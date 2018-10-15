@@ -62,4 +62,5 @@ En esta semana se comienza con la creacion de las activities. Para ello se repar
   * Votación -> Enol
   * Juegos interactivos -> De momento no se implementa
 * Resultados actividades -> Jorge
+
 Esta semana, Enol también creará los xml con las actividades a realizar
