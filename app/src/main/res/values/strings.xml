@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Trabajo-SDM</string>
+
+    <string name="votaciones_title">Votación</string>
+    <string name="votaciones_texto">Decidid entre todos si preferís A o B</string>
+    <string name="votaciones_a">A</string>
+    <string name="voteciones_b">B</string>
 </resources>
