@@ -26,6 +26,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
+        android:padding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,15 +36,20 @@
             android:id="@+id/imgBtnAcercaDe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:contentDescription="@string/contentDescription_principal_acerca_de"
+            android:padding="ç"
             app:srcCompat="@android:drawable/ic_dialog_info" />
 
         <ImageButton
             android:id="@+id/imgBtnSettings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:contentDescription="@string/contentDescription_principal_settings"
             app:srcCompat="@android:drawable/ic_menu_preferences" />
     </LinearLayout>
