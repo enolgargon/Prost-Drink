@@ -17,4 +17,24 @@
     <string name="contentDescription_atras">Icono de flecha hacia atras</string>
     <string name="contentDescription_principal_acerca_de">Icono para la información sobre la aplicación</string>
     <string name="contentDescription_principal_settings">Icono para la configuración de la aplicación</string>
+    <string name="Juego">Juego</string>
+    
+    <string name="Preguntas">Preguntas</string>
+    <string name="Retos">Retos</string>
+    <string name="YoNunca">Yo nunca</string>
+    <string name="Juegos">Juegos</string>
+    <string name="Votaciones">Votaciones</string>
+    <string name="Resultados">Resultados</string>
+
+    <string name="Bebe">Bebe</string>
+    <string name="MandaBeber">Manda beber</string>
+    <string name="Castigo">Castigo</string>
+    <string name="Reto">Reto</string>
+    <string name="Jugar">Jugar</string>
+    <string name="Contestar">Contestar</string>
+    <string name="Pasar">Pasar</string>
+    <string name="PLACEHOLDER">PLACEHOLDER</string>
+    <string name="ElegirJugadores">Elección de Jugadores</string>
+    <string name="JugadorAñadir">Jugador a añadir</string>
+    <string name="AñadirParticipante">Añadir participante</string>
 </resources>
