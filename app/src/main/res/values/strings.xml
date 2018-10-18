@@ -20,4 +20,13 @@
     <string name="titulo">Nombre de la aplicacion</string>
     <string name="juegoRapido">Juego rapido</string>
     <string name="juegoPersonalizado">Juego personalizado</string>
+    <string name="elegirJugador">Elegir jugadores</string>
+    <string name="jugadorAñadir">Jugador a añadir</string>
+    <string name="numGrupos">Numero de grupos</string>
+    <string name="añadirParticipante">Añadir participante</string>
+    <string name="sortear">Sortear</string>
+    <string name="textoResultado">Texto con el resultado de la actividad que se ha hecho</string>
+    <string name="siguiente">Siguiente jugador</string>
+    <string name="noApto">No hay huevos</string>
+    <string name="apto">¿Qué no qué?</string>
 </resources>
