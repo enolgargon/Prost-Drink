@@ -31,4 +31,10 @@
     <string name="Castigo">Castigo</string>
     <string name="Reto">Reto</string>
     <string name="Jugar">Jugar</string>
+    <string name="Contestar">Contestar</string>
+    <string name="Pasar">Pasar</string>
+    <string name="PLACEHOLDER">PLACEHOLDER</string>
+    <string name="ElegirJugadores">Elección de Jugadores</string>
+    <string name="JugadorAñadir">Jugador a añadir</string>
+    <string name="AñadirParticipante">Añadir participante</string>
 </resources>
