@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="sdm.workgroup.trabajo_sdm">
+    package="com.cgi.sdm_project">
 
-    <application>
+    <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -20,21 +20,22 @@
         <activity
             android:name=".ResultadoSorteoActivity"
             android:parentActivityName=".SortearActivity" />
-        <activity android:name="smd.workgroup.trabajo_sdm.ResultadoActivity" />
-        <activity android:name="smd.workgroup.trabajo_sdm.JuegoActivity" />
+        <activity android:name=".ResultadoActivity" />
+        <activity android:name=".JuegoActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity
-            android:name="smd.workgroup.trabajo_sdm.ConfiguracionActivity"
+            android:name=".ConfiguracionActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name="smd.workgroup.trabajo_sdm.SortearActivity"
+            android:name=".SortearActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name="smd.workgroup.trabajo_sdm.JuegoPersonalizadoActivity"
+            android:name=".JuegoPersonalizadoActivity"
             android:parentActivityName=".JuegoActivity" />
         <activity
-            android:name="smd.workgroup.trabajo_sdm.ElegirJugadoresActivity"
+            android:name=".ElegirJugadoresActivity"
             android:parentActivityName=".JuegoPersonalizadoActivity" />
-        <activity android:name="smd.workgroup.trabajo_sdm.JuegoPreguntaActivity"></activity>
+        <activity android:name=".JuegoPreguntaActivity"></activity>
     </application>
 
 </manifest>

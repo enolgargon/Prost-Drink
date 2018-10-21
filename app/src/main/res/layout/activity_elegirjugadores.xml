@@ -87,6 +87,7 @@
         android:layout_marginBottom="8dp"
         android:clickable="true"
         android:focusable="auto"
+        android:onClick="empezarJuego"
         app:backgroundTint="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

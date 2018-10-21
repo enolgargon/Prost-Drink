@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string-array name="Idiomas">
@@ -65,5 +66,6 @@
     <string name="Volumen">Volumen</string>
     <string name="Idioma">Idioma</string>
 
-
+    <string name="PreguntaEjemplo">¿Te has o estas enamorado de un amigo/a?</string>
+    <string name="ResultadoEjemplo">Bebe 3, champ</string>
 </resources>

@@ -50,6 +50,7 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:contentDescription="@string/contentDescription_principal_settings"
+            android:onClick="lanzarConfiguracion"
             app:srcCompat="@android:drawable/ic_menu_preferences" />
     </LinearLayout>
 
@@ -66,12 +67,14 @@
             android:id="@+id/btnJuego"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="lanzarJuego"
             android:text="@string/principal_juego" />
 
         <Button
             android:id="@+id/btnSorteo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="lanzarSortear"
             android:text="@string/principal_sorteo" />
     </LinearLayout>
 
