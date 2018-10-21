@@ -1,4 +1,11 @@
 <resources>
+
+    <string-array name="Idiomas">
+        <item>Español</item>
+        <item>Inglés</item>
+        <item>Francés</item>
+    </string-array>
+
     <string name="app_name">Trabajo-SDM</string>
 
     <string name="principal_juego">Juego</string>
@@ -17,10 +24,10 @@
     <string name="contentDescription_atras">Icono de flecha hacia atras</string>
     <string name="contentDescription_principal_acerca_de">Icono para la información sobre la aplicación</string>
     <string name="contentDescription_principal_settings">Icono para la configuración de la aplicación</string>
-  
-  
+
+
     <string name="Juego">Juego</string>
-    
+
     <string name="Preguntas">Preguntas</string>
     <string name="Retos">Retos</string>
     <string name="YoNunca">Yo nunca</string>
@@ -39,8 +46,8 @@
     <string name="ElegirJugadores">Elección de Jugadores</string>
     <string name="JugadorAñadir">Jugador a añadir</string>
     <string name="AñadirParticipante">Añadir participante</string>
-	
-	<string name="titulo">Nombre de la aplicacion</string>
+
+    <string name="titulo">Nombre de la aplicacion</string>
     <string name="juegoRapido">Juego rapido</string>
     <string name="juegoPersonalizado">Juego personalizado</string>
     <string name="elegirJugador">Elegir jugadores</string>
@@ -52,4 +59,11 @@
     <string name="siguiente">Siguiente jugador</string>
     <string name="noApto">No hay huevos</string>
     <string name="apto">¿Qué no qué?</string>
+
+    <string name="Configuración">Configuracion</string>
+    <string name="Sonido">Sonido</string>
+    <string name="Volumen">Volumen</string>
+    <string name="Idioma">Idioma</string>
+
+
 </resources>

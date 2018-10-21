@@ -40,7 +40,6 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:contentDescription="@string/contentDescription_principal_acerca_de"
-            android:padding="ç"
             app:srcCompat="@android:drawable/ic_dialog_info" />
 
         <ImageButton
