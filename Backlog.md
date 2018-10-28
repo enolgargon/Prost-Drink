@@ -28,4 +28,5 @@ Se agruparan en tres paquetes:
 * Paquete 1 (Juego personalizado, Elegir jugadores) -> Jorge
 * Paquete 2 (Main, Inicio juego, Configuración) -> Samuel
 * Paquete 3 (Preparación sorteo, sorteo) -> Enol
+Cada paquete se implementará en una rama.  
 También se debe reorganizar nuestra estructura de clases en paquetes.
