@@ -18,8 +18,8 @@ En esta semana se comienza con la creacion de las activities. Para ello se repar
 
 Esta semana, Enol también creará los xml con las actividades a realizar
 
-**Resultado del sprint:** Objetivos alcanzados con éxito.
-Cambio y corto,
+**Resultado del sprint:** Objetivos alcanzados con éxito.  
+Cambio y corto,  
 _Herr Koordinator_
 
 ## Lunes 22 de octubre - Lunes 5 de noviembre
