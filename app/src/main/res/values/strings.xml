@@ -61,7 +61,7 @@
     <string name="noApto">No hay huevos</string>
     <string name="apto">¿Qué no qué?</string>
 
-    <string name="Configuración">Configuracion</string>
+    <string name="Configuración">Configuración</string>
     <string name="Sonido">Sonido</string>
     <string name="Volumen">Volumen</string>
     <string name="Idioma">Idioma</string>
@@ -71,4 +71,6 @@
     <string name="error_nombre_sorteo">Debes introducir un nombre para el jugador</string>
     <string name="error_equipos_menor">No puedes crear un número de equipos 0 o negativo</string>
     <string name="error_equipos_mayor">No puede haber pas equipos que jugadores</string>
+    <string name="Guardar">Guardar</string>
+    <string name="CambiosGuardados">Se han guardado tus cambios</string>
 </resources>

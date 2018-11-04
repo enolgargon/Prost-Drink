@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.155" />
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/sbVolumen"
         style="@android:style/Widget.Material.SeekBar"
         android:layout_width="178dp"
         android:layout_height="17dp"
@@ -90,12 +90,12 @@
         app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.322" />
 
     <Spinner
         android:id="@+id/spIdioma"
-        android:layout_width="126dp"
-        android:layout_height="19dp"
+        android:layout_width="128dp"
+        android:layout_height="34dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -103,8 +103,25 @@
         android:entries="@array/Idiomas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar"
-        app:layout_constraintVertical_bias="0.221" />
+        app:layout_constraintTop_toBottomOf="@+id/sbVolumen"
+        app:layout_constraintVertical_bias="0.258" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="118dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="guardar"
+        android:text="@string/Guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spIdioma"
+        app:layout_constraintVertical_bias="0.917" />
 </android.support.constraint.ConstraintLayout>
