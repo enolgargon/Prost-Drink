@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -66,6 +67,19 @@ public class SortearActivity extends AppCompatActivity {
 
         // Configuración de los componentes gráficos
         lista.setAdapter(new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, sorteo.getJugadores()));
+        lista.setOnItemLongClickListener(new ListView.OnItemLongClickListener() {
+            /*
+             * Al mantener pulsado un elemento se elimina ese nombre del sorteo
+             *
+             * @see OnItemLongClickListener
+             */
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                sorteo.removeJugador(i);
+                ((ArrayAdapter) lista.getAdapter()).notifyDataSetChanged();
+                return true;
+            }
+        });
     }
 
     /**
