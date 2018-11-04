@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.cgi.sdm_project.logica.sorteo.util.ConfigSingleton;
+import com.cgi.sdm_project.logica.sorteo.util.Conf;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putInt("Idioma", 0);
             editor.commit();
         }
-        ConfigSingleton.getInstancia().setPreferences(settings);
+        Conf.getInstancia().setPreferences(settings);
     }
 
     public void lanzarJuego (View vs){

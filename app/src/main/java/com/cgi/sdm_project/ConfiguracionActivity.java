@@ -1,9 +1,7 @@
 package com.cgi.sdm_project;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -12,14 +10,14 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.cgi.sdm_project.logica.sorteo.util.Conf;
+
 /**
  * Se encarga de guardar las preferencias del usuario en el SharedPreferences
  *
  * @author Samuel
  */
 public class ConfiguracionActivity extends AppCompatActivity {
-    public static String NombrePreferencias = "Preferencias";
-    SharedPreferences settings;
 
     Switch swSonido;
     SeekBar sbVolumen;
@@ -95,10 +93,10 @@ public class ConfiguracionActivity extends AppCompatActivity {
      * Carga los valores almacenados en las preferencias
      */
     private void cargarPreferencias() {
-        settings = getSharedPreferences(NombrePreferencias, Context.MODE_PRIVATE);
-        swSonido.setChecked(settings.getBoolean("Sonido", true));
-        sbVolumen.setProgress(settings.getInt("Volumen", 100));
-        spIdioma.setSelection(settings.getInt("Idioma", 0));
+        Conf conf = Conf.getInstancia();
+        swSonido.setChecked(conf.getSonido());
+        sbVolumen.setProgress(conf.getVolumen());
+        spIdioma.setSelection(conf.getIdioma());
     }
 
     /**
@@ -106,11 +104,10 @@ public class ConfiguracionActivity extends AppCompatActivity {
      * @param view
      */
     public void guardar(View view){
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("Sonido", swSonido.isChecked());
-        editor.putInt("Volumen", sbVolumen.getProgress());
-        editor.putInt("Idioma", spIdioma.getSelectedItemPosition());
-        editor.commit();
+        Conf conf = Conf.getInstancia();
+        conf.setSonido(swSonido.isChecked());
+        conf.setVolumen(sbVolumen.getProgress());
+        conf.setIdioma(spIdioma.getSelectedItemPosition());
         Toast.makeText(getApplicationContext(), getString(R.string.CambiosGuardados),
                 Toast.LENGTH_SHORT).show();
 
