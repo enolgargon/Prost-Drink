@@ -30,3 +30,7 @@ Se agruparan en tres paquetes:
 * Paquete 3 (Preparación sorteo, sorteo) -> Enol  
 Cada paquete se implementará en una rama.  
 También se debe reorganizar nuestra estructura de clases en paquetes.
+
+**Resultado del sprint:** Objetivos cumplidos por todos salvo, *ejem, ejem* Iturrioz *ejem, ejem*. Plantearse instaurar medida para sustituir miembros deficientes del equipo.
+Cambio y corto,
+_Herr Koordinator_
