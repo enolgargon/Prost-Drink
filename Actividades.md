@@ -30,6 +30,7 @@ Estos son algunos de los retos que se pueden encontrar en la aplicación:
 * Retuércete los pezones hasta que esten bien duritos
 * Los que hayan discutido en lo dos últimos días beben
 * Intenta poner caliente a la persona que más te guste de la mesa
+* Imita a Gollum (que a Juanra le encanta el sr de los anillos)
 
 
 ## Votaciones
