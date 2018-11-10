@@ -12,7 +12,7 @@ import com.cgi.sdm_project.R;
 import java.util.List;
 
 /**
- * Clase que define un adaptador para mostrar una llista de nombres personalizada
+ * Clase que define un adaptador para mostrar una lista de nombres personalizada
  *
  * @author Enol García González
  * @version 04-11-2018

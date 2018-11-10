@@ -4,21 +4,82 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.cgi.sdm_project.logica.sorteo.GestionJugadores;
 
 
 public class ElegirJugadoresActivity extends AppCompatActivity {
+
+    private ListView listaJugadores;
+    private TextView txtJugador;
+    private Button añadirJugador;
+    private Button jugar;
+    private GestionJugadores jugadores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elegirjugadores);
 
+        jugadores = new GestionJugadores();
+        setComponents();
+        setListeners();
+
     }
 
-    public void empezarJuego(View vs){
-        Intent mIntent = new Intent(this, JuegoPreguntaActivity.class);
-        startActivity(mIntent);
+    /**
+     * Método privado que inicializa los componentes del layout asociado
+     */
+    private void setComponents(){
+        listaJugadores = findViewById(R.id.listJugadores);
+        txtJugador = findViewById(R.id.txtAñadirJugador);
+        añadirJugador = findViewById(R.id.btnAñadirParticipante);
+        jugar = findViewById(R.id.fabJugar);
+
     }
 
+    /**
+     * Metodo privado que añade listeners a los elementos necesarios
+     */
+    private void setListeners(){
 
+        listaJugadores.setAdapter(new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, jugadores.getJugadores()));
+        listaJugadores.setOnItemLongClickListener(new ListView.OnItemLongClickListener() {
+            /*
+             * Al mantener pulsado un elemento se elimina ese nombre del sorteo
+             *
+             * @see OnItemLongClickListener
+             */
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                jugadores.eliminarJugador(i);
+                ((ArrayAdapter) listaJugadores.getAdapter()).notifyDataSetChanged();
+                return true;
+            }
+        });
+
+        /*
+         *  Al hacer click sobre el botón de añadir con un nombre válido, se añade al modelo y a la vista que muestra los jugadores correspondientes
+         */
+        añadirJugador.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                jugadores.addJugador(añadirJugador.getText().toString());
+                ((ArrayAdapter) listaJugadores.getAdapter()).notifyDataSetChanged();
+            }
+        });
+
+        jugar.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mIntent = new Intent(getApplicationContext(), JuegoPreguntaActivity.class);
+                startActivity(mIntent);
+            }
+        });
+    }
 }

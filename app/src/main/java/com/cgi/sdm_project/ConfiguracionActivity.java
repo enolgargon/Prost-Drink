@@ -112,5 +112,4 @@ public class ConfiguracionActivity extends AppCompatActivity {
                 Toast.LENGTH_SHORT).show();
 
     }
-
 }
