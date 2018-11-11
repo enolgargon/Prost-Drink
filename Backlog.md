@@ -34,3 +34,5 @@ También se debe reorganizar nuestra estructura de clases en paquetes.
 **Resultado del sprint:** Objetivos cumplidos por todos salvo, *ejem, ejem* Iturrioz *ejem, ejem*. Plantearse instaurar medida para sustituir miembros deficientes del equipo.
 Cambio y corto,
 _Herr Koordinator_
+
+**Domingo 11/11/2018 Sprint finalizado:** Iturrioz terminó su parte tan solo 6 días después de la fecha establecida
