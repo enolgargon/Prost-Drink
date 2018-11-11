@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.Jugador;
-import com.cgi.sdm_project.logica.sorteo.GestionJugadores;
 
 import java.util.ArrayList;
 import java.util.List;
