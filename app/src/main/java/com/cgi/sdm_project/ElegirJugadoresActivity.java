@@ -10,7 +10,12 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.cgi.sdm_project.logica.juego.Juego;
+import com.cgi.sdm_project.logica.juego.Jugador;
 import com.cgi.sdm_project.logica.sorteo.GestionJugadores;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class ElegirJugadoresActivity extends AppCompatActivity {
@@ -19,14 +24,13 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
     private TextView txtJugador;
     private Button añadirJugador;
     private Button jugar;
-    private GestionJugadores jugadores;
+    private List<Jugador> jugadores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elegirjugadores);
-
-        jugadores = new GestionJugadores();
+        jugadores = new ArrayList<Jugador>();
         setComponents();
         setListeners();
 
@@ -48,7 +52,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
      */
     private void setListeners(){
 
-        listaJugadores.setAdapter(new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, jugadores.getJugadores()));
+        listaJugadores.setAdapter(new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, jugadores));
         listaJugadores.setOnItemLongClickListener(new ListView.OnItemLongClickListener() {
             /*
              * Al mantener pulsado un elemento se elimina ese nombre del sorteo
@@ -57,7 +61,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
              */
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                jugadores.eliminarJugador(i);
+                jugadores.remove(i);
                 ((ArrayAdapter) listaJugadores.getAdapter()).notifyDataSetChanged();
                 return true;
             }
@@ -69,7 +73,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
         añadirJugador.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                jugadores.addJugador(añadirJugador.getText().toString());
+                jugadores.add(new Jugador(añadirJugador.getText().toString()));
                 ((ArrayAdapter) listaJugadores.getAdapter()).notifyDataSetChanged();
             }
         });
@@ -77,6 +81,8 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
         jugar.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Juego.getInstance().setJugadores(jugadores);
                 Intent mIntent = new Intent(getApplicationContext(), JuegoPreguntaActivity.class);
                 startActivity(mIntent);
             }
