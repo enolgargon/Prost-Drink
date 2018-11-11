@@ -6,6 +6,7 @@ public class Conf {
     private static Conf instancia;
     private SharedPreferences settings;
 
+    private Conf(){}
 
     public static Conf getInstancia(){
         if (instancia == null)
