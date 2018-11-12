@@ -36,3 +36,13 @@ Cambio y corto,
 _Herr Koordinator_
 
 **Domingo 11/11/2018 Sprint finalizado:** Iturrioz terminó su parte tan solo 6 días después de la fecha establecida (Pero al menos lo hizo, tal y como prometió sobre su santa madre).
+
+**Lunes 12/11/2018 Anotación:** Iturrioz la cagó. Master inestable. Sigue contando los días, van 7.
+
+## Lunes 12 de noviembre - 19 de noviembre
+En esta iteración se deberá aumentar la lógica.
+Se agrupará en tres paquetes:
+* Paquete 1 (AlmacenadorActividades, FinJuego, interfaz inicioJuego) -> Enol
+* Paquete 2 (Votación, Pregunta, ReglasJuego) -> Samuel
+* Paquete 3 (Reto, HastaQueTeVuelvaATocar) -> Jorge
+
