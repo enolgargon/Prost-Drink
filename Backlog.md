@@ -35,4 +35,4 @@ También se debe reorganizar nuestra estructura de clases en paquetes.
 Cambio y corto,
 _Herr Koordinator_
 
-**Domingo 11/11/2018 Sprint finalizado:** Iturrioz terminó su parte tan solo 6 días después de la fecha establecida
+**Domingo 11/11/2018 Sprint finalizado:** Iturrioz terminó su parte tan solo 6 días después de la fecha establecida (Pero al menos lo hizo, tal y como prometió sobre su santa madre).
