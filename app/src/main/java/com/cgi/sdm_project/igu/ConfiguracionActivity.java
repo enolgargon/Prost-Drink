@@ -1,4 +1,4 @@
-package com.cgi.sdm_project;
+package com.cgi.sdm_project.igu;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +10,8 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 
-import com.cgi.sdm_project.logica.sorteo.util.Conf;
+import com.cgi.sdm_project.R;
+import com.cgi.sdm_project.util.Conf;
 
 /**
  * Se encarga de guardar las preferencias del usuario en el SharedPreferences

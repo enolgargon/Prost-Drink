@@ -1,4 +1,4 @@
-package com.cgi.sdm_project.componentes.adapter;
+package com.cgi.sdm_project.util.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;

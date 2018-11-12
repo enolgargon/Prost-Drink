@@ -1,9 +1,11 @@
-package com.cgi.sdm_project;
+package com.cgi.sdm_project.igu.juego;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.cgi.sdm_project.R;
 
 
 public class JuegoActivity extends AppCompatActivity {

@@ -9,33 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".igu.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".VotacionActivity" />
+        <activity android:name=".igu.juego.VotacionActivity" />
         <activity
-            android:name=".ResultadoSorteoActivity"
-            android:parentActivityName=".SortearActivity" />
-        <activity android:name=".ResultadoActivity" />
-        <activity android:name=".JuegoActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:name=".igu.sorteo.ResultadoSorteoActivity"
+            android:parentActivityName=".igu.sorteo.SortearActivity" />
+        <activity android:name=".igu.juego.ResultadoActivity" />
+        <activity android:name=".igu.juego.JuegoActivity"
+            android:parentActivityName=".igu.MainActivity"/>
         <activity
-            android:name=".ConfiguracionActivity"
-            android:parentActivityName=".MainActivity" />
+            android:name=".igu.ConfiguracionActivity"
+            android:parentActivityName=".igu.MainActivity" />
         <activity
-            android:name=".SortearActivity"
-            android:parentActivityName=".MainActivity" />
+            android:name=".igu.sorteo.SortearActivity"
+            android:parentActivityName=".igu.MainActivity" />
         <activity
-            android:name=".JuegoPersonalizadoActivity"
-            android:parentActivityName=".JuegoActivity" />
+            android:name=".igu.juego.JuegoPersonalizadoActivity"
+            android:parentActivityName=".igu.juego.JuegoActivity" />
         <activity
-            android:name=".ElegirJugadoresActivity"
-            android:parentActivityName=".JuegoPersonalizadoActivity" />
-        <activity android:name=".JuegoPreguntaActivity"></activity>
+            android:name=".igu.juego.ElegirJugadoresActivity"
+            android:parentActivityName=".igu.juego.JuegoPersonalizadoActivity" />
+        <activity android:name=".igu.juego.JuegoPreguntaActivity"></activity>
     </application>
 
 </manifest>

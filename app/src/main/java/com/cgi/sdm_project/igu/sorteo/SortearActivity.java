@@ -1,4 +1,4 @@
-package com.cgi.sdm_project;
+package com.cgi.sdm_project.igu.sorteo;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.sorteo.Sorteo;
 
 /**

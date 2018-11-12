@@ -1,4 +1,4 @@
-package com.cgi.sdm_project;
+package com.cgi.sdm_project.igu;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,7 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.cgi.sdm_project.logica.sorteo.util.Conf;
+import com.cgi.sdm_project.igu.juego.JuegoActivity;
+import com.cgi.sdm_project.R;
+import com.cgi.sdm_project.igu.sorteo.SortearActivity;
+import com.cgi.sdm_project.util.Conf;
 
 
 public class MainActivity extends AppCompatActivity {

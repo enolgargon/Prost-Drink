@@ -1,4 +1,4 @@
-package com.cgi.sdm_project.logica.sorteo.util;
+package com.cgi.sdm_project.util;
 
 import android.content.SharedPreferences;
 

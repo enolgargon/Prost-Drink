@@ -1,4 +1,4 @@
-package com.cgi.sdm_project;
+package com.cgi.sdm_project.igu.sorteo;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -7,7 +7,8 @@ import android.support.v7.widget.GridLayout;
 import android.util.DisplayMetrics;
 import android.widget.ListView;
 
-import com.cgi.sdm_project.componentes.adapter.NombreAdapter;
+import com.cgi.sdm_project.R;
+import com.cgi.sdm_project.util.adapters.NombreAdapter;
 import com.cgi.sdm_project.logica.sorteo.Sorteo;
 
 import java.util.List;
