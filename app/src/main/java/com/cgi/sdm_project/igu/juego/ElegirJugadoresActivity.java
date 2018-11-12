@@ -1,6 +1,7 @@
 package com.cgi.sdm_project.igu.juego;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
@@ -23,7 +25,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
     private ListView listaJugadores;
     private TextView txtJugador;
     private Button añadirJugador;
-    private Button jugar;
+    private FloatingActionButton jugar;
     private List<Jugador> jugadores;
 
     @Override
@@ -73,8 +75,12 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
         añadirJugador.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                jugadores.add(new Jugador(añadirJugador.getText().toString()));
-                ((ArrayAdapter) listaJugadores.getAdapter()).notifyDataSetChanged();
+                if (txtJugador.getText() != null){
+                    jugadores.add(new Jugador(txtJugador.getText().toString()));
+                    ((ArrayAdapter) listaJugadores.getAdapter()).notifyDataSetChanged();
+                }
+                else
+                    Toast.makeText(getApplicationContext(), "Debe introducir un nombre de jugador", Toast.LENGTH_SHORT).show();
             }
         });
 

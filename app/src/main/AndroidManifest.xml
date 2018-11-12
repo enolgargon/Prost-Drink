@@ -21,8 +21,9 @@
             android:name=".igu.sorteo.ResultadoSorteoActivity"
             android:parentActivityName=".igu.sorteo.SortearActivity" />
         <activity android:name=".igu.juego.ResultadoActivity" />
-        <activity android:name=".igu.juego.JuegoActivity"
-            android:parentActivityName=".igu.MainActivity"/>
+        <activity
+            android:name=".igu.juego.JuegoActivity"
+            android:parentActivityName=".igu.MainActivity" />
         <activity
             android:name=".igu.ConfiguracionActivity"
             android:parentActivityName=".igu.MainActivity" />
@@ -35,7 +36,7 @@
         <activity
             android:name=".igu.juego.ElegirJugadoresActivity"
             android:parentActivityName=".igu.juego.JuegoPersonalizadoActivity" />
-        <activity android:name=".igu.juego.JuegoPreguntaActivity"></activity>
+        <activity android:name=".igu.juego.JuegoPreguntaActivity" />
     </application>
 
 </manifest>

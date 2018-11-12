@@ -33,12 +33,12 @@ public class JuegoActivity extends AppCompatActivity {
         });
     }
 
-    public void lanzarJuegoNormal(View vs){
+    private void lanzarJuegoNormal(View vs){
         Intent mIntent = new Intent(getApplicationContext(), ElegirJugadoresActivity.class);
         startActivity(mIntent);
     }
 
-    public void lanzarJuegoPersonalizado(View vs){
+    private void lanzarJuegoPersonalizado(View vs){
         Intent mIntent = new Intent(getApplicationContext(), JuegoPersonalizadoActivity.class);
         startActivity(mIntent);
     }
