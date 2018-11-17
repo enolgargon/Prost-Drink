@@ -46,3 +46,6 @@ Se agrupará en tres paquetes:
 * Paquete 2 (Votación, Pregunta, ReglasJuego) -> Samuel
 * Paquete 3 (Reto, HastaQueTeVuelvaATocar) -> Jorge
 
+**Prórroga hasta el 22 de noviembre**
+Debido al adelanto de la entrega de RI
+
