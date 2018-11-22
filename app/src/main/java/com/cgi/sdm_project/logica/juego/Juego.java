@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Juego {
-
     private static Juego juego;
     private List<Jugador> jugadores;
 
@@ -22,5 +21,9 @@ public class Juego {
 
     public List<Jugador> getJugadores(){
         return  new ArrayList<Jugador>(jugadores);
+    }
+
+    public ReglasJuego getSiguienteJuego() {
+        throw new UnsupportedOperationException("Esto todavía no se ha implementado");
     }
 }
