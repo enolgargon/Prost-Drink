@@ -12,7 +12,6 @@ import com.cgi.sdm_project.logica.juego.Reglas.Pregunta;
 
 public class PreguntaActivity extends AppCompatActivity implements InicioJuego {
     private Pregunta pregunta;
-    private TextView preguntaView;
 
     public PreguntaActivity(Pregunta pregunta) {
         this.pregunta = pregunta;
@@ -22,8 +21,8 @@ public class PreguntaActivity extends AppCompatActivity implements InicioJuego {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pregunta);
-        preguntaView = findViewById(R.id.lblPregunta);
-        preguntaView.setText(pregunta.getPregunta());
+
+        ((TextView) findViewById(R.id.lblPregunta)).setText(pregunta.getPregunta());
     }
 
     public void contestar(View v) {

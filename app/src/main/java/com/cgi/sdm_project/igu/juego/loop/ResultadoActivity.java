@@ -10,14 +10,13 @@ import com.cgi.sdm_project.logica.juego.FinJuego;
 import com.cgi.sdm_project.logica.juego.IFinJuego;
 
 public class ResultadoActivity extends AppCompatActivity implements IFinJuego {
-    private TextView resultado;
+    public static final String REGLA = "REGLA";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultado);
-        resultado = findViewById(R.id.txtResultado);
-        resultado.setText(R.string.ResultadoEjemplo);
+        ((TextView) findViewById(R.id.txtResultado)).setText(R.string.ResultadoEjemplo);
     }
 
     @Override

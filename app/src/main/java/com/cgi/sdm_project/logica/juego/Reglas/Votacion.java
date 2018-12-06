@@ -4,7 +4,7 @@ public class Votacion extends Regla {
     private String[] opciones;
     private String texto;
 
-    public Votacion(String opcion1, String opcion2, int tragos){
+    public Votacion(String opcion1, String opcion2, int tragos) {
         super(tragos);
         this.opciones = new String[]{opcion1, opcion2};
     }
@@ -13,4 +13,7 @@ public class Votacion extends Regla {
         return opciones.clone();
     }
 
+    public String getTexto() {
+        return texto;
+    }
 }
