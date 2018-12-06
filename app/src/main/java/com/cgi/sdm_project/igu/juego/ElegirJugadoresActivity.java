@@ -1,9 +1,9 @@
 package com.cgi.sdm_project.igu.juego;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -41,7 +41,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
     /**
      * Método privado que inicializa los componentes del layout asociado
      */
-    private void setComponents(){
+    private void setComponents() {
         listaJugadores = findViewById(R.id.listJugadores);
         txtJugador = findViewById(R.id.txtAñadirJugador);
         añadirJugador = findViewById(R.id.btnAñadirParticipante);
@@ -52,7 +52,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
     /**
      * Metodo privado que añade listeners a los elementos necesarios
      */
-    private void setListeners(){
+    private void setListeners() {
 
         listaJugadores.setAdapter(new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, jugadores));
         listaJugadores.setOnItemLongClickListener(new ListView.OnItemLongClickListener() {
@@ -75,11 +75,10 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
         añadirJugador.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (txtJugador.getText() != null){
+                if (txtJugador.getText() != null) {
                     jugadores.add(new Jugador(txtJugador.getText().toString()));
                     ((ArrayAdapter) listaJugadores.getAdapter()).notifyDataSetChanged();
-                }
-                else
+                } else
                     Toast.makeText(getApplicationContext(), "Debe introducir un nombre de jugador", Toast.LENGTH_SHORT).show();
             }
         });
@@ -89,7 +88,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Juego.getInstance().setJugadores(jugadores);
-                Intent mIntent = new Intent(getApplicationContext(), JuegoPreguntaActivity.class);
+                Intent mIntent = new Intent(getApplicationContext(), Juego.getInstance().getSiguienteJuego().getClass());
                 startActivity(mIntent);
             }
         });

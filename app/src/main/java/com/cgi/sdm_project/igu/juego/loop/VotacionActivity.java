@@ -8,9 +8,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
+import com.cgi.sdm_project.logica.juego.InicioJuego;
 import com.cgi.sdm_project.logica.juego.Reglas.Votacion;
 
-public class VotacionActivity extends AppCompatActivity {
+public class VotacionActivity extends AppCompatActivity implements InicioJuego {
     private Votacion votacion;
 
     public VotacionActivity(Votacion votacion) {

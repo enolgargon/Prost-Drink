@@ -1,5 +1,7 @@
 package com.cgi.sdm_project.logica.juego;
 
+import android.util.Log;
+
 import com.cgi.sdm_project.logica.juego.Reglas.IRegla;
 
 import java.lang.reflect.InvocationTargetException;
@@ -31,13 +33,18 @@ public class Juego {
         jugadorActual = 0;
     }
 
-    private InicioJuego getSiguienteJuego() {
+    public InicioJuego getSiguienteJuego() {
         String tipoPrueba = juegosValidos[(int) (Math.random() * (juegosValidos.length + 1))];
         IRegla regla = null;
         try {
             regla = (IRegla) ReglasJuego.class.getMethod("get" + tipoPrueba).invoke(ReglasJuego.getInstance());
-        } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-            throw new RuntimeException();
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        } catch (InvocationTargetException e) {
+            Log.i("error", e.getCause().getMessage());
+            throw new RuntimeException(e);
+        } catch (NoSuchMethodException e) {
+            throw new RuntimeException(e);
         }
         return AlmacenadorActivities.getInstance().getActivityFor(regla);
     }
