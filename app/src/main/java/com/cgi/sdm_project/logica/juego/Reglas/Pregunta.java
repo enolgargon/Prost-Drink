@@ -1,19 +1,14 @@
 package com.cgi.sdm_project.logica.juego.Reglas;
 
-public class Pregunta {
+public class Pregunta extends Regla {
     private String pregunta;
-    private int tragos;
 
     public Pregunta(String pregunta, int tragos){
+        super(tragos);
         this.pregunta = pregunta;
-        this.tragos = tragos;
     }
 
     public String getPregunta() {
         return pregunta;
-    }
-
-    public int getTragos() {
-        return tragos;
     }
 }

@@ -16,11 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".igu.juego.VotacionActivity" />
+        <activity android:name=".igu.juego.loop.VotacionActivity" />
         <activity
             android:name=".igu.sorteo.ResultadoSorteoActivity"
             android:parentActivityName=".igu.sorteo.SortearActivity" />
-        <activity android:name=".igu.juego.ResultadoActivity" />
+        <activity android:name=".igu.juego.loop.ResultadoActivity" />
         <activity
             android:name=".igu.juego.JuegoActivity"
             android:parentActivityName=".igu.MainActivity" />

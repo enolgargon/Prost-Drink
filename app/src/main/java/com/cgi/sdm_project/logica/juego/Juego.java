@@ -23,7 +23,7 @@ public class Juego {
         return  new ArrayList<Jugador>(jugadores);
     }
 
-    public ReglasJuego getSiguienteJuego() {
+    public InicioJuego getSiguienteJuego() {
         throw new UnsupportedOperationException("Esto todavía no se ha implementado");
     }
 }
