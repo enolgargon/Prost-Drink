@@ -1,9 +1,9 @@
 package com.cgi.sdm_project.logica.juego.Reglas;
 
-class Regla implements IRegla {
+class ReglaTragable implements Tragable {
     protected int tragos;
 
-    Regla(int tragos) {
+    ReglaTragable(int tragos) {
         this.tragos = tragos;
     }
 
