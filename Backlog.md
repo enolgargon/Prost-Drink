@@ -49,3 +49,11 @@ Se agrupará en tres paquetes:
 **Prórroga hasta el 22 de noviembre**
 Debido al adelanto de la entrega de RI
 
+**Resultado del sprint**: Con mucho retraso por parte del koordinator e iturriós pero se ha llegado.
+
+## Lunes 10 de diciembre ##
+Revisión de un prototipo de la aplicación
+Objetivos:
+* Sorteo implementado: _Listo_
+* Preguntas implementadas:
+
