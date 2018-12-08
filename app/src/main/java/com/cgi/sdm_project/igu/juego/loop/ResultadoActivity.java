@@ -8,6 +8,8 @@ import android.widget.TextView;
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.FinJuego;
 import com.cgi.sdm_project.logica.juego.IFinJuego;
+import com.cgi.sdm_project.logica.juego.Juego;
+import com.cgi.sdm_project.logica.juego.Reglas.Tragable;
 
 public class ResultadoActivity extends AppCompatActivity implements IFinJuego {
     public static final String REGLA = "REGLA";
@@ -16,7 +18,8 @@ public class ResultadoActivity extends AppCompatActivity implements IFinJuego {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultado);
-        ((TextView) findViewById(R.id.txtResultado)).setText(R.string.ResultadoEjemplo);
+        ((TextView) findViewById(R.id.txtResultado)).setText(String.format(getString(R.string.ResultadoEjemplo),
+                ((Tragable) Juego.getInstance().getJuegoActual()).getTragos()));
     }
 
     @Override

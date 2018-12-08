@@ -67,7 +67,7 @@
     <string name="Idioma">Idioma</string>
 
     <string name="PreguntaEjemplo">¿Te has o estas enamorado de un amigo/a?</string>
-    <string name="ResultadoEjemplo">Bebe 3, champ</string>
+    <string name="ResultadoEjemplo">Bebe %d, champ</string>
     <string name="error_nombre_sorteo">Debes introducir un nombre para el jugador</string>
     <string name="error_equipos_menor">No puedes crear un número de equipos 0 o negativo</string>
     <string name="error_equipos_mayor">No puede haber pas equipos que jugadores</string>
