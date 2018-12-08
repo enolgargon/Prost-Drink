@@ -75,8 +75,9 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
         añadirJugador.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (txtJugador.getText() != null) {
+                if (txtJugador.getText() != null && !txtJugador.getText().toString().trim().isEmpty()) {
                     jugadores.add(new Jugador(txtJugador.getText().toString()));
+                    txtJugador.setText("");
                     ((ArrayAdapter) listaJugadores.getAdapter()).notifyDataSetChanged();
                 } else
                     Toast.makeText(getApplicationContext(), "Debe introducir un nombre de jugador", Toast.LENGTH_SHORT).show();

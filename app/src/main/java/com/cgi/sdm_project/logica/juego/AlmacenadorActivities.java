@@ -27,20 +27,17 @@ public class AlmacenadorActivities {
     }
 
     public Class<? extends InicioJuego> getActivityFor(Regla regla) {
-        if (regla instanceof Pregunta) {
-            PreguntaActivity.setPregunta((Pregunta) regla);
+        if (regla instanceof Pregunta)
             return PreguntaActivity.class;
-        } else if (regla instanceof HastaQue) {
+        else if (regla instanceof HastaQue)
             return null;
-        } else if (regla instanceof Reto) {
-            RetoActivity.setReto((Reto) regla);
+        else if (regla instanceof Reto)
             return RetoActivity.class;
-        } else if (regla instanceof Votacion) {
-            VotacionActivity.setVotacion((Votacion) regla);
+        else if (regla instanceof Votacion)
             return VotacionActivity.class;
-        } else if (regla instanceof Juego) {
+        else if (regla instanceof Juego)
             return null;
-        }
+
         throw new UnsupportedOperationException();
     }
 }

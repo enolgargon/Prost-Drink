@@ -34,6 +34,14 @@ public class Juego {
         jugadorActual = 0;
     }
 
+    public Jugador getJugadorActual() {
+        return jugadores.get(jugadorActual);
+    }
+
+    public Regla getJuegoActual() {
+        return juegoActual;
+    }
+
     public Class<? extends InicioJuego> getSiguienteJuego() {
         String tipoPrueba = juegosValidos[(int) (Math.random() * (juegosValidos.length))];
         Regla regla = null;

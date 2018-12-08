@@ -8,25 +8,33 @@ import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.InicioJuego;
+import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.Reglas.Pregunta;
 
 public class PreguntaActivity extends AppCompatActivity implements InicioJuego {
-    private static Pregunta pregunta;
-
-    public static void setPregunta(Pregunta pregunta) {
-        PreguntaActivity.pregunta = pregunta;
-    }
+    private Pregunta pregunta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pregunta);
+        pregunta = (Pregunta) Juego.getInstance().getJuegoActual();
 
         ((TextView) findViewById(R.id.lblPregunta)).setText(pregunta.getPregunta());
     }
 
-    public void contestar(View v) {
+    private void siguiente(View v) {
         Intent mIntent = new Intent(getApplicationContext(), ResultadoActivity.class);
         startActivity(mIntent);
+    }
+
+    public void contestar(View v) {
+        pregunta.contestar();
+        siguiente(v);
+    }
+
+    public void pasar(View v) {
+        pregunta.pasar();
+        siguiente(v);
     }
 }

@@ -8,24 +8,34 @@ import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.InicioJuego;
+import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.Reglas.Reto;
 
 public class RetoActivity extends AppCompatActivity implements InicioJuego {
-    private static Reto reto;
-
-    public static void setReto(Reto reto) {
-        RetoActivity.reto = reto;
-    }
+    private Reto reto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reto);
+
+        reto = (Reto) Juego.getInstance().getJuegoActual();
+
         ((TextView) findViewById(R.id.lblReto)).setText(reto.getTexto());
     }
 
-    public void contestar(View v) {
+    private void siguiente(View v) {
         Intent mIntent = new Intent(getApplicationContext(), ResultadoActivity.class);
         startActivity(mIntent);
+    }
+
+    public void atreverse(View v) {
+        reto.atreverse();
+        siguiente(v);
+    }
+
+    public void pasar(View v) {
+        reto.pasar();
+        siguiente(v);
     }
 }
