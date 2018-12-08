@@ -1,14 +1,14 @@
 package com.cgi.sdm_project.igu.juego;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.cgi.sdm_project.R;
 
 
-public class JuegoActivity extends AppCompatActivity {
+public class InicioJuegoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

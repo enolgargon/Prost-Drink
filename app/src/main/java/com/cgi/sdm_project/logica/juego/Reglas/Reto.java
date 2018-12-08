@@ -4,8 +4,9 @@ import java.util.List;
 
 public class Reto extends ReglaTragable {
     private String texto;
+    private boolean atrevido;
 
-    public Reto(String texto, int tragos){
+    public Reto(String texto, int tragos) {
         super(tragos);
         this.texto = texto;
     }
@@ -16,7 +17,19 @@ public class Reto extends ReglaTragable {
         texto.replace("{0}", values.get(index));
     }
 
+    public void atreverse() {
+        atrevido = true;
+    }
+
+    public void pasar() {
+        atrevido = false;
+    }
+
     public String getTexto() {
         return texto;
+    }
+
+    public boolean isAtrevido() {
+        return atrevido;
     }
 }
