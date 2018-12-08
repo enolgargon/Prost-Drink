@@ -1,8 +1,11 @@
 package com.cgi.sdm_project.logica.juego;
 
+import com.cgi.sdm_project.igu.juego.loop.PreguntaActivity;
+import com.cgi.sdm_project.igu.juego.loop.RetoActivity;
+import com.cgi.sdm_project.igu.juego.loop.VotacionActivity;
 import com.cgi.sdm_project.logica.juego.Reglas.HastaQue;
-import com.cgi.sdm_project.logica.juego.Reglas.Tragable;
 import com.cgi.sdm_project.logica.juego.Reglas.Pregunta;
+import com.cgi.sdm_project.logica.juego.Reglas.Regla;
 import com.cgi.sdm_project.logica.juego.Reglas.Reto;
 import com.cgi.sdm_project.logica.juego.Reglas.Votacion;
 
@@ -23,17 +26,21 @@ public class AlmacenadorActivities {
         return instance;
     }
 
-    public InicioJuego getActivityFor(Tragable regla) {
-        if (regla instanceof Pregunta)
+    public Class<? extends InicioJuego> getActivityFor(Regla regla) {
+        if (regla instanceof Pregunta) {
+            PreguntaActivity.setPregunta((Pregunta) regla);
+            return PreguntaActivity.class;
+        } else if (regla instanceof HastaQue) {
             return null;
-        else if (regla instanceof HastaQue)
+        } else if (regla instanceof Reto) {
+            RetoActivity.setReto((Reto) regla);
+            return RetoActivity.class;
+        } else if (regla instanceof Votacion) {
+            VotacionActivity.setVotacion((Votacion) regla);
+            return VotacionActivity.class;
+        } else if (regla instanceof Juego) {
             return null;
-        else if (regla instanceof Reto)
-            return null;
-        else if (regla instanceof Votacion)
-            return null;
-        else if (regla instanceof Juego)
-            return null;
+        }
         throw new UnsupportedOperationException();
     }
 }

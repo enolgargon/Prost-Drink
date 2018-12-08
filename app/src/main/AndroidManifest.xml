@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".igu.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,27 +17,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".igu.juego.loop.VotacionActivity" />
-        <activity
-            android:name=".igu.sorteo.ResultadoSorteoActivity"
-            android:parentActivityName=".igu.sorteo.SortearActivity" />
-        <activity android:name=".igu.juego.loop.ResultadoActivity" />
-        <activity
-            android:name=".igu.juego.JuegoActivity"
-            android:parentActivityName=".igu.MainActivity" />
+
         <activity
             android:name=".igu.ConfiguracionActivity"
             android:parentActivityName=".igu.MainActivity" />
+
         <activity
             android:name=".igu.sorteo.SortearActivity"
             android:parentActivityName=".igu.MainActivity" />
         <activity
-            android:name=".igu.juego.JuegoPersonalizadoActivity"
-            android:parentActivityName=".igu.juego.JuegoActivity" />
+            android:name=".igu.sorteo.ResultadoSorteoActivity"
+            android:parentActivityName=".igu.sorteo.SortearActivity" />
+
+        <activity
+            android:name=".igu.juego.InicioJuegoActivity"
+            android:parentActivityName=".igu.MainActivity" />
         <activity
             android:name=".igu.juego.ElegirJugadoresActivity"
             android:parentActivityName=".igu.juego.JuegoPersonalizadoActivity" />
-        <activity android:name=".igu.juego.JuegoPreguntaActivity" />
+        <activity
+            android:name=".igu.juego.JuegoPersonalizadoActivity"
+            android:parentActivityName=".igu.juego.InicioJuegoActivity" />
+
+        <activity android:name=".igu.juego.loop.PreguntaActivity" />
+        <activity android:name=".igu.juego.loop.VotacionActivity" />
+        <activity android:name=".igu.juego.loop.RetoActivity" />
+
+        <activity android:name=".igu.juego.loop.ResultadoActivity" />
+
+
     </application>
 
 </manifest>

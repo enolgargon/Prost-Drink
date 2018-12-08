@@ -21,6 +21,7 @@ public class Loader {
         toRet.add(new Pregunta("¿Te has masturbado alguna vez delante de alguien? ¿De quién?", 3));
         return toRet;
     }
+
     public static List<Reto> loadRetos() {
         //TODO incorporar parser
         List<Reto> toRet = new ArrayList<>();
@@ -33,20 +34,24 @@ public class Loader {
         toRet.add(new Reto("Intenta poner caliente a la persona que más te guste de la mesa", 3));
         return toRet;
     }
+
     public static List<Votacion> loadVotaciones() {
         //TODO incorporar parser
         List<Votacion> toRet = new ArrayList<>();
-        toRet.add(new Votacion("Ser invisible", "Leer la mente", 2));
-        toRet.add(new Votacion("Morir congelado", "Morir quemado", 3));
-        toRet.add(new Votacion("Beber un litro de orina cada día", "Una noche de sexo con tu madre", 3));
-        toRet.add(new Votacion("Supositorio cada día", "Inyección cada día", 4));
-        toRet.add(new Votacion("Saber que te hen puesto los cuernos", "No enterarte nunca", 2));
+        toRet.add(new Votacion("¿Qué preferirías?", "Ser invisible", "Leer la mente", 2));
+        toRet.add(new Votacion("¿Qué preferirías?", "Morir congelado", "Morir quemado", 3));
+        toRet.add(new Votacion("¿Qué preferirías?", "Beber un litro de orina cada día", "Una noche de sexo con tu madre", 3));
+        toRet.add(new Votacion("¿Qué preferirías?", "Supositorio cada día", "Inyección cada día", 4));
+        toRet.add(new Votacion("¿Qué preferirías?",
+                "Saber que te hen puesto los cuernos", "No enterarte nunca", 2));
         return toRet;
     }
+
     public static List<Juego> loadJuegos() {
         //TODO implementar
         return null;
     }
+
     public static List<HastaQue> loadHastaQues() {
         //TODO incorporar parser
         List<HastaQue> toRet = new ArrayList<>();

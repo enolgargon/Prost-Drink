@@ -2,7 +2,7 @@ package com.cgi.sdm_project.logica.juego;
 
 import android.util.Log;
 
-import com.cgi.sdm_project.logica.juego.Reglas.IRegla;
+import com.cgi.sdm_project.logica.juego.Reglas.Regla;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -14,6 +14,7 @@ public class Juego {
 
     private List<Jugador> jugadores;
     private int jugadorActual;
+    private Regla juegoActual;
 
     private Juego() {
     }
@@ -33,23 +34,24 @@ public class Juego {
         jugadorActual = 0;
     }
 
-    public InicioJuego getSiguienteJuego() {
-        String tipoPrueba = juegosValidos[(int) (Math.random() * (juegosValidos.length + 1))];
-        IRegla regla = null;
+    public Class<? extends InicioJuego> getSiguienteJuego() {
+        String tipoPrueba = juegosValidos[(int) (Math.random() * (juegosValidos.length))];
+        Regla regla = null;
         try {
-            regla = (IRegla) ReglasJuego.class.getMethod("get" + tipoPrueba).invoke(ReglasJuego.getInstance());
+            regla = (Regla) ReglasJuego.class.getMethod("get" + tipoPrueba).invoke(ReglasJuego.getInstance());
         } catch (IllegalAccessException e) {
             throw new RuntimeException(e);
         } catch (InvocationTargetException e) {
-            Log.i("error", e.getCause().getMessage());
+            Log.i("ENOL", e.getCause().getMessage());
             throw new RuntimeException(e);
         } catch (NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
+        juegoActual = regla;
         return AlmacenadorActivities.getInstance().getActivityFor(regla);
     }
 
-    public InicioJuego finalizarRonda() {
+    public Class<? extends InicioJuego> finalizarRonda() {
         jugadorActual = ++jugadorActual % jugadores.size();
         return getSiguienteJuego();
     }

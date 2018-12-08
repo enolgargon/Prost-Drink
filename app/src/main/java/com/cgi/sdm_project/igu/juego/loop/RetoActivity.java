@@ -11,10 +11,10 @@ import com.cgi.sdm_project.logica.juego.InicioJuego;
 import com.cgi.sdm_project.logica.juego.Reglas.Reto;
 
 public class RetoActivity extends AppCompatActivity implements InicioJuego {
-    private Reto reto;
+    private static Reto reto;
 
-    public RetoActivity(Reto reto) {
-        this.reto = reto;
+    public static void setReto(Reto reto) {
+        RetoActivity.reto = reto;
     }
 
     @Override

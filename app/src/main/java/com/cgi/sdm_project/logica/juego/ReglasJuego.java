@@ -1,15 +1,16 @@
 package com.cgi.sdm_project.logica.juego;
 
 import com.cgi.sdm_project.logica.juego.Reglas.HastaQue;
+import com.cgi.sdm_project.logica.juego.Reglas.Juego;
 import com.cgi.sdm_project.logica.juego.Reglas.Pregunta;
 import com.cgi.sdm_project.logica.juego.Reglas.Reto;
 import com.cgi.sdm_project.logica.juego.Reglas.Votacion;
-import com.cgi.sdm_project.logica.juego.Reglas.Juego;
 import com.cgi.sdm_project.util.Loader;
 
 import java.util.List;
 
 public class ReglasJuego {
+    private static ReglasJuego instance;
 
     private List<Pregunta> preguntas;
     private List<Reto> retos;
@@ -17,11 +18,17 @@ public class ReglasJuego {
     private List<Juego> juegos;
     private List<HastaQue> hastaques;
 
-    public ReglasJuego(){
+    private ReglasJuego() {
         cargarReglas();
     }
 
-    public void cargarReglas(){
+    public static ReglasJuego getInstance() {
+        if (instance == null)
+            instance = new ReglasJuego();
+        return instance;
+    }
+
+    public void cargarReglas() {
         preguntas = Loader.loadPreguntas();
         retos = Loader.loadRetos();
         votaciones = Loader.loadVotaciones();
@@ -29,13 +36,23 @@ public class ReglasJuego {
         hastaques = Loader.loadHastaQues();
     }
 
-    public List<Pregunta> getPreguntas() { return preguntas; }
+    public Pregunta getPregunta() {
+        return preguntas.get((int) (Math.random() * (preguntas.size())));
+    }
 
-    public List<Reto> getRetos() { return retos; }
+    public Reto getReto() {
+        return retos.get((int) (Math.random() * (retos.size())));
+    }
 
-    public List<Votacion> getVotaciones() { return votaciones; }
+    public Votacion getVotacion() {
+        return votaciones.get((int) (Math.random() * (votaciones.size())));
+    }
 
-    public List<Juego> getJuegos() { return juegos; }
+    public Juego getJuego() {
+        return juegos.get((int) (Math.random() * (juegos.size())));
+    }
 
-    public List<HastaQue> getHastaques() { return hastaques; }
+    public HastaQue getHastaque() {
+        return hastaques.get((int) (Math.random() * (hastaques.size())));
+    }
 }

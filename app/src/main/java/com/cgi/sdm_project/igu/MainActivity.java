@@ -3,12 +3,12 @@ package com.cgi.sdm_project.igu;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.cgi.sdm_project.igu.juego.JuegoActivity;
 import com.cgi.sdm_project.R;
+import com.cgi.sdm_project.igu.juego.InicioJuegoActivity;
 import com.cgi.sdm_project.igu.sorteo.SortearActivity;
 import com.cgi.sdm_project.util.Conf;
 
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void lanzarJuego (View vs){
-        Intent mIntent = new Intent(this, JuegoActivity.class);
+        Intent mIntent = new Intent(this, InicioJuegoActivity.class);
         startActivity(mIntent);
     }
 

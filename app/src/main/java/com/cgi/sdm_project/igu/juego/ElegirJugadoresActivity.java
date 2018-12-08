@@ -88,7 +88,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Juego.getInstance().setJugadores(jugadores);
-                Intent mIntent = new Intent(getApplicationContext(), Juego.getInstance().getSiguienteJuego().getClass());
+                Intent mIntent = new Intent(getApplicationContext(), Juego.getInstance().getSiguienteJuego());
                 startActivity(mIntent);
             }
         });

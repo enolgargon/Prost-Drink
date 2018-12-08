@@ -11,10 +11,10 @@ import com.cgi.sdm_project.logica.juego.InicioJuego;
 import com.cgi.sdm_project.logica.juego.Reglas.Pregunta;
 
 public class PreguntaActivity extends AppCompatActivity implements InicioJuego {
-    private Pregunta pregunta;
+    private static Pregunta pregunta;
 
-    public PreguntaActivity(Pregunta pregunta) {
-        this.pregunta = pregunta;
+    public static void setPregunta(Pregunta pregunta) {
+        PreguntaActivity.pregunta = pregunta;
     }
 
     @Override

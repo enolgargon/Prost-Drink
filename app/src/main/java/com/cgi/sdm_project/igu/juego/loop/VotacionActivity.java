@@ -12,10 +12,10 @@ import com.cgi.sdm_project.logica.juego.InicioJuego;
 import com.cgi.sdm_project.logica.juego.Reglas.Votacion;
 
 public class VotacionActivity extends AppCompatActivity implements InicioJuego {
-    private Votacion votacion;
+    private static Votacion votacion;
 
-    public VotacionActivity(Votacion votacion) {
-        this.votacion = votacion;
+    public static void setVotacion(Votacion votacion) {
+        VotacionActivity.votacion = votacion;
     }
 
     @Override
@@ -23,7 +23,7 @@ public class VotacionActivity extends AppCompatActivity implements InicioJuego {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_votacion);
 
-        ((TextView) findViewById(R.id.lblPregunta)).setText(votacion.getTexto());
+        ((TextView) findViewById(R.id.txtTextoVotacion)).setText(votacion.getTexto());
         ((Button) findViewById(R.id.btnVotacionOpA)).setText(votacion.getOpciones()[0]);
         ((Button) findViewById(R.id.btnVotacionOpB)).setText(votacion.getOpciones()[1]);
     }
