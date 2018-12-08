@@ -1,8 +1,8 @@
 <actividad name="Juego">
-	<item text="Cazatopos" />
-	<item text="Adivinar personaje" />
-	<item text="Mimica de acciones" />
-	<item text="Lanzar moneda" />
-	<item text="Equilibrio entre todos" />
-	<item text="Apuntar con la brujula" />
+	<item text="Cazatopos"  tragos = "5"/>
+	<item text="Adivinar personaje"  tragos = "5"/>
+	<item text="Mimica de acciones"  tragos = "5"/>
+	<item text="Lanzar moneda"  tragos = "5"/>
+	<item text="Equilibrio entre todos"  tragos = "5"/>
+	<item text="Apuntar con la brujula" tragos = "5"/>
 </actividad>

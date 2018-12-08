@@ -1,35 +1,35 @@
 package com.cgi.sdm_project.util.parsers;
 
-import com.cgi.sdm_project.logica.juego.Reglas.HastaQue;
+import com.cgi.sdm_project.logica.juego.Reglas.Juego;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class HastaQueParser implements Parser<List<HastaQue>>{
-
+public class JuegosParser implements Parser<List<Juego>> {
     @Override
-    public List<HastaQue> execute(Document doc) {
+    public List<Juego> execute(Document doc) {
 
-        ArrayList<HastaQue> list = new ArrayList<HastaQue>();
+        ArrayList<Juego> list = new ArrayList<Juego>();
 
         Element raiz = doc.getDocumentElement();
         NodeList items = raiz.getElementsByTagName("item");
 
-        for (int i = 0; i < items.getLength(); i++){
+        for (int i = 0; i < items.getLength(); i++) {
             Node node = items.item(i);
 
             if (node.getNodeType() == Node.ELEMENT_NODE){
 
                 Element elemento = (Element) node;
                 String valor = elemento.getAttribute("text");
-                int numeroTurnos = Integer.parseInt(elemento.getAttribute("turnos"));
-                HastaQue hasta = new HastaQue(valor, numeroTurnos);
+                int numeroTragos = Integer.parseInt(elemento.getAttribute("tragos"));
 
-                list.add(hasta);
+                Juego juego = new Juego(valor, numeroTragos);
+                list.add(juego);
             }
         }
         return list;
