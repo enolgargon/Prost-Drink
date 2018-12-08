@@ -1,0 +1,7 @@
+<actividad name="Pregunta">
+	<item text="¿Te has o estas enamorado de un amigo/a?" tragos = "5"/>
+	<item text="¿Te liariías con alguien de la mesa?" tragos = "5"/>
+	<item text="¿Cuál ha sido el momento más caliente de tu vida?" tragos = "5" />
+	<item text="¿Alguna vez te han atado o has atado a alguien a la cama?" tragos = "5"/>
+	<item text="¿Te has masturbado alguna vez delante de alguien? ¿De quién?" tragos = "5"/>
+</actividad>

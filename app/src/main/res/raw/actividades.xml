@@ -1,0 +1,7 @@
+<actividades>
+	<item file="preguntas.xml" />
+	<item file="hasta.xml" />
+	<item file="retos.xml" />
+	<item file="votaciones.xml" />
+	<item file="juegos.xml" />
+</actividades>

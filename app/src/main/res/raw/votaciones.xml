@@ -1,0 +1,22 @@
+<actividad name="Votación">
+	<item text="Ser invisible o leer la mente" tragos = "5">
+		<value text="Ser invisible" />
+		<value text="Leer la mente" />
+	</item>
+	<item text="Morir congelado o morir quemado" tragos = "5">
+		<value text="Morir congelado" />
+		<value text="Morir quemado" />
+	</item>
+	<item text="Beber un litro de orina cada día o una noche de sexo con tu madre" tragos = "5">
+		<value text="Beber un litro de orina cada día"/>
+		<value text="Una noche de sexo con tu madre"/>
+	</item>
+	<item text="Supositorio cada día o inyección cada día" tragos = "5">
+		<value text="Supositorio cada día" />
+		<value text="Inyección cada día" />
+	</item>
+	<item text="Saber que te han puesto los cuernos o no enterarte nunca" tragos = "5">
+		<value text="Saber que te hen puesto los cuernos" />
+		<value text="No enterarte nunca" />
+	</item>
+</actividad>
