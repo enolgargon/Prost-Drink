@@ -1,49 +1,41 @@
 package com.cgi.sdm_project.logica.juego;
 
 import com.cgi.sdm_project.logica.juego.Reglas.HastaQue;
-import com.cgi.sdm_project.logica.juego.Reglas.Juego;
 import com.cgi.sdm_project.logica.juego.Reglas.Pregunta;
 import com.cgi.sdm_project.logica.juego.Reglas.Reto;
 import com.cgi.sdm_project.logica.juego.Reglas.Votacion;
+import com.cgi.sdm_project.logica.juego.Reglas.Juego;
+import com.cgi.sdm_project.util.Loader;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class ReglasJuego {
-    private static ReglasJuego instance;
 
-    private ArrayList<Pregunta> preguntas;
-    private ArrayList<Reto> retos;
-    private ArrayList<Votacion> votaciones;
-    private ArrayList<Juego> juegos;
-    private ArrayList<HastaQue> hastaques;
+    private List<Pregunta> preguntas;
+    private List<Reto> retos;
+    private List<Votacion> votaciones;
+    private List<Juego> juegos;
+    private List<HastaQue> hastaques;
 
-    private ReglasJuego() {
-
+    public ReglasJuego(){
+        cargarReglas();
     }
 
-    public static ReglasJuego getInstance() {
-        if (instance == null)
-            instance = new ReglasJuego();
-        return instance;
+    public void cargarReglas(){
+        preguntas = Loader.loadPreguntas();
+        retos = Loader.loadRetos();
+        votaciones = Loader.loadVotaciones();
+        juegos = Loader.loadJuegos();
+        hastaques = Loader.loadHastaQues();
     }
 
-    public Pregunta getPregunta() {
-        return preguntas.get((int) (Math.random() * (preguntas.size() + 1)));
-    }
+    public List<Pregunta> getPreguntas() { return preguntas; }
 
-    public Reto getReto() {
-        return retos.get((int) (Math.random() * (retos.size() + 1)));
-    }
+    public List<Reto> getRetos() { return retos; }
 
-    public Votacion getVotacion() {
-        return votaciones.get((int) (Math.random() * (votaciones.size() + 1)));
-    }
+    public List<Votacion> getVotaciones() { return votaciones; }
 
-    public Juego getJuego() {
-        return juegos.get((int) (Math.random() * (juegos.size() + 1)));
-    }
+    public List<Juego> getJuegos() { return juegos; }
 
-    public HastaQue getHastaQue() {
-        return hastaques.get((int) (Math.random() * (hastaques.size() + 1)));
-    }
+    public List<HastaQue> getHastaques() { return hastaques; }
 }

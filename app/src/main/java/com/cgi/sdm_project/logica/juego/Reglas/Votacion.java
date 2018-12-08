@@ -1,6 +1,6 @@
 package com.cgi.sdm_project.logica.juego.Reglas;
 
-public class Votacion extends Regla {
+public class Votacion extends ReglaTragable {
     private String[] opciones;
     private String texto;
 

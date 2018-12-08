@@ -1,11 +1,10 @@
 package com.cgi.sdm_project.logica.juego.Reglas;
 
-public class HastaQue extends Regla {
+public class HastaQue implements Regla{
     private String texto;
     private int turnos;
 
-    public HastaQue(String texto, int tragos, int turnos){
-        super(tragos);
+    public HastaQue(String texto, int turnos){
         this.texto = texto;
         this.turnos = turnos;
     }

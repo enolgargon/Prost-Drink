@@ -1,7 +1,7 @@
 package com.cgi.sdm_project.logica.juego;
 
 import com.cgi.sdm_project.logica.juego.Reglas.HastaQue;
-import com.cgi.sdm_project.logica.juego.Reglas.IRegla;
+import com.cgi.sdm_project.logica.juego.Reglas.Tragable;
 import com.cgi.sdm_project.logica.juego.Reglas.Pregunta;
 import com.cgi.sdm_project.logica.juego.Reglas.Reto;
 import com.cgi.sdm_project.logica.juego.Reglas.Votacion;
@@ -23,7 +23,7 @@ public class AlmacenadorActivities {
         return instance;
     }
 
-    public InicioJuego getActivityFor(IRegla regla) {
+    public InicioJuego getActivityFor(Tragable regla) {
         if (regla instanceof Pregunta)
             return null;
         else if (regla instanceof HastaQue)
