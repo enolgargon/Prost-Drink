@@ -14,9 +14,9 @@ public class Loader {
     public static List<Pregunta> loadPreguntas() {
 
         //TODO Introducir el documento a parsear correspondiente en cada comando en base al contexto
-        return FactoryParser.getPreguntaParser().execute(null);
+        //return FactoryParser.getPreguntaParser().execute(null);
 
-        /*
+        
         List<Pregunta> toRet = new ArrayList<>();
         toRet.add(new Pregunta("¿Te has o estás enamorado de un amigo/a?", 5));
         toRet.add(new Pregunta("¿Te liarías con alguien de la mesa?", 3));
@@ -24,13 +24,13 @@ public class Loader {
         toRet.add(new Pregunta("¿Alguna vez te han atado o has atado a alguien a la cama?", 4));
         toRet.add(new Pregunta("¿Te has masturbado alguna vez delante de alguien? ¿De quién?", 3));
         return toRet;
-        */
+        
     }
     public static List<Reto> loadRetos() {
 
         //TODO Introducir el documento a parsear correspondiente en cada comando en base al contexto
-        return FactoryParser.getRetoParser().execute(null);
-        /*
+        //return FactoryParser.getRetoParser().execute(null);
+        
         List<Reto> toRet = new ArrayList<>();
         toRet.add(new Reto("Las tres personas que señales con el dedo beben", 3));
         toRet.add(new Reto("Quien tenga una prenda de color {0} bebe", 2,
@@ -40,13 +40,13 @@ public class Loader {
         toRet.add(new Reto("Los que hayan discutido en lo dos últimos días beben", 2));
         toRet.add(new Reto("Intenta poner caliente a la persona que más te guste de la mesa", 3));
         return toRet;
-        */
+        
     }
     public static List<Votacion> loadVotaciones() {
 
         //TODO Introducir el documento a parsear correspondiente en cada comando en base al contexto
-        return FactoryParser.getVotacionParser().execute(null);
-        /*
+        //return FactoryParser.getVotacionParser().execute(null);
+        
         List<Votacion> toRet = new ArrayList<>();
 
         toRet.add(new Votacion(Arrays.asList("Ser invisible", "Leer la mente"),2));
@@ -56,23 +56,23 @@ public class Loader {
         toRet.add(new Votacion(Arrays.asList("Saber que te han puesto los cuernos", "No enterarte nunca"),2));
 
         return toRet;
-        */
+        
     }
     public static List<Juego> loadJuegos() {
         //TODO Introducir el documento a parsear correspondiente en cada comando en base al contexto
-        return FactoryParser.getJuegosParser().execute(null);
+        //return FactoryParser.getJuegosParser().execute(null);
     }
     public static List<HastaQue> loadHastaQues() {
 
         //TODO Introducir el documento a parsear correspondiente en cada comando en base al contexto
-        return FactoryParser.getHastaQueParser().execute(null);
-        /*
+        //return FactoryParser.getHastaQueParser().execute(null);
+        
         List<HastaQue> toRet = new ArrayList<>();
         toRet.add(new HastaQue("Hasta que te vuelva a tocar tienes que hablar y moverte como un robot", 5));
         toRet.add(new HastaQue("Hasta que te vuelva a tocar te tienen que tratar de usted", 7));
         toRet.add(new HastaQue("Hasta que te vuelva a tocar tienes que estar sin camiseta", 3));
         toRet.add(new HastaQue("Hasta que te vuelva a tocar tienes que estar sentado/a encima de la persona que más te guste de la mesa", 4));
         return toRet;
-        */
+        
     }
 }
