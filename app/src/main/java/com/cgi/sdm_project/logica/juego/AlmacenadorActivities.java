@@ -5,9 +5,9 @@ import com.cgi.sdm_project.igu.juego.loop.RetoActivity;
 import com.cgi.sdm_project.igu.juego.loop.VotacionActivity;
 import com.cgi.sdm_project.logica.juego.Reglas.HastaQue;
 import com.cgi.sdm_project.logica.juego.Reglas.Pregunta;
-import com.cgi.sdm_project.logica.juego.Reglas.Regla;
 import com.cgi.sdm_project.logica.juego.Reglas.Reto;
 import com.cgi.sdm_project.logica.juego.Reglas.Votacion;
+import com.cgi.sdm_project.logica.juego.reglas.Regla;
 
 /**
  * @author Enol García González (UO257775)
