@@ -16,7 +16,7 @@ public class Loader {
         //TODO Introducir el documento a parsear correspondiente en cada comando en base al contexto
         //return FactoryParser.getPreguntaParser().execute(null);
 
-        
+
         List<Pregunta> toRet = new ArrayList<>();
         toRet.add(new Pregunta("¿Te has o estás enamorado de un amigo/a?", 5));
         toRet.add(new Pregunta("¿Te liarías con alguien de la mesa?", 3));
@@ -24,7 +24,7 @@ public class Loader {
         toRet.add(new Pregunta("¿Alguna vez te han atado o has atado a alguien a la cama?", 4));
         toRet.add(new Pregunta("¿Te has masturbado alguna vez delante de alguien? ¿De quién?", 3));
         return toRet;
-        
+
     }
     public static List<Reto> loadRetos() {
 
@@ -61,6 +61,8 @@ public class Loader {
     public static List<Juego> loadJuegos() {
         //TODO Introducir el documento a parsear correspondiente en cada comando en base al contexto
         //return FactoryParser.getJuegosParser().execute(null);
+
+        throw new UnsupportedOperationException("Otro día");
     }
     public static List<HastaQue> loadHastaQues() {
 
