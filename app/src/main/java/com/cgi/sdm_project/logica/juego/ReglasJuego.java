@@ -1,10 +1,10 @@
 package com.cgi.sdm_project.logica.juego;
 
-import com.cgi.sdm_project.logica.juego.Reglas.HastaQue;
-import com.cgi.sdm_project.logica.juego.Reglas.Juego;
-import com.cgi.sdm_project.logica.juego.Reglas.Pregunta;
-import com.cgi.sdm_project.logica.juego.Reglas.Reto;
-import com.cgi.sdm_project.logica.juego.Reglas.Votacion;
+import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
+import com.cgi.sdm_project.logica.juego.reglas.Juego;
+import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
+import com.cgi.sdm_project.logica.juego.reglas.Reto;
+import com.cgi.sdm_project.logica.juego.reglas.Votacion;
 import com.cgi.sdm_project.util.Loader;
 
 import java.util.List;

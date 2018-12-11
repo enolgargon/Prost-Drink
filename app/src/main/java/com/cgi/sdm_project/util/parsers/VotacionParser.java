@@ -1,6 +1,6 @@
 package com.cgi.sdm_project.util.parsers;
 
-import com.cgi.sdm_project.logica.juego.Reglas.Votacion;
+import com.cgi.sdm_project.logica.juego.reglas.Votacion;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
