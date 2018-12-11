@@ -27,4 +27,9 @@ public class HastaQueActivity extends AppCompatActivity implements InicioJuego {
         Intent mIntent = new Intent(getApplicationContext(), ResultadoActivity.class);
         startActivity(mIntent);
     }
+
+    @Override
+    public void onBackPressed() {
+        //Eliminar la opcion de volver hacia atrás ya que no interesa
+    }
 }

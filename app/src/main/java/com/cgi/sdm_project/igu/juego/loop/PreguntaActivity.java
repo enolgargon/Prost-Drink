@@ -37,4 +37,9 @@ public class PreguntaActivity extends AppCompatActivity implements InicioJuego {
         pregunta.pasar();
         siguiente(v);
     }
+
+    @Override
+    public void onBackPressed() {
+        //Eliminar la opcion de volver hacia atrás ya que no interesa
+    }
 }

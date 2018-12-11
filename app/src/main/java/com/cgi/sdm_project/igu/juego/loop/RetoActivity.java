@@ -38,4 +38,9 @@ public class RetoActivity extends AppCompatActivity implements InicioJuego {
         reto.pasar();
         siguiente(v);
     }
+
+    @Override
+    public void onBackPressed() {
+        //Eliminar la opcion de volver hacia atrás ya que no interesa
+    }
 }

@@ -1,5 +1,6 @@
 package com.cgi.sdm_project.logica.juego.Reglas;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Votacion extends ReglaTragable {
@@ -7,12 +8,21 @@ public class Votacion extends ReglaTragable {
     private String texto;
 
     public Votacion(List<String> opciones, int tragos){
+
         super(tragos);
-        this.opciones = (String[]) opciones.toArray();
+        ArrayList<String> aux = new ArrayList<>(opciones);
+        this.opciones = new String[aux.size()];
+        for (int i = 0; i < aux.size(); i++)
+            this.opciones[i] = aux.get(i);
     }
 
     public String[] getOpciones() {
         return opciones.clone();
     }
 
+    public String getTexto(){ return texto;}
+
+    public void votar(int i) {
+        //TODO implementar el metodo para almacenar los votos
+    }
 }

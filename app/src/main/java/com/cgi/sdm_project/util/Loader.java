@@ -61,6 +61,7 @@ public class Loader {
     public static List<Juego> loadJuegos() {
         //TODO Introducir el documento a parsear correspondiente en cada comando en base al contexto
         //return FactoryParser.getJuegosParser().execute(null);
+        return null;
     }
     public static List<HastaQue> loadHastaQues() {
 
