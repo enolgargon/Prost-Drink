@@ -61,7 +61,7 @@ Tareas pendientes:
 * Ejecutar limpieza del fichero de String
 * Acabar el loader de los xml
 * Solución de bugs
- * Botón pulsar hacia atrás
+ * Botón pulsar hacia atrás _Listo_
 * Organizar los layouts
 * Mejorar diseño gráfico y la apariencia
  * Cambio de los botones de la ventana principal para que esten en la barra superior
