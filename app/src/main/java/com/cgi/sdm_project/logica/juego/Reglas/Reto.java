@@ -1,10 +1,11 @@
-package com.cgi.sdm_project.logica.juego.Reglas;
+package com.cgi.sdm_project.logica.juego.reglas;
 
 import java.util.List;
 
 public class Reto extends ReglaTragable {
     private String texto;
     private boolean atrevido;
+    private List<String> valores;
 
     public Reto(String texto, int tragos) {
         super(tragos);
@@ -13,8 +14,7 @@ public class Reto extends ReglaTragable {
 
     public Reto(String texto, int tragos, List<String> values) {
         this(texto, tragos);
-        int index = (int) Math.floor(Math.random() * values.size());
-        texto.replace("{0}", values.get(index));
+        this.valores = values;
     }
 
     public void atreverse() {
@@ -26,7 +26,7 @@ public class Reto extends ReglaTragable {
     }
 
     public String getTexto() {
-        return texto;
+        return valores == null ? texto : String.format(texto, valores.get((int) (Math.random() * valores.size())));
     }
 
     public boolean isAtrevido() {

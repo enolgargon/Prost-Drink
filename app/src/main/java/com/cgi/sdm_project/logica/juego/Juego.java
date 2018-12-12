@@ -2,14 +2,14 @@ package com.cgi.sdm_project.logica.juego;
 
 import android.util.Log;
 
-import com.cgi.sdm_project.logica.juego.Reglas.Regla;
+import com.cgi.sdm_project.logica.juego.reglas.Regla;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Juego {
-    private static String[] juegosValidos = new String[]{"Reto", "Votacion", "Pregunta"};
+    private static String[] juegosValidos = new String[]{"Reto", "Votacion", "Pregunta", "Hastaque"};
     private static Juego juego;
 
     private List<Jugador> jugadores;

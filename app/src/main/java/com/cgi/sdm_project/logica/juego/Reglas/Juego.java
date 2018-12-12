@@ -1,4 +1,4 @@
-package com.cgi.sdm_project.logica.juego.Reglas;
+package com.cgi.sdm_project.logica.juego.reglas;
 
 public class Juego extends ReglaTragable{
 

@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.InicioJuego;
 import com.cgi.sdm_project.logica.juego.Juego;
-import com.cgi.sdm_project.logica.juego.Reglas.Reto;
+import com.cgi.sdm_project.logica.juego.reglas.Reto;
 
 public class RetoActivity extends AppCompatActivity implements InicioJuego {
     private Reto reto;

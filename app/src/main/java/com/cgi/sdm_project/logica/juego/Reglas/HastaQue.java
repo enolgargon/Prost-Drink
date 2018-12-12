@@ -1,4 +1,4 @@
-package com.cgi.sdm_project.logica.juego.Reglas;
+package com.cgi.sdm_project.logica.juego.reglas;
 
 public class HastaQue implements Regla{
     private String texto;
@@ -14,4 +14,9 @@ public class HastaQue implements Regla{
     }
 
     public int getTurnos(){ return turnos; }
+
+    @Override
+    public String toString() {
+        return "texto:" + texto + "-turnos:"+turnos;
+    }
 }

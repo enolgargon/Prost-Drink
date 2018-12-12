@@ -1,12 +1,13 @@
 <actividad name="Reto">
-	<item text="Las tres personas que señales con el dedo beben" tragos = "5"/>
-	<item text="Quien tenga una prenda de color {0} bebe" tragos = "5">
+
+	<item text="Quien tenga una prenda de color %s bebe" tragos = "5">
 		<value text="rojo" />
 		<value text="azul" />
 		<value text="verde" />
 		<value text="negro" />
 		<value text="marron" />
 	</item>
+	<item text="Las tres personas que señales con el dedo beben" tragos = "5"/>
 	<item text="Decir personajes de los Simpson. Quien repita pierde" tragos = "5"/>
 	<item text="Retuércete los pezones hasta que esten bien duritos" tragos = "5"/>
 	<item text="Los que hayan discutido en lo dos últimos días beben" tragos = "5"/>

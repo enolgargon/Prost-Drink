@@ -1,6 +1,6 @@
 package com.cgi.sdm_project.util.parsers;
 
-import com.cgi.sdm_project.logica.juego.Reglas.Votacion;
+import com.cgi.sdm_project.logica.juego.reglas.Votacion;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -26,6 +26,8 @@ public class VotacionParser implements Parser<List<Votacion>>{
             if (node.getNodeType() == Node.ELEMENT_NODE){
                 Element elemento = (Element) node;
                 int numeroTragos = Integer.parseInt(elemento.getAttribute("tragos"));
+                String texto = elemento.getAttribute("text");
+
 
                 List<String> valores = new ArrayList<>();
                 for (int j = 0; j < node.getChildNodes().getLength(); j++){
@@ -36,7 +38,7 @@ public class VotacionParser implements Parser<List<Votacion>>{
                         valores.add(elementAux.getAttribute("text"));
                     }
                 }
-                Votacion votacion = new Votacion(valores, numeroTragos);
+                Votacion votacion = new Votacion(valores, numeroTragos, texto);
                 list.add(votacion);
             }
         }

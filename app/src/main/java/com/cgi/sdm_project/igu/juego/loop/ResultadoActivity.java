@@ -9,7 +9,7 @@ import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.FinJuego;
 import com.cgi.sdm_project.logica.juego.IFinJuego;
 import com.cgi.sdm_project.logica.juego.Juego;
-import com.cgi.sdm_project.logica.juego.Reglas.Tragable;
+import com.cgi.sdm_project.logica.juego.reglas.Tragable;
 
 public class ResultadoActivity extends AppCompatActivity implements IFinJuego {
     public static final String REGLA = "REGLA";
