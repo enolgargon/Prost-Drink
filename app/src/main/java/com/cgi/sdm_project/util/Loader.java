@@ -89,6 +89,8 @@ public class Loader {
     }
     public static List<Juego> loadJuegos() {
         return FactoryParser.getJuegosParser().execute(getXML(R.raw.juegos));
+        //TODO Introducir el documento a parsear correspondiente en cada comando en base al contexto
+   
     }
     public static List<HastaQue> loadHastaQues() {
 

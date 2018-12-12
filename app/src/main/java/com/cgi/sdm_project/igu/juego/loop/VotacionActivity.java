@@ -40,4 +40,9 @@ public class VotacionActivity extends AppCompatActivity implements InicioJuego {
         votacion.votar(1);
         siguiente(v);
     }
+
+    @Override
+    public void onBackPressed() {
+        //Eliminar la opcion de volver hacia atrás ya que no interesa
+    }
 }
