@@ -26,7 +26,7 @@
         android:layout_marginEnd="148dp"
         android:layout_marginBottom="32dp"
         android:onClick="confirmarNotificacion"
-        android:text="@string/siguiente"
+        android:text="@string/notificaciones_seguir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

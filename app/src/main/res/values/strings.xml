@@ -51,6 +51,12 @@
     <string name="Votaciones">Votaciones</string>
     <string name="Jugar">Jugar</string>
 
+    <!-- Dialogo back -->
+    <string name="titulo_back">Salir del juego</string>
+    <string name="texto_back">¿Estás seguro de que quieres salir del juego?</string>
+    <string name="OK">OK</string>
+    <string name="Cancelar">Cancelar</string>
+
     <!-- ACTIVITIES DEL JUEGO PRINCIPAL -->
     <!-- Activity Preguntas -->
     <string name="Contestar">Contestar</string>
@@ -73,6 +79,9 @@
     <!-- También usado en:
         Activity Hasta que
     -->
+
+    <!-- Activity Resultados -->
+    <string name="notificaciones_seguir">Seguir</string>
 
 
     <!-- ACTIVITIES DE LA SECCIÓN DE SORTEO -->
