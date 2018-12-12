@@ -57,20 +57,6 @@ Objetivos:
 * Sorteo implementado: _Listo_
 * Preguntas implementadas: _Listo_
 
-Tareas pendientes:
-* Ejecutar limpieza del fichero de String
-* Acabar el loader de los xml
-* Solución de bugs
- * Botón pulsar hacia atrás: **_Listo_**
-* Organizar los layouts
-* Mejorar diseño gráfico y la apariencia
- * Cambio de los botones de la ventana principal para que esten en la barra superior
- * Aplicar tema
- * Replantearse contenido de texto de los botones
- * Añadir texto del jugador actual
-* Reunión
- * Diseño de software
- * Documentación
  
 ## Lunes 10 de diciembre - 12 de diciembre
 Una pequeña iteración para poner el proyecto al día antes de la reunión de equipo.
@@ -78,3 +64,20 @@ Una pequeña iteración para poner el proyecto al día antes de la reunión de e
 * Acabar loader -> Samu
 * Solución bugs -> Jorge
 **Proxima reunión para temas de diseño de software y grafico: 12 de diciembre**
+
+## Miércoles 12 de diciembre -  Miércoles 19 de diciembre
+Tras el Scrum Team
+* Evitar que se lance sin jugadores -> Jorge
+* Contemplar que no existan reglas -> Enol
+* Creación estilos  -> Samuel  **Prioritario**
+* Etiquetación elementos con sus estilos
+ * Main layout, sorteos y resultados: Jorge
+ * Reglas activities: Enol
+ * Resto: Samuel
+* Crear imágenes -> Samuel
+* Insertar ImageViews -> Jorge
+* String de resultados -> Enol
+* Notificaciones -> Enol
+
+
+## Fin del desarrollo 28 de diciembre de 2018
