@@ -1,12 +1,13 @@
 package com.cgi.sdm_project.logica.juego;
 
+import com.cgi.sdm_project.igu.juego.loop.HastaQueActivity;
 import com.cgi.sdm_project.igu.juego.loop.PreguntaActivity;
 import com.cgi.sdm_project.igu.juego.loop.RetoActivity;
 import com.cgi.sdm_project.igu.juego.loop.VotacionActivity;
-import com.cgi.sdm_project.logica.juego.Reglas.HastaQue;
-import com.cgi.sdm_project.logica.juego.Reglas.Pregunta;
-import com.cgi.sdm_project.logica.juego.Reglas.Reto;
-import com.cgi.sdm_project.logica.juego.Reglas.Votacion;
+import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
+import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
+import com.cgi.sdm_project.logica.juego.reglas.Reto;
+import com.cgi.sdm_project.logica.juego.reglas.Votacion;
 import com.cgi.sdm_project.logica.juego.reglas.Regla;
 
 /**
@@ -30,7 +31,7 @@ public class AlmacenadorActivities {
         if (regla instanceof Pregunta)
             return PreguntaActivity.class;
         else if (regla instanceof HastaQue)
-            return null;
+            return HastaQueActivity.class;
         else if (regla instanceof Reto)
             return RetoActivity.class;
         else if (regla instanceof Votacion)

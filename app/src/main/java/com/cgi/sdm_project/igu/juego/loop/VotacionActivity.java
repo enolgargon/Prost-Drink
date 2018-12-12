@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.InicioJuego;
 import com.cgi.sdm_project.logica.juego.Juego;
-import com.cgi.sdm_project.logica.juego.Reglas.Votacion;
+import com.cgi.sdm_project.logica.juego.reglas.Votacion;
 
 public class VotacionActivity extends AppCompatActivity implements InicioJuego {
     private Votacion votacion;

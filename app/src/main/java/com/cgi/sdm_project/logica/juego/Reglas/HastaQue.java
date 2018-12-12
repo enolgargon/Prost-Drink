@@ -14,4 +14,9 @@ public class HastaQue implements Regla{
     }
 
     public int getTurnos(){ return turnos; }
+
+    @Override
+    public String toString() {
+        return "texto:" + texto + "-turnos:"+turnos;
+    }
 }

@@ -7,11 +7,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
+import com.cgi.sdm_project.logica.juego.FinJuego;
+import com.cgi.sdm_project.logica.juego.IFinJuego;
 import com.cgi.sdm_project.logica.juego.InicioJuego;
 import com.cgi.sdm_project.logica.juego.Juego;
-import com.cgi.sdm_project.logica.juego.Reglas.HastaQue;
+import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
 
-public class HastaQueActivity extends AppCompatActivity implements InicioJuego {
+public class HastaQueActivity extends AppCompatActivity implements InicioJuego, IFinJuego {
     private HastaQue hastaQue;
 
     @Override
@@ -24,7 +26,11 @@ public class HastaQueActivity extends AppCompatActivity implements InicioJuego {
     }
 
     public void siguiente(View v) {
-        Intent mIntent = new Intent(getApplicationContext(), ResultadoActivity.class);
-        startActivity(mIntent);
+        cargarSiguienteJuego(v);
+    }
+
+    @Override
+    public void cargarSiguienteJuego(View view) {
+        new FinJuego().cargarSiguienteJuego(view);
     }
 }

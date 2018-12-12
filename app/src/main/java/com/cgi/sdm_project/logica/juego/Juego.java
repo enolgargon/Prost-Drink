@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Juego {
-    private static String[] juegosValidos = new String[]{"Reto", "Votacion", "Pregunta"};
+    private static String[] juegosValidos = new String[]{"Reto", "Votacion", "Pregunta", "Hastaque"};
     private static Juego juego;
 
     private List<Jugador> jugadores;
