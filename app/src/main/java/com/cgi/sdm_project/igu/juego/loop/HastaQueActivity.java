@@ -31,6 +31,7 @@ public class HastaQueActivity extends AppCompatActivity implements InicioJuego, 
 
     @Override
     public void cargarSiguienteJuego(View view) {
+        hastaQue.confirmarHastaQue();
         new FinJuego().cargarSiguienteJuego(view);
     }
 

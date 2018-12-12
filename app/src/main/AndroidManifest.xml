@@ -3,12 +3,12 @@
     package="com.cgi.sdm_project">
 
     <application
+        android:name=".util.AppSingleton"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name = ".util.AppSingleton"
         android:theme="@style/AppTheme">
         <activity android:name=".igu.MainActivity">
             <intent-filter>
@@ -38,8 +38,9 @@
         <activity android:name=".igu.juego.loop.PreguntaActivity" />
         <activity android:name=".igu.juego.loop.VotacionActivity" />
         <activity android:name=".igu.juego.loop.RetoActivity" />
-        <activity android:name=".igu.juego.loop.ResultadoActivity" />
         <activity android:name=".igu.juego.loop.HastaQueActivity"></activity>
+        <activity android:name=".igu.juego.loop.ResultadoActivity" />
+        <activity android:name=".igu.juego.loop.NotificacionActivity" />
     </application>
 
 </manifest>

@@ -118,4 +118,7 @@
     <!-- VOTACIONES -->
     <string name="resultado_votacion_bebe">Los que hayan votado %s beben %d</string>
     <string name="resultado_votacion_manda">Los que hayan votado %s pueden mandar beber %d a quien quieran</string>
+
+    <!-- HASTA QUE -> Notificacion -->
+    <string name="notificacion_hasta_que">El jugador %s ya ha finalizado su hasta que</string>
 </resources>
