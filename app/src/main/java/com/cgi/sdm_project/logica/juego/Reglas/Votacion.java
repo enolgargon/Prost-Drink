@@ -7,7 +7,6 @@ public class Votacion extends ReglaTragable {
     private String[] opciones;
     private String texto;
 
-
     public Votacion(List<String> opciones, int tragos, String texto){
 
         super(tragos);

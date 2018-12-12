@@ -26,4 +26,9 @@ public class ResultadoActivity extends AppCompatActivity implements IFinJuego {
     public void cargarSiguienteJuego(View view) {
         new FinJuego().cargarSiguienteJuego(view);
     }
+
+    @Override
+    public void onBackPressed() {
+        //Eliminar la opcion de volver hacia atrás ya que no interesa
+    }
 }
