@@ -46,7 +46,8 @@ public class Juego {
         String tipoPrueba = juegosValidos[(int) (Math.random() * (juegosValidos.length))];
         Regla regla = null;
         try {
-            regla = (Regla) ReglasJuego.class.getMethod("get" + tipoPrueba).invoke(ReglasJuego.getInstance());
+            while (regla == null)
+                regla = (Regla) ReglasJuego.class.getMethod("get" + tipoPrueba).invoke(ReglasJuego.getInstance());
         } catch (IllegalAccessException e) {
             throw new RuntimeException(e);
         } catch (InvocationTargetException e) {
