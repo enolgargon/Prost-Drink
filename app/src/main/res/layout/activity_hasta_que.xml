@@ -38,7 +38,6 @@
         android:paddingEnd="24dp"
         android:paddingRight="24dp"
         android:paddingBottom="24dp"
-        android:text="@string/PLACEHOLDER"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
