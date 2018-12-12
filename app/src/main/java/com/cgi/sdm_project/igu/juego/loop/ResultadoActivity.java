@@ -18,6 +18,8 @@ public class ResultadoActivity extends AppCompatActivity implements IFinJuego {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultado);
+
+        ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
         ((TextView) findViewById(R.id.txtResultado)).setText(((Tragable) Juego.getInstance().getJuegoActual()).getResultado());
     }
 

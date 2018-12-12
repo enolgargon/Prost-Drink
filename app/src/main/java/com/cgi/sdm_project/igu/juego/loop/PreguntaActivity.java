@@ -20,6 +20,7 @@ public class PreguntaActivity extends AppCompatActivity implements InicioJuego {
         setContentView(R.layout.activity_pregunta);
         pregunta = (Pregunta) Juego.getInstance().getJuegoActual();
 
+        ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
         ((TextView) findViewById(R.id.lblPregunta)).setText(pregunta.getPregunta());
     }
 

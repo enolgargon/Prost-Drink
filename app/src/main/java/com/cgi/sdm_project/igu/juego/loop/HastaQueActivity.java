@@ -1,8 +1,7 @@
 package com.cgi.sdm_project.igu.juego.loop;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -22,6 +21,7 @@ public class HastaQueActivity extends AppCompatActivity implements InicioJuego, 
         setContentView(R.layout.activity_hasta_que);
         hastaQue = (HastaQue) Juego.getInstance().getJuegoActual();
 
+        ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
         ((TextView) findViewById(R.id.lblHastaQue)).setText(hastaQue.getTexto());
     }
 

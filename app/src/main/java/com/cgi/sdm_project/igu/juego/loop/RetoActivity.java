@@ -21,6 +21,7 @@ public class RetoActivity extends AppCompatActivity implements InicioJuego {
 
         reto = (Reto) Juego.getInstance().getJuegoActual();
 
+        ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
         ((TextView) findViewById(R.id.lblReto)).setText(reto.getTexto());
     }
 

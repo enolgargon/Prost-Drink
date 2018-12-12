@@ -21,6 +21,7 @@ public class VotacionActivity extends AppCompatActivity implements InicioJuego {
         setContentView(R.layout.activity_votacion);
         votacion = (Votacion) Juego.getInstance().getJuegoActual();
 
+        ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
         ((TextView) findViewById(R.id.txtTextoVotacion)).setText(votacion.getTexto());
         ((Button) findViewById(R.id.btnVotacionOpA)).setText(votacion.getOpciones()[0]);
         ((Button) findViewById(R.id.btnVotacionOpB)).setText(votacion.getOpciones()[1]);
