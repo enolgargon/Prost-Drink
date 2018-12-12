@@ -6,93 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="373dp"
-        android:layout_height="241dp"
+    <Button
+        android:id="@+id/btnJugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="lanzarJuego"
+        android:text="@string/Jugar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintVertical_bias="0.968">
-
-        <TextView
-            android:id="@+id/txtResultado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/Resultados"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.058"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.04" />
-
-        <LinearLayout
-            android:id="@+id/layResultados"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="108dp"
-            android:layout_marginBottom="28dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtResultado">
-
-            <CheckBox
-                android:id="@+id/ckBebe"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Bebe" />
-
-            <CheckBox
-                android:id="@+id/ckMandaBeber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/MandaBeber" />
-
-            <CheckBox
-                android:id="@+id/ckCastigo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Castigo" />
-
-            <CheckBox
-                android:id="@+id/ckReto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Reto" />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btnJugar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:onClick="lanzarJuego"
-            android:text="@string/Jugar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.97"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layResultados"
-            app:layout_constraintVertical_bias="0.0" />
-
-    </android.support.constraint.ConstraintLayout>
+        app:layout_constraintVertical_bias="0.644" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -104,10 +33,10 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.429">
 
         <TextView
             android:id="@+id/txtJuego"
