@@ -21,6 +21,12 @@ public class Pregunta extends ReglaTragable {
         return pregunta;
     }
 
+    protected String nombreRespuesta() {
+        if (isContestada())
+            return "pregunta_contestada" + ((int) (Math.random() * 3) + 1);
+        return "pregunta_nocontestada" + ((int) (Math.random() * 3) + 1);
+    }
+
     public boolean isContestada() {
         return contestada;
     }

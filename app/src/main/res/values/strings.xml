@@ -67,10 +67,27 @@
     <string name="Idioma">Idioma</string>
 
     <string name="PreguntaEjemplo">¿Te has o estas enamorado de un amigo/a?</string>
-    <string name="ResultadoEjemplo">Bebe %d, champ</string>
+    <string name="resultado_generar">Bebe %d, champ</string>
     <string name="error_nombre_sorteo">Debes introducir un nombre para el jugador</string>
     <string name="error_equipos_menor">No puedes crear un número de equipos 0 o negativo</string>
     <string name="error_equipos_mayor">No puede haber pas equipos que jugadores</string>
     <string name="Guardar">Guardar</string>
     <string name="CambiosGuardados">Se han guardado tus cambios</string>
+
+    <string name="pregunta_contestada1">Bien!! Por haber contestado puedes mandar beber %d a quien tu quieras</string>
+    <string name="pregunta_contestada2">Así se juega, manda beber %d a quien tu quieras</string>
+    <string name="pregunta_contestada3">¿¿Este juego es maravilloso, verdad?? Manda beber %d a quien tu quieras y recomienda la app a más gente</string>
+    <string name="pregunta_nocontestada1">Si esto solo es un juego… Bebe %d, a ver si para la próxima contestas</string>
+    <string name="pregunta_nocontestada2">No has entendido como hay que jugar. Para ganar hay que ser valiente, bebe %d</string>
+    <string name="pregunta_nocontestada3">Parece que la cosa todavía esta fría. Bebe %d a ver si entras en calor</string>
+
+    <string name="resultado_atrevido1">En este juego nos gusta la gente atrevida. Puedes mandar beber %d a quien tu quieras</string>
+    <string name="resultado_atrevido2">¿No crees que tus amigos están demasiado bien? Reparte %d tragos</string>
+    <string name="resultado_atrevido3">Muy bien!! Por valiente te toca elegir quien bebe tus %d tragos</string>
+    <string name="resultado_cobarde1">Cloc-cloc!! Gallina. A los cobardes les toca beber. Bebe %d</string>
+    <string name="resultado_cobarde2">No has entendido como hay que jugar. Para ganar hay que ser valiente, bebe %d a ver si la próxima te animas</string>
+    <string name="resultado_cobarde3">Hay algo que no funciona. Los cobardes se quedan en casa. Bebe %d y la próxima vez échale huevos</string>
+
+    <string name="resultado_votacion_bebe">Los que hayan votado %s beben %d</string>
+    <string name="resultado_votacion_manda">Los que hayan votado %s pueden mandar beber %d a quien quieran</string>
 </resources>

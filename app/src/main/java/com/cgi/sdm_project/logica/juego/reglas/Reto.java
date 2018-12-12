@@ -25,6 +25,12 @@ public class Reto extends ReglaTragable {
         atrevido = false;
     }
 
+    protected String nombreRespuesta() {
+        if (isAtrevido())
+            return "resultado_atrevido" + ((int) (Math.random() * 3) + 1);
+        return "resultado_cobarde" + ((int) (Math.random() * 3) + 1);
+    }
+
     public String getTexto() {
         return valores == null ? texto : String.format(texto, valores.get((int) (Math.random() * valores.size())));
     }

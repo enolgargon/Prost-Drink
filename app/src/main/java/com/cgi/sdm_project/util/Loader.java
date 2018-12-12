@@ -2,7 +2,6 @@ package com.cgi.sdm_project.util;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
-import com.cgi.sdm_project.logica.juego.reglas.Juego;
 import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
 import com.cgi.sdm_project.logica.juego.reglas.Reto;
 import com.cgi.sdm_project.logica.juego.reglas.Votacion;
@@ -22,16 +21,17 @@ public class Loader {
 
     /**
      * Carga un xml desde la carpeta raw y devuelve un Document
-     * @param xml de la carpeta raw
+     *
+     * @param res de la carpeta raw
      * @return Document para enviar a los parsers
      */
-    private static Document getXML(int res){
+    private static Document getXML(int res) {
         try {
             DocumentBuilder db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             Document doc = db.parse(AppSingleton.getInstance().getContext()
                     .getResources().openRawResource(res));
             return doc;
-        }catch (ParserConfigurationException e){
+        } catch (ParserConfigurationException e) {
             e.printStackTrace();
             return null;
         } catch (SAXException e) {
@@ -57,6 +57,7 @@ public class Loader {
         return toRet;
         */
     }
+
     public static List<Reto> loadRetos() {
         return FactoryParser.getRetoParser().execute(getXML(R.raw.retos));
         /*
@@ -71,6 +72,7 @@ public class Loader {
         return toRet;
         */
     }
+
     public static List<Votacion> loadVotaciones() {
 
         return FactoryParser.getVotacionParser().execute(getXML(R.raw.votaciones));
@@ -87,11 +89,7 @@ public class Loader {
         return toRet;
         */
     }
-    public static List<Juego> loadJuegos() {
-        return FactoryParser.getJuegosParser().execute(getXML(R.raw.juegos));
-        //TODO Introducir el documento a parsear correspondiente en cada comando en base al contexto
-   
-    }
+
     public static List<HastaQue> loadHastaQues() {
 
         return FactoryParser.getHastaQueParser().execute(getXML(R.raw.hasta));

@@ -1,7 +1,6 @@
 package com.cgi.sdm_project.logica.juego;
 
 import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
-import com.cgi.sdm_project.logica.juego.reglas.Juego;
 import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
 import com.cgi.sdm_project.logica.juego.reglas.Reto;
 import com.cgi.sdm_project.logica.juego.reglas.Votacion;
@@ -15,7 +14,6 @@ public class ReglasJuego {
     private List<Pregunta> preguntas;
     private List<Reto> retos;
     private List<Votacion> votaciones;
-    private List<Juego> juegos;
     private List<HastaQue> hastaques;
 
     private ReglasJuego() {
@@ -32,7 +30,6 @@ public class ReglasJuego {
         preguntas = Loader.loadPreguntas();
         retos = Loader.loadRetos();
         votaciones = Loader.loadVotaciones();
-        juegos = Loader.loadJuegos();
         hastaques = Loader.loadHastaQues();
     }
 
@@ -46,10 +43,6 @@ public class ReglasJuego {
 
     public Votacion getVotacion() {
         return votaciones.get((int) (Math.random() * (votaciones.size())));
-    }
-
-    public Juego getJuego() {
-        return juegos.get((int) (Math.random() * (juegos.size())));
     }
 
     public HastaQue getHastaque() {
