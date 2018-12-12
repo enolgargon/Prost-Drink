@@ -39,10 +39,6 @@ public class JuegoPersonalizadoActivity extends AppCompatActivity{
         yoNunca = findViewById(R.id.ckYoNunca);
         juegos = findViewById(R.id.ckJuegos);
         votaciones = findViewById(R.id.ckVotaciones);
-        bebe = findViewById(R.id.ckBebe);
-        mandaBeber = findViewById(R.id.ckMandaBeber);
-        castigo = findViewById(R.id.ckCastigo);
-        reto = findViewById(R.id.ckReto);
     }
 
     private void cargarPreferencias() {
@@ -53,10 +49,6 @@ public class JuegoPersonalizadoActivity extends AppCompatActivity{
         yoNunca.setChecked(conf.getYoNunca());
         juegos.setChecked(conf.getJuegos());
         votaciones.setChecked(conf.getVotaciones());
-        bebe.setChecked(conf.getBebe());
-        mandaBeber.setChecked(conf.getMandaBeber());
-        castigo.setChecked(conf.getCastigo());
-        reto.setChecked(conf.getReto());
     }
 
     private void guardarPreferencias(){
@@ -67,10 +59,6 @@ public class JuegoPersonalizadoActivity extends AppCompatActivity{
         conf.setYoNunca(yoNunca.isChecked());
         conf.setJuegos(juegos.isChecked());
         conf.setVotaciones(votaciones.isChecked());
-        conf.setBebe(bebe.isChecked());
-        conf.setMandaBeber(mandaBeber.isChecked());
-        conf.setCastigo(castigo.isChecked());
-        conf.setReto(reto.isChecked());
 
     }
 }

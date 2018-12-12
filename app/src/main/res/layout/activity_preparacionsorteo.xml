@@ -90,7 +90,8 @@
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:onClick="addJugador"
-            android:text="@string/añadirParticipante" />
+            android:text="@string/añadirParticipante"
+            android:theme="@android:style/Theme.Material.Light" />
 
         <Button
             android:id="@+id/btnSortear"
