@@ -1,24 +1,23 @@
 <resources>
 
     <!-- Base application theme. -->
-
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:statusBarColor">@android:color/background_dark</item>
+    </style>
+    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="MainBtn" parent="AppTheme" >
+    <style name="AppTheme.Base.Button" parent = "Widget.AppCompat.Button">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
     </style>
 
-    <style name="InvertedBtn" parent="AppTheme" >
+    <style name="AppTheme.Base.InvertedButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:backgroundTint">@android:color/transparent</item>
     </style>
 
-    <style name="Lista" parent="AppTheme" >
-    </style>
-
-    <style name="FAB" parent="AppTheme" >
-    </style>
 
 </resources>

@@ -68,10 +68,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="lanzarJuego"
-            android:text="@string/principal_juego" />
+            android:text="@string/principal_juego"
+            style="@style/AppTheme.Base.Button"/>
 
         <Button
             android:id="@+id/btnSorteo"
+            style="@style/AppTheme.Base.InvertedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="lanzarSortear"
