@@ -3,8 +3,8 @@ package com.cgi.sdm_project.logica.juego.juego;
 import android.support.annotation.NonNull;
 
 public class Notificacion implements Comparable<Notificacion> {
-    private long turno;
-    private String mensaje;
+    private final long turno;
+    private final String mensaje;
 
     public Notificacion(long turno, String mensaje) {
         this.turno = turno;

@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Votacion extends ReglaTragable {
-    private String[] opciones;
-    private String texto;
+    private final String[] opciones;
+    private final String texto;
     private int votacion;
     private String votacionQueMostrar;
 
@@ -34,9 +34,7 @@ public class Votacion extends ReglaTragable {
         try {
             int resource = R.string.class.getField(nombreRespuesta()).getInt(R.string.class);
             return String.format(AppSingleton.getInstance().getContext().getString(resource), votacionQueMostrar, getTragos());
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (NoSuchFieldException e) {
+        } catch (IllegalAccessException | NoSuchFieldException e) {
             e.printStackTrace();
         }
 

@@ -7,5 +7,15 @@ public abstract class SelectorRegla implements ISelectorRegla {
     /**
      * Lista de juegos que hay en la aplicación
      */
-    protected String[] juegos = new String[]{"Reto", "Votacion", "Pregunta", "Hastaque"};
+    protected final String[] juegos = new String[]{"Reto", "Votacion", "Pregunta", "Hastaque"};
+
+    /**
+     * Método que permite obtener el juego en un índice
+     *
+     * @param index Indice del juego que se quiere obtener
+     * @return Juego en el índice solicitado
+     */
+    protected String getElementAt(int index) {
+        return juegos[index];
+    }
 }

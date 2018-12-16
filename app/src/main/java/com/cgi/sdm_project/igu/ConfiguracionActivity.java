@@ -20,10 +20,9 @@ import com.cgi.sdm_project.util.Conf;
  */
 public class ConfiguracionActivity extends AppCompatActivity {
 
-    Switch swSonido;
-    SeekBar sbVolumen;
-    Spinner spIdioma;
-    Button btnGuardar;
+    private Switch swSonido;
+    private SeekBar sbVolumen;
+    private Spinner spIdioma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +43,7 @@ public class ConfiguracionActivity extends AppCompatActivity {
         sbVolumen = findViewById(R.id.sbVolumen);
         sbVolumen.setMax(100);
         spIdioma = findViewById(R.id.spIdioma);
-        btnGuardar = findViewById(R.id.btnGuardar);
+        Button btnGuardar = findViewById(R.id.btnGuardar);
     }
 
     /**
@@ -56,10 +55,10 @@ public class ConfiguracionActivity extends AppCompatActivity {
         swSonido.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
+                if (isChecked) {
                     sbVolumen.setProgress(50);
                 }
-                if(!isChecked){
+                if (!isChecked) {
                     sbVolumen.setProgress(0);
                 }
             }
@@ -70,10 +69,9 @@ public class ConfiguracionActivity extends AppCompatActivity {
         sbVolumen.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if (seekBar.getProgress() == 0){
+                if (seekBar.getProgress() == 0) {
                     swSonido.setChecked(false);
-                }
-                else{
+                } else {
                     swSonido.setChecked(true);
                 }
             }
@@ -102,9 +100,10 @@ public class ConfiguracionActivity extends AppCompatActivity {
 
     /**
      * Guarda los cambios en las preferences
-     * @param view
+     *
+     * @param view Vista para proveer de accion al botón
      */
-    public void guardar(View view){
+    public void guardar(View view) {
         Conf conf = Conf.getInstancia();
         conf.setSonido(swSonido.isChecked());
         conf.setVolumen(sbVolumen.getProgress());

@@ -7,7 +7,7 @@ import com.cgi.sdm_project.logica.juego.almacenes.ReglasJuego;
 import com.cgi.sdm_project.logica.juego.juego.ISelectorRegla;
 import com.cgi.sdm_project.logica.juego.juego.Jugador;
 import com.cgi.sdm_project.logica.juego.juego.Notificacion;
-import com.cgi.sdm_project.logica.juego.juego.selectores.FilteredSelector;
+import com.cgi.sdm_project.logica.juego.juego.selectores.ProbabilitySelector;
 import com.cgi.sdm_project.logica.juego.reglas.Regla;
 
 import java.lang.reflect.InvocationTargetException;
@@ -31,7 +31,7 @@ public class Juego {
     /**
      * Objeto que ofrece una estrategia para obtener el siguiente juego
      */
-    private ISelectorRegla selectorRegla;
+    private final ISelectorRegla selectorRegla;
     /**
      * Cola de prioridad con las notificacions que se van a tener que mostrar al usuario
      */
@@ -50,7 +50,7 @@ public class Juego {
     private Regla juegoActual;
 
     private Juego() {
-        selectorRegla = new FilteredSelector();
+        selectorRegla = new ProbabilitySelector();
     }
 
     /**

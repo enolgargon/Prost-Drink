@@ -83,7 +83,7 @@ public class JuegoPersonalizadoActivity extends AppCompatActivity {
         /**
          * Nombre de la regla que va a cambiar
          */
-        private String nombreRegla;
+        private final String nombreRegla;
 
         /**
          * Constructor que establece la regla que cambia

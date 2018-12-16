@@ -6,6 +6,7 @@ package com.cgi.sdm_project.logica.sorteo;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +40,7 @@ public class Sorteo implements Parcelable {
     /**
      * Lista en la que se guardarán los jugadores para el sorteo
      */
-    private List<String> jugadores;
+    private final List<String> jugadores;
     /**
      * Número de equipos que se generarán con los jugadores
      */
@@ -62,7 +63,7 @@ public class Sorteo implements Parcelable {
      * @param in Objeto parcel que tiene los datos del objeto
      * @see Parcel
      */
-    protected Sorteo(Parcel in) {
+    private Sorteo(Parcel in) {
         jugadores = in.createStringArrayList();
         numEquipos = in.readInt();
     }
@@ -176,9 +177,10 @@ public class Sorteo implements Parcelable {
         return grupos;
     }
 
+    @NonNull
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Sorteo{");
+        final StringBuilder sb = new StringBuilder("Sorteo{");
         sb.append("jugadores=").append(jugadores);
         sb.append(", numEquipos=").append(numEquipos);
         sb.append('}');

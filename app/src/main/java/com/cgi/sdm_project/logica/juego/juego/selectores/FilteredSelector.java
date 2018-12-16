@@ -14,7 +14,7 @@ public class FilteredSelector extends SelectorRegla {
     /**
      * Array de filtrado que indica si se va a poder usar un elemento o no
      */
-    private boolean[] validos;
+    private final boolean[] validos;
 
     public FilteredSelector() {
         validos = new boolean[juegos.length];
@@ -73,10 +73,18 @@ public class FilteredSelector extends SelectorRegla {
         if (validos.length > juegos.length)
             throw new IllegalStateException("La lista de juegos validos es mas larga que la lista de juegos que filtrar");
 
-        int index = -1;
-        while (index < 0 || !validos[index])
-            index = (int) (Math.random() * (juegos.length));
+        String juego = null;
+        while (juego == null)
+            juego = getElementAt((int) (Math.random() * (juegos.length)));
 
-        return juegos[index];
+        return juego;
+    }
+
+    /*
+     * Solo devuelve si es válido, si no null.
+     */
+    @Override
+    protected String getElementAt(int index) {
+        return validos[index] ? super.getElementAt(index) : null;
     }
 }

@@ -24,7 +24,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
 
     private ListView listaJugadores;
     private TextView txtJugador;
-    private Button añadirJugador;
+    private Button anadirJugador;
     private FloatingActionButton jugar;
     private List<Jugador> jugadores;
 
@@ -32,7 +32,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elegirjugadores);
-        jugadores = new ArrayList<Jugador>();
+        jugadores = new ArrayList<>();
         setComponents();
         setListeners();
 
@@ -44,7 +44,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
     private void setComponents() {
         listaJugadores = findViewById(R.id.listJugadores);
         txtJugador = findViewById(R.id.txtAñadirJugador);
-        añadirJugador = findViewById(R.id.btnAñadirParticipante);
+        anadirJugador = findViewById(R.id.btnAñadirParticipante);
         jugar = findViewById(R.id.fabJugar);
 
     }
@@ -72,7 +72,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
         /*
          *  Al hacer click sobre el botón de añadir con un nombre válido, se añade al modelo y a la vista que muestra los jugadores correspondientes
          */
-        añadirJugador.setOnClickListener(new Button.OnClickListener() {
+        anadirJugador.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (txtJugador.getText() != null && !txtJugador.getText().toString().trim().isEmpty()) {

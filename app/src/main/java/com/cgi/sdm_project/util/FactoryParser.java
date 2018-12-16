@@ -5,24 +5,24 @@ import com.cgi.sdm_project.util.parsers.PreguntaParser;
 import com.cgi.sdm_project.util.parsers.RetoParser;
 import com.cgi.sdm_project.util.parsers.VotacionParser;
 
-public class FactoryParser {
+class FactoryParser {
 
     private FactoryParser() {
     }
 
-    public static VotacionParser getVotacionParser() {
+    static VotacionParser getVotacionParser() {
         return new VotacionParser();
     }
 
-    public static HastaQueParser getHastaQueParser() {
+    static HastaQueParser getHastaQueParser() {
         return new HastaQueParser();
     }
 
-    public static PreguntaParser getPreguntaParser() {
+    static PreguntaParser getPreguntaParser() {
         return new PreguntaParser();
     }
 
-    public static RetoParser getRetoParser() {
+    static RetoParser getRetoParser() {
         return new RetoParser();
     }
 }

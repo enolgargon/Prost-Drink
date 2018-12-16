@@ -30,7 +30,7 @@ public class Conf {
     public void setSonido(boolean sonido) {
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("Sonido", sonido);
-        editor.commit();
+        editor.apply();
     }
 
     //Volumen
@@ -41,7 +41,7 @@ public class Conf {
     public void setVolumen(int volumen) {
         SharedPreferences.Editor editor = settings.edit();
         editor.putInt("Volumen", volumen);
-        editor.commit();
+        editor.apply();
     }
 
     //Idioma
@@ -52,7 +52,7 @@ public class Conf {
     public void setIdioma(int index) {
         SharedPreferences.Editor editor = settings.edit();
         editor.putInt("Idioma", index);
-        editor.commit();
+        editor.apply();
     }
 
     /*Configuraciones para los tipos de juego*/
@@ -64,7 +64,7 @@ public class Conf {
     public void setPreguntas(boolean opcion) {
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("Preguntas", opcion);
-        editor.commit();
+        editor.apply();
     }
 
     public boolean getRetos() {
@@ -74,7 +74,7 @@ public class Conf {
     public void setRetos(boolean opcion) {
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("Retos", opcion);
-        editor.commit();
+        editor.apply();
     }
 
     public boolean getYoNunca() {
@@ -84,7 +84,7 @@ public class Conf {
     public void setYoNunca(boolean opcion) {
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("YoNunca", opcion);
-        editor.commit();
+        editor.apply();
     }
 
     public boolean getHastaQues() {
@@ -94,7 +94,7 @@ public class Conf {
     public void setHastaQues(boolean opcion) {
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("HastaQues", opcion);
-        editor.commit();
+        editor.apply();
     }
 
     public boolean getVotaciones() {
@@ -104,7 +104,7 @@ public class Conf {
     public void setVotaciones(boolean opcion) {
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("Votaciones", opcion);
-        editor.commit();
+        editor.apply();
     }
 
     /* Configuraciones para los tipos de resultados */
@@ -115,7 +115,7 @@ public class Conf {
     public void setBebe(boolean opcion) {
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("Bebe", opcion);
-        editor.commit();
+        editor.apply();
     }
 
     public boolean getMandaBeber() {
@@ -125,7 +125,7 @@ public class Conf {
     public void setMandaBeber(boolean opcion) {
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("MandaBeber", opcion);
-        editor.commit();
+        editor.apply();
     }
 
     public boolean getCastigo() {
@@ -135,7 +135,7 @@ public class Conf {
     public void setCastigo(boolean opcion) {
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("Castigo", opcion);
-        editor.commit();
+        editor.apply();
     }
 
     public boolean getReto() {
@@ -145,6 +145,6 @@ public class Conf {
     public void setReto(boolean opcion) {
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("Reto", opcion);
-        editor.commit();
+        editor.apply();
     }
 }

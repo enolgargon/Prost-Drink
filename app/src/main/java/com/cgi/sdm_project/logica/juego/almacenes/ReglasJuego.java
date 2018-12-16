@@ -26,7 +26,7 @@ public class ReglasJuego {
         return instance;
     }
 
-    public void cargarReglas() {
+    private void cargarReglas() {
         preguntas = Loader.loadPreguntas();
         retos = Loader.loadRetos();
         votaciones = Loader.loadVotaciones();
