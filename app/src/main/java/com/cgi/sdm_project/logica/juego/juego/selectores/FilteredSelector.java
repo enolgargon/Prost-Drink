@@ -11,6 +11,9 @@ import java.util.Arrays;
  * @version 16-12-2018
  */
 public class FilteredSelector extends SelectorRegla {
+    /**
+     * Array de filtrado que indica si se va a poder usar un elemento o no
+     */
     private boolean[] validos;
 
     public FilteredSelector() {
@@ -19,15 +22,38 @@ public class FilteredSelector extends SelectorRegla {
     }
 
     /**
+     * Método que indica si la configuración del filtrado es correcta.
+     * Por el momento es correcta si hay algún elemento con el que se permite jugar.
+     *
+     * @return true si la configuración es válida. False en otro caso
+     */
+    public boolean isValidConfiguration() {
+        for (boolean b : validos)
+            if (b)
+                return true;
+        return false;
+    }
+
+    /**
+     * Método que permite obtener el indice del filtrado para un tipo de regla en concreto
+     *
+     * @param tipo Tipo de regla que se quiere buscar en el array de filtrado
+     * @return Índice que ocupa la regla en el array de filtrado
+     */
+    private int getIndexOf(String tipo) {
+        int index;
+        if ((index = Arrays.asList(juegos).indexOf(tipo)) < 0)
+            throw new IllegalArgumentException("No existe el tipo de juego que quieres modificar: " + tipo);
+        return index;
+    }
+
+    /**
      * Método que permite hacer que se vuelva a poder usar una regla
      *
      * @param tipo Nombre del tipo de regla que se quiere activar
      */
     public void active(String tipo) {
-        int index;
-        if ((index = Arrays.binarySearch(juegos, tipo)) < 0)
-            throw new IllegalArgumentException("No existe el tipo de juego que quieres desactivar");
-        validos[index] = true;
+        validos[getIndexOf(tipo)] = true;
     }
 
     /**
@@ -36,10 +62,7 @@ public class FilteredSelector extends SelectorRegla {
      * @param tipo Nombre del tipo de regla que se quiere desactivar
      */
     public void desactive(String tipo) {
-        int index;
-        if ((index = Arrays.binarySearch(juegos, tipo)) < 0)
-            throw new IllegalArgumentException("No existe el tipo de juego que quieres desactivar");
-        validos[index] = false;
+        validos[getIndexOf(tipo)] = false;
     }
 
     /*
