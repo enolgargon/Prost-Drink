@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
-import com.cgi.sdm_project.logica.juego.Jugador;
+import com.cgi.sdm_project.logica.juego.juego.Jugador;
 
 import java.util.ArrayList;
 import java.util.List;

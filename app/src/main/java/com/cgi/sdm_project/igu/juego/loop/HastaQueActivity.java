@@ -8,10 +8,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
-import com.cgi.sdm_project.logica.juego.FinJuego;
-import com.cgi.sdm_project.logica.juego.IFinJuego;
-import com.cgi.sdm_project.logica.juego.InicioJuego;
 import com.cgi.sdm_project.logica.juego.Juego;
+import com.cgi.sdm_project.logica.juego.activities.FinJuego;
+import com.cgi.sdm_project.logica.juego.activities.IFinJuego;
+import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
 
 public class HastaQueActivity extends AppCompatActivity implements InicioJuego, IFinJuego {

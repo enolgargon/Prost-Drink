@@ -9,8 +9,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
-import com.cgi.sdm_project.logica.juego.InicioJuego;
 import com.cgi.sdm_project.logica.juego.Juego;
+import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
 
 public class PreguntaActivity extends AppCompatActivity implements InicioJuego {

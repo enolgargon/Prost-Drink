@@ -2,7 +2,7 @@ package com.cgi.sdm_project.logica.juego.reglas;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
-import com.cgi.sdm_project.logica.juego.Notificacion;
+import com.cgi.sdm_project.logica.juego.juego.Notificacion;
 import com.cgi.sdm_project.util.AppSingleton;
 
 public class HastaQue implements Regla {

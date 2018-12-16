@@ -1,4 +1,4 @@
-package com.cgi.sdm_project.logica.juego;
+package com.cgi.sdm_project.logica.juego.juego;
 
 import android.support.annotation.NonNull;
 

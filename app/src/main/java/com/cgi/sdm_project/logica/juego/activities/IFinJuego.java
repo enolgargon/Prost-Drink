@@ -1,4 +1,4 @@
-package com.cgi.sdm_project.logica.juego;
+package com.cgi.sdm_project.logica.juego.activities;
 
 import android.view.View;
 
