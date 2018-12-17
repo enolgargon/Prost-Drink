@@ -88,9 +88,13 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Juego.getInstance().setJugadores(jugadores);
-                Intent mIntent = new Intent(getApplicationContext(), Juego.getInstance().getSiguienteJuego());
-                startActivity(mIntent);
+                if (jugadores.isEmpty())
+                    Toast.makeText(getApplicationContext(), "Debe introducir minimo un jugador para jugar", Toast.LENGTH_SHORT).show();
+                else{
+                    Juego.getInstance().setJugadores(jugadores);
+                    Intent mIntent = new Intent(getApplicationContext(), Juego.getInstance().getSiguienteJuego());
+                    startActivity(mIntent);
+                }
             }
         });
     }
