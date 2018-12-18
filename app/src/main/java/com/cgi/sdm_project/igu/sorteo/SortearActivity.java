@@ -2,9 +2,11 @@ package com.cgi.sdm_project.igu.sorteo;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -67,7 +69,18 @@ public class SortearActivity extends AppCompatActivity {
         equipos = findViewById(R.id.txtNumGrupos);
 
         // Configuración de los componentes gráficos
-        lista.setAdapter(new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, sorteo.getJugadores()));
+        lista.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, sorteo.getJugadores()) {
+            /* Redefinición de getView para aplicar estilo al listitem */
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View view = super.getView(position, convertView, parent);
+                TextView text = (TextView) view.findViewById(android.R.id.text1);
+
+                text.setTextColor(Color.WHITE);
+
+                return view;
+            }
+        });
         lista.setOnItemLongClickListener(new ListView.OnItemLongClickListener() {
             /*
              * Al mantener pulsado un elemento se elimina ese nombre del sorteo
@@ -107,16 +120,20 @@ public class SortearActivity extends AppCompatActivity {
      * @see ResultadoSorteoActivity
      */
     public void lanzarResultadoSorteo(View view) {
-        int numEquipos = Integer.parseInt(equipos.getText().toString());
-        if (numEquipos <= 0)
-            Toast.makeText(getApplicationContext(), R.string.error_equipos_menor, Toast.LENGTH_SHORT).show();
-        else if (numEquipos > sorteo.getNumJugadores())
-            Toast.makeText(getApplicationContext(), R.string.error_equipos_mayor, Toast.LENGTH_SHORT).show();
+        if (equipos.getText().toString().equals(""))
+            Toast.makeText(getApplicationContext(), R.string.error_equipos_inexistente, Toast.LENGTH_SHORT).show();
         else {
-            sorteo.setNumEquipos(numEquipos);
-            Intent mIntent = new Intent(getApplicationContext(), ResultadoSorteoActivity.class);
-            mIntent.putExtra(SORTEO, sorteo);
-            startActivity(mIntent);
+            int numEquipos = Integer.parseInt(equipos.getText().toString());
+            if (numEquipos <= 0)
+                Toast.makeText(getApplicationContext(), R.string.error_equipos_menor, Toast.LENGTH_SHORT).show();
+            else if (numEquipos > sorteo.getNumJugadores())
+                Toast.makeText(getApplicationContext(), R.string.error_equipos_mayor, Toast.LENGTH_SHORT).show();
+            else {
+                sorteo.setNumEquipos(numEquipos);
+                Intent mIntent = new Intent(getApplicationContext(), ResultadoSorteoActivity.class);
+                mIntent.putExtra(SORTEO, sorteo);
+                startActivity(mIntent);
+            }
         }
     }
 }

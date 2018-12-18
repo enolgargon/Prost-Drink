@@ -1,10 +1,12 @@
 package com.cgi.sdm_project.igu.juego;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -54,7 +56,18 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
      */
     private void setListeners() {
 
-        listaJugadores.setAdapter(new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, jugadores));
+        listaJugadores.setAdapter(new ArrayAdapter<Jugador>(getApplicationContext(), android.R.layout.simple_list_item_1, jugadores){
+            /* Redefinición de getView para aplicar estilo al listitem */
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View view = super.getView(position, convertView, parent);
+                TextView text = (TextView) view.findViewById(android.R.id.text1);
+
+                text.setTextColor(Color.WHITE);
+
+                return view;
+            }
+        });
         listaJugadores.setOnItemLongClickListener(new ListView.OnItemLongClickListener() {
             /*
              * Al mantener pulsado un elemento se elimina ese nombre del sorteo

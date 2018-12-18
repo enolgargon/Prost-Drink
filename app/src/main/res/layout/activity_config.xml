@@ -38,7 +38,7 @@
         app:layout_constraintHorizontal_bias="0.171"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/swSonido"
-        app:layout_constraintVertical_bias="0.619" />
+        app:layout_constraintVertical_bias="0.387" />
 
     <Switch
         android:id="@+id/swSonido"
@@ -100,12 +100,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:entries="@array/Idiomas"
+        android:theme="@style/Spinner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/sbVolumen"
-        app:layout_constraintVertical_bias="0.258" />
+        app:layout_constraintVertical_bias="0.308" />
 
     <Button
         android:id="@+id/btnGuardar"

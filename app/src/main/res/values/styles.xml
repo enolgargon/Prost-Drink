@@ -1,24 +1,101 @@
 <resources>
 
     <!-- Base application theme. -->
-
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/background_medium</item>
+        <item name="colorPrimaryDark">@color/background_dark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/background_medium</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorPrimaryDisableOnly">@android:color/white</item>
+        <item name="android:editTextColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
     </style>
 
-    <style name="MainBtn" parent="AppTheme" >
+    <!-- Tema de la main activity (se asigna programáticamente) -->
+    <style name="AppTheme.Splash">
+        <item name="android:windowBackground">@drawable/splash</item>
     </style>
 
-    <style name="InvertedBtn" parent="AppTheme" >
+
+    <!-- Componentes -->
+    <style name="Button" parent="CondensedBase">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.2</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
     </style>
 
-    <style name="Lista" parent="AppTheme" >
+    <style name="InvertedButton" parent="Button">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:backgroundTint">@android:color/white</item>
     </style>
 
-    <style name="FAB" parent="AppTheme" >
+    <style name="ListItem" parent="H3">
+        <item name="android:textSize">44sp</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
+
+    <!-- Incluir y redefinir adaptador de spinners -->
+    <style name="Spinner" parent="AppTheme">
+        <item name="android:popupBackground">@color/background_dark</item>
+    </style>
+
+
+    <!-- Fuentes -->
+    <style name="EczarBase" parent="AppTheme">
+        <item name="android:fontFamily">@font/eczar</item>
+    </style>
+
+    <style name="CondensedBase" parent="AppTheme">
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="Subtitle1" parent="CondensedBase">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.035625</item>
+    </style>
+
+    <style name="Subtitle2" parent="CondensedBase">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.035</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="BodyEczar" parent="EczarBase">
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">0.16</item>
+    </style>
+
+    <style name="BodyCondensed" parent="CondensedBase">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.1875</item>
+        <item name="android:fontFamily">@font/robotolight</item>
+    </style>
+
+    <style name="H1" parent="CondensedBase">
+        <item name="android:letterSpacing">0.0357</item>
+        <item name="android:textSize">96sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="H2" parent="CondensedBase">
+        <item name="android:letterSpacing">0.0357</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="H3" parent="EczarBase">
+        <item name="android:letterSpacing">0.0357</item>
+        <item name="android:textSize">44sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
 
 </resources>
+
