@@ -13,6 +13,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/app_name"
         android:textSize="@dimen/titles"
+        android:theme="@style/H1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +41,8 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:contentDescription="@string/contentDescription_principal_acerca_de"
+            android:foregroundTint="@color/colorPrimaryDark"
+            android:tint="@color/colorPrimaryDark"
             app:srcCompat="@android:drawable/ic_dialog_info" />
 
         <ImageButton
@@ -51,6 +54,7 @@
             android:background="@android:color/transparent"
             android:contentDescription="@string/contentDescription_principal_settings"
             android:onClick="lanzarConfiguracion"
+            android:tint="@color/colorPrimaryDark"
             app:srcCompat="@android:drawable/ic_menu_preferences" />
     </LinearLayout>
 
@@ -61,7 +65,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle">
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        app:layout_constraintVertical_bias="0.77">
 
         <Button
             android:id="@+id/btnJuego"
@@ -69,15 +74,15 @@
             android:layout_height="wrap_content"
             android:onClick="lanzarJuego"
             android:text="@string/principal_juego"
-            style="@style/AppTheme.Base.Button"/>
+            android:theme="@style/Button" />
 
         <Button
             android:id="@+id/btnSorteo"
-            style="@style/AppTheme.Base.InvertedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="lanzarSortear"
-            android:text="@string/principal_sorteo" />
+            android:text="@string/principal_sorteo"
+            android:theme="@style/InvertedButton" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

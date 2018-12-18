@@ -96,7 +96,7 @@
     <!-- Errores en la preparacion de sorteo -->
     <string name="error_nombre_sorteo">Debes introducir un nombre para el jugador</string>
     <string name="error_equipos_menor">No puedes crear un número de equipos 0 o negativo</string>
-    <string name="error_equipos_mayor">No puede haber pas equipos que jugadores</string>
+    <string name="error_equipos_mayor">No puede haber más equipos que jugadores</string>
 
     <!-- Activity de resultado de sorteo -->
     <string name="sorteo_resultado">Resultado del sorteo</string>
@@ -130,4 +130,5 @@
 
     <!-- HASTA QUE -> Notificacion -->
     <string name="notificacion_hasta_que">El jugador %s ya ha finalizado su hasta que</string>
+    <string name="error_equipos_inexistente">Debes introducir un número de equipos</string>
 </resources>
