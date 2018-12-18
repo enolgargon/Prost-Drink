@@ -1,4 +1,6 @@
-package com.cgi.sdm_project.logica.juego;
+package com.cgi.sdm_project.logica.juego.juego;
+
+import android.support.annotation.NonNull;
 
 public class Jugador {
 
@@ -9,6 +11,7 @@ public class Jugador {
             this.nombre = nombre;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return nombre;

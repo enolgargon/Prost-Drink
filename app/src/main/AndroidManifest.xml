@@ -38,7 +38,7 @@
         <activity android:name=".igu.juego.loop.PreguntaActivity" />
         <activity android:name=".igu.juego.loop.VotacionActivity" />
         <activity android:name=".igu.juego.loop.RetoActivity" />
-        <activity android:name=".igu.juego.loop.HastaQueActivity"></activity>
+        <activity android:name=".igu.juego.loop.HastaQueActivity" />
         <activity android:name=".igu.juego.loop.ResultadoActivity" />
         <activity android:name=".igu.juego.loop.NotificacionActivity" />
     </application>

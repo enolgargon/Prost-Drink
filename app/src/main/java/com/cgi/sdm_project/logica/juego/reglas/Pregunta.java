@@ -1,7 +1,7 @@
 package com.cgi.sdm_project.logica.juego.reglas;
 
 public class Pregunta extends ReglaTragable {
-    private String pregunta;
+    private final String pregunta;
     private boolean contestada;
 
     public Pregunta(String pregunta, int tragos) {

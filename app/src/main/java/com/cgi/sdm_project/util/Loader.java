@@ -28,16 +28,9 @@ public class Loader {
     private static Document getXML(int res) {
         try {
             DocumentBuilder db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            Document doc = db.parse(AppSingleton.getInstance().getContext()
+            return db.parse(AppSingleton.getInstance().getContext()
                     .getResources().openRawResource(res));
-            return doc;
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-            return null;
-        } catch (SAXException e) {
-            e.printStackTrace();
-            return null;
-        } catch (IOException e) {
+        } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
             return null;
         }

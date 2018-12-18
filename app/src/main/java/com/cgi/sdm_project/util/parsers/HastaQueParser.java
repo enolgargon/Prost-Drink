@@ -8,6 +8,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class HastaQueParser implements Parser<List<HastaQue>>{
     @Override
     public List<HastaQue> execute(Document doc) {
 
-        ArrayList<HastaQue> list = new ArrayList<HastaQue>();
+        ArrayList<HastaQue> list = new ArrayList<>();
 
         Element raiz = doc.getDocumentElement();
         NodeList items = raiz.getElementsByTagName("item");

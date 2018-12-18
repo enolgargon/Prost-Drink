@@ -28,10 +28,10 @@ public class RetoParser implements Parser<List<Reto>>{
                 int numeroTragos = Integer.parseInt(elemento.getAttribute("tragos"));
 
                 int hijosNodo = node.getChildNodes().getLength();
-                Reto reto = null;
+                Reto reto;
 
                 if (hijosNodo > 0){
-                    List<String> valores = new ArrayList<String>();
+                    List<String> valores = new ArrayList<>();
                     for (int j = 0; j < node.getChildNodes().getLength(); j++) {
                         Node nodeAux = node.getChildNodes().item(j);
 

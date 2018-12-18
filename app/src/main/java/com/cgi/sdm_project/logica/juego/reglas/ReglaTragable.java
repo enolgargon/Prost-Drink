@@ -4,7 +4,7 @@ import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.util.AppSingleton;
 
 abstract class ReglaTragable implements Tragable {
-    private int tragos;
+    private final int tragos;
 
     ReglaTragable(int tragos) {
         this.tragos = tragos;
@@ -18,9 +18,7 @@ abstract class ReglaTragable implements Tragable {
         try {
             int resource = R.string.class.getField(nombreRespuesta()).getInt(R.string.class);
             return String.format(AppSingleton.getInstance().getContext().getString(resource), getTragos());
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (NoSuchFieldException e) {
+        } catch (IllegalAccessException | NoSuchFieldException e) {
             e.printStackTrace();
         }
 

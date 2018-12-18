@@ -3,7 +3,7 @@ package com.cgi.sdm_project.logica.juego.reglas;
 import java.util.List;
 
 public class Reto extends ReglaTragable {
-    private String texto;
+    private final String texto;
     private boolean atrevido;
     private List<String> valores;
 

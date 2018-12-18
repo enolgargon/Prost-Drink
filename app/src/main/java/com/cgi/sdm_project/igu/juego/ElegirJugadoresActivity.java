@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
-import com.cgi.sdm_project.logica.juego.Jugador;
+import com.cgi.sdm_project.logica.juego.juego.Jugador;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
 
     private ListView listaJugadores;
     private TextView txtJugador;
-    private Button añadirJugador;
+    private Button anadirJugador;
     private FloatingActionButton jugar;
     private List<Jugador> jugadores;
 
@@ -34,7 +34,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elegirjugadores);
-        jugadores = new ArrayList<Jugador>();
+        jugadores = new ArrayList<>();
         setComponents();
         setListeners();
 
@@ -46,7 +46,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
     private void setComponents() {
         listaJugadores = findViewById(R.id.listJugadores);
         txtJugador = findViewById(R.id.txtAñadirJugador);
-        añadirJugador = findViewById(R.id.btnAñadirParticipante);
+        anadirJugador = findViewById(R.id.btnAñadirParticipante);
         jugar = findViewById(R.id.fabJugar);
 
     }
@@ -85,7 +85,7 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
         /*
          *  Al hacer click sobre el botón de añadir con un nombre válido, se añade al modelo y a la vista que muestra los jugadores correspondientes
          */
-        añadirJugador.setOnClickListener(new Button.OnClickListener() {
+        anadirJugador.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (txtJugador.getText() != null && !txtJugador.getText().toString().trim().isEmpty()) {
@@ -101,9 +101,13 @@ public class ElegirJugadoresActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Juego.getInstance().setJugadores(jugadores);
-                Intent mIntent = new Intent(getApplicationContext(), Juego.getInstance().getSiguienteJuego());
-                startActivity(mIntent);
+                if (jugadores.isEmpty())
+                    Toast.makeText(getApplicationContext(), "Debe introducir minimo un jugador para jugar", Toast.LENGTH_SHORT).show();
+                else{
+                    Juego.getInstance().setJugadores(jugadores);
+                    Intent mIntent = new Intent(getApplicationContext(), Juego.getInstance().getSiguienteJuego());
+                    startActivity(mIntent);
+                }
             }
         });
     }

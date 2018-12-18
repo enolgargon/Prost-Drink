@@ -1,4 +1,4 @@
-package com.cgi.sdm_project.logica.juego;
+package com.cgi.sdm_project.logica.juego.almacenes;
 
 import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
 import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
@@ -26,7 +26,7 @@ public class ReglasJuego {
         return instance;
     }
 
-    public void cargarReglas() {
+    private void cargarReglas() {
         preguntas = Loader.loadPreguntas();
         retos = Loader.loadRetos();
         votaciones = Loader.loadVotaciones();
