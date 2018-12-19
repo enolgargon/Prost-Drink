@@ -99,6 +99,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-        app:srcCompat="@drawable/Placeholder1" />
+        app:srcCompat="@drawable/splash" />
 
 </android.support.constraint.ConstraintLayout>

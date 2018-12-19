@@ -8,44 +8,49 @@
 
     <TextView
         android:id="@+id/txtTitulo"
-        android:layout_width="182dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="158dp"
-        android:text="@string/app_name"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="368dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="128dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="126dp"
-        android:orientation="vertical"
+        android:layout_marginBottom="8dp"
+        android:text="@string/app_name"
+        android:textSize="@dimen/titles"
+        android:theme="@style/H1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitulo"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.76">
 
         <Button
             android:id="@+id/btnJuegoRapido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/juegoRapido" />
+            android:text="@string/juegoRapido"
+            android:theme="@style/Button" />
 
         <Button
             android:id="@+id/btnJuegoPersonalizado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/juegoPersonalizado" />
+            android:text="@string/juegoPersonalizado"
+            android:theme="@style/Button" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
