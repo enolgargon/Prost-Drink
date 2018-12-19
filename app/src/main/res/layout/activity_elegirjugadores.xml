@@ -60,6 +60,7 @@
     </android.support.design.widget.TextInputLayout>
 
     <Button
+
         android:id="@+id/btnAñadirParticipante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,9 +68,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:backgroundTint="@color/colorPrimaryDark"
+        android:theme="@style/Button"
         android:text="@string/AñadirParticipante"
-        android:textColor="?attr/colorBackgroundFloating"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"

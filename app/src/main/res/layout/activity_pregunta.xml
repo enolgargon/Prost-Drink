@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:onClick="pasar"
             android:text="@string/Pasar"
-            android:theme="@style/Button" />
+            android:theme="@style/InvertedButton" />
     </LinearLayout>
 
     <TextView

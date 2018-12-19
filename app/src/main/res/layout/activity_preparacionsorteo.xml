@@ -92,7 +92,7 @@
             android:layout_weight="1"
             android:onClick="addJugador"
             android:text="@string/AñadirParticipante"
-            android:theme="@android:style/Theme.Material.Light" />
+            android:theme="@style/Button" />
 
         <Button
             android:id="@+id/btnSortear"
@@ -100,6 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="lanzarResultadoSorteo"
+            android:theme="@style/InvertedButton"
             android:text="@string/sortear" />
     </LinearLayout>
 
