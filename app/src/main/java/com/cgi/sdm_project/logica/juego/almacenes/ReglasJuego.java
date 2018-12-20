@@ -1,5 +1,6 @@
 package com.cgi.sdm_project.logica.juego.almacenes;
 
+import com.cgi.sdm_project.logica.juego.reglas.Camara;
 import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
 import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
 import com.cgi.sdm_project.logica.juego.reglas.Reto;
@@ -15,6 +16,7 @@ public class ReglasJuego {
     private List<Reto> retos;
     private List<Votacion> votaciones;
     private List<HastaQue> hastaques;
+    private List<Camara> camaras;
 
     private ReglasJuego() {
         cargarReglas();
@@ -31,6 +33,7 @@ public class ReglasJuego {
         retos = Loader.loadRetos();
         votaciones = Loader.loadVotaciones();
         hastaques = Loader.loadHastaQues();
+        camaras = Loader.loadCamara();
     }
 
     public Pregunta getPregunta() {
@@ -47,5 +50,9 @@ public class ReglasJuego {
 
     public HastaQue getHastaque() {
         return hastaques.get((int) (Math.random() * (hastaques.size())));
+    }
+
+    public Camara getCamara() {
+        return camaras.get((int) (Math.random() * (camaras.size())));
     }
 }

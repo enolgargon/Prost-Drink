@@ -1,6 +1,7 @@
 package com.cgi.sdm_project.util;
 
 import com.cgi.sdm_project.R;
+import com.cgi.sdm_project.logica.juego.reglas.Camara;
 import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
 import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
 import com.cgi.sdm_project.logica.juego.reglas.Reto;
@@ -10,6 +11,7 @@ import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -95,5 +97,12 @@ public class Loader {
         toRet.add(new HastaQue("Hasta que te vuelva a tocar tienes que estar sentado/a encima de la persona que más te guste de la mesa", 4));
         return toRet;
         */
+    }
+
+    public static List<Camara> loadCamara() {
+        List<Camara> toRet = new ArrayList<>();
+        toRet.add(new Camara("Saca una foto al vaso después de acabartelo y compartela"));
+        toRet.add(new Camara("Saca una foto a un amigo bebiendo y compartela"));
+        return toRet;
     }
 }

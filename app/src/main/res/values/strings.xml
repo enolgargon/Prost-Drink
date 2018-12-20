@@ -137,4 +137,7 @@
     <!-- HASTA QUE -> Notificacion -->
     <string name="notificacion_hasta_que">El jugador %s ya ha finalizado su hasta que</string>
     <string name="error_equipos_inexistente">Debes introducir un número de equipos</string>
+
+    <!-- CAMARA -->
+    <string name="error_camara">Hay algún problema con la cámara y no se puede sacar la foto</string>
 </resources>
