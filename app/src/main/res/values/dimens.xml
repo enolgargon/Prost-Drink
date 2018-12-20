@@ -3,18 +3,23 @@
     <dimen name="titles">32sp</dimen>
 
     <!-- Botones -->
-    <dimen name="mierdibutton">2dp</dimen>
+    <dimen name="mierdibutton">8dp</dimen>
 
     <!-- Componentes Varios -->
     <dimen name="nameLblPaddingTop">8dp</dimen>
     <dimen name="nameLblPaddingRight">16dp</dimen>
     <dimen name="nameLblPaddingBottom">8dp</dimen>
 
+    <dimen name="bucketPadding">16dp</dimen>
+    <dimen name="bucketMargin">16dp</dimen>
+
     <!-- Fuentes -->
     <dimen name="h1">96sp</dimen>
     <dimen name="h2">60sp</dimen>
     <dimen name="h3">44sp</dimen>
-    <dimen name="body">14sp</dimen>
+    <dimen name="h4">32sp</dimen>
+    <dimen name="body">22sp</dimen>
+    <dimen name="button">16sp</dimen>
     <dimen name="bodyEzcar">18sp</dimen>
     <dimen name="subtitle1">16sp</dimen>
     <dimen name="subtitle2">14sp</dimen>

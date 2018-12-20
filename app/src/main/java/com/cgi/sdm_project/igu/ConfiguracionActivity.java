@@ -42,6 +42,7 @@ public class ConfiguracionActivity extends AppCompatActivity {
         swSonido = findViewById(R.id.swSonido);
         sbVolumen = findViewById(R.id.sbVolumen);
         sbVolumen.setMax(100);
+
         spIdioma = findViewById(R.id.spIdioma);
         Button btnGuardar = findViewById(R.id.btnGuardar);
     }

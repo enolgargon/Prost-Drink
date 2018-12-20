@@ -5,11 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
 import android.util.DisplayMetrics;
+import android.view.ContextThemeWrapper;
 import android.widget.ListView;
 
 import com.cgi.sdm_project.R;
-import com.cgi.sdm_project.util.adapters.NombreAdapter;
 import com.cgi.sdm_project.logica.sorteo.Sorteo;
+import com.cgi.sdm_project.util.adapters.NombreAdapter;
 
 import java.util.List;
 import java.util.Objects;
@@ -63,12 +64,13 @@ public class ResultadoSorteoActivity extends AppCompatActivity {
      * @return Nuevo list view que muestra el equipo
      */
     private ListView generarListaEquipo(List<String> equipo) {
-        ListView lista = new ListView(getApplicationContext());
+        ListView lista = new ListView(new ContextThemeWrapper(getApplicationContext(), R.style.SorteoBucket));
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         lista.setLayoutParams(new ListView.LayoutParams(metrics.widthPixels / 3 - getPixels(16), ListView.LayoutParams.WRAP_CONTENT));
         lista.setAdapter(new NombreAdapter(getApplicationContext(), equipo));
         lista.setDivider(null);
+        lista.setBackground(getApplicationContext().getDrawable(R.drawable.borderbuttom));
         lista.setPadding(getPixels(4), getPixels(32), getPixels(4), getPixels(32));
 
         return lista;

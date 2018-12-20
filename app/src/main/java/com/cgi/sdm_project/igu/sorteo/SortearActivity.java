@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.sorteo.Sorteo;
+import com.cgi.sdm_project.util.Conf;
 
 /**
  * Clase que se encarga de preparar un sorteo. Para eso interacciona con la parte gráfica y gestiona los datos que introduce el usuario.
@@ -110,6 +111,18 @@ public class SortearActivity extends AppCompatActivity {
         sorteo.addJugador(nombre);
         ((ArrayAdapter) lista.getAdapter()).notifyDataSetChanged();
         this.nombre.setText("");
+    }
+
+    /**
+     * Método que carga la lista de jugadores almacenadas en el preferences en el RecyclerView
+     *
+     * @param view
+     */
+    public void cargarJugadores(View view) {
+        for (String jugador : Conf.getInstancia().loadArray(Conf.JUGADORES)) {
+            sorteo.addJugador(jugador);
+        }
+        ((ArrayAdapter) lista.getAdapter()).notifyDataSetChanged();
     }
 
     /**

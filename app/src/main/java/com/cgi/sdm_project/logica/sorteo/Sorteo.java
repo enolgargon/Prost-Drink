@@ -8,6 +8,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
 
+import com.cgi.sdm_project.util.Conf;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -157,6 +159,9 @@ public class Sorteo implements Parcelable {
             throw new IllegalStateException("No se ha registrado un número de equipos válido");
         if (numEquipos > jugadores.size())
             throw new IllegalStateException("No se puede sortear un número de equipos mayor que el número de jugadores registrados");
+
+        //Guarda jugadores en las Shared Preferences
+        Conf.getInstancia().saveArray(jugadores.toArray(new String[jugadores.size()]), Conf.JUGADORES);
 
         // Preparar las nuevas estructuras de datos para el sorteo
         List<List<String>> grupos = new ArrayList<>();

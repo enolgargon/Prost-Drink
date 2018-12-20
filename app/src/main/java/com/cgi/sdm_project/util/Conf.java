@@ -1,23 +1,25 @@
 package com.cgi.sdm_project.util;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 
 public class Conf {
     private static Conf instancia;
     private SharedPreferences settings;
 
+    //Constantes
+    public static final String JUGADORES = "jugadores";
+
     private Conf() {
+        String nombrePreferencias = "Preferencias";
+        this.settings = AppSingleton.getInstance().getContext()
+                .getSharedPreferences(nombrePreferencias, Context.MODE_PRIVATE);
     }
 
     public static Conf getInstancia() {
         if (instancia == null)
             instancia = new Conf();
         return instancia;
-    }
-
-    //Main debe pasar sus preferencias aquí
-    public void setPreferences(SharedPreferences settings) {
-        this.settings = settings;
     }
 
 
@@ -107,44 +109,23 @@ public class Conf {
         editor.apply();
     }
 
-    /* Configuraciones para los tipos de resultados */
-    public boolean getBebe() {
-        return settings.getBoolean("Bebe", true);
-    }
-
-    public void setBebe(boolean opcion) {
+    //Guardar array
+    public void saveArray(String[] array, String arrayName) {
         SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("Bebe", opcion);
+        editor.putInt(arrayName + "_size", array.length);
+        for (int i = 0; i < array.length; i++)
+            editor.putString(arrayName + "_" + i, array[i]);
         editor.apply();
     }
 
-    public boolean getMandaBeber() {
-        return settings.getBoolean("MandaBeber", true);
-    }
-
-    public void setMandaBeber(boolean opcion) {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("MandaBeber", opcion);
-        editor.apply();
-    }
-
-    public boolean getCastigo() {
-        return settings.getBoolean("Castigo", true);
-    }
-
-    public void setCastigo(boolean opcion) {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("Castigo", opcion);
-        editor.apply();
-    }
-
-    public boolean getReto() {
-        return settings.getBoolean("Reto", true);
-    }
-
-    public void setReto(boolean opcion) {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("Reto", opcion);
-        editor.apply();
+    //Carga array
+    public String[] loadArray(String arrayName) {
+        int size = settings.getInt(arrayName + "_size", -1);
+        if (size == -1)
+            return new String[0];
+        String array[] = new String[size];
+        for (int i = 0; i < size; i++)
+            array[i] = settings.getString(arrayName + "_" + i, null);
+        return array;
     }
 }

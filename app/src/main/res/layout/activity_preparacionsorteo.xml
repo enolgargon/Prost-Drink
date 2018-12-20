@@ -25,6 +25,7 @@
 
     <Button
         android:id="@+id/btnCargar"
+        android:background="@drawable/borderbuttom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -32,6 +33,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/CargarLista"
+        android:onClick="cargarJugadores"
         android:theme="@style/MierdiButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +50,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="24dp"
-        android:theme="@style/ListItem"
+        android:theme="@style/CondensedBase"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

@@ -29,7 +29,7 @@
 
     <!-- Componentes -->
     <style name="Button" parent="CondensedBase">
-        <item name="android:textSize">@dimen/body</item>
+        <item name="android:textSize">@dimen/button</item>
         <item name="android:letterSpacing">0.2</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textStyle">bold</item>
@@ -48,11 +48,6 @@
         <item name="android:padding">@dimen/mierdibutton</item>
     </style>
 
-    <style name="ListItem" parent="H3">
-        <item name="android:textSize">@dimen/h3</item>
-        <item name="android:textColor">@android:color/white</item>
-    </style>
-
     <!-- Incluir y redefinir adaptador de spinners -->
     <style name="Spinner" parent="AppTheme">
         <item name="android:popupBackground">@color/background_dark</item>
@@ -62,6 +57,10 @@
         <item name="android:backgroundTint">@color/colorPrimary</item>
     </style>
 
+    <style name="SorteoBucket" parent="AppTheme">
+        <item name="android:padding">@dimen/bucketPadding</item>
+        <item name="android:layout_margin">@dimen/bucketMargin</item>
+    </style>
 
     <!-- Fuentes -->
     <style name="EczarBase" parent="AppTheme">
@@ -112,6 +111,10 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="H4" parent="H2">
+        <item name="android:textSize">@dimen/h4</item>
+    </style>
+
     <style name="nameLbl" parent="CondensedBase">
         <item name="android:textSize">@dimen/nameLbl</item>
         <item name="android:gravity">right</item>
@@ -121,8 +124,6 @@
         <item name="android:paddingTop">@dimen/nameLblPaddingTop</item>
         <item name="android:paddingBottom">@dimen/nameLblPaddingBottom</item>
     </style>
-
-
 
 </resources>
 

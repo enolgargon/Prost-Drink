@@ -13,6 +13,7 @@ public class InicioJuegoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.setTheme(R.style.AppTheme_Splash);
         setContentView(R.layout.activity_iniciojuego);
         attachListeners();
 
