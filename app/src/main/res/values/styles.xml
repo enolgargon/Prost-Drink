@@ -18,10 +18,18 @@
         <item name="android:windowBackground">@drawable/splash</item>
     </style>
 
+    <style name="AppTheme.Dialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="colorPrimary">@color/background_medium</item>
+        <item name="colorPrimaryDark">@color/background_dark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/background_medium</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
 
     <!-- Componentes -->
     <style name="Button" parent="CondensedBase">
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/body</item>
         <item name="android:letterSpacing">0.2</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textStyle">bold</item>
@@ -34,14 +42,24 @@
         <item name="android:backgroundTint">@android:color/white</item>
     </style>
 
+    <style name="MierdiButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/borderbuttom</item>
+        <item name="android:padding">@dimen/mierdibutton</item>
+    </style>
+
     <style name="ListItem" parent="H3">
-        <item name="android:textSize">44sp</item>
+        <item name="android:textSize">@dimen/h3</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
 
     <!-- Incluir y redefinir adaptador de spinners -->
     <style name="Spinner" parent="AppTheme">
         <item name="android:popupBackground">@color/background_dark</item>
+    </style>
+
+    <style name="FAB" parent="AppTheme">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
     </style>
 
 
@@ -55,45 +73,54 @@
     </style>
 
     <style name="Subtitle1" parent="CondensedBase">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/subtitle1</item>
         <item name="android:letterSpacing">0.035625</item>
     </style>
 
     <style name="Subtitle2" parent="CondensedBase">
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/subtitle2</item>
         <item name="android:letterSpacing">0.035</item>
         <item name="android:lineSpacingExtra">4dp</item>
     </style>
 
     <style name="BodyEczar" parent="EczarBase">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/bodyEzcar</item>
         <item name="android:letterSpacing">0.16</item>
     </style>
 
     <style name="BodyCondensed" parent="CondensedBase">
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/body</item>
         <item name="android:letterSpacing">0.1875</item>
         <item name="android:fontFamily">@font/robotolight</item>
     </style>
 
     <style name="H1" parent="CondensedBase">
         <item name="android:letterSpacing">0.0357</item>
-        <item name="android:textSize">96sp</item>
+        <item name="android:textSize">@dimen/h1</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="H2" parent="CondensedBase">
         <item name="android:letterSpacing">0.0357</item>
-        <item name="android:textSize">60sp</item>
+        <item name="android:textSize">@dimen/h2</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="H3" parent="EczarBase">
         <item name="android:letterSpacing">0.0357</item>
-        <item name="android:textSize">44sp</item>
+        <item name="android:textSize">@dimen/h3</item>
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="nameLbl" parent="CondensedBase">
+        <item name="android:textSize">@dimen/nameLbl</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:paddingRight">@dimen/nameLblPaddingRight</item>
+        <item name="android:paddingTop">@dimen/nameLblPaddingTop</item>
+        <item name="android:paddingBottom">@dimen/nameLblPaddingBottom</item>
+    </style>
 
 
 

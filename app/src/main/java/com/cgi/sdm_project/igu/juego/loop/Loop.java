@@ -3,13 +3,14 @@ package com.cgi.sdm_project.igu.juego.loop;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.ContextThemeWrapper;
 
 import com.cgi.sdm_project.R;
 
 abstract class Loop extends AppCompatActivity {
     @Override
     public void onBackPressed() {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AppTheme_Dialog));
         alertDialogBuilder.setTitle(getString(R.string.titulo_back));
 
         alertDialogBuilder

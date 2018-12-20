@@ -41,6 +41,10 @@
     <!-- También usado en:
         Activity Preparación de sorteo
     -->
+    <string name="CargarLista">Cargar la última lista</string>
+    <!-- También usado en:
+        Activity Preparación de sorteo
+    -->
 
     <!-- Juego Personalizado -->
     <!-- Texto de titulo juego, ver activity principal-->
@@ -64,8 +68,8 @@
     <string name="Pasar">Pasar</string>
 
     <!-- Activity Retos -->
-    <string name="noApto">No hay huevos</string>
-    <string name="apto">¿Qué no qué?</string>
+    <string name="noApto">Nah, no me atrevo</string>
+    <string name="apto">¿Que ho hay huevos? Me atrevo</string>
 
     <!-- Activity Yo nunca -->
 
@@ -92,6 +96,7 @@
     <string name="jugadorAñadir">Jugador a añadir</string>
     <string name="numGrupos">Numero de grupos</string>
     <!-- Botón de añadir participante, ver activity de preparación de juego -->
+    <!-- Botón de cargar lista, ver activity de preparación de juego -->
     <string name="sortear">Sortear</string>
 
     <!-- Errores en la preparacion de sorteo -->

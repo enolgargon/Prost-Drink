@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putBoolean("Sonido", true);
             editor.putInt("Volumen", 100);
             editor.putInt("Idioma", 0);
-            editor.commit();
+            editor.apply();
         }
         Conf.getInstancia().setPreferences(settings);
     }
