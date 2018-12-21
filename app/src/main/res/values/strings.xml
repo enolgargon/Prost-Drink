@@ -53,6 +53,7 @@
     <string name="YoNunca">Yo nunca</string>
     <string name="HastaQue">Hasta Ques</string>
     <string name="Votaciones">Votaciones</string>
+    <string name="Fotos">Fotos</string>
     <string name="Jugar">Jugar</string>
     <string name="error_personalizado">La configuración para iniciar el juego no es correcta. Recuerda que debes seleccionar al menos un tipo de juego.</string>
 
@@ -140,4 +141,7 @@
 
     <!-- CAMARA -->
     <string name="error_camara">Hay algún problema con la cámara y no se puede sacar la foto</string>
+    <string name="error_conexion">Hay un problema con la conexión a internet. No podrás compartir la imagen</string>
+    <string name="compartir">Compartir imagen usando</string>
+    <string name="compartir_publi">Te regalo esta foto. Prost&amp;Drink</string>
 </resources>

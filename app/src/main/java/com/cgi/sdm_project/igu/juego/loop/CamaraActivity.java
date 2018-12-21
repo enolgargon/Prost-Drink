@@ -1,16 +1,20 @@
 package com.cgi.sdm_project.igu.juego.loop;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.FileProvider;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,7 +32,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class CamaraActivity extends AppCompatActivity implements InicioJuego, IFinJuego {
+public class CamaraActivity extends Loop implements InicioJuego, IFinJuego {
     static final int REQUEST_TAKE_PHOTO = 1;
 
     private Camara regla;
@@ -37,6 +41,19 @@ public class CamaraActivity extends AppCompatActivity implements InicioJuego, IF
     private ImageView imageView;
     private FloatingActionButton fabCamara;
     private FloatingActionButton fabShare;
+
+    public static boolean isConnected(Context context) {
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Network[] redes = cm.getAllNetworks();
+            for (Network red : redes)
+                if (cm.getNetworkInfo(red).getState().equals(NetworkInfo.State.CONNECTED))
+                    return true;
+            return false;
+        }
+        return false;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,10 +75,17 @@ public class CamaraActivity extends AppCompatActivity implements InicioJuego, IF
     }
 
     public void compartir(View view) {
-        final Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.setType("image/jpg");
-        shareIntent.putExtra(Intent.EXTRA_STREAM, mCurrentPhotoPath);
-        startActivity(Intent.createChooser(shareIntent, "Share image using"));
+        if (!isConnected(getApplicationContext()))
+            Toast.makeText(getApplicationContext(), R.string.error_conexion, Toast.LENGTH_LONG).show();
+        else {
+            final Intent intent = new Intent(android.content.Intent.ACTION_SEND);
+            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            intent.putExtra(Intent.EXTRA_STREAM,
+                    FileProvider.getUriForFile(this, "com.example.android.fileprovider", new File(mCurrentPhotoPath)));
+            intent.putExtra(Intent.EXTRA_SUBJECT, R.string.compartir_publi);
+            intent.setType("image/jpg");
+            startActivity(intent);
+        }
     }
 
     @SuppressLint("RestrictedApi")
@@ -73,7 +97,7 @@ public class CamaraActivity extends AppCompatActivity implements InicioJuego, IF
 
             imageView.setVisibility(ImageView.VISIBLE);
             fabShare.setVisibility(FloatingActionButton.VISIBLE);
-            fabCamara.setVisibility(FloatingActionButton.VISIBLE);
+            fabCamara.setVisibility(FloatingActionButton.GONE);
         }
     }
 
