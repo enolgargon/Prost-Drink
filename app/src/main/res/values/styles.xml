@@ -57,6 +57,12 @@
         <item name="android:backgroundTint">@color/colorPrimary</item>
     </style>
 
+    <style name="CameraFAB" parent="FAB">
+        <item name="android:scaleX">2.5</item>
+        <item name="android:scaleY">2.5</item>
+        <item name="android:padding">@dimen/mierdibutton</item>
+    </style>
+
     <style name="SorteoBucket" parent="AppTheme">
         <item name="android:padding">@dimen/bucketPadding</item>
         <item name="android:layout_margin">@dimen/bucketMargin</item>

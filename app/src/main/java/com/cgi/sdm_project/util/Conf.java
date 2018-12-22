@@ -4,11 +4,10 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class Conf {
-    private static Conf instancia;
-    private SharedPreferences settings;
-
     //Constantes
     public static final String JUGADORES = "jugadores";
+    private static Conf instancia;
+    private SharedPreferences settings;
 
     private Conf() {
         String nombrePreferencias = "Preferencias";
@@ -106,6 +105,16 @@ public class Conf {
     public void setVotaciones(boolean opcion) {
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("Votaciones", opcion);
+        editor.apply();
+    }
+
+    public boolean getFotos() {
+        return settings.getBoolean("Fotos", true);
+    }
+
+    public void setFotos(boolean opcion) {
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean("Fotos", opcion);
         editor.apply();
     }
 

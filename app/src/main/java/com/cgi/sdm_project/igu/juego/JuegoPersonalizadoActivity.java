@@ -17,7 +17,7 @@ import com.cgi.sdm_project.util.Conf;
 
 public class JuegoPersonalizadoActivity extends AppCompatActivity {
 
-    private CheckBox preguntas, retos, yoNunca, hastaQues, votaciones;
+    private CheckBox preguntas, retos, yoNunca, hastaQues, votaciones, fotos;
 
 
     @Override
@@ -51,6 +51,8 @@ public class JuegoPersonalizadoActivity extends AppCompatActivity {
         hastaQues.setOnCheckedChangeListener(new CheckedListener("Hastaque"));
         votaciones = findViewById(R.id.ckVotaciones);
         votaciones.setOnCheckedChangeListener(new CheckedListener("Votacion"));
+        fotos = findViewById(R.id.ckFotos);
+        fotos.setOnCheckedChangeListener(new CheckedListener("Camara"));
     }
 
     private void cargarPreferencias() {
@@ -61,6 +63,7 @@ public class JuegoPersonalizadoActivity extends AppCompatActivity {
         yoNunca.setChecked(conf.getYoNunca());
         hastaQues.setChecked(conf.getHastaQues());
         votaciones.setChecked(conf.getVotaciones());
+        fotos.setChecked(conf.getFotos());
     }
 
     private void guardarPreferencias() {
@@ -70,6 +73,7 @@ public class JuegoPersonalizadoActivity extends AppCompatActivity {
         conf.setYoNunca(yoNunca.isChecked());
         conf.setHastaQues(hastaQues.isChecked());
         conf.setVotaciones(votaciones.isChecked());
+        conf.setFotos(fotos.isChecked());
     }
 
     /**
