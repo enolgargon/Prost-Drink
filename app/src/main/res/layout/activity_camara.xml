@@ -44,7 +44,7 @@
         android:layout_marginBottom="8dp"
         android:clickable="true"
         android:onClick="pulsarCamara"
-        android:theme="@style/FAB"
+        android:theme="@style/CameraFAB"
         app:borderWidth="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

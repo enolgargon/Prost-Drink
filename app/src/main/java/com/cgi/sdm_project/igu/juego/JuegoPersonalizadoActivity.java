@@ -63,7 +63,7 @@ public class JuegoPersonalizadoActivity extends AppCompatActivity {
         yoNunca.setChecked(conf.getYoNunca());
         hastaQues.setChecked(conf.getHastaQues());
         votaciones.setChecked(conf.getVotaciones());
-        fotos.setChecked(conf.getVotaciones());
+        fotos.setChecked(conf.getFotos());
     }
 
     private void guardarPreferencias() {
