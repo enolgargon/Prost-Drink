@@ -5,6 +5,7 @@ import com.cgi.sdm_project.logica.juego.reglas.Camara;
 import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
 import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
 import com.cgi.sdm_project.logica.juego.reglas.Reto;
+import com.cgi.sdm_project.logica.juego.reglas.Trabalenguas;
 import com.cgi.sdm_project.logica.juego.reglas.Votacion;
 
 import org.w3c.dom.Document;
@@ -97,6 +98,12 @@ public class Loader {
         toRet.add(new HastaQue("Hasta que te vuelva a tocar tienes que estar sentado/a encima de la persona que más te guste de la mesa", 4));
         return toRet;
         */
+    }
+
+    public static List<Trabalenguas> loadTrabalenguas(){
+
+        return FactoryParser.getTrabalenguasParser().execute(getXML(R.raw.trabalenguas));
+
     }
 
     public static List<Camara> loadCamara() {

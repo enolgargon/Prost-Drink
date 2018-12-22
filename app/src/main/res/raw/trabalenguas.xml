@@ -1,0 +1,15 @@
+<actividad name="Trabalenguas">
+    <item text="El perro de San Roque no tiene rabo porque Ramón Rodríguez se lo ha cortado" tragos = "3">
+    </item>
+    <item text="Tres tristes tigres tragan trigo en un trigal" tragos = "2">
+    </item>
+    <item text="El cielo está enladrillado, ¿quién lo desenladrillará? El desenladrillador
+    que lo desenladrille, buen desenladrillador será." tragos = "4">
+    </item>
+    <item text="Pablito clavó un clavito, ¿qué clavito clavó Pablito?, el clavito que Pablito clavó,
+     era el clavito de Pablito" tragos = "4">
+    </item>
+    <item text="Cuando cuentes cuentos cuenta cuantos cuentos cuentas,
+    porque si no cuentas cuantos cuentos cuentas nunca sabrás cuántos cuentos sabes contar." tragos = "5">
+    </item>
+</actividad>
