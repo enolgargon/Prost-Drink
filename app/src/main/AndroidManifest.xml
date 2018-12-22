@@ -50,7 +50,8 @@
         <activity android:name=".igu.juego.loop.HastaQueActivity" />
         <activity android:name=".igu.juego.loop.ResultadoActivity" />
         <activity android:name=".igu.juego.loop.NotificacionActivity" />
-        <activity android:name=".igu.juego.loop.CamaraActivity"></activity>
+        <activity android:name=".igu.juego.loop.CamaraActivity"/>
+        <activity android:name=".igu.juego.loop.TrabalenguasActivity"/>
 
         <provider
             android:name="android.support.v4.content.FileProvider"

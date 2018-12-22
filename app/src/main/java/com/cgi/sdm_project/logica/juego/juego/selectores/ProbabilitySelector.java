@@ -4,7 +4,7 @@ public class ProbabilitySelector extends FilteredSelector {
     /**
      * Lista con los porcentajes de cada juego
      */
-    private final int[] porcentajes = new int[]{30, 25, 25, 10, 10};
+    private final int[] porcentajes = new int[]{100}/*{30, 25, 25, 10, 10}*/;
 
     @Override
     public String getNombreSiguienteJuego() {

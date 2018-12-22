@@ -1,5 +1,6 @@
 <actividad name="Trabalenguas">
-    <item
+    <item text="hello" tragos="3"></item>
+    <!-- item
         text="El perro de San Roque no tiene rabo porque Ramón Rodríguez se lo ha cortado"
         tragos="3"></item>
     <item
@@ -16,5 +17,5 @@
     <item
         text="Cuando cuentes cuentos cuenta cuantos cuentos cuentas,
     porque si no cuentas cuantos cuentos cuentas nunca sabrás cuántos cuentos sabes contar."
-        tragos="5"></item>
+        tragos="5"></item -->
 </actividad>

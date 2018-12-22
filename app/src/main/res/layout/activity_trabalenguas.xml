@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constrLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".igu.juego.loop.TrabalenguasActivity">
@@ -88,7 +89,7 @@
         app:layout_constraintVertical_bias="0.120000005" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/btnSpeak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -120,13 +121,14 @@
         app:layout_constraintVertical_bias="0.85" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnContinuar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="9dp"
+        android:onClick="continuar"
         android:text="@string/continuar"
         android:theme="@style/Button"
         android:visibility="invisible"
@@ -138,7 +140,7 @@
         app:layout_constraintVertical_bias="0.984" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnTTS"
         android:layout_width="26dp"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"

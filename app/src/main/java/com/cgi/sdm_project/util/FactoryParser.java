@@ -3,6 +3,7 @@ package com.cgi.sdm_project.util;
 import com.cgi.sdm_project.util.parsers.HastaQueParser;
 import com.cgi.sdm_project.util.parsers.PreguntaParser;
 import com.cgi.sdm_project.util.parsers.RetoParser;
+import com.cgi.sdm_project.util.parsers.TrabalenguasParser;
 import com.cgi.sdm_project.util.parsers.VotacionParser;
 
 class FactoryParser {
@@ -25,4 +26,6 @@ class FactoryParser {
     static RetoParser getRetoParser() {
         return new RetoParser();
     }
+
+    static TrabalenguasParser getTrabalenguasParser() { return new TrabalenguasParser(); }
 }
