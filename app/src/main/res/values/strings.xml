@@ -145,4 +145,9 @@
     <string name="error_conexion">Hay un problema con la conexión a internet. No podrás compartir la imagen</string>
     <string name="compartir">Compartir imagen usando</string>
     <string name="compartir_publi">Te regalo esta foto. Prost&amp;Drink</string>
+
+    <!-- TRABALENGUAS -->
+    <string name="repite">Repite:</string>
+    <string name="intentos">Intentos restantes: </string>
+    <string name="continuar">Continuar</string>
 </resources>

@@ -48,11 +48,6 @@
         <item name="android:padding">@dimen/mierdibutton</item>
     </style>
 
-    <!-- Incluir y redefinir adaptador de spinners -->
-    <style name="Spinner" parent="AppTheme">
-        <item name="android:popupBackground">@color/background_dark</item>
-    </style>
-
     <style name="FAB" parent="AppTheme">
         <item name="android:backgroundTint">@color/colorPrimary</item>
     </style>
@@ -63,10 +58,21 @@
         <item name="android:padding">@dimen/mierdibutton</item>
     </style>
 
+    <style name="MicFAB" parent="FAB">
+        <item name="android:scaleX">2</item>
+        <item name="android:scaleY">2</item>
+        <item name="android:padding">@dimen/mierdibutton</item>
+    </style>
+
     <style name="SorteoBucket" parent="AppTheme">
         <item name="android:padding">@dimen/bucketPadding</item>
         <item name="android:layout_margin">@dimen/bucketMargin</item>
     </style>
+
+    <style name="InputText" parent="BodyCondensed">
+        <item name="android:backgroundTint">@color/background_light</item>
+    </style>
+
 
     <!-- Fuentes -->
     <style name="EczarBase" parent="AppTheme">
