@@ -20,9 +20,9 @@
         android:drawable="@color/background_medium"/>
 
     <item
-        android:width="160dp"
-        android:height="160dp"
-        android:drawable="@drawable/ic_logo_symbol"
+        android:width="200dp"
+        android:height="200dp"
+        android:drawable="@drawable/logo"
         android:gravity="center"/>
 
 </layer-list>

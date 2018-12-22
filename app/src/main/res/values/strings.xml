@@ -137,4 +137,5 @@
     <!-- HASTA QUE -> Notificacion -->
     <string name="notificacion_hasta_que">El jugador %s ya ha finalizado su hasta que</string>
     <string name="error_equipos_inexistente">Debes introducir un número de equipos</string>
+    <string name="Imagen">Imagen</string>
 </resources>
