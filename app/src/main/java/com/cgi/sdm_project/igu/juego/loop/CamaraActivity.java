@@ -13,6 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.FileProvider;
 import android.view.View;
@@ -26,6 +27,7 @@ import com.cgi.sdm_project.logica.juego.activities.FinJuego;
 import com.cgi.sdm_project.logica.juego.activities.IFinJuego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.Camara;
+import com.cgi.sdm_project.util.PermissionChecker;
 
 import java.io.File;
 import java.io.IOException;
@@ -71,8 +73,22 @@ public class CamaraActivity extends Loop implements InicioJuego, IFinJuego {
     }
 
     public void pulsarCamara(View view) {
-        dispatchTakePictureIntent();
+        PermissionChecker permissionChecker = PermissionChecker.getInstance();
+        if (!permissionChecker.isCameraPermissionGranted())
+            permissionChecker.pedirPermisos(PermissionChecker.CAMARA_LOC, PermissionChecker.MY_PERMISSIONS_CAMARA, this);
+        else
+            dispatchTakePictureIntent();
     }
+
+    public void retomarPulsarCamara() {
+        if (!PermissionChecker.getInstance().isCameraPermissionGranted()) {
+            Intent i = new Intent(this, Juego.getInstance().getSiguienteJuego());
+            startActivity(i);
+            finish();
+        } else
+            dispatchTakePictureIntent();
+    }
+
 
     public void compartir(View view) {
         if (!isConnected(getApplicationContext()))
@@ -99,6 +115,17 @@ public class CamaraActivity extends Loop implements InicioJuego, IFinJuego {
             fabShare.setVisibility(FloatingActionButton.VISIBLE);
             fabCamara.setVisibility(FloatingActionButton.GONE);
         }
+    }
+
+    /**
+     * Handles the result of the request for location permissions.
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           @NonNull String permissions[],
+                                           @NonNull int[] grantResults) {
+        PermissionChecker.getInstance().onRequestPermissionsResult(requestCode, permissions, grantResults);
+        retomarPulsarCamara();
     }
 
     private File createImageFile() throws IOException {
