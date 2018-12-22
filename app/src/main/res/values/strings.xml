@@ -82,6 +82,7 @@
 
     <!-- Activity Resultados -->
     <string name="siguiente">Siguiente jugador</string>
+    <string name="Imagen">Imagen</string>
     <!-- También usado en:
         Activity Hasta que
     -->

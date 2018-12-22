@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="154dp"
-        android:layout_height="39dp"
+        android:layout_width="331dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/Configuración"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:textStyle="bold"
+        android:theme="@style/H4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintHorizontal_bias="0.67"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.155" />
+        app:layout_constraintVertical_bias="0.187" />
 
     <SeekBar
         android:id="@+id/sbVolumen"
@@ -28,16 +28,15 @@
         android:layout_width="178dp"
         android:layout_height="17dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="188dp"
         android:progress="50"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/swSonido"
-        app:layout_constraintVertical_bias="0.387" />
+        app:layout_constraintVertical_bias="0.227" />
 
     <Switch
         android:id="@+id/swSonido"
@@ -47,23 +46,20 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="@string/Sonido"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.191"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.152" />
+        app:layout_constraintVertical_bias="0.09" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="61dp"
         android:layout_height="18dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="@string/Volumen"
         android:textAppearance="@android:style/TextAppearance.Material"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,7 +67,7 @@
         app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/swSonido"
-        app:layout_constraintVertical_bias="0.193" />
+        app:layout_constraintVertical_bias="0.117" />
 
     <TextView
         android:id="@+id/textView7"
@@ -88,7 +84,7 @@
         app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.322" />
+        app:layout_constraintVertical_bias="0.187" />
 
     <Spinner
         android:id="@+id/spIdioma"
@@ -99,13 +95,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:entries="@array/Idiomas"
+        android:popupBackground="@color/background_dark"
         android:theme="@style/Spinner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/sbVolumen"
-        app:layout_constraintVertical_bias="0.308" />
+        app:layout_constraintVertical_bias="0.16" />
 
     <Button
         android:id="@+id/btnGuardar"
@@ -117,6 +114,7 @@
         android:layout_marginBottom="8dp"
         android:onClick="guardar"
         android:text="@string/Guardar"
+        android:theme="@style/Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.968"
