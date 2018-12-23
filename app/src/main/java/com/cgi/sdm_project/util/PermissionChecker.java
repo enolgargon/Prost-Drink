@@ -28,8 +28,8 @@ public class PermissionChecker {
         return instance;
     }
 
-    public boolean isCameraPermissionGranted() {
-        return cameraPermissionGranted;
+    public boolean isCameraPermissionGranted(Activity activity) {
+        return ContextCompat.checkSelfPermission(activity, CAMARA_LOC) == PackageManager.PERMISSION_GRANTED;
     }
 
     public boolean isRecordPermissionGranted(Activity activity) {
