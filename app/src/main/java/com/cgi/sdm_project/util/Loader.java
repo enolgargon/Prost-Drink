@@ -100,7 +100,7 @@ public class Loader {
         */
     }
 
-    public static List<Trabalenguas> loadTrabalenguas(){
+    public static List<Trabalenguas> loadTrabalenguas() {
 
         return FactoryParser.getTrabalenguasParser().execute(getXML(R.raw.trabalenguas));
 

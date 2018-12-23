@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
 
     <uses-feature
@@ -50,8 +51,8 @@
         <activity android:name=".igu.juego.loop.HastaQueActivity" />
         <activity android:name=".igu.juego.loop.ResultadoActivity" />
         <activity android:name=".igu.juego.loop.NotificacionActivity" />
-        <activity android:name=".igu.juego.loop.CamaraActivity"/>
-        <activity android:name=".igu.juego.loop.TrabalenguasActivity"/>
+        <activity android:name=".igu.juego.loop.CamaraActivity" />
+        <activity android:name=".igu.juego.loop.TrabalenguasActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

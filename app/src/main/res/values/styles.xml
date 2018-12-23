@@ -101,7 +101,7 @@
 
     <style name="BodyCondensed" parent="CondensedBase">
         <item name="android:textSize">@dimen/body</item>
-        <item name="android:letterSpacing">0.1875</item>
+        <item name="android:letterSpacing">0.1</item>
         <item name="android:fontFamily">@font/robotolight</item>
     </style>
 

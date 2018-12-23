@@ -12,7 +12,7 @@ import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
 
-public class PreguntaActivity extends Loop implements InicioJuego{
+public class PreguntaActivity extends Loop implements InicioJuego {
     private Pregunta pregunta;
 
     @Override
@@ -24,7 +24,6 @@ public class PreguntaActivity extends Loop implements InicioJuego{
         ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
         ((TextView) findViewById(R.id.lblPregunta)).setText(pregunta.getPregunta());
     }
-
 
 
     private void siguiente(View v) {

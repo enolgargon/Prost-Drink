@@ -1,18 +1,20 @@
 package com.cgi.sdm_project.logica.juego.reglas;
 
-public class Trabalenguas extends ReglaTragable{
+public class Trabalenguas extends ReglaTragable {
 
     private final String texto;
     private boolean respuesta;
     private int intentos; //Número de intentos que tendrán para acertar el trabalenguas
 
-    public Trabalenguas(String texto, int tragos){
+    public Trabalenguas(String texto, int tragos) {
         super(tragos);
         this.texto = texto;
         this.intentos = 3;
     }
 
-    public boolean isRespuesta(){ return respuesta; }
+    public boolean isRespuesta() {
+        return respuesta;
+    }
 
     public void atreverse() {
         respuesta = true;
@@ -22,11 +24,19 @@ public class Trabalenguas extends ReglaTragable{
         respuesta = false;
     }
 
-    public String getTexto(){ return texto; }
+    public String getTexto() {
+        return texto;
+    }
 
-    public int getIntentos(){ return intentos; }
+    public int getIntentos() {
+        return intentos;
+    }
 
-    public boolean reducirIntentos(){
+    public void resetIntentos() {
+        this.intentos = 3;
+    }
+
+    public boolean reducirIntentos() {
         intentos--;
         if (intentos <= 0)
             return true;

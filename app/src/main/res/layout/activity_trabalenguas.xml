@@ -5,25 +5,26 @@
     android:id="@+id/constrLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/BodyCondensed"
     tools:context=".igu.juego.loop.TrabalenguasActivity">
 
     <TextView
         android:id="@+id/txtIntentos"
-        android:layout_width="172dp"
-        android:layout_height="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="right"
         android:text="@string/intentos"
-        android:theme="@style/BodyCondensed"
+        android:theme="@style/Subtitle1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.120000005" />
+        app:layout_constraintVertical_bias="0.118" />
 
     <TextView
         android:id="@+id/txtIntNum"
@@ -40,16 +41,16 @@
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.120000005" />
+        app:layout_constraintVertical_bias="0.110000014" />
 
     <TextView
         android:id="@+id/lblTrabalenguas"
         android:layout_width="0dp"
-        android:layout_height="167dp"
+        android:layout_height="0dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="275dp"
         android:gravity="center_vertical|center_horizontal"
         android:theme="@style/BodyCondensed"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,17 +74,17 @@
 
     <TextView
         android:id="@+id/txtRepite"
-        android:layout_width="52dp"
-        android:layout_height="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/repite"
-        android:theme="@style/BodyCondensed"
+        android:theme="@style/Subtitle1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.120000005" />

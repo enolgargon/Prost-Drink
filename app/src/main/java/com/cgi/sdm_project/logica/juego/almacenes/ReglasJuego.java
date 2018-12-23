@@ -59,7 +59,7 @@ public class ReglasJuego {
         return camaras.get((int) (Math.random() * (camaras.size())));
     }
 
-    public Trabalenguas getTrabalenguas(){
+    public Trabalenguas getTrabalenguas() {
         return trabalenguas.get((int) (Math.random() * trabalenguas.size()));
     }
 }
