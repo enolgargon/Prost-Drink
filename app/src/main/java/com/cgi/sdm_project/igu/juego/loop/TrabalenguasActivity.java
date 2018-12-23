@@ -23,6 +23,7 @@ import com.cgi.sdm_project.util.PermissionChecker;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.text.Collator;
 
 public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpeech.OnInitListener {
     private Trabalenguas trabalenguas;
@@ -129,8 +130,10 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
      * @return
      */
     private boolean checkRespuesta(List<String> matches) {
+        Collator c = Collator.getInstance();
+        c.setStrength(Collator.PRIMARY);
         for (String m : matches) {
-            if (m.toLowerCase().equals(trabalenguas.getTexto().toLowerCase())) {
+            if (c.equals(m, trabalenguas.getTexto())) {
                 inputText.setText(m);
                 Log.i("tts", m);
                 inputText.setTextColor(Color.GREEN);
@@ -153,6 +156,14 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
     }
 
     public void continuar(View view) {
+        //TODO implementar esto
+        if (trabalenguas.isRespuesta()) {
+            //Si lo hacen bien
+        } else {
+            //Si lo hacen mal
+        }
+
+        //Y de aquí a abajo fuera
         Intent mIntent = new Intent(getApplicationContext(), ResultadoActivity.class);
         startActivity(mIntent);
         finish();

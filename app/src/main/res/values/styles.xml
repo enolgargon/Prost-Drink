@@ -69,7 +69,7 @@
         <item name="android:layout_margin">@dimen/bucketMargin</item>
     </style>
 
-    <style name="InputText" parent="BodyCondensed">
+    <style name="InputText" parent="Subtitle1">
         <item name="android:backgroundTint">@color/background_light</item>
     </style>
 
