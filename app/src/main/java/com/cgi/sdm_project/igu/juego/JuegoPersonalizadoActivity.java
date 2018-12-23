@@ -10,14 +10,15 @@ import android.widget.Toast;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
-import com.cgi.sdm_project.logica.juego.juego.ISelectorRegla;
 import com.cgi.sdm_project.logica.juego.juego.selectores.FilteredSelector;
+import com.cgi.sdm_project.logica.juego.juego.selectores.ProbabilitySelector;
 import com.cgi.sdm_project.util.Conf;
 
 
 public class JuegoPersonalizadoActivity extends AppCompatActivity {
 
     private CheckBox preguntas, retos, yoNunca, hastaQues, votaciones, fotos;
+    private FilteredSelector filtro;
 
 
     @Override
@@ -25,16 +26,14 @@ public class JuegoPersonalizadoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_juegopersonalizado);
 
+        Juego.getInstance().setSelectorRegla(filtro = new FilteredSelector(new ProbabilitySelector(), null));
         cargarComponentes();
         cargarPreferencias();
     }
 
     public void lanzarJuego(View vs) {
         guardarPreferencias();
-        ISelectorRegla selector = Juego.getInstance().getSelectorRegla();
-        if (!(selector instanceof FilteredSelector))
-            throw new IllegalStateException("No puedes filtrar con un selector sin filtro");
-        if (((FilteredSelector) selector).isValidConfiguration()) {
+        if (filtro.isValidConfiguration()) {
             Intent mIntent = new Intent(getApplicationContext(), ElegirJugadoresActivity.class);
             startActivity(mIntent);
         } else
@@ -43,22 +42,22 @@ public class JuegoPersonalizadoActivity extends AppCompatActivity {
 
     private void cargarComponentes() {
         preguntas = findViewById(R.id.ckPreguntas);
-        preguntas.setOnCheckedChangeListener(new CheckedListener("Pregunta"));
+        preguntas.setOnCheckedChangeListener(new CheckedListener("Pregunta", filtro));
         retos = findViewById(R.id.ckRetos);
-        retos.setOnCheckedChangeListener(new CheckedListener("Reto"));
+        retos.setOnCheckedChangeListener(new CheckedListener("Reto", filtro));
         yoNunca = findViewById(R.id.ckYoNunca);
         hastaQues = findViewById(R.id.ckHastaQues);
-        hastaQues.setOnCheckedChangeListener(new CheckedListener("Hastaque"));
+        hastaQues.setOnCheckedChangeListener(new CheckedListener("Hastaque", filtro));
         votaciones = findViewById(R.id.ckVotaciones);
-        votaciones.setOnCheckedChangeListener(new CheckedListener("Votacion"));
+        votaciones.setOnCheckedChangeListener(new CheckedListener("Votacion", filtro));
         fotos = findViewById(R.id.ckFotos);
-        fotos.setOnCheckedChangeListener(new CheckedListener("Camara"));
+        fotos.setOnCheckedChangeListener(new CheckedListener("Camara", filtro));
     }
 
     private void cargarPreferencias() {
         Conf conf = Conf.getInstancia();
-        preguntas.setChecked(conf.getPreguntas());
 
+        preguntas.setChecked(conf.getPreguntas());
         retos.setChecked(conf.getRetos());
         yoNunca.setChecked(conf.getYoNunca());
         hastaQues.setChecked(conf.getHastaQues());
@@ -88,25 +87,19 @@ public class JuegoPersonalizadoActivity extends AppCompatActivity {
          * Nombre de la regla que va a cambiar
          */
         private final String nombreRegla;
+        private final FilteredSelector filtro;
 
-        /**
-         * Constructor que establece la regla que cambia
-         *
-         * @param nombreRegla Nombre de la regla que se modifica
-         */
-        private CheckedListener(String nombreRegla) {
+        CheckedListener(String nombreRegla, FilteredSelector filtro) {
             this.nombreRegla = nombreRegla;
+            this.filtro = filtro;
         }
 
         @Override
         public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-            ISelectorRegla selector = Juego.getInstance().getSelectorRegla();
-            if (!(selector instanceof FilteredSelector))
-                throw new IllegalStateException("No puedes filtrar con un selector sin filtro");
             if (b)
-                ((FilteredSelector) selector).active(nombreRegla);
+                filtro.active(nombreRegla);
             else
-                ((FilteredSelector) selector).desactive(nombreRegla);
+                filtro.desactive(nombreRegla);
         }
     }
 }

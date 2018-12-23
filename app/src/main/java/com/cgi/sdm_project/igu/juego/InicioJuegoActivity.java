@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.cgi.sdm_project.R;
+import com.cgi.sdm_project.logica.juego.Juego;
+import com.cgi.sdm_project.logica.juego.juego.selectores.ProbabilitySelector;
 
 
 public class InicioJuegoActivity extends AppCompatActivity {
@@ -34,12 +36,13 @@ public class InicioJuegoActivity extends AppCompatActivity {
         });
     }
 
-    private void lanzarJuegoNormal(View vs){
+    private void lanzarJuegoNormal(View vs) {
+        Juego.getInstance().setSelectorRegla(new ProbabilitySelector());
         Intent mIntent = new Intent(getApplicationContext(), ElegirJugadoresActivity.class);
         startActivity(mIntent);
     }
 
-    private void lanzarJuegoPersonalizado(View vs){
+    private void lanzarJuegoPersonalizado(View vs) {
         Intent mIntent = new Intent(getApplicationContext(), JuegoPersonalizadoActivity.class);
         startActivity(mIntent);
     }

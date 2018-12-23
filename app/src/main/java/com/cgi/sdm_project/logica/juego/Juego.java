@@ -31,7 +31,7 @@ public class Juego {
     /**
      * Objeto que ofrece una estrategia para obtener el siguiente juego
      */
-    private final ISelectorRegla selectorRegla;
+    private ISelectorRegla selectorRegla;
     /**
      * Cola de prioridad con las notificacions que se van a tener que mostrar al usuario
      */
@@ -72,6 +72,12 @@ public class Juego {
      */
     public ISelectorRegla getSelectorRegla() {
         return selectorRegla;
+    }
+
+    public void setSelectorRegla(ISelectorRegla selectorRegla) {
+        if (selectorRegla == null)
+            throw new IllegalArgumentException("No puedes establecer un selector null");
+        this.selectorRegla = selectorRegla;
     }
 
     /**
@@ -159,9 +165,14 @@ public class Juego {
         }
 
         juegoActual = null;
+        String nombre;
         try {
-            while (juegoActual == null)
-                juegoActual = (Regla) ReglasJuego.class.getMethod("get" + selectorRegla.getNombreSiguienteJuego()).invoke(ReglasJuego.getInstance());
+            if ((nombre = selectorRegla.getNombreSiguienteJuego()) == null) {
+                while ((nombre = selectorRegla.getNombreSiguienteJuego()) == null) ;
+            }
+            while ((juegoActual = (Regla) ReglasJuego.class.getMethod("get" + nombre).invoke(ReglasJuego.getInstance())) == null)
+                ;
+
         } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
