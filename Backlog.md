@@ -79,5 +79,8 @@ Tras el Scrum Team
 * String de resultados -> Enol
 * Notificaciones -> Enol
 
+## Nochebuena de 2018
+Los objetivos del último sprint se finalizaorn en su plazo, a partir de ahora trabajaremos mediante issues de Github, al adaptarse mejor a los objetivos restantes del desarrollo
+
 
 ## Fin del desarrollo 28 de diciembre de 2018

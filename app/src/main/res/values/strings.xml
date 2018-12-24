@@ -54,6 +54,7 @@
     <string name="HastaQue">Hasta Ques</string>
     <string name="Votaciones">Votaciones</string>
     <string name="Fotos">Fotos</string>
+    <string name="Trabalenguas">Trabalenguas</string>
     <string name="Jugar">Jugar</string>
     <string name="error_personalizado">La configuración para iniciar el juego no es correcta. Recuerda que debes seleccionar al menos un tipo de juego.</string>
 
@@ -145,4 +146,17 @@
     <string name="error_conexion">Hay un problema con la conexión a internet. No podrás compartir la imagen</string>
     <string name="compartir">Compartir imagen usando</string>
     <string name="compartir_publi">Te regalo esta foto. Prost&amp;Drink</string>
+
+    <!-- TRABALENGUAS -->
+    <string name="repite">Repite:</string>
+    <string name="intentos">Intentos restantes: </string>
+    <string name="continuar">Continuar</string>
+    <string name="trabalenguas_exito1">Todavía estás muy sobrio... Manda beber %d</string>
+    <string name="trabalenguas_exito2">¡Muy bien! Manda beber %d</string>
+    <string name="trabalenguas_exito3">¡Menuda dicción! Manda beber %d</string>
+    <string name="trabalenguas_fracaso1">El alcohol va surgiendo efecto... Bebe %d</string>
+    <string name="trabalenguas_fracaso2">¿Tan mal vas ya? Bebe %d</string>
+    <string name="trabalenguas_fracaso3">Más suerte la próxima vez. Bebe %d</string>
+
+
 </resources>

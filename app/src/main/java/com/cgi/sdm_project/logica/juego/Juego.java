@@ -9,6 +9,8 @@ import com.cgi.sdm_project.logica.juego.juego.Jugador;
 import com.cgi.sdm_project.logica.juego.juego.Notificacion;
 import com.cgi.sdm_project.logica.juego.juego.selectores.ProbabilitySelector;
 import com.cgi.sdm_project.logica.juego.reglas.Regla;
+import com.cgi.sdm_project.util.Conf;
+import com.cgi.sdm_project.util.Enumerates.Idioma;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -31,7 +33,7 @@ public class Juego {
     /**
      * Objeto que ofrece una estrategia para obtener el siguiente juego
      */
-    private final ISelectorRegla selectorRegla;
+    private ISelectorRegla selectorRegla;
     /**
      * Cola de prioridad con las notificacions que se van a tener que mostrar al usuario
      */
@@ -48,6 +50,7 @@ public class Juego {
      * Regla con la que se está jugando
      */
     private Regla juegoActual;
+
 
     private Juego() {
         selectorRegla = new ProbabilitySelector();
@@ -72,6 +75,12 @@ public class Juego {
      */
     public ISelectorRegla getSelectorRegla() {
         return selectorRegla;
+    }
+
+    public void setSelectorRegla(ISelectorRegla selectorRegla) {
+        if (selectorRegla == null)
+            throw new IllegalArgumentException("No puedes establecer un selector null");
+        this.selectorRegla = selectorRegla;
     }
 
     /**
@@ -124,6 +133,7 @@ public class Juego {
         return turno;
     }
 
+
     /**
      * Método que registra una nueva notificación que se le va a tener que mostrar al usuario cuando toque.
      *
@@ -159,9 +169,14 @@ public class Juego {
         }
 
         juegoActual = null;
+        String nombre;
         try {
-            while (juegoActual == null)
-                juegoActual = (Regla) ReglasJuego.class.getMethod("get" + selectorRegla.getNombreSiguienteJuego()).invoke(ReglasJuego.getInstance());
+            if ((nombre = selectorRegla.getNombreSiguienteJuego()) == null) {
+                while ((nombre = selectorRegla.getNombreSiguienteJuego()) == null) ;
+            }
+            while ((juegoActual = (Regla) ReglasJuego.class.getMethod("get" + nombre).invoke(ReglasJuego.getInstance())) == null)
+                ;
+
         } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
@@ -182,4 +197,5 @@ public class Juego {
             throw new AssertionError("No se ha seleccionado un nuevo juego");
         return nuevo;
     }
+
 }

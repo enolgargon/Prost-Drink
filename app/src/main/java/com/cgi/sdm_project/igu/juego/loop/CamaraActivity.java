@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
+import com.cgi.sdm_project.logica.juego.activities.ContinuarRonda;
 import com.cgi.sdm_project.logica.juego.activities.FinJuego;
 import com.cgi.sdm_project.logica.juego.activities.IFinJuego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
@@ -74,16 +75,15 @@ public class CamaraActivity extends Loop implements InicioJuego, IFinJuego {
 
     public void pulsarCamara(View view) {
         PermissionChecker permissionChecker = PermissionChecker.getInstance();
-        if (!permissionChecker.isCameraPermissionGranted())
+        if (!permissionChecker.isCameraPermissionGranted(this))
             permissionChecker.pedirPermisos(PermissionChecker.CAMARA_LOC, PermissionChecker.MY_PERMISSIONS_CAMARA, this);
         else
             dispatchTakePictureIntent();
     }
 
     public void retomarPulsarCamara() {
-        if (!PermissionChecker.getInstance().isCameraPermissionGranted()) {
-            Intent i = new Intent(this, Juego.getInstance().getSiguienteJuego());
-            startActivity(i);
+        if (!PermissionChecker.getInstance().isCameraPermissionGranted(this)) {
+            new ContinuarRonda().cargarSiguienteJuego(null);
             finish();
         } else
             dispatchTakePictureIntent();

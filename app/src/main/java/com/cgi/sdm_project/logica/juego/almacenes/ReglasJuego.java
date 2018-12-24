@@ -4,6 +4,7 @@ import com.cgi.sdm_project.logica.juego.reglas.Camara;
 import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
 import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
 import com.cgi.sdm_project.logica.juego.reglas.Reto;
+import com.cgi.sdm_project.logica.juego.reglas.Trabalenguas;
 import com.cgi.sdm_project.logica.juego.reglas.Votacion;
 import com.cgi.sdm_project.util.Loader;
 
@@ -17,6 +18,7 @@ public class ReglasJuego {
     private List<Votacion> votaciones;
     private List<HastaQue> hastaques;
     private List<Camara> camaras;
+    private List<Trabalenguas> trabalenguas;
 
     private ReglasJuego() {
         cargarReglas();
@@ -34,6 +36,7 @@ public class ReglasJuego {
         votaciones = Loader.loadVotaciones();
         hastaques = Loader.loadHastaQues();
         camaras = Loader.loadCamara();
+        trabalenguas = Loader.loadTrabalenguas();
     }
 
     public Pregunta getPregunta() {
@@ -54,5 +57,9 @@ public class ReglasJuego {
 
     public Camara getCamara() {
         return camaras.get((int) (Math.random() * (camaras.size())));
+    }
+
+    public Trabalenguas getTrabalenguas() {
+        return trabalenguas.get((int) (Math.random() * trabalenguas.size()));
     }
 }

@@ -2,6 +2,8 @@ package com.cgi.sdm_project.igu.juego.loop;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.TextView;
 
@@ -22,6 +24,7 @@ public class PreguntaActivity extends Loop implements InicioJuego {
         ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
         ((TextView) findViewById(R.id.lblPregunta)).setText(pregunta.getPregunta());
     }
+
 
     private void siguiente(View v) {
         Intent mIntent = new Intent(getApplicationContext(), ResultadoActivity.class);
