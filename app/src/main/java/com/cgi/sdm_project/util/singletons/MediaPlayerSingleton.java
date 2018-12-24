@@ -3,18 +3,20 @@ package com.cgi.sdm_project.util.singletons;
 import android.media.MediaPlayer;
 
 import com.cgi.sdm_project.R;
+import com.cgi.sdm_project.util.Conf;
+
+/**
+ * Clase que aplica el patrón singleton para tener una única instancia del objeto MediaPlayer, que
+ * se encarga de reproducir la música de fondo de la aplicación
+ *
+ * @author Jorge Iturrioz
+ * @version 24-12-2018
+ */
 
 public class MediaPlayerSingleton {
 
     private static MediaPlayer mediaPlayer = null;
-
-    /**
-     * Atributo que determina si el reproductor estaba funcionando originalmente o no
-     * Utilizado por las activities para saber si tienen que retomar la reproducción de la música
-     * de fondo
-     */
-
-    //private static boolean wasPlaying = false;
+    public static final int MAX_VOLUMEN = 100;
 
     private MediaPlayerSingleton() {
     }
@@ -25,20 +27,14 @@ public class MediaPlayerSingleton {
             mediaPlayer = MediaPlayer
                     .create(AppSingleton.getInstance().getContext(), R.raw.cancionfondo);
             mediaPlayer.setLooping(true);
+
+            float volume = (float) (1 - (Math.log(MAX_VOLUMEN - Conf.getInstancia().getVolumen()) / Math.log(MAX_VOLUMEN)));
+            mediaPlayer.setVolume(volume, volume);
         }
         return mediaPlayer;
     }
 
-    /*
-    public static void setWasPlaying(boolean option) {
-        wasPlaying = option;
-    }
-
-    public static boolean wasPlaying() {
-        return wasPlaying;
-    }
-*/
-    public static void destroyMediaPlayer(){
+    public static void destroyMediaPlayer() {
         mediaPlayer = null;
     }
 }

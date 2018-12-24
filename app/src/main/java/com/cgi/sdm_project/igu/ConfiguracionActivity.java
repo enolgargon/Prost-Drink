@@ -1,5 +1,6 @@
 package com.cgi.sdm_project.igu;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.util.AppCompatActivityExtended;
 import com.cgi.sdm_project.util.Conf;
+import com.cgi.sdm_project.util.singletons.MediaPlayerSingleton;
 
 /**
  * Se encarga de guardar las preferencias del usuario en el SharedPreferences
@@ -109,6 +111,22 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
         conf.setSonido(swSonido.isChecked());
         conf.setVolumen(sbVolumen.getProgress());
         conf.setIdioma(spIdioma.getSelectedItemPosition());
+
+        MediaPlayer mediaPlayer = MediaPlayerSingleton.getInstance();
+
+        if (!swSonido.isChecked() && mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            MediaPlayerSingleton.destroyMediaPlayer();
+        }
+
+        else if (mediaPlayer.isPlaying() && swSonido.isChecked())
+        {
+            mediaPlayer.pause();
+            mediaPlayer.setVolume(sbVolumen.getProgress(), sbVolumen.getProgress());
+            mediaPlayer.start();
+        }
+
         Toast.makeText(getApplicationContext(), getString(R.string.CambiosGuardados),
                 Toast.LENGTH_SHORT).show();
 
