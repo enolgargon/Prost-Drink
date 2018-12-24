@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -61,8 +60,11 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/paths"></meta-data>
+                android:resource="@xml/paths" />
         </provider>
+
+        <activity android:name=".igu.juego.loop.brujula.BrujulaActivity" />
+        <activity android:name=".igu.juego.loop.brujula.BrujulaInicioActivity"></activity>
     </application>
 
 </manifest>

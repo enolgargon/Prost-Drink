@@ -128,6 +128,16 @@ public class Conf {
         editor.apply();
     }
 
+    public boolean getBrujula() {
+        return settings.getBoolean("Brujula", true);
+    }
+
+    public void setBrujula(boolean opcion) {
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean("Brujula", opcion);
+        editor.apply();
+    }
+
     //Guardar array
     public void saveArray(String[] array, String arrayName) {
         SharedPreferences.Editor editor = settings.edit();

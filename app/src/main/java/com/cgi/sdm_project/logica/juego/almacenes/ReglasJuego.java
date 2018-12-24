@@ -1,5 +1,6 @@
 package com.cgi.sdm_project.logica.juego.almacenes;
 
+import com.cgi.sdm_project.logica.juego.reglas.Brujula;
 import com.cgi.sdm_project.logica.juego.reglas.Camara;
 import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
 import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
@@ -61,5 +62,9 @@ public class ReglasJuego {
 
     public Trabalenguas getTrabalenguas() {
         return trabalenguas.get((int) (Math.random() * trabalenguas.size()));
+    }
+
+    public Brujula getBrujula() {
+        return new Brujula();
     }
 }
