@@ -5,7 +5,7 @@ import android.support.annotation.NonNull;
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.juego.Notificacion;
-import com.cgi.sdm_project.util.AppSingleton;
+import com.cgi.sdm_project.util.singletons.AppSingleton;
 
 public class HastaQue implements Regla {
     private final String texto;

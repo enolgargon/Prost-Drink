@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -15,6 +14,7 @@ import android.widget.Toast;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.sorteo.Sorteo;
+import com.cgi.sdm_project.util.AppCompatActivityExtended;
 import com.cgi.sdm_project.util.Conf;
 
 /**
@@ -25,7 +25,7 @@ import com.cgi.sdm_project.util.Conf;
  * @version 28-10-2018
  * @see Sorteo
  */
-public class SortearActivity extends AppCompatActivity {
+public class SortearActivity extends AppCompatActivityExtended {
     /**
      * Clave que se usa para pasar el sorteo por el intent
      */

@@ -3,7 +3,6 @@ package com.cgi.sdm_project.igu.juego;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -15,13 +14,14 @@ import android.widget.Toast;
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.juego.Jugador;
+import com.cgi.sdm_project.util.AppCompatActivityExtended;
 import com.cgi.sdm_project.util.Conf;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class ElegirJugadoresActivity extends AppCompatActivity {
+public class ElegirJugadoresActivity extends AppCompatActivityExtended {
 
     private ListView listaJugadores;
     private TextView txtJugador;

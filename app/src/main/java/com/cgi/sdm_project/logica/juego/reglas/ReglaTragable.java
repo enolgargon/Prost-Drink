@@ -1,7 +1,7 @@
 package com.cgi.sdm_project.logica.juego.reglas;
 
 import com.cgi.sdm_project.R;
-import com.cgi.sdm_project.util.AppSingleton;
+import com.cgi.sdm_project.util.singletons.AppSingleton;
 
 abstract class ReglaTragable implements Tragable {
     private final int tragos;

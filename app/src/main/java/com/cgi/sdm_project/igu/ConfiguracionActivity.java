@@ -1,7 +1,6 @@
 package com.cgi.sdm_project.igu;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -11,6 +10,7 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 import com.cgi.sdm_project.R;
+import com.cgi.sdm_project.util.AppCompatActivityExtended;
 import com.cgi.sdm_project.util.Conf;
 
 /**
@@ -18,7 +18,7 @@ import com.cgi.sdm_project.util.Conf;
  *
  * @author Samuel
  */
-public class ConfiguracionActivity extends AppCompatActivity {
+public class ConfiguracionActivity extends AppCompatActivityExtended {
 
     private Switch swSonido;
     private SeekBar sbVolumen;
