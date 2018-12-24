@@ -106,6 +106,7 @@
         android:layout_marginBottom="44dp"
         android:clickable="true"
         android:focusable="true"
+        android:theme="@style/FAB"
         app:borderWidth="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
