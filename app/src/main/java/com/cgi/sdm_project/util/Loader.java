@@ -7,6 +7,7 @@ import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
 import com.cgi.sdm_project.logica.juego.reglas.Reto;
 import com.cgi.sdm_project.logica.juego.reglas.Trabalenguas;
 import com.cgi.sdm_project.logica.juego.reglas.Votacion;
+import com.cgi.sdm_project.util.factories.FactoryParser;
 
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;

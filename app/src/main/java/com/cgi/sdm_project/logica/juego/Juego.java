@@ -9,6 +9,8 @@ import com.cgi.sdm_project.logica.juego.juego.Jugador;
 import com.cgi.sdm_project.logica.juego.juego.Notificacion;
 import com.cgi.sdm_project.logica.juego.juego.selectores.ProbabilitySelector;
 import com.cgi.sdm_project.logica.juego.reglas.Regla;
+import com.cgi.sdm_project.util.Conf;
+import com.cgi.sdm_project.util.Enumerates.Idioma;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -48,6 +50,7 @@ public class Juego {
      * Regla con la que se está jugando
      */
     private Regla juegoActual;
+
 
     private Juego() {
         selectorRegla = new ProbabilitySelector();
@@ -130,6 +133,7 @@ public class Juego {
         return turno;
     }
 
+
     /**
      * Método que registra una nueva notificación que se le va a tener que mostrar al usuario cuando toque.
      *
@@ -193,4 +197,5 @@ public class Juego {
             throw new AssertionError("No se ha seleccionado un nuevo juego");
         return nuevo;
     }
+
 }

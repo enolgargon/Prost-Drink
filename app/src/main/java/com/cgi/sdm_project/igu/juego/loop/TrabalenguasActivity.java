@@ -21,7 +21,11 @@ import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.ContinuarRonda;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.Trabalenguas;
+import com.cgi.sdm_project.util.Conf;
+import com.cgi.sdm_project.util.Enumerates;
 import com.cgi.sdm_project.util.PermissionChecker;
+import com.cgi.sdm_project.util.factories.FactoryStemmer;
+import com.cgi.sdm_project.util.stemmers.Stemmer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +39,7 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
 
     private SpeechRecognizer sr;
     private TextToSpeech tts;
+    private Stemmer stemmer;
     private List<String> matches;
 
     @Override
@@ -45,7 +50,6 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
 
         ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
         ((TextView) findViewById(R.id.lblTrabalenguas)).setText(trabalenguas.getTexto());
-
 
         //Asignación atributos
         intentosTxt = findViewById(R.id.txtIntNum);
@@ -64,6 +68,10 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
 
         //TTS
         tts = new TextToSpeech(this, this);
+
+        //Selecciono Stemmer en función del idioma del juego
+        stemmer = FactoryStemmer.getStemmer();
+
     }
 
     /**
@@ -155,9 +163,9 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
         Collator c = Collator.getInstance();
         c.setStrength(Collator.PRIMARY);
         for (String m : matches) {
-            if (c.equals(m, trabalenguas.getTexto())) {
+            if (c.equals(stemmer.stem(m), stemmer.stem(trabalenguas.getTexto()))) {
                 inputText.setText(m);
-                Log.i("tts", m);
+                Log.i("tts", stemmer.stem(m));
                 inputText.setTextColor(Color.GREEN);
                 continuar.setVisibility(View.VISIBLE);
                 speakButton.setClickable(false);
@@ -224,7 +232,6 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
         @Override
         public void onResults(Bundle results) {
             matches = results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-            Log.i("input", matches.toString());
             checkRespuesta(matches);
         }
 
