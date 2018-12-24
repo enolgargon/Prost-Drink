@@ -10,6 +10,9 @@
 
     <string name="app_name">Prost &amp; Drink</string>
 
+    <!-- Instrucciones -->
+    <string name="instrucciones">Instrucciones</string>
+
     <!-- Main activity -->
     <string name="principal_juego">Juego</string>
     <!-- También usado en:
@@ -169,6 +172,8 @@
     <string name="ready">¡Ya!</string>
     <string name="equilibrio_exito">¡Muy bien! Manda beber %d</string>
     <string name="equilibrio_fracaso">Va a ser que no... Bebe %d</string>
+    <string name="comenzar">¡A jugar!</string>
+    <string name="equilibrio_instrucciones">En este juego deberás conseguir colocar la aguja del medidor en la posición correcta. Para ello deberás girar el móvil para hacer que se mueva. Presta atención a las pistas.</string>
 
 
 </resources>

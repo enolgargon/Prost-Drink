@@ -160,7 +160,8 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
         Collator c = Collator.getInstance();
         c.setStrength(Collator.PRIMARY);
         for (String m : matches) {
-            if (c.equals(stemmer.stem(m), stemmer.stem(trabalenguas.getTexto()))) {
+            if (c.equals(stemmer.stem(m.replace("(?|¿|¡|!)", "")),
+                    stemmer.stem(trabalenguas.getTexto().replace("(?|¿|¡|!)", "")))) {
                 inputText.setText(m);
                 Log.i("tts", stemmer.stem(m));
                 inputText.setTextColor(Color.GREEN);
