@@ -118,6 +118,16 @@ public class Conf {
         editor.apply();
     }
 
+    public boolean getTrabalenguas() {
+        return settings.getBoolean("Trabalenguas", true);
+    }
+
+    public void setTrabalenguas(boolean opcion) {
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean("Trabalenguas", opcion);
+        editor.apply();
+    }
+
     //Guardar array
     public void saveArray(String[] array, String arrayName) {
         SharedPreferences.Editor editor = settings.edit();

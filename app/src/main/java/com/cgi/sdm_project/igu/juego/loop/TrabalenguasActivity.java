@@ -79,6 +79,7 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
 
     /**
      * Reproduce el trabalenguas mediante TTS
+     *
      * @param v
      */
     public void ttsEvent(View v) {
@@ -177,14 +178,6 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
     }
 
     public void continuar(View view) {
-        //TODO implementar esto
-        if (trabalenguas.isRespuesta()) {
-            //Si lo hacen bien
-        } else {
-            //Si lo hacen mal
-        }
-
-        //Y de aquí a abajo fuera
         Intent mIntent = new Intent(getApplicationContext(), ResultadoActivity.class);
         startActivity(mIntent);
         finish();
