@@ -4,7 +4,7 @@ public class ProbabilitySelector extends BasicSelector {
     /**
      * Lista con los porcentajes de cada juego
      */
-    private final int[] porcentajes = new int[]{26, 25, 25, 8, 8, 8};
+    private final int[] porcentajes = new int[]{26, 25, 25, 6, 6, 6, 6};
 
     @Override
     public String getNombreSiguienteJuego() {

@@ -1,6 +1,7 @@
 package com.cgi.sdm_project.logica.juego.almacenes;
 
 import com.cgi.sdm_project.logica.juego.reglas.Camara;
+import com.cgi.sdm_project.logica.juego.reglas.Equilibrio;
 import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
 import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
 import com.cgi.sdm_project.logica.juego.reglas.Reto;
@@ -61,5 +62,9 @@ public class ReglasJuego {
 
     public Trabalenguas getTrabalenguas() {
         return trabalenguas.get((int) (Math.random() * trabalenguas.size()));
+    }
+
+    public Equilibrio getEquilibrio() {
+        return new Equilibrio(3);
     }
 }

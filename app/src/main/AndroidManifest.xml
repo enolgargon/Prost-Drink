@@ -52,6 +52,10 @@
         <activity android:name=".igu.juego.loop.NotificacionActivity" />
         <activity android:name=".igu.juego.loop.CamaraActivity" />
         <activity android:name=".igu.juego.loop.TrabalenguasActivity" />
+        <activity android:name=".igu.juego.loop.equilibrio.EquilibrioInicioActivity" />
+        <activity
+            android:name=".igu.juego.loop.equilibrio.EquilibrioActivity"
+            android:screenOrientation="portrait" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

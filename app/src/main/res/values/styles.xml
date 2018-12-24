@@ -105,6 +105,10 @@
         <item name="android:fontFamily">@font/robotolight</item>
     </style>
 
+    <style name="SmallerBody" parent="BodyCondensed">
+        <item name="android:textSize">@dimen/bodySmall</item>
+    </style>
+
     <style name="H1" parent="CondensedBase">
         <item name="android:letterSpacing">0.0357</item>
         <item name="android:textSize">@dimen/h1</item>

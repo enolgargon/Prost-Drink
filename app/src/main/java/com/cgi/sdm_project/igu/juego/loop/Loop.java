@@ -8,7 +8,7 @@ import android.view.ContextThemeWrapper;
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.util.AppCompatActivityExtended;
 
-abstract class Loop extends AppCompatActivityExtended {
+public abstract class Loop extends AppCompatActivityExtended {
     @Override
     public void onBackPressed() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AppTheme_Dialog));

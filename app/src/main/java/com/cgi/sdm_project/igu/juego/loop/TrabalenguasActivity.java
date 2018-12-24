@@ -13,7 +13,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
@@ -21,8 +20,6 @@ import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.ContinuarRonda;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.Trabalenguas;
-import com.cgi.sdm_project.util.Conf;
-import com.cgi.sdm_project.util.Enumerates;
 import com.cgi.sdm_project.util.PermissionChecker;
 import com.cgi.sdm_project.util.factories.FactoryStemmer;
 import com.cgi.sdm_project.util.stemmers.Stemmer;
@@ -163,7 +160,8 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
         Collator c = Collator.getInstance();
         c.setStrength(Collator.PRIMARY);
         for (String m : matches) {
-            if (c.equals(stemmer.stem(m), stemmer.stem(trabalenguas.getTexto()))) {
+            if (c.equals(stemmer.stem(m.replace("(?|¿|¡|!)", "")),
+                    stemmer.stem(trabalenguas.getTexto().replace("(?|¿|¡|!)", "")))) {
                 inputText.setText(m);
                 Log.i("tts", stemmer.stem(m));
                 inputText.setTextColor(Color.GREEN);

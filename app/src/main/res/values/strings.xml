@@ -10,6 +10,9 @@
 
     <string name="app_name">Prost &amp; Drink</string>
 
+    <!-- Instrucciones -->
+    <string name="instrucciones">Instrucciones</string>
+
     <!-- Main activity -->
     <string name="principal_juego">Juego</string>
     <!-- También usado en:
@@ -55,6 +58,7 @@
     <string name="Votaciones">Votaciones</string>
     <string name="Fotos">Fotos</string>
     <string name="Trabalenguas">Trabalenguas</string>
+    <string name="Equilibrio">Equilibrio</string>
     <string name="Jugar">Jugar</string>
     <string name="error_personalizado">La configuración para iniciar el juego no es correcta. Recuerda que debes seleccionar al menos un tipo de juego.</string>
 
@@ -157,6 +161,19 @@
     <string name="trabalenguas_fracaso1">El alcohol va surgiendo efecto... Bebe %d</string>
     <string name="trabalenguas_fracaso2">¿Tan mal vas ya? Bebe %d</string>
     <string name="trabalenguas_fracaso3">Más suerte la próxima vez. Bebe %d</string>
+
+    <!-- EQUILIBRIO -->
+    <string name="helado">Helado</string>
+    <string name="frio">Frío</string>
+    <string name="templado">Templado</string>
+    <string name="caliente">Caliente</string>
+    <string name="ardiendo">Ardiendo</string>
+    <string name="jugar">Jugar</string>
+    <string name="ready">¡Ya!</string>
+    <string name="equilibrio_exito">¡Muy bien! Manda beber %d</string>
+    <string name="equilibrio_fracaso">Va a ser que no... Bebe %d</string>
+    <string name="comenzar">¡A jugar!</string>
+    <string name="equilibrio_instrucciones">En este juego deberás conseguir colocar la aguja del medidor en la posición correcta. Para ello deberás girar el móvil para hacer que se mueva. Presta atención a las pistas.</string>
 
 
 </resources>

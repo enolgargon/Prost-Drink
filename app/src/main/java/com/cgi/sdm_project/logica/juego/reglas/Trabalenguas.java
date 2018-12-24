@@ -45,7 +45,6 @@ public class Trabalenguas extends ReglaTragable {
 
     @Override
     protected String nombreRespuesta() {
-        //TODO Cambiar los strings para que se ajusten a un trabalenguas
         if (isRespuesta())
             return "trabalenguas_exito" + ((int) (Math.random() * 3) + 1);
         return "trabalenguas_fracaso" + ((int) (Math.random() * 3) + 1);

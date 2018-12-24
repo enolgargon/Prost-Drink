@@ -29,4 +29,6 @@ dependencies {
     implementation 'com.android.support:gridlayout-v7:28.0.0'
     // https://mvnrepository.com/artifact/org.tartarus.snowball/libstemmer
     implementation group: 'org.tartarus.snowball', name: 'libstemmer', version: '1.0.0'
+    implementation 'com.github.anastr:speedviewlib:1.2.0'
+
 }
