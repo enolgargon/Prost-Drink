@@ -3,6 +3,8 @@ package com.cgi.sdm_project.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.cgi.sdm_project.util.singletons.AppSingleton;
+
 public class Conf {
     //Constantes
     public static final String JUGADORES = "jugadores";

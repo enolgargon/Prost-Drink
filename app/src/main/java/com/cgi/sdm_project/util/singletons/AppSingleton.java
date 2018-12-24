@@ -1,4 +1,4 @@
-package com.cgi.sdm_project.util;
+package com.cgi.sdm_project.util.singletons;
 
 import android.app.Application;
 import android.content.Context;
