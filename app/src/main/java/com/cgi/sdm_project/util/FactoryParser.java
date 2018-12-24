@@ -27,5 +27,7 @@ class FactoryParser {
         return new RetoParser();
     }
 
-    static TrabalenguasParser getTrabalenguasParser() { return new TrabalenguasParser(); }
+    static TrabalenguasParser getTrabalenguasParser() {
+        return new TrabalenguasParser();
+    }
 }

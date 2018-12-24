@@ -17,7 +17,7 @@ import com.cgi.sdm_project.util.Conf;
 
 public class JuegoPersonalizadoActivity extends AppCompatActivity {
 
-    private CheckBox preguntas, retos, yoNunca, hastaQues, votaciones, fotos;
+    private CheckBox preguntas, retos, yoNunca, hastaQues, votaciones, fotos, trabalenguas;
     private FilteredSelector filtro;
 
 
@@ -52,6 +52,8 @@ public class JuegoPersonalizadoActivity extends AppCompatActivity {
         votaciones.setOnCheckedChangeListener(new CheckedListener("Votacion", filtro));
         fotos = findViewById(R.id.ckFotos);
         fotos.setOnCheckedChangeListener(new CheckedListener("Camara", filtro));
+        trabalenguas = findViewById(R.id.ckTrabalenguas);
+        trabalenguas.setOnCheckedChangeListener(new CheckedListener("Trabalenguas", filtro));
     }
 
     private void cargarPreferencias() {
@@ -63,6 +65,7 @@ public class JuegoPersonalizadoActivity extends AppCompatActivity {
         hastaQues.setChecked(conf.getHastaQues());
         votaciones.setChecked(conf.getVotaciones());
         fotos.setChecked(conf.getFotos());
+        trabalenguas.setChecked(conf.getTrabalenguas());
     }
 
     private void guardarPreferencias() {
@@ -73,6 +76,7 @@ public class JuegoPersonalizadoActivity extends AppCompatActivity {
         conf.setHastaQues(hastaQues.isChecked());
         conf.setVotaciones(votaciones.isChecked());
         conf.setFotos(fotos.isChecked());
+        conf.setTrabalenguas(trabalenguas.isChecked());
     }
 
     /**

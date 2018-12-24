@@ -75,14 +75,14 @@ public class CamaraActivity extends Loop implements InicioJuego, IFinJuego {
 
     public void pulsarCamara(View view) {
         PermissionChecker permissionChecker = PermissionChecker.getInstance();
-        if (!permissionChecker.isCameraPermissionGranted())
+        if (!permissionChecker.isCameraPermissionGranted(this))
             permissionChecker.pedirPermisos(PermissionChecker.CAMARA_LOC, PermissionChecker.MY_PERMISSIONS_CAMARA, this);
         else
             dispatchTakePictureIntent();
     }
 
     public void retomarPulsarCamara() {
-        if (!PermissionChecker.getInstance().isCameraPermissionGranted()) {
+        if (!PermissionChecker.getInstance().isCameraPermissionGranted(this)) {
             new ContinuarRonda().cargarSiguienteJuego(null);
             finish();
         } else
