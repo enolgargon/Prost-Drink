@@ -128,6 +128,16 @@ public class Conf {
         editor.apply();
     }
 
+    public boolean getEquilibrio() {
+        return settings.getBoolean("Equilibrio", true);
+    }
+
+    public void setEquilibrio(boolean opcion) {
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean("Equilibrio", opcion);
+        editor.apply();
+    }
+
     //Guardar array
     public void saveArray(String[] array, String arrayName) {
         SharedPreferences.Editor editor = settings.edit();
