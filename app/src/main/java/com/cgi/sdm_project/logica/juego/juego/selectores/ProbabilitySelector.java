@@ -1,6 +1,6 @@
 package com.cgi.sdm_project.logica.juego.juego.selectores;
 
-public class ProbabilitySelector extends FilteredSelector {
+public class ProbabilitySelector extends BasicSelector {
     /**
      * Lista con los porcentajes de cada juego
      */
@@ -8,16 +8,10 @@ public class ProbabilitySelector extends FilteredSelector {
 
     @Override
     public String getNombreSiguienteJuego() {
-        String juego = null;
-
-        while (juego == null) {
-            int index = 0;
-            int probabilidad = (int) (Math.random() * 100);
-            while ((probabilidad -= porcentajes[index]) > 0)
-                index++;
-            juego = getElementAt(index);
-        }
-
-        return juego;
+        int index = 0;
+        int probabilidad = (int) (Math.random() * 100);
+        while ((probabilidad -= porcentajes[index]) > 0)
+            index++;
+        return getElementAt(index);
     }
 }

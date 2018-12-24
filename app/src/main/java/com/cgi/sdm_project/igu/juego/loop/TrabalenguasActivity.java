@@ -8,6 +8,7 @@ import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.speech.tts.TextToSpeech;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
+import com.cgi.sdm_project.logica.juego.activities.ContinuarRonda;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.Trabalenguas;
 import com.cgi.sdm_project.util.PermissionChecker;
@@ -28,11 +30,11 @@ import java.text.Collator;
 public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpeech.OnInitListener {
     private Trabalenguas trabalenguas;
     private FloatingActionButton speakButton;
-    private ImageButton reproducir;
     private Button continuar;
     private TextView inputText, trabalenguasTxt, intentosTxt;
 
     private SpeechRecognizer sr;
+    private TextToSpeech tts;
     private List<String> matches;
 
     @Override
@@ -50,58 +52,77 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
         inputText = findViewById(R.id.txtInput);
         trabalenguasTxt = findViewById(R.id.lblTrabalenguas);
         speakButton = findViewById(R.id.btnSpeak);
-        reproducir = findViewById(R.id.btnTTS);
         continuar = findViewById(R.id.btnContinuar);
 
 
-        //Set número de intentos inicial
+        //Muestra número de intentos inicial
         intentosTxt.setText(String.valueOf(trabalenguas.getIntentos()));
-
-        handleAudioIO();
 
         //Reconocedor de voz
         sr = SpeechRecognizer.createSpeechRecognizer(this);
         sr.setRecognitionListener(new SRListener());
+
+        //TTS
+        tts = new TextToSpeech(this, this);
     }
 
     /**
-     * Libero los recursos asignados al reconocedor de voz
+     * Libero los recursos asignados al reconocedor de voz y el tts
      */
     @Override
     protected void onDestroy() {
         trabalenguas.resetIntentos();
         sr.destroy();
+        tts.shutdown();
         super.onDestroy();
     }
 
     /**
-     * Se encarga de la asignación de listeners para la entrada y salida de audio por voz
+     * Reproduce el trabalenguas mediante TTS
+     * @param v
      */
-    private void handleAudioIO() {
-        final Activity act = this;
-        speakButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                PermissionChecker permissionChecker = PermissionChecker.getInstance();
-                if (!permissionChecker.isRecordPermissionGranted(act))
-                    permissionChecker.pedirPermisos(PermissionChecker.RECORD_LOC, PermissionChecker.MY_PERMISSIONS_RECORD, act);
-                else {
-                    Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-                    intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-                    intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, "voice.recognition.test");
+    public void ttsEvent(View v) {
+        tts.speak(trabalenguasTxt.getText().toString(), TextToSpeech.QUEUE_ADD,
+                null, null);
+    }
 
-                    intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 5);
-                    Log.i("input", "Llegué aquí");
-                    sr.startListening(intent);
-                }
-            }
-        });
-        final TextToSpeech tts = new TextToSpeech(this, this);
-        reproducir.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                tts.speak(trabalenguasTxt.getText().toString(), TextToSpeech.QUEUE_ADD,
-                        null, null);
-            }
-        });
+    /**
+     * Evento del fab de escuchar, comprueba si tenemos permisos de grabación de audio, si no, los
+     * pide. Llama al método que gestiona la entrada de audio
+     * @param v
+     */
+    public void speak(View v) {
+        PermissionChecker permissionChecker = PermissionChecker.getInstance();
+        if (!permissionChecker.isRecordPermissionGranted(this)) {
+            permissionChecker.pedirPermisos(PermissionChecker.RECORD_LOC, PermissionChecker.MY_PERMISSIONS_RECORD, this);
+        } else {
+            listenToSweetVoice();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           @NonNull String permissions[],
+                                           @NonNull int[] grantResults) {
+        PermissionChecker.getInstance().onRequestPermissionsResult(requestCode, permissions, grantResults);
+        listenToSweetVoice();
+    }
+
+    /**
+     * Escucha tu dulce voz
+     */
+    private void listenToSweetVoice() {
+        if (!PermissionChecker.getInstance().isRecordPermissionGranted(this)) {
+            new ContinuarRonda().cargarSiguienteJuego(null);
+            finish();
+        }
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, "voice.recognition.test");
+
+        intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 5);
+        Log.i("input", "Llegué aquí");
+        sr.startListening(intent);
     }
 
     /**

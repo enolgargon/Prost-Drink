@@ -150,4 +150,12 @@
     <string name="repite">Repite:</string>
     <string name="intentos">Intentos restantes: </string>
     <string name="continuar">Continuar</string>
+    <string name="trabalenguas_exito1">Todavía estás muy sobrio... Manda beber %d</string>
+    <string name="trabalenguas_exito2">¡Muy bien! Manda beber %d</string>
+    <string name="trabalenguas_exito3">¡Menuda dicción! Manda beber %d</string>
+    <string name="trabalenguas_fracaso1">El alcohol va surgiendo efecto... Bebe %d</string>
+    <string name="trabalenguas_fracaso2">¿Tan mal vas ya? Bebe %d</string>
+    <string name="trabalenguas_fracaso3">Más suerte la próxima vez. Bebe %d</string>
+
+
 </resources>

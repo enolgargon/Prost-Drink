@@ -1,12 +1,12 @@
 package com.cgi.sdm_project.igu.juego.loop;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
+import com.cgi.sdm_project.logica.juego.activities.ContinuarRonda;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 
 public class NotificacionActivity extends Loop implements InicioJuego {
@@ -20,8 +20,7 @@ public class NotificacionActivity extends Loop implements InicioJuego {
     }
 
     public void confirmarNotificacion(View view) {
-        Intent i = new Intent(view.getContext(), Juego.getInstance().getSiguienteJuego());
-        view.getContext().startActivity(i);
+        new ContinuarRonda().cargarSiguienteJuego(view);
         finish();
     }
 }
