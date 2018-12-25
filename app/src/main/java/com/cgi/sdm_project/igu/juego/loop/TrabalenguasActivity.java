@@ -3,6 +3,7 @@ package com.cgi.sdm_project.igu.juego.loop;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
@@ -22,6 +23,7 @@ import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.Trabalenguas;
 import com.cgi.sdm_project.util.PermissionChecker;
 import com.cgi.sdm_project.util.factories.FactoryStemmer;
+import com.cgi.sdm_project.util.singletons.MediaPlayerSingleton;
 import com.cgi.sdm_project.util.stemmers.Stemmer;
 
 import java.util.ArrayList;
@@ -38,6 +40,12 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
     private TextToSpeech tts;
     private Stemmer stemmer;
     private List<String> matches;
+
+    /**
+     * Atributos auxiliares para poder controlar la música de fondo en esta única activity
+     */
+    private MediaPlayer mp = MediaPlayerSingleton.getInstance();
+    private boolean wasPlaying = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +77,10 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
         //Selecciono Stemmer en función del idioma del juego
         stemmer = FactoryStemmer.getStemmer();
 
+        if (mp.isPlaying()) {
+            mp.pause();
+            wasPlaying = true;
+        }
     }
 
     /**
@@ -79,6 +91,10 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
         trabalenguas.resetIntentos();
         sr.destroy();
         tts.shutdown();
+        if (wasPlaying) {
+            mp.start();
+            wasPlaying = false;
+        }
         super.onDestroy();
     }
 
@@ -95,6 +111,7 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
     /**
      * Evento del fab de escuchar, comprueba si tenemos permisos de grabación de audio, si no, los
      * pide. Llama al método que gestiona la entrada de audio
+     *
      * @param v
      */
     public void speak(View v) {
