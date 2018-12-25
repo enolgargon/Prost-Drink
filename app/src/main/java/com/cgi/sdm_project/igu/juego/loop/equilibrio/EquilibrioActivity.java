@@ -143,7 +143,7 @@ public class EquilibrioActivity extends Loop implements SensorEventListener {
     }
 
     @Override
-    protected void onPause() {
+    public void onPause() {
         super.onPause();
         mSensorManager.unregisterListener(this);
     }

@@ -20,7 +20,7 @@
 
     <TextView
         android:id="@+id/txtCamara"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginTop="64dp"
