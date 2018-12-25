@@ -12,10 +12,11 @@ import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.juego.selectores.FilteredSelector;
 import com.cgi.sdm_project.logica.juego.juego.selectores.ProbabilitySelector;
+import com.cgi.sdm_project.util.AppCompatActivityExtended;
 import com.cgi.sdm_project.util.Conf;
 
 
-public class JuegoPersonalizadoActivity extends AppCompatActivity {
+public class JuegoPersonalizadoActivity extends AppCompatActivityExtended {
 
     private CheckBox preguntas, retos, yoNunca, hastaQues, votaciones, fotos, trabalenguas, equilibrio;
     private FilteredSelector filtro;
