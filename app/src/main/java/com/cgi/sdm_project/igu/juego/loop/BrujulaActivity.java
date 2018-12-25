@@ -1,4 +1,4 @@
-package com.cgi.sdm_project.igu.juego.loop.brujula;
+package com.cgi.sdm_project.igu.juego.loop;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -9,8 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
-import com.cgi.sdm_project.igu.juego.loop.Loop;
-import com.cgi.sdm_project.igu.juego.loop.ResultadoActivity;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.Brujula;
@@ -61,6 +59,7 @@ public class BrujulaActivity extends Loop implements Observer, InicioJuego {
     private void mostrarResultado() {
         Intent i = new Intent(this, ResultadoActivity.class);
         startActivity(i);
+        finish();
     }
 
     @Override

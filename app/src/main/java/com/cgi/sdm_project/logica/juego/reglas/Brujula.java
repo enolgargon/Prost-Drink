@@ -6,6 +6,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
+import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.util.AppSingleton;
 
 import java.util.Arrays;
@@ -44,6 +45,9 @@ public class Brujula extends Observable implements SensorEventListener, Tragable
     }
 
     public boolean juega() {
+        if (Math.abs(getAngle()) < 5)
+            logrado = true;
+
         return intentos-- != 0 && !logrado;
     }
 
@@ -69,8 +73,6 @@ public class Brujula extends Observable implements SensorEventListener, Tragable
 
         SensorManager.getOrientation(mRotationMatrix, mOrientationAngles);
 
-        if (Math.abs(getAngle()) < 5)
-            logrado = true;
         notifyObservers(getAngle());
     }
 
@@ -81,6 +83,19 @@ public class Brujula extends Observable implements SensorEventListener, Tragable
 
     @Override
     public String getResultado() {
-        return null;
+        try {
+            int resource = R.string.class.getField(nombreRespuesta()).getInt(R.string.class);
+            return String.format(AppSingleton.getInstance().getContext().getString(resource), getTragos());
+        } catch (IllegalAccessException | NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+
+        return String.format(AppSingleton.getInstance().getContext().getString(R.string.resultado_generar), getTragos());
+    }
+
+    private String nombreRespuesta() {
+        if (logrado)
+            return "brujula_acierto" + ((int) (Math.random() * 2) + 1);
+        return "brujula_fallo" + ((int) (Math.random() * 2) + 1);
     }
 }

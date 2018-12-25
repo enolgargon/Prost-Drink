@@ -101,6 +101,8 @@ public class CamaraActivity extends Loop implements InicioJuego, IFinJuego {
             intent.setType("image/jpg");
             startActivity(intent);
         }
+
+        new FinJuego().cargarSiguienteJuego(null);
     }
 
     @SuppressLint("RestrictedApi")

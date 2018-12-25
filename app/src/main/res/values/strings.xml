@@ -153,17 +153,24 @@
     <string name="intentos">Intentos restantes: </string>
     <string name="continuar">Continuar</string>
     <!-- Exito -->
-    <string name="trabalenguas_exito1">Todavía estás muy sobrio... Manda beber %d</string>
+    <string name="trabalenguas_exito1">Todavía estás muy sobrio… Manda beber %d</string>
     <string name="trabalenguas_exito2">¡Muy bien! Manda beber %d</string>
     <string name="trabalenguas_exito3">¡Menuda dicción! Manda beber %d</string>
     <!-- Fracaso -->
-    <string name="trabalenguas_fracaso1">El alcohol va surgiendo efecto... Bebe %d</string>
+    <string name="trabalenguas_fracaso1">El alcohol va surgiendo efecto… Bebe %d</string>
     <string name="trabalenguas_fracaso2">¿Tan mal vas ya? Bebe %d</string>
     <string name="trabalenguas_fracaso3">Más suerte la próxima vez. Bebe %d</string>
 
     <!-- BRUJULA -->
-    <string name="instrucciones_brujula">Instrucciones</string>
+    <string name="instrucciones_brujula">Vamos con un juego un poco distinto. ¿Has bebido mucho? Intenta en contrar el norte.
+        Vas a tener 3 intentos para hacer que el móvil apunte al norte. En cada intento habra una cuenta atras de 3 segundos y luego verás una brújula.
+        ¿Serás capaz de que apunte al norte?</string>
     <string name="empezar">Empezar</string>
-
+    <!-- Norte -->
+    <string name="brujula_acierto1">Que poco has bebido. Si todavía puedes encontrar el norte… Bebe %d</string>
+    <string name="brujula_acierto2">Bien. Has encontrado el norte. Puedes mandar beber %d a quien quieras</string>
+    <!-- Perdido -->
+    <string name="brujula_fallo1">Ten cuidao, que te pierdes. Esta vez no bebas. Regalale tus %d a quien quieras</string>
+    <string name="brujula_fallo2">Uy uy. No te sabes orientar? Bebe %d</string>
 
 </resources>

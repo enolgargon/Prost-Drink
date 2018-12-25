@@ -52,8 +52,7 @@
         <activity android:name=".igu.juego.loop.NotificacionActivity" />
         <activity android:name=".igu.juego.loop.CamaraActivity" />
         <activity android:name=".igu.juego.loop.TrabalenguasActivity" />
-        <activity android:name=".igu.juego.loop.brujula.BrujulaActivity" />
-        <activity android:name=".igu.juego.loop.brujula.BrujulaInicioActivity"></activity>
+        <activity android:name=".igu.juego.loop.BrujulaActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
