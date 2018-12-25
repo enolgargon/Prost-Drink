@@ -12,12 +12,19 @@ import java.util.Arrays;
 import java.util.Observable;
 
 public class Brujula extends Observable implements SensorEventListener, Tragable {
+    private int intentos;
+    private boolean logrado;
+
     private float[] mAccelerometerReading = new float[3];
     private float[] mMagnetometerReading = new float[3];
     private float[] mRotationMatrix = new float[9];
+
     private float[] mOrientationAngles = new float[3];
 
     public Brujula() {
+        intentos = 3;
+        logrado = false;
+
         SensorManager mSensorManager = (SensorManager) AppSingleton.getInstance().getContext().getSystemService(Context.SENSOR_SERVICE);
 
         Sensor accelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -34,6 +41,10 @@ public class Brujula extends Observable implements SensorEventListener, Tragable
 
     public float getAngle() {
         return (float) Math.toDegrees(mOrientationAngles[0]);
+    }
+
+    public boolean juega() {
+        return intentos-- != 0 && !logrado;
     }
 
     @Override
@@ -58,12 +69,14 @@ public class Brujula extends Observable implements SensorEventListener, Tragable
 
         SensorManager.getOrientation(mRotationMatrix, mOrientationAngles);
 
+        if (Math.abs(getAngle()) < 5)
+            logrado = true;
         notifyObservers(getAngle());
     }
 
     @Override
     public int getTragos() {
-        return 0;
+        return 3 + intentos;
     }
 
     @Override

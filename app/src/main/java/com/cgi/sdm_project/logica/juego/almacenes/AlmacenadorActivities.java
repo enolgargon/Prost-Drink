@@ -6,7 +6,7 @@ import com.cgi.sdm_project.igu.juego.loop.PreguntaActivity;
 import com.cgi.sdm_project.igu.juego.loop.RetoActivity;
 import com.cgi.sdm_project.igu.juego.loop.TrabalenguasActivity;
 import com.cgi.sdm_project.igu.juego.loop.VotacionActivity;
-import com.cgi.sdm_project.igu.juego.loop.brujula.BrujulaInicioActivity;
+import com.cgi.sdm_project.igu.juego.loop.brujula.BrujulaActivity;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.Brujula;
@@ -51,7 +51,7 @@ public class AlmacenadorActivities {
         else if (regla instanceof Trabalenguas)
             return TrabalenguasActivity.class;
         else if (regla instanceof Brujula)
-            return BrujulaInicioActivity.class;
+            return BrujulaActivity.class;
 
         throw new UnsupportedOperationException();
     }

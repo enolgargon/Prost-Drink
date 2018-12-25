@@ -137,5 +137,9 @@
         <item name="android:paddingBottom">@dimen/nameLblPaddingBottom</item>
     </style>
 
+    <style name="contador" parent="H1">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
 </resources>
 
