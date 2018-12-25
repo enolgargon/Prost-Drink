@@ -2,7 +2,6 @@ package com.cgi.sdm_project.igu.sorteo;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
 import android.util.DisplayMetrics;
 import android.view.ContextThemeWrapper;
@@ -10,6 +9,7 @@ import android.widget.ListView;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.sorteo.Sorteo;
+import com.cgi.sdm_project.util.AppCompatActivityExtended;
 import com.cgi.sdm_project.util.adapters.NombreAdapter;
 
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.Objects;
  * @author Enol García González
  * @version 04-11-2018
  */
-public class ResultadoSorteoActivity extends AppCompatActivity {
+public class ResultadoSorteoActivity extends AppCompatActivityExtended {
     /**
      * Grid layout que muestra a los equipos en forma de rejilla
      */
