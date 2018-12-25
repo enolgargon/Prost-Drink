@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.text.Collator;
 
-public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpeech.OnInitListener {
+public class TrabalenguasActivity extends LoopSinMusica implements InicioJuego, TextToSpeech.OnInitListener {
     private Trabalenguas trabalenguas;
     private FloatingActionButton speakButton;
     private Button continuar;
@@ -40,12 +40,6 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
     private TextToSpeech tts;
     private Stemmer stemmer;
     private List<String> matches;
-
-    /**
-     * Atributos auxiliares para poder controlar la música de fondo en esta única activity
-     */
-    private MediaPlayer mp = MediaPlayerSingleton.getInstance();
-    private boolean wasPlaying = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,10 +71,6 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
         //Selecciono Stemmer en función del idioma del juego
         stemmer = FactoryStemmer.getStemmer();
 
-        if (mp.isPlaying()) {
-            mp.pause();
-            wasPlaying = true;
-        }
     }
 
     /**
@@ -91,10 +81,6 @@ public class TrabalenguasActivity extends Loop implements InicioJuego, TextToSpe
         trabalenguas.resetIntentos();
         sr.destroy();
         tts.shutdown();
-        if (wasPlaying) {
-            mp.start();
-            wasPlaying = false;
-        }
         super.onDestroy();
     }
 
