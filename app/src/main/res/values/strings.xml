@@ -181,6 +181,9 @@
     <string name="topos_resultado1">Lo importante es participar. Bebe %d.</string>
     <string name="topos_resultado2">No está nada mal. Manda beber %d a quién tú quieras.</string>
     <string name="topos_resultado3">¡El terror de los topos! Manda beber %d, leyenda.</string>
+    <string name="topos_fin">¡Fin del juego!</string>
+    <string name="topos_instrucciones1">En este juego tienes 30 segundos para aplastar el máximo número de topos posibles.</string>
+    <string name="topos_instrucciones2">¡Pero cuidado! Darle a una madriguera sin topo se penalizará.</string>
 
 
 </resources>

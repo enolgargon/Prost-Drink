@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".igu.juego.loop.PreguntaActivity">
+    tools:context=".igu.juego.loop.cazatopos.CazatoposActivity">
 
     <Button
         android:id="@+id/btnContinuar"
@@ -14,9 +14,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="pasar"
+        android:onClick="cargarSiguienteJuego"
         android:text="@string/continuar"
         android:theme="@style/Button"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,16 +37,17 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TableLayout
+        android:id="@+id/topoBoard"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/topo_background"
         android:shrinkColumns="*"
         android:weightSum="3"
-        app:layout_constraintBottom_toTopOf="@+id/btnContinuar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/hole" />
 
             <ImageButton
@@ -70,22 +72,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/hole" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/colorPrimary">
+            android:layout_weight="1">
 
             <ImageButton
                 android:id="@+id/topo2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/hole" />
 
             <ImageButton
@@ -93,7 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/topo" />
         </TableRow>
 
@@ -107,7 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/hole" />
 
             <ImageButton
@@ -115,10 +116,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/hole" />
         </TableRow>
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/txtFinTopos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/topos_fin"
+        android:theme="@style/ColoredH3"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

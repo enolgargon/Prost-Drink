@@ -1,13 +1,12 @@
 package com.cgi.sdm_project.logica.juego.almacenes;
 
 import com.cgi.sdm_project.igu.juego.loop.CamaraActivity;
-import com.cgi.sdm_project.igu.juego.loop.CazatoposActivity;
-import com.cgi.sdm_project.igu.juego.loop.equilibrio.EquilibrioActivity;
 import com.cgi.sdm_project.igu.juego.loop.HastaQueActivity;
 import com.cgi.sdm_project.igu.juego.loop.PreguntaActivity;
 import com.cgi.sdm_project.igu.juego.loop.RetoActivity;
 import com.cgi.sdm_project.igu.juego.loop.TrabalenguasActivity;
 import com.cgi.sdm_project.igu.juego.loop.VotacionActivity;
+import com.cgi.sdm_project.igu.juego.loop.cazatopos.CazatoposInicioActivity;
 import com.cgi.sdm_project.igu.juego.loop.equilibrio.EquilibrioInicioActivity;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
@@ -56,7 +55,7 @@ public class AlmacenadorActivities {
         else if (regla instanceof Equilibrio)
             return EquilibrioInicioActivity.class;
         else if (regla instanceof Cazatopos)
-            return CazatoposActivity.class;
+            return CazatoposInicioActivity.class;
 
         throw new UnsupportedOperationException();
     }

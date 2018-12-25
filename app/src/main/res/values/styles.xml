@@ -131,6 +131,10 @@
         <item name="android:textSize">@dimen/h4</item>
     </style>
 
+    <style name="ColoredH3" parent="H3">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
     <style name="nameLbl" parent="CondensedBase">
         <item name="android:textSize">@dimen/nameLbl</item>
         <item name="android:gravity">right</item>

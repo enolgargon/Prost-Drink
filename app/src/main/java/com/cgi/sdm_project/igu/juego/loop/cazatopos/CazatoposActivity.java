@@ -1,4 +1,4 @@
-package com.cgi.sdm_project.igu.juego.loop;
+package com.cgi.sdm_project.igu.juego.loop.cazatopos;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,9 +10,10 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
+import com.cgi.sdm_project.igu.juego.loop.Loop;
+import com.cgi.sdm_project.igu.juego.loop.ResultadoActivity;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.IFinJuego;
-import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.Cazatopos;
 
 
@@ -21,7 +22,7 @@ import com.cgi.sdm_project.logica.juego.reglas.Cazatopos;
  *
  * @author Samuel
  */
-public class CazatoposActivity extends Loop implements InicioJuego, IFinJuego {
+public class CazatoposActivity extends Loop implements IFinJuego {
     private final static int SECONDS = 30;
     private final static int TICKMS = 100;
 
@@ -75,7 +76,9 @@ public class CazatoposActivity extends Loop implements InicioJuego, IFinJuego {
 
             @Override
             public void onFinish() {
-                Log.i("score", cazatopos.getScore() + "");
+                findViewById(R.id.topoBoard).setVisibility(View.INVISIBLE);
+                findViewById(R.id.txtFinTopos).setVisibility(View.VISIBLE);
+                findViewById(R.id.btnContinuar).setVisibility(View.VISIBLE);
             }
         };
         ticks = 0;
