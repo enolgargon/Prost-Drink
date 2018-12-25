@@ -7,7 +7,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
 import com.cgi.sdm_project.R;
-import com.cgi.sdm_project.util.AppSingleton;
+import com.cgi.sdm_project.util.singletons.AppSingleton;
 
 import java.util.Arrays;
 import java.util.Observable;
