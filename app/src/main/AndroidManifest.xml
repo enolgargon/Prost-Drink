@@ -56,6 +56,10 @@
         <activity
             android:name=".igu.juego.loop.equilibrio.EquilibrioActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".igu.juego.loop.cazatopos.CazatoposInicioActivity" />
+        <activity
+            android:name=".igu.juego.loop.cazatopos.CazatoposActivity"
+            android:screenOrientation="portrait" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

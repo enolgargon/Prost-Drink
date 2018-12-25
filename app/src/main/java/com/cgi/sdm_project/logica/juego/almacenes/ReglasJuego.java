@@ -1,6 +1,7 @@
 package com.cgi.sdm_project.logica.juego.almacenes;
 
 import com.cgi.sdm_project.logica.juego.reglas.Camara;
+import com.cgi.sdm_project.logica.juego.reglas.Cazatopos;
 import com.cgi.sdm_project.logica.juego.reglas.Equilibrio;
 import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
 import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
@@ -66,5 +67,9 @@ public class ReglasJuego {
 
     public Equilibrio getEquilibrio() {
         return new Equilibrio(3);
+    }
+
+    public Cazatopos getCazatopos() {
+        return new Cazatopos(0);
     }
 }

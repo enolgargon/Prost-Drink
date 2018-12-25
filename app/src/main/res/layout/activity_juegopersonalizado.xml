@@ -117,6 +117,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Equilibrio" />
+
+            <CheckBox
+                android:id="@+id/ckTopos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Cazatopos" />
         </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>
