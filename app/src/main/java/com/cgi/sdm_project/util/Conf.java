@@ -140,6 +140,16 @@ public class Conf {
         editor.apply();
     }
 
+    public boolean getCazatopos() {
+        return settings.getBoolean("CazatoposActivity", true);
+    }
+
+    public void setCazatopos(boolean opcion) {
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean("CazatoposActivity", opcion);
+        editor.apply();
+    }
+
     //Guardar array
     public void saveArray(String[] array, String arrayName) {
         SharedPreferences.Editor editor = settings.edit();

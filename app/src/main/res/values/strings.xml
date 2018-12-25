@@ -59,6 +59,7 @@
     <string name="Fotos">Fotos</string>
     <string name="Trabalenguas">Trabalenguas</string>
     <string name="Equilibrio">Equilibrio</string>
+    <string name="Cazatopos">Cazatopos</string>
     <string name="Jugar">Jugar</string>
     <string name="error_personalizado">La configuración para iniciar el juego no es correcta. Recuerda que debes seleccionar al menos un tipo de juego.</string>
 
