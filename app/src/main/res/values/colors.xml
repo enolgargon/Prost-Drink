@@ -9,5 +9,6 @@
     <color name="background_dark">#26282F</color>
 
     <color name="white">#ffffff</color>
+    <color name="red">#ff0000</color>
 
 </resources>

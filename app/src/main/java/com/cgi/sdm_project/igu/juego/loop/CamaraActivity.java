@@ -38,7 +38,6 @@ import java.util.Date;
 public class CamaraActivity extends Loop implements InicioJuego, IFinJuego {
     static final int REQUEST_TAKE_PHOTO = 1;
 
-    private Camara regla;
     private String mCurrentPhotoPath;
 
     private ImageView imageView;
@@ -63,7 +62,7 @@ public class CamaraActivity extends Loop implements InicioJuego, IFinJuego {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camara);
 
-        regla = (Camara) Juego.getInstance().getJuegoActual();
+        Camara regla = (Camara) Juego.getInstance().getJuegoActual();
 
         imageView = findViewById(R.id.imgCamara);
         fabCamara = findViewById(R.id.fabCamara);
@@ -102,6 +101,8 @@ public class CamaraActivity extends Loop implements InicioJuego, IFinJuego {
             intent.setType("image/jpg");
             startActivity(intent);
         }
+
+        new FinJuego().cargarSiguienteJuego(null);
     }
 
     @SuppressLint("RestrictedApi")

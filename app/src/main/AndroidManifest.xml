@@ -52,6 +52,7 @@
         <activity android:name=".igu.juego.loop.NotificacionActivity" />
         <activity android:name=".igu.juego.loop.CamaraActivity" />
         <activity android:name=".igu.juego.loop.TrabalenguasActivity" />
+        <activity android:name=".igu.juego.loop.BrujulaActivity" />
         <activity android:name=".igu.juego.loop.equilibrio.EquilibrioInicioActivity" />
         <activity
             android:name=".igu.juego.loop.equilibrio.EquilibrioActivity"
@@ -68,7 +69,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/paths"></meta-data>
+                android:resource="@xml/paths" />
         </provider>
     </application>
 

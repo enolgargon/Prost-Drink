@@ -1,5 +1,6 @@
 package com.cgi.sdm_project.logica.juego.almacenes;
 
+import com.cgi.sdm_project.logica.juego.reglas.Brujula;
 import com.cgi.sdm_project.logica.juego.reglas.Camara;
 import com.cgi.sdm_project.logica.juego.reglas.Cazatopos;
 import com.cgi.sdm_project.logica.juego.reglas.Equilibrio;
@@ -71,5 +72,9 @@ public class ReglasJuego {
 
     public Cazatopos getCazatopos() {
         return new Cazatopos(0);
+    }
+
+    public Brujula getBrujula() {
+        return new Brujula();
     }
 }

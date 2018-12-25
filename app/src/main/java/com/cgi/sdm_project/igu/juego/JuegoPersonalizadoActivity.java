@@ -19,7 +19,7 @@ import com.cgi.sdm_project.util.Conf;
 public class JuegoPersonalizadoActivity extends AppCompatActivityExtended {
 
     private CheckBox preguntas, retos, yoNunca, hastaQues, votaciones, fotos, trabalenguas,
-            equilibrio, topos;
+            equilibrio, topos, norte;
     private FilteredSelector filtro;
 
 
@@ -60,6 +60,8 @@ public class JuegoPersonalizadoActivity extends AppCompatActivityExtended {
         equilibrio.setOnCheckedChangeListener(new CheckedListener("Equilibrio", filtro));
         topos = findViewById(R.id.ckTopos);
         topos.setOnCheckedChangeListener(new CheckedListener("Cazatopos", filtro));
+        norte = findViewById(R.id.ckNorte);
+        norte.setOnCheckedChangeListener(new CheckedListener("Brujula", filtro));
     }
 
     private void cargarPreferencias() {
@@ -74,6 +76,7 @@ public class JuegoPersonalizadoActivity extends AppCompatActivityExtended {
         trabalenguas.setChecked(conf.getTrabalenguas());
         equilibrio.setChecked(conf.getEquilibrio());
         topos.setChecked(conf.getCazatopos());
+        norte.setChecked(conf.getBrujula());
     }
 
     private void guardarPreferencias() {
@@ -87,6 +90,7 @@ public class JuegoPersonalizadoActivity extends AppCompatActivityExtended {
         conf.setTrabalenguas(trabalenguas.isChecked());
         conf.setEquilibrio(equilibrio.isChecked());
         conf.setCazatopos(topos.isChecked());
+        conf.setBrujula(norte.isChecked());
     }
 
     /**
