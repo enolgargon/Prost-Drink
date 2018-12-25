@@ -70,6 +70,6 @@ public class ReglasJuego {
     }
 
     public Cazatopos getCazatopos() {
-        return new Cazatopos();
+        return new Cazatopos(0);
     }
 }

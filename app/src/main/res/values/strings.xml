@@ -176,5 +176,11 @@
     <string name="comenzar">¡A jugar!</string>
     <string name="equilibrio_instrucciones">En este juego deberás conseguir colocar la aguja del medidor en la posición correcta. Para ello deberás girar el móvil para hacer que se mueva. Presta atención a las pistas.</string>
 
+    <!-- TOPOS -->
+    <string name="topos_resultado0">Horrible... Bebe %d anda.</string>
+    <string name="topos_resultado1">Lo importante es participar. Bebe %d.</string>
+    <string name="topos_resultado2">No está nada mal. Manda beber %d a quién tú quieras.</string>
+    <string name="topos_resultado3">¡El terror de los topos! Manda beber %d, leyenda.</string>
+
 
 </resources>

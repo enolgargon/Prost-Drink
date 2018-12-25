@@ -10,13 +10,14 @@ import com.cgi.sdm_project.util.SamUtil;
  *
  * @author Samuel
  */
-public class Cazatopos implements Regla {
+public class Cazatopos extends ReglaTragable {
     private final static int TOPO_KILL = 10;
     private final static int HOLE_PENALTY = -5;
     private int score;
     private Casilla[] casillas;
 
-    public Cazatopos() {
+    public Cazatopos(int tragos) {
+        super(tragos);
         this.score = 0;
         this.casillas = new Casilla[6];
         actualizarTablero(1);
@@ -73,4 +74,24 @@ public class Cazatopos implements Regla {
         return score;
     }
 
+    @Override
+    public int getTragos() {
+        if (score <= 0) return 4;
+        else if (score <= 100) return 2;
+        else if (score <= 250) return 1;
+        else return 3;
+    }
+
+    @Override
+    protected String nombreRespuesta() {
+        if (score <= 0) {
+            return "topos_resultado" + 0;
+        } else if (score <= 100) {
+            return "topos_resultado" + 1;
+        } else if (score <= 250) {
+            return "topos_resultado" + 2;
+        } else {
+            return "topos_resultado" + 3;
+        }
+    }
 }

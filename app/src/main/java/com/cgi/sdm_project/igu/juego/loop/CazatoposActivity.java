@@ -1,11 +1,13 @@
 package com.cgi.sdm_project.igu.juego.loop;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
@@ -42,6 +44,7 @@ public class CazatoposActivity extends Loop implements InicioJuego, IFinJuego {
         setContentView(R.layout.activity_topos);
 
         this.cazatopos = (Cazatopos) Juego.getInstance().getJuegoActual();
+        ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
 
         inputs = new ImageButton[]{findViewById(R.id.topo0),
                 findViewById(R.id.topo1),
@@ -72,7 +75,7 @@ public class CazatoposActivity extends Loop implements InicioJuego, IFinJuego {
 
             @Override
             public void onFinish() {
-
+                Log.i("score", cazatopos.getScore() + "");
             }
         };
         ticks = 0;
@@ -121,7 +124,9 @@ public class CazatoposActivity extends Loop implements InicioJuego, IFinJuego {
 
     @Override
     public void cargarSiguienteJuego(View view) {
-
+        Intent mIntent = new Intent(getApplicationContext(), ResultadoActivity.class);
+        startActivity(mIntent);
+        finish();
     }
 
     /**
