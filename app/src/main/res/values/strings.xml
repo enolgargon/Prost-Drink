@@ -225,15 +225,40 @@
         En la parte superior de la pantalla aparecerá que jugador debe participar en cada momento. Antes de empezar, se pedirá el nombre de los jugadores para identificaros, se recomienda que no pongáis dos jugadores con el mismo nombre.
         El juego no tiene fin, e irán apareciendo pruebas que tendréis que hacer. Cada prueba os puede mandar beber o repartir bebida a los demás jugadores. No olvides rellenar el vaso.
     </string>
-    <string name="brujula_instrucciones">Instrucciones de la brujula</string>
-    <string name="camara_instrucciones">Instrucciones de la camara</string>
-    <string name="cazatopos_instrucciones">Instrucciones del cazatopos</string>
+    <string name="brujula_instrucciones">
+        En este juego tienes que intentar encontrar el norte.
+        Tendrás 3 intentos, en los que se te mostrará una cuenta atrás para buscar el norte.
+        Después de que se te acabe el tiempo podrás ver la brújala para saber lo que te has equivocado.
+    </string>
+    <string name="camara_instrucciones">
+        Por los amigos que no estan con vosotros.
+        En este juego se te retará a sacar una foto a algo de la fiesta y compartirsela.
+        Que se mueran de envidia
+    </string>
+    <string name="cazatopos_instrucciones">
+        Seguro que todos habéis jugado al cazatopos. Intenta matar al moyor numero de topos que puedas en 30 segundos, pero cuidado, que si te equivocas se te penalizará.
+    </string>
     <!-- Texto de las instrucciones del equilibrio, ver activity equilibrio -->
-    <string name="hastaque_instrucciones">Instrucciones del hasta que</string>
-    <string name="pregunta_instrucciones">Instrucciones de las preguntas</string>
-    <string name="reto_instrucciones">Instrucciones de los retos</string>
-    <string name="trabalenguas_instrucciones">Instrucciones de los trabalenguas</string>
-    <string name="votacion_instrucciones">Instrucciones de las votaciones</string>
+    <string name="hastaque_instrucciones">
+        Dejate llevar. Hasta que pasen un numero de turnos tienes que hacer o te tienen que hacer algo.
+        Solo tienes que leer el mensaje y a ver que pasa
+    </string>
+    <string name="pregunta_instrucciones">
+        Vamos a ver cuanto eres capaz de contar de tu vida. La aplicación te hará preguntas (puede que comprometidas).
+        Si no contestas tendrás que beber. A ver si el alcohol te suelta.
+    </string>
+    <string name="reto_instrucciones">
+        ¿Cómo de valiente eres? Te proponemos cosas a las que te tienes que atrever.
+        Si te atreves y las haces tendrás premio, si no castigo.
+    </string>
+    <string name="trabalenguas_instrucciones">
+        No hay quien te endienda borracho. Intenta decir un trabalenguas que te proponemos al microfono del teléfono.
+        Será capaz de entenderte. Recuerda… Al micrófono, no a la columna del bar.
+    </string>
+    <string name="votacion_instrucciones">
+        Fácil, sencillo y para todo el grupo. Encuesta a los del grupo para ver que prefieren de las opciones que te damos.
+        Marca la opción más votada y la aplicación os dirá que hacer.
+    </string>
 
     <!-- Activity -->
     <string name="antes">Andes de empezar…</string>
@@ -243,5 +268,12 @@
 
     <!-- Otros textos -->
     <string name="entendido">Creo que ya lo he entendido</string>
-
+    <string name="activity_elegir">
+        Vete escribiendo abajo el nombre de los jugadores que participarán, si quieres quitar alguno puedes hacerlo manteniendo pulsado su nombre.
+        Cuando estén todos en la lista para jugar, dale al play y… A JUGAR!!!
+    </string>
+    <string name="activity_sorteo">
+        Aquí puedes hacer equipos. Añade a la lista los nombres de las personas que van a jugar y abajo pon el número de equipos.
+        Si quieres quitar un jugador manten pulsado su nombre.
+    </string>
 </resources>

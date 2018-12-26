@@ -14,6 +14,8 @@ import com.cgi.sdm_project.logica.juego.Juego;
 
 public class InstruccionesActivity extends AppCompatActivity {
     private final Handler handler = new Handler();
+    private Runnable llamada;
+
     private AlertDialog dialog;
 
     @Override
@@ -32,12 +34,17 @@ public class InstruccionesActivity extends AppCompatActivity {
         });
         dialog = builder.create();
 
-        handler.postDelayed(new Runnable() {
+        programarLlamada();
+    }
+
+    private void programarLlamada() {
+        llamada = new Runnable() {
             @Override
             public void run() {
                 seguir(null);
             }
-        }, 10000);
+        };
+        handler.postDelayed(llamada, 10000);
     }
 
     public void mostrarAyuda(View view) {
@@ -46,17 +53,13 @@ public class InstruccionesActivity extends AppCompatActivity {
 
     public void seguir(View view) {
         if (dialog.isShowing())
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    seguir(null);
-                }
-            }, 10000);
+            programarLlamada();
         else
             empezarJuego();
     }
 
     private void empezarJuego() {
+        handler.removeCallbacks(llamada);
         Intent mIntent = new Intent(getApplicationContext(), Juego.getInstance().getSiguienteJuego());
         startActivity(mIntent);
         finish();
