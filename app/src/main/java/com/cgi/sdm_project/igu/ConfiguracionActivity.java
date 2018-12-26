@@ -15,6 +15,8 @@ import com.cgi.sdm_project.util.AppCompatActivityExtended;
 import com.cgi.sdm_project.util.Conf;
 import com.cgi.sdm_project.util.singletons.MediaPlayerSingleton;
 
+import static com.cgi.sdm_project.util.singletons.MediaPlayerSingleton.MAX_VOLUMEN;
+
 /**
  * Se encarga de guardar las preferencias del usuario en el SharedPreferences
  *
@@ -118,12 +120,12 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
             mediaPlayer.stop();
             mediaPlayer.release();
             MediaPlayerSingleton.destroyMediaPlayer();
-        }
-
-        else if (mediaPlayer.isPlaying() && swSonido.isChecked())
-        {
-            mediaPlayer.pause();
-            mediaPlayer.setVolume(sbVolumen.getProgress(), sbVolumen.getProgress());
+        } else if (swSonido.isChecked()) {
+            if (mediaPlayer.isPlaying())
+                mediaPlayer.pause();
+            float volume = (float) (1 - (Math.log(MAX_VOLUMEN - sbVolumen.getProgress())
+                    / Math.log(MAX_VOLUMEN)));
+            mediaPlayer.setVolume(volume, volume);
             mediaPlayer.start();
         }
 
