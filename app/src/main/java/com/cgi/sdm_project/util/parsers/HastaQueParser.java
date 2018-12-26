@@ -1,6 +1,6 @@
 package com.cgi.sdm_project.util.parsers;
 
-import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.HastaQue;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -10,7 +10,7 @@ import org.w3c.dom.NodeList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HastaQueParser implements Parser<List<HastaQue>>{
+public class HastaQueParser implements Parser<List<HastaQue>> {
 
     @Override
     public List<HastaQue> execute(Document doc) {
@@ -20,10 +20,10 @@ public class HastaQueParser implements Parser<List<HastaQue>>{
         Element raiz = doc.getDocumentElement();
         NodeList items = raiz.getElementsByTagName("item");
 
-        for (int i = 0; i < items.getLength(); i++){
+        for (int i = 0; i < items.getLength(); i++) {
             Node node = items.item(i);
 
-            if (node.getNodeType() == Node.ELEMENT_NODE){
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
 
                 Element elemento = (Element) node;
                 String valor = elemento.getAttribute("text");

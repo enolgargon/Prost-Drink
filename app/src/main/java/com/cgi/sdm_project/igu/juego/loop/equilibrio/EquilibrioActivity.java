@@ -9,7 +9,6 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,7 +17,7 @@ import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.igu.juego.loop.Loop;
 import com.cgi.sdm_project.igu.juego.loop.ResultadoActivity;
 import com.cgi.sdm_project.logica.juego.Juego;
-import com.cgi.sdm_project.logica.juego.reglas.Equilibrio;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Equilibrio;
 import com.github.anastr.speedviewlib.PointerSpeedometer;
 
 

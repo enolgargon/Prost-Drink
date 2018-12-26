@@ -1,9 +1,9 @@
-package com.cgi.sdm_project.logica.juego.reglas.cazatopos;
+package com.cgi.sdm_project.logica.juego.reglas.implementaciones.cazatopos;
 
 import android.graphics.drawable.Drawable;
 
 import com.cgi.sdm_project.R;
-import com.cgi.sdm_project.logica.juego.reglas.Cazatopos;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Cazatopos;
 import com.cgi.sdm_project.util.singletons.AppSingleton;
 
 /**

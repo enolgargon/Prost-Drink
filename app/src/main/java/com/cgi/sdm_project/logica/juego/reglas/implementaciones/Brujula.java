@@ -1,4 +1,4 @@
-package com.cgi.sdm_project.logica.juego.reglas;
+package com.cgi.sdm_project.logica.juego.reglas.implementaciones;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -7,6 +7,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
 import com.cgi.sdm_project.R;
+import com.cgi.sdm_project.logica.juego.reglas.Tragable;
 import com.cgi.sdm_project.util.singletons.AppSingleton;
 
 import java.util.Arrays;

@@ -3,10 +3,10 @@ package com.cgi.sdm_project.logica.juego.reglas;
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.util.singletons.AppSingleton;
 
-abstract class ReglaTragable implements Tragable {
+public abstract class ReglaTragable implements Tragable {
     private final int tragos;
 
-    ReglaTragable(int tragos) {
+    protected ReglaTragable(int tragos) {
         this.tragos = tragos;
     }
 

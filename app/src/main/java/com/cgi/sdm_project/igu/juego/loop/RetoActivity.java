@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
-import com.cgi.sdm_project.logica.juego.reglas.Reto;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Reto;
 
 public class RetoActivity extends Loop implements InicioJuego {
     private Reto reto;

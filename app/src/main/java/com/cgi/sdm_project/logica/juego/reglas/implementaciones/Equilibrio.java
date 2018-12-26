@@ -1,9 +1,11 @@
-package com.cgi.sdm_project.logica.juego.reglas;
+package com.cgi.sdm_project.logica.juego.reglas.implementaciones;
+
+import com.cgi.sdm_project.logica.juego.reglas.ReglaTragable;
 
 public class Equilibrio extends ReglaTragable {
     private boolean respuesta;
 
-    public Equilibrio(int tragos) {
+    public Equilibrio() {
         super(3);
     }
 

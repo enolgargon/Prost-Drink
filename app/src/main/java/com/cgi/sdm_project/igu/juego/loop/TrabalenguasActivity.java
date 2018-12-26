@@ -1,9 +1,7 @@
 package com.cgi.sdm_project.igu.juego.loop;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
@@ -20,15 +18,14 @@ import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.ContinuarRonda;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
-import com.cgi.sdm_project.logica.juego.reglas.Trabalenguas;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Trabalenguas;
 import com.cgi.sdm_project.util.PermissionChecker;
 import com.cgi.sdm_project.util.factories.FactoryStemmer;
-import com.cgi.sdm_project.util.singletons.MediaPlayerSingleton;
 import com.cgi.sdm_project.util.stemmers.Stemmer;
 
+import java.text.Collator;
 import java.util.ArrayList;
 import java.util.List;
-import java.text.Collator;
 
 public class TrabalenguasActivity extends LoopSinMusica implements InicioJuego, TextToSpeech.OnInitListener {
     private Trabalenguas trabalenguas;

@@ -11,16 +11,16 @@ import com.cgi.sdm_project.igu.juego.loop.cazatopos.CazatoposInicioActivity;
 import com.cgi.sdm_project.igu.juego.loop.equilibrio.EquilibrioInicioActivity;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
-import com.cgi.sdm_project.logica.juego.reglas.Brujula;
-import com.cgi.sdm_project.logica.juego.reglas.Camara;
-import com.cgi.sdm_project.logica.juego.reglas.Cazatopos;
-import com.cgi.sdm_project.logica.juego.reglas.Equilibrio;
-import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
-import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
 import com.cgi.sdm_project.logica.juego.reglas.Regla;
-import com.cgi.sdm_project.logica.juego.reglas.Reto;
-import com.cgi.sdm_project.logica.juego.reglas.Trabalenguas;
-import com.cgi.sdm_project.logica.juego.reglas.Votacion;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Brujula;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Camara;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Cazatopos;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Equilibrio;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.HastaQue;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Pregunta;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Reto;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Trabalenguas;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Votacion;
 
 /**
  * @author Enol García González (UO257775)

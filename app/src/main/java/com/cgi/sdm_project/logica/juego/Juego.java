@@ -9,10 +9,8 @@ import com.cgi.sdm_project.logica.juego.juego.Jugador;
 import com.cgi.sdm_project.logica.juego.juego.Notificacion;
 import com.cgi.sdm_project.logica.juego.juego.selectores.ProbabilitySelector;
 import com.cgi.sdm_project.logica.juego.reglas.Regla;
-import com.cgi.sdm_project.util.Conf;
-import com.cgi.sdm_project.util.Enumerates.Idioma;
+import com.cgi.sdm_project.logica.juego.reglas.Reglas;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -66,15 +64,6 @@ public class Juego {
         if (juego == null)
             juego = new Juego();
         return juego;
-    }
-
-    /**
-     * Método que devuelve el selector de reglas que se va a usar.
-     *
-     * @return Selector
-     */
-    public ISelectorRegla getSelectorRegla() {
-        return selectorRegla;
     }
 
     public void setSelectorRegla(ISelectorRegla selectorRegla) {
@@ -169,17 +158,10 @@ public class Juego {
         }
 
         juegoActual = null;
-        String nombre;
-        try {
-            if ((nombre = selectorRegla.getNombreSiguienteJuego()) == null) {
-                while ((nombre = selectorRegla.getNombreSiguienteJuego()) == null) ;
-            }
-            while ((juegoActual = (Regla) ReglasJuego.class.getMethod("get" + nombre).invoke(ReglasJuego.getInstance())) == null)
-                ;
+        Reglas regla;
 
-        } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-            throw new RuntimeException(e);
-        }
+        while ((regla = selectorRegla.getSiguienteJuego()) == null) ;
+        while ((juegoActual = ReglasJuego.getInstance().get(regla)) == null) ;
 
         return AlmacenadorActivities.getInstance().getActivityFor(juegoActual);
     }

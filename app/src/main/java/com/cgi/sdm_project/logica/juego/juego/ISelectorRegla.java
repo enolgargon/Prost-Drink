@@ -1,5 +1,7 @@
 package com.cgi.sdm_project.logica.juego.juego;
 
+import com.cgi.sdm_project.logica.juego.reglas.Reglas;
+
 /**
  * Interfaz que define los métodos que tienen que cumplir lo selectores de reglas.
  * Para ser un selector de reglas, se tiene que proveer de métodos para selecionar reglas... Valga la redundancia.
@@ -9,9 +11,9 @@ package com.cgi.sdm_project.logica.juego.juego;
  */
 public interface ISelectorRegla {
     /**
-     * Método que provee del nombre de la siguiente regla de juego que se usará.
+     * Método que hace las operaciones aleatorias y lógicas para obtener la sieguiente actividad a la que se tienen que enfrentar los jugadores.
      *
-     * @return Nombre de la siguiente regla de juego.
+     * @return Regla a la que se va a juagar a continuación
      */
-    String getNombreSiguienteJuego();
+    Reglas getSiguienteJuego();
 }

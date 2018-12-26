@@ -1,6 +1,7 @@
 package com.cgi.sdm_project.logica.juego.juego.selectores;
 
 import com.cgi.sdm_project.logica.juego.juego.ISelectorRegla;
+import com.cgi.sdm_project.logica.juego.reglas.Reglas;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -13,37 +14,34 @@ import java.util.List;
  */
 public class FilteredSelector implements ISelectorRegla {
     private ISelectorRegla selectorRegla;
-    private List<String> nombresValidos;
+    private List<Reglas> reglasValidas;
 
-    public FilteredSelector(ISelectorRegla selectorRegla, List<String> nombresValidos) {
+    public FilteredSelector(ISelectorRegla selectorRegla) {
         if (selectorRegla == null)
             throw new IllegalArgumentException("No se puede filtrar si no hay un selector para filtrar");
         this.selectorRegla = selectorRegla;
-        if (nombresValidos == null)
-            this.nombresValidos = new LinkedList<>();
-        else
-            this.nombresValidos = new LinkedList<>(nombresValidos);
+        this.reglasValidas = new LinkedList<>();
     }
 
     public boolean isValidConfiguration() {
-        return nombresValidos.size() > 0;
+        return reglasValidas.size() > 0;
     }
 
-    public void active(String nombre) {
-        if (nombre == null)
+    public void active(Reglas regla) {
+        if (regla == null)
             throw new IllegalArgumentException();
-        nombresValidos.add(nombre);
+        reglasValidas.add(regla);
     }
 
-    public void desactive(String nombre) {
-        if (nombre == null)
+    public void desactive(Reglas regla) {
+        if (regla == null)
             throw new IllegalArgumentException();
-        nombresValidos.remove(nombre);
+        reglasValidas.remove(regla);
     }
 
     @Override
-    public String getNombreSiguienteJuego() {
-        String nombre = selectorRegla.getNombreSiguienteJuego();
-        return nombresValidos.contains(nombre) ? nombre : null;
+    public Reglas getSiguienteJuego() {
+        Reglas regla = selectorRegla.getSiguienteJuego();
+        return reglasValidas.contains(regla) ? regla : null;
     }
 }

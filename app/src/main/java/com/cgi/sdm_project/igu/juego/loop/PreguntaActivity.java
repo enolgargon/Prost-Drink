@@ -2,15 +2,13 @@ package com.cgi.sdm_project.igu.juego.loop;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.speech.RecognizerIntent;
-import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
-import com.cgi.sdm_project.logica.juego.reglas.Pregunta;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Pregunta;
 
 public class PreguntaActivity extends Loop implements InicioJuego {
     private Pregunta pregunta;

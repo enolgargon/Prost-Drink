@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
-import com.cgi.sdm_project.logica.juego.reglas.Brujula;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Brujula;
 
 import java.util.Observable;
 import java.util.Observer;

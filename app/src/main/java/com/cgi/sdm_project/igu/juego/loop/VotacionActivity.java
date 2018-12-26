@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
-import com.cgi.sdm_project.logica.juego.reglas.Votacion;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Votacion;
 
 public class VotacionActivity extends Loop implements InicioJuego {
     private Votacion votacion;

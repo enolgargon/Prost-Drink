@@ -1,4 +1,4 @@
-package com.cgi.sdm_project.logica.juego.reglas.cazatopos;
+package com.cgi.sdm_project.logica.juego.reglas.implementaciones.cazatopos;
 
 import android.graphics.drawable.Drawable;
 

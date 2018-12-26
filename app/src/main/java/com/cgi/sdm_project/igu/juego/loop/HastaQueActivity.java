@@ -9,7 +9,7 @@ import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.FinJuego;
 import com.cgi.sdm_project.logica.juego.activities.IFinJuego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
-import com.cgi.sdm_project.logica.juego.reglas.HastaQue;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.HastaQue;
 
 public class HastaQueActivity extends Loop implements InicioJuego, IFinJuego {
     private HastaQue hastaQue;

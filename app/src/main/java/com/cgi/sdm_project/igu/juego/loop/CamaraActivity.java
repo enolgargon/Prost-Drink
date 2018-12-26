@@ -27,7 +27,7 @@ import com.cgi.sdm_project.logica.juego.activities.ContinuarRonda;
 import com.cgi.sdm_project.logica.juego.activities.FinJuego;
 import com.cgi.sdm_project.logica.juego.activities.IFinJuego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
-import com.cgi.sdm_project.logica.juego.reglas.Camara;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Camara;
 import com.cgi.sdm_project.util.PermissionChecker;
 
 import java.io.File;

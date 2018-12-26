@@ -1,6 +1,7 @@
-package com.cgi.sdm_project.logica.juego.reglas;
+package com.cgi.sdm_project.logica.juego.reglas.implementaciones;
 
 import com.cgi.sdm_project.R;
+import com.cgi.sdm_project.logica.juego.reglas.ReglaTragable;
 import com.cgi.sdm_project.util.singletons.AppSingleton;
 
 import java.util.ArrayList;

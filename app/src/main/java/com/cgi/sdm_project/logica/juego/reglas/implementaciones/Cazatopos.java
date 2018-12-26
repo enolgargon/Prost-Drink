@@ -1,8 +1,9 @@
-package com.cgi.sdm_project.logica.juego.reglas;
+package com.cgi.sdm_project.logica.juego.reglas.implementaciones;
 
-import com.cgi.sdm_project.logica.juego.reglas.cazatopos.Agujero;
-import com.cgi.sdm_project.logica.juego.reglas.cazatopos.Casilla;
-import com.cgi.sdm_project.logica.juego.reglas.cazatopos.Topo;
+import com.cgi.sdm_project.logica.juego.reglas.ReglaTragable;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.cazatopos.Agujero;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.cazatopos.Casilla;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.cazatopos.Topo;
 import com.cgi.sdm_project.util.SamUtil;
 
 /**
@@ -16,8 +17,8 @@ public class Cazatopos extends ReglaTragable {
     private int score;
     private Casilla[] casillas;
 
-    public Cazatopos(int tragos) {
-        super(tragos);
+    public Cazatopos() {
+        super(0);
         this.score = 0;
         this.casillas = new Casilla[6];
         actualizarTablero(1);

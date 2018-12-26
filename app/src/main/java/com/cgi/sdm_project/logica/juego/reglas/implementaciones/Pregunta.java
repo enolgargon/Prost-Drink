@@ -1,4 +1,6 @@
-package com.cgi.sdm_project.logica.juego.reglas;
+package com.cgi.sdm_project.logica.juego.reglas.implementaciones;
+
+import com.cgi.sdm_project.logica.juego.reglas.ReglaTragable;
 
 public class Pregunta extends ReglaTragable {
     private final String pregunta;

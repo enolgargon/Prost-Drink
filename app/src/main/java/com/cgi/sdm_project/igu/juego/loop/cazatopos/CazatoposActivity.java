@@ -14,7 +14,7 @@ import com.cgi.sdm_project.igu.juego.loop.Loop;
 import com.cgi.sdm_project.igu.juego.loop.ResultadoActivity;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.IFinJuego;
-import com.cgi.sdm_project.logica.juego.reglas.Cazatopos;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Cazatopos;
 
 
 /**
