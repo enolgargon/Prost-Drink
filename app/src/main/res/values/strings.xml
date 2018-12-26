@@ -178,6 +178,9 @@
     <string name="equilibrio_fracaso">Va a ser que no… Bebe %d</string>
     <string name="comenzar">¡A jugar!</string>
     <string name="equilibrio_instrucciones">En este juego deberás conseguir colocar la aguja del medidor en la posición correcta. Para ello deberás girar el móvil para hacer que se mueva. Presta atención a las pistas.</string>
+    <!-- También usado en:
+        Instrucciones
+    -->
 
     <!-- TOPOS -->
     <string name="topos_resultado0">Horrible… Bebe %d anda.</string>
@@ -199,5 +202,38 @@
     <!-- Perdido -->
     <string name="brujula_fallo1">Ten cuidao, que te pierdes. Esta vez no bebas. Regalale tus %d a quien quieras</string>
     <string name="brujula_fallo2">Uy uy. No te sabes orientar? Bebe %d</string>
+
+
+    <!-- INSTRUCCIONES -->
+    <string name="instrucciones_title">Instrucciones</string>
+    <string name="instrucciones_text">
+        Gracias por usar nuestra aplicación. Te vamos a explicar brevemente todo lo que se puede hacer con ella. Espero que lo disfrutes.
+        Para empezar, tienes que saber que la aplicación tiene dos partes. Una para hacer sorteos de equipos y otra para jugar a beber.
+    </string>
+    <!-- Sorteo -->
+    <string name="sorteo_instrucciones_title">Instrucciones de los sorteos</string>
+    <string name="sorteo_instrucciones">
+        Desde la pantalla de inicio de la aplicación puedes acceder a la sección de sorteos.
+        En esa parte puedes indicar los jugadores que quieras en una lista, el número de equipos que quieres hacer y, al pulsar en sortear, la aplicación generará los equipos que deseas.
+        Esta opción es útil para cuando se quiere jugar a otros juegos como parchís o billar
+    </string>
+
+    <!-- Juegos -->
+    <string name="juegos_instrucciones_title">Instrucciones de los juegos</string>
+    <string name="juegos_instrucciones">
+        La parte mas importante de la aplicación es sin duda la de los juegos. En ella jugaréis por turnos.
+        En la parte superior de la pantalla aparecerá que jugador debe participar en cada momento. Antes de empezar, se pedirá el nombre de los jugadores para identificaros, se recomienda que no pongáis dos jugadores con el mismo nombre.
+        El juego no tiene fin, e irán apareciendo pruebas que tendréis que hacer. Cada prueba os puede mandar beber o repartir bebida a los demás jugadores. No olvides rellenar el vaso.
+    </string>
+    <string name="brujula_instrucciones">Instrucciones de la brujula</string>
+    <string name="camara_instrucciones">Instrucciones de la camara</string>
+    <string name="cazatopos_instrucciones">Instrucciones del cazatopos</string>
+    <!-- Texto de las instrucciones del equilibrio, ver activity equilibrio -->
+    <string name="hastaque_instrucciones">Instrucciones del hasta que</string>
+    <string name="pregunta_instrucciones">Instrucciones de las preguntas</string>
+    <string name="reto_instrucciones">Instrucciones de los retos</string>
+    <string name="trabalenguas_instrucciones">Instrucciones de los trabalenguas</string>
+    <string name="votacion_instrucciones">Instrucciones de las votaciones</string>
+    <string name="entendido">Creo que ya lo he entendido</string>
 
 </resources>

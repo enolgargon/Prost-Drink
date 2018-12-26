@@ -71,6 +71,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/paths" />
         </provider>
+
+        <activity android:name=".igu.juego.InstruccionesActivity"></activity>
     </application>
 
 </manifest>
