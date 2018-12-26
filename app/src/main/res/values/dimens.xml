@@ -13,6 +13,8 @@
     <dimen name="bucketPadding">16dp</dimen>
     <dimen name="bucketMargin">16dp</dimen>
 
+    <dimen name="instruccionesPadding">16dp</dimen>
+
     <!-- Fuentes -->
     <dimen name="h1">96sp</dimen>
     <dimen name="h2">60sp</dimen>

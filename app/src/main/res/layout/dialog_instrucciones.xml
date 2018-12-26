@@ -8,7 +8,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="@dimen/instruccionesPadding"
+        android:paddingBottom="@dimen/instruccionesPadding">
 
         <TextView
             android:id="@+id/textView9"

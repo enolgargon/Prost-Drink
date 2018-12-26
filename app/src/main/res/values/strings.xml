@@ -77,7 +77,7 @@
 
     <!-- Activity Retos -->
     <string name="noApto">Nah, no me atrevo</string>
-    <string name="apto">¿Que ho hay huevos? Me atrevo</string>
+    <string name="apto">¿Que no hay huevos? Me atrevo</string>
 
     <!-- Activity Yo nunca -->
 
@@ -121,7 +121,7 @@
 
     <!-- PREGUNTAS -->
     <!-- Contestada -->
-    <string name="pregunta_contestada1">Bien!! Por haber contestado puedes mandar beber %d a quien tu quieras</string>
+    <string name="pregunta_contestada1">¡¡Bien!! Por haber contestado puedes mandar beber %d a quien tu quieras</string>
     <string name="pregunta_contestada2">Así se juega, manda beber %d a quien tu quieras</string>
     <string name="pregunta_contestada3">¿¿Este juego es maravilloso, verdad?? Manda beber %d a quien tu quieras y recomienda la app a más gente</string>
     <!-- No contestada -->
@@ -133,9 +133,9 @@
     <!-- Atrevido -->
     <string name="resultado_atrevido1">En este juego nos gusta la gente atrevida. Puedes mandar beber %d a quien tu quieras</string>
     <string name="resultado_atrevido2">¿No crees que tus amigos están demasiado bien? Reparte %d tragos</string>
-    <string name="resultado_atrevido3">Muy bien!! Por valiente te toca elegir quien bebe tus %d tragos</string>
+    <string name="resultado_atrevido3">¡¡Muy bien!! Por valiente te toca elegir quien bebe tus %d tragos</string>
     <!-- Ho hay huevos -->
-    <string name="resultado_cobarde1">Cloc-cloc!! Gallina. A los cobardes les toca beber. Bebe %d</string>
+    <string name="resultado_cobarde1">¡¡Cloc-cloc!! Gallina. A los cobardes les toca beber. Bebe %d</string>
     <string name="resultado_cobarde2">No has entendido como hay que jugar. Para ganar hay que ser valiente, bebe %d a ver si la próxima te animas</string>
     <string name="resultado_cobarde3">Hay algo que no funciona. Los cobardes se quedan en casa. Bebe %d y la próxima vez échale huevos</string>
 
@@ -192,22 +192,22 @@
     <string name="topos_instrucciones2">¡Pero cuidado! Darle a una madriguera sin topo se penalizará.</string>
 
     <!-- BRUJULA -->
-    <string name="instrucciones_brujula">Vamos con un juego un poco distinto. ¿Has bebido mucho? Intenta en contrar el norte.
-        Vas a tener 3 intentos para hacer que el móvil apunte al norte. En cada intento habra una cuenta atras de 3 segundos y luego verás una brújula.
-        ¿Serás capaz de que apunte al norte?</string>
+    <string name="instrucciones_brujula">Vamos con un juego un poco distinto. ¿Has bebido mucho? Intenta encontrar el norte.
+        Vas a tener 3 intentos para hacer que el móvil apunte al norte. En cada intento habrá una cuenta atrás de 3 segundos y luego verás una brújula.
+        ¿Serás capaz de orientarte?</string>
     <string name="empezar">Empezar</string>
     <!-- Norte -->
     <string name="brujula_acierto1">Que poco has bebido. Si todavía puedes encontrar el norte… Bebe %d</string>
     <string name="brujula_acierto2">Bien. Has encontrado el norte. Puedes mandar beber %d a quien quieras</string>
     <!-- Perdido -->
-    <string name="brujula_fallo1">Ten cuidao, que te pierdes. Esta vez no bebas. Regalale tus %d a quien quieras</string>
-    <string name="brujula_fallo2">Uy uy. No te sabes orientar? Bebe %d</string>
+    <string name="brujula_fallo1">Ten cuidado, que te pierdes. Esta vez no bebas. Regálale tus %d a quien quieras</string>
+    <string name="brujula_fallo2">Uy uy. ¿No te sabes orientar? Bebe %d</string>
 
 
     <!-- INSTRUCCIONES -->
     <string name="instrucciones_title">Instrucciones</string>
     <string name="instrucciones_text">
-        Gracias por usar nuestra aplicación. Te vamos a explicar brevemente todo lo que se puede hacer con ella. Espero que lo disfrutes.
+        Gracias por usar nuestra aplicación. Te vamos a explicar brevemente todo lo que se puede hacer en ella. Espero que lo disfrutes.
         Para empezar, tienes que saber que la aplicación tiene dos partes. Una para hacer sorteos de equipos y otra para jugar a beber.
     </string>
     <!-- Sorteo -->
@@ -215,62 +215,62 @@
     <string name="sorteo_instrucciones">
         Desde la pantalla de inicio de la aplicación puedes acceder a la sección de sorteos.
         En esa parte puedes indicar los jugadores que quieras en una lista, el número de equipos que quieres hacer y, al pulsar en sortear, la aplicación generará los equipos que deseas.
-        Esta opción es útil para cuando se quiere jugar a otros juegos como parchís o billar
+        Esta opción es útil para cuando se quiere jugar a otros juegos como parchís o billar.
     </string>
 
     <!-- Juegos -->
     <string name="juegos_instrucciones_title">Instrucciones de los juegos</string>
     <string name="juegos_instrucciones">
-        La parte mas importante de la aplicación es sin duda la de los juegos. En ella jugaréis por turnos.
-        En la parte superior de la pantalla aparecerá que jugador debe participar en cada momento. Antes de empezar, se pedirá el nombre de los jugadores para identificaros, se recomienda que no pongáis dos jugadores con el mismo nombre.
+        El funcionamiento de los juegos es el siguiente:
+        En la parte superior de la pantalla aparecerá qué jugador debe participar en cada momento. Antes de empezar, se pedirá el nombre de los jugadores para identificaros, se recomienda que no pongais dos jugadores con el mismo nombre.
         El juego no tiene fin, e irán apareciendo pruebas que tendréis que hacer. Cada prueba os puede mandar beber o repartir bebida a los demás jugadores. No olvides rellenar el vaso.
     </string>
     <string name="brujula_instrucciones">
-        En este juego tienes que intentar encontrar el norte.
-        Tendrás 3 intentos, en los que se te mostrará una cuenta atrás para buscar el norte.
-        Después de que se te acabe el tiempo podrás ver la brújala para saber lo que te has equivocado.
+        En este juego tienes que intentar apuntar tu móvil hacia el norte.
+        Tendrás 3 intentos, en los que se te mostrará una cuenta atrás para buscarlo.
+        Después de que se te acabe el tiempo podrás ver la brújula para saber lo que te has equivocado.
     </string>
     <string name="camara_instrucciones">
-        Por los amigos que no estan con vosotros.
-        En este juego se te retará a sacar una foto a algo de la fiesta y compartirsela.
-        Que se mueran de envidia
+        Por los amigos que no están con vosotros.
+        En este juego se te retará a sacar una foto a algo de la fiesta y compartírsela.
+        Que se mueran de envidia.
     </string>
     <string name="cazatopos_instrucciones">
-        Seguro que todos habéis jugado al cazatopos. Intenta matar al moyor numero de topos que puedas en 30 segundos, pero cuidado, que si te equivocas se te penalizará.
+        Seguro que todos habéis jugado al cazatopos. Intenta matar al mayor número de topos que puedas en 30 segundos, pero ten cuidado, que si te equivocas se te penalizará.
     </string>
     <!-- Texto de las instrucciones del equilibrio, ver activity equilibrio -->
     <string name="hastaque_instrucciones">
-        Dejate llevar. Hasta que pasen un numero de turnos tienes que hacer o te tienen que hacer algo.
-        Solo tienes que leer el mensaje y a ver que pasa
+        Déjate llevar. Hasta que pasen un numero de turnos tienes que hacer o te tienen que hacer algo.
+        Solo tienes que leer el mensaje y&#8230; ¡Qué decida el juego!
     </string>
     <string name="pregunta_instrucciones">
-        Vamos a ver cuanto eres capaz de contar de tu vida. La aplicación te hará preguntas (puede que comprometidas).
-        Si no contestas tendrás que beber. A ver si el alcohol te suelta.
+        La aplicación te hará preguntas (puede que comprometidas).
+        Si no contestas tendrás que beber. A ver si el alcohol te suelta la lengua.
     </string>
     <string name="reto_instrucciones">
-        ¿Cómo de valiente eres? Te proponemos cosas a las que te tienes que atrever.
-        Si te atreves y las haces tendrás premio, si no castigo.
+        ¿A que no hay huevos?
+        Si te atreves y haces los retos que te proponemos, tendrás premio, si no castigo.
     </string>
     <string name="trabalenguas_instrucciones">
         No hay quien te endienda borracho. Intenta decir un trabalenguas que te proponemos al microfono del teléfono.
-        Será capaz de entenderte. Recuerda… Al micrófono, no a la columna del bar.
+        Será capaz de entenderte. Recuerda… Al micrófono, ¡no a la columna del bar!
     </string>
     <string name="votacion_instrucciones">
-        Fácil, sencillo y para todo el grupo. Encuesta a los del grupo para ver que prefieren de las opciones que te damos.
+        Fácil, sencillo y para todo el grupo. Encuesta a todos para ver que opción prefieren de las que te damos.
         Marca la opción más votada y la aplicación os dirá que hacer.
     </string>
 
     <!-- Activity -->
-    <string name="antes">Andes de empezar…</string>
+    <string name="antes">Antes de empezar…</string>
     <string name="instrucciones_activity_bebida">Aseguraos de tener siempre bebida en el vaso</string>
-    <string name="instrucciones_activity_desarrollo">Van a aparecer juegos que os dirán que hacer, y teneis que contestar a todo y atreveros a los retos</string>
-    <string name="instrucciones_activity_instrucciones">Si todavía tienes dudas se enseñamos las instrucciones</string>
+    <string name="instrucciones_activity_desarrollo">Van a aparecer juegos que os dirán que hacer, teneis que contestar a todo y atreveros a realizar los retos</string>
+    <string name="instrucciones_activity_instrucciones">Si todavía tienes dudas te enseñamos las instrucciones</string>
 
     <!-- Otros textos -->
     <string name="entendido">Creo que ya lo he entendido</string>
     <string name="activity_elegir">
         Vete escribiendo abajo el nombre de los jugadores que participarán, si quieres quitar alguno puedes hacerlo manteniendo pulsado su nombre.
-        Cuando estén todos en la lista para jugar, dale al play y… A JUGAR!!!
+        Cuando estén todos en la lista para jugar, dale al play y… ¡¡¡A JUGAR!!!
     </string>
     <string name="activity_sorteo">
         Aquí puedes hacer equipos. Añade a la lista los nombres de las personas que van a jugar y abajo pon el número de equipos.
