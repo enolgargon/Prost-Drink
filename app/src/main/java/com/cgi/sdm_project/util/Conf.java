@@ -3,6 +3,7 @@ package com.cgi.sdm_project.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.cgi.sdm_project.logica.juego.almacenes.ReglasJuego;
 import com.cgi.sdm_project.logica.juego.reglas.Reglas;
 import com.cgi.sdm_project.util.singletons.AppSingleton;
 
@@ -57,6 +58,11 @@ public class Conf {
         SharedPreferences.Editor editor = settings.edit();
         editor.putInt("Idioma", index);
         editor.apply();
+
+        //Avisa al singleton para que se actualice
+        AppSingleton.notifyLangChange();
+        //Invalida las reglas cargadas para que se tengan que leer los xml del idioma correcto
+        ReglasJuego.getInstance().invalidate();
     }
 
     /*Configuraciones para los tipos de juego*/

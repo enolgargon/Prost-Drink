@@ -19,7 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".igu.MainActivity">
+        <activity
+            android:name=".igu.MainActivity"
+            android:configChanges="layoutDirection|locale">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,38 +30,68 @@
         </activity>
         <activity
             android:name=".igu.ConfiguracionActivity"
+            android:configChanges="layoutDirection|locale"
             android:parentActivityName=".igu.MainActivity" />
         <activity
             android:name=".igu.sorteo.SortearActivity"
+            android:configChanges="layoutDirection|locale"
             android:parentActivityName=".igu.MainActivity" />
         <activity
             android:name=".igu.sorteo.ResultadoSorteoActivity"
+            android:configChanges="layoutDirection|locale"
             android:parentActivityName=".igu.sorteo.SortearActivity" />
         <activity
             android:name=".igu.juego.InicioJuegoActivity"
+            android:configChanges="layoutDirection|locale"
             android:parentActivityName=".igu.MainActivity" />
         <activity
             android:name=".igu.juego.ElegirJugadoresActivity"
+            android:configChanges="layoutDirection|locale"
             android:parentActivityName=".igu.juego.JuegoPersonalizadoActivity" />
         <activity
             android:name=".igu.juego.JuegoPersonalizadoActivity"
+            android:configChanges="layoutDirection|locale"
             android:parentActivityName=".igu.juego.InicioJuegoActivity" />
-        <activity android:name=".igu.juego.loop.PreguntaActivity" />
-        <activity android:name=".igu.juego.loop.VotacionActivity" />
-        <activity android:name=".igu.juego.loop.RetoActivity" />
-        <activity android:name=".igu.juego.loop.HastaQueActivity" />
-        <activity android:name=".igu.juego.loop.ResultadoActivity" />
-        <activity android:name=".igu.juego.loop.NotificacionActivity" />
-        <activity android:name=".igu.juego.loop.CamaraActivity" />
-        <activity android:name=".igu.juego.loop.TrabalenguasActivity" />
-        <activity android:name=".igu.juego.loop.BrujulaActivity" />
-        <activity android:name=".igu.juego.loop.equilibrio.EquilibrioInicioActivity" />
+        <activity
+            android:name=".igu.juego.loop.PreguntaActivity"
+            android:configChanges="layoutDirection|locale" />
+        <activity
+            android:name=".igu.juego.loop.VotacionActivity"
+            android:configChanges="layoutDirection|locale" />
+        <activity
+            android:name=".igu.juego.loop.RetoActivity"
+            android:configChanges="layoutDirection|locale" />
+        <activity
+            android:name=".igu.juego.loop.HastaQueActivity"
+            android:configChanges="layoutDirection|locale" />
+        <activity
+            android:name=".igu.juego.loop.ResultadoActivity"
+            android:configChanges="layoutDirection|locale" />
+        <activity
+            android:name=".igu.juego.loop.NotificacionActivity"
+            android:configChanges="layoutDirection|locale" />
+        <activity
+            android:name=".igu.juego.loop.CamaraActivity"
+            android:configChanges="layoutDirection|locale" />
+        <activity
+            android:name=".igu.juego.loop.TrabalenguasActivity"
+            android:configChanges="layoutDirection|locale" />
+        <activity
+            android:name=".igu.juego.loop.BrujulaActivity"
+            android:configChanges="layoutDirection|locale" />
+        <activity
+            android:name=".igu.juego.loop.equilibrio.EquilibrioInicioActivity"
+            android:configChanges="layoutDirection|locale" />
         <activity
             android:name=".igu.juego.loop.equilibrio.EquilibrioActivity"
+            android:configChanges="layoutDirection|locale"
             android:screenOrientation="portrait" />
-        <activity android:name=".igu.juego.loop.cazatopos.CazatoposInicioActivity" />
+        <activity
+            android:name=".igu.juego.loop.cazatopos.CazatoposInicioActivity"
+            android:configChanges="layoutDirection|locale" />
         <activity
             android:name=".igu.juego.loop.cazatopos.CazatoposActivity"
+            android:configChanges="layoutDirection|locale"
             android:screenOrientation="portrait" />
 
         <provider

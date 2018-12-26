@@ -6,29 +6,28 @@
         <item>English</item>
     </string-array>
 
-
     <string name="app_name">Prost &amp; Drink</string>
 
     <!-- Instrucciones -->
     <string name="instrucciones">Instrucciones</string>
 
     <!-- Main activity -->
-    <string name="principal_juego">Juego</string>
+    <string name="principal_juego">Play</string>
     <!-- También usado en:
         Activity Preparación de juego
     -->
-    <string name="principal_sorteo">Sortear</string>
-    <string name="contentDescription_atras">Icono de flecha hacia atras</string>
-    <string name="contentDescription_principal_acerca_de">Icono para la información sobre la aplicación</string>
-    <string name="contentDescription_principal_settings">Icono para la configuración de la aplicación</string>
+    <string name="principal_sorteo">Draw teams</string>
+    <string name="contentDescription_atras">Backwards arrow icon</string>
+    <string name="contentDescription_principal_acerca_de">App info icon</string>
+    <string name="contentDescription_principal_settings">Configuration icon</string>
 
     <!-- Activity de configuración -->
-    <string name="Configuración">Configuración</string>
-    <string name="Sonido">Sonido</string>
-    <string name="Volumen">Volumen</string>
-    <string name="Idioma">Idioma</string>
-    <string name="Guardar">Guardar</string>
-    <string name="CambiosGuardados">Se han guardado tus cambios</string>
+    <string name="Configuración">Configuration</string>
+    <string name="Sonido">Sound</string>
+    <string name="Volumen">Volume</string>
+    <string name="Idioma">Language</string>
+    <string name="Guardar">Save</string>
+    <string name="CambiosGuardados">Your changes have been saved</string>
 
     <!-- ACTIVITIES DE LA SECCIÓN DE JUEGO -->
 
@@ -76,7 +75,7 @@
 
     <!-- Activity Retos -->
     <string name="noApto">Nah, no me atrevo</string>
-    <string name="apto">¿Que no hay huevos? Me atrevo</string>
+    <string name="apto">¿Que ho hay huevos? Me atrevo</string>
 
     <!-- Activity Yo nunca -->
 
@@ -120,7 +119,7 @@
 
     <!-- PREGUNTAS -->
     <!-- Contestada -->
-    <string name="pregunta_contestada1">¡¡Bien!! Por haber contestado puedes mandar beber %d a quien tu quieras</string>
+    <string name="pregunta_contestada1">Bien!! Por haber contestado puedes mandar beber %d a quien tu quieras</string>
     <string name="pregunta_contestada2">Así se juega, manda beber %d a quien tu quieras</string>
     <string name="pregunta_contestada3">¿¿Este juego es maravilloso, verdad?? Manda beber %d a quien tu quieras y recomienda la app a más gente</string>
     <!-- No contestada -->
@@ -132,9 +131,9 @@
     <!-- Atrevido -->
     <string name="resultado_atrevido1">En este juego nos gusta la gente atrevida. Puedes mandar beber %d a quien tu quieras</string>
     <string name="resultado_atrevido2">¿No crees que tus amigos están demasiado bien? Reparte %d tragos</string>
-    <string name="resultado_atrevido3">¡¡Muy bien!! Por valiente te toca elegir quien bebe tus %d tragos</string>
+    <string name="resultado_atrevido3">Muy bien!! Por valiente te toca elegir quien bebe tus %d tragos</string>
     <!-- Ho hay huevos -->
-    <string name="resultado_cobarde1">¡¡Cloc-cloc!! Gallina. A los cobardes les toca beber. Bebe %d</string>
+    <string name="resultado_cobarde1">Cloc-cloc!! Gallina. A los cobardes les toca beber. Bebe %d</string>
     <string name="resultado_cobarde2">No has entendido como hay que jugar. Para ganar hay que ser valiente, bebe %d a ver si la próxima te animas</string>
     <string name="resultado_cobarde3">Hay algo que no funciona. Los cobardes se quedan en casa. Bebe %d y la próxima vez échale huevos</string>
 
@@ -177,9 +176,6 @@
     <string name="equilibrio_fracaso">Va a ser que no… Bebe %d</string>
     <string name="comenzar">¡A jugar!</string>
     <string name="equilibrio_instrucciones">En este juego deberás conseguir colocar la aguja del medidor en la posición correcta. Para ello deberás girar el móvil para hacer que se mueva. Presta atención a las pistas.</string>
-    <!-- También usado en:
-        Instrucciones
-    -->
 
     <!-- TOPOS -->
     <string name="topos_resultado0">Horrible… Bebe %d anda.</string>
@@ -191,88 +187,15 @@
     <string name="topos_instrucciones2">¡Pero cuidado! Darle a una madriguera sin topo se penalizará.</string>
 
     <!-- BRUJULA -->
-    <string name="instrucciones_brujula">Vamos con un juego un poco distinto. ¿Has bebido mucho? Intenta encontrar el norte.
-        Vas a tener 3 intentos para hacer que el móvil apunte al norte. En cada intento habrá una cuenta atrás de 3 segundos y luego verás una brújula.
-        ¿Serás capaz de orientarte?</string>
+    <string name="instrucciones_brujula">Vamos con un juego un poco distinto. ¿Has bebido mucho? Intenta en contrar el norte.
+        Vas a tener 3 intentos para hacer que el móvil apunte al norte. En cada intento habra una cuenta atras de 3 segundos y luego verás una brújula.
+        ¿Serás capaz de que apunte al norte?</string>
     <string name="empezar">Empezar</string>
     <!-- Norte -->
     <string name="brujula_acierto1">Que poco has bebido. Si todavía puedes encontrar el norte… Bebe %d</string>
     <string name="brujula_acierto2">Bien. Has encontrado el norte. Puedes mandar beber %d a quien quieras</string>
     <!-- Perdido -->
-    <string name="brujula_fallo1">Ten cuidado, que te pierdes. Esta vez no bebas. Regálale tus %d a quien quieras</string>
-    <string name="brujula_fallo2">Uy uy. ¿No te sabes orientar? Bebe %d</string>
+    <string name="brujula_fallo1">Ten cuidao, que te pierdes. Esta vez no bebas. Regalale tus %d a quien quieras</string>
+    <string name="brujula_fallo2">Uy uy. No te sabes orientar? Bebe %d</string>
 
-
-    <!-- INSTRUCCIONES -->
-    <string name="instrucciones_title">Instrucciones</string>
-    <string name="instrucciones_text">
-        Gracias por usar nuestra aplicación. Te vamos a explicar brevemente todo lo que se puede hacer en ella. Espero que lo disfrutes.
-        Para empezar, tienes que saber que la aplicación tiene dos partes. Una para hacer sorteos de equipos y otra para jugar a beber.
-    </string>
-    <!-- Sorteo -->
-    <string name="sorteo_instrucciones_title">Instrucciones de los sorteos</string>
-    <string name="sorteo_instrucciones">
-        Desde la pantalla de inicio de la aplicación puedes acceder a la sección de sorteos.
-        En esa parte puedes indicar los jugadores que quieras en una lista, el número de equipos que quieres hacer y, al pulsar en sortear, la aplicación generará los equipos que deseas.
-        Esta opción es útil para cuando se quiere jugar a otros juegos como parchís o billar.
-    </string>
-
-    <!-- Juegos -->
-    <string name="juegos_instrucciones_title">Instrucciones de los juegos</string>
-    <string name="juegos_instrucciones">
-        El funcionamiento de los juegos es el siguiente:
-        En la parte superior de la pantalla aparecerá qué jugador debe participar en cada momento. Antes de empezar, se pedirá el nombre de los jugadores para identificaros, se recomienda que no pongais dos jugadores con el mismo nombre.
-        El juego no tiene fin, e irán apareciendo pruebas que tendréis que hacer. Cada prueba os puede mandar beber o repartir bebida a los demás jugadores. No olvides rellenar el vaso.
-    </string>
-    <string name="brujula_instrucciones">
-        En este juego tienes que intentar apuntar tu móvil hacia el norte.
-        Tendrás 3 intentos, en los que se te mostrará una cuenta atrás para buscarlo.
-        Después de que se te acabe el tiempo podrás ver la brújula para saber lo que te has equivocado.
-    </string>
-    <string name="camara_instrucciones">
-        Por los amigos que no están con vosotros.
-        En este juego se te retará a sacar una foto a algo de la fiesta y compartírsela.
-        Que se mueran de envidia.
-    </string>
-    <string name="cazatopos_instrucciones">
-        Seguro que todos habéis jugado al cazatopos. Intenta matar al mayor número de topos que puedas en 30 segundos, pero ten cuidado, que si te equivocas se te penalizará.
-    </string>
-    <!-- Texto de las instrucciones del equilibrio, ver activity equilibrio -->
-    <string name="hastaque_instrucciones">
-        Déjate llevar. Hasta que pasen un numero de turnos tienes que hacer o te tienen que hacer algo.
-        Solo tienes que leer el mensaje y&#8230; ¡Qué decida el juego!
-    </string>
-    <string name="pregunta_instrucciones">
-        La aplicación te hará preguntas (puede que comprometidas).
-        Si no contestas tendrás que beber. A ver si el alcohol te suelta la lengua.
-    </string>
-    <string name="reto_instrucciones">
-        ¿A que no hay huevos?
-        Si te atreves y haces los retos que te proponemos, tendrás premio, si no castigo.
-    </string>
-    <string name="trabalenguas_instrucciones">
-        No hay quien te endienda borracho. Intenta decir un trabalenguas que te proponemos al microfono del teléfono.
-        Será capaz de entenderte. Recuerda… Al micrófono, ¡no a la columna del bar!
-    </string>
-    <string name="votacion_instrucciones">
-        Fácil, sencillo y para todo el grupo. Encuesta a todos para ver que opción prefieren de las que te damos.
-        Marca la opción más votada y la aplicación os dirá que hacer.
-    </string>
-
-    <!-- Activity -->
-    <string name="antes">Antes de empezar…</string>
-    <string name="instrucciones_activity_bebida">Aseguraos de tener siempre bebida en el vaso</string>
-    <string name="instrucciones_activity_desarrollo">Van a aparecer juegos que os dirán que hacer, teneis que contestar a todo y atreveros a realizar los retos</string>
-    <string name="instrucciones_activity_instrucciones">Si todavía tienes dudas te enseñamos las instrucciones</string>
-
-    <!-- Otros textos -->
-    <string name="entendido">Creo que ya lo he entendido</string>
-    <string name="activity_elegir">
-        Vete escribiendo abajo el nombre de los jugadores que participarán, si quieres quitar alguno puedes hacerlo manteniendo pulsado su nombre.
-        Cuando estén todos en la lista para jugar, dale al play y… ¡¡¡A JUGAR!!!
-    </string>
-    <string name="activity_sorteo">
-        Aquí puedes hacer equipos. Añade a la lista los nombres de las personas que van a jugar y abajo pon el número de equipos.
-        Si quieres quitar un jugador manten pulsado su nombre.
-    </string>
 </resources>

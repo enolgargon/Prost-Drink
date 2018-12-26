@@ -1,5 +1,6 @@
 package com.cgi.sdm_project.igu;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +17,6 @@ import com.cgi.sdm_project.util.Conf;
 import com.cgi.sdm_project.util.singletons.MediaPlayerSingleton;
 
 import static com.cgi.sdm_project.util.singletons.MediaPlayerSingleton.MAX_VOLUMEN;
-
 /**
  * Se encarga de guardar las preferencias del usuario en el SharedPreferences
  *
@@ -158,6 +158,12 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
 
         Toast.makeText(getApplicationContext(), getString(R.string.CambiosGuardados),
                 Toast.LENGTH_SHORT).show();
+      
+      
+       Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(mIntent);
+      
         super.onDestroy();
     }
+
 }
