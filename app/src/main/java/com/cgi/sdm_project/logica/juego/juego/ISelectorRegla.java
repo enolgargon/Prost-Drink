@@ -7,7 +7,7 @@ import com.cgi.sdm_project.logica.juego.reglas.Reglas;
  * Para ser un selector de reglas, se tiene que proveer de métodos para selecionar reglas... Valga la redundancia.
  *
  * @author Enol García González
- * @version 16-12-2018
+ * @version 26-12-2018
  */
 public interface ISelectorRegla {
     /**

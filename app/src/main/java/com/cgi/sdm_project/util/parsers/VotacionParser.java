@@ -10,7 +10,7 @@ import org.w3c.dom.NodeList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VotacionParser implements Parser<List<Votacion>>{
+public class VotacionParser implements Parser<Votacion> {
     @Override
     public List<Votacion> execute(Document doc) {
 
@@ -23,14 +23,14 @@ public class VotacionParser implements Parser<List<Votacion>>{
         for (int i = 0; i < items.getLength(); i++) {
             Node node = items.item(i);
 
-            if (node.getNodeType() == Node.ELEMENT_NODE){
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
                 Element elemento = (Element) node;
                 int numeroTragos = Integer.parseInt(elemento.getAttribute("tragos"));
                 String texto = elemento.getAttribute("text");
 
 
                 List<String> valores = new ArrayList<>();
-                for (int j = 0; j < node.getChildNodes().getLength(); j++){
+                for (int j = 0; j < node.getChildNodes().getLength(); j++) {
 
                     Node nodeAux = node.getChildNodes().item(j);
                     if (nodeAux.getNodeType() == Node.ELEMENT_NODE) {

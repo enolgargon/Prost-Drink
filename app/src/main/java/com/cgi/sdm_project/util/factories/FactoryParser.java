@@ -12,30 +12,28 @@ import com.cgi.sdm_project.util.parsers.RetoParser;
 import com.cgi.sdm_project.util.parsers.TrabalenguasParser;
 import com.cgi.sdm_project.util.parsers.VotacionParser;
 
-import java.util.List;
-
 public class FactoryParser {
 
     private FactoryParser() {
     }
 
-    public static Parser<List<Votacion>> getVotacionParser() {
+    public static Parser<Votacion> getVotacionParser() {
         return new VotacionParser();
     }
 
-    public static Parser<List<HastaQue>> getHastaQueParser() {
+    public static Parser<HastaQue> getHastaQueParser() {
         return new HastaQueParser();
     }
 
-    public static Parser<List<Pregunta>> getPreguntaParser() {
+    public static Parser<Pregunta> getPreguntaParser() {
         return new PreguntaParser();
     }
 
-    public static Parser<List<Reto>> getRetoParser() {
+    public static Parser<Reto> getRetoParser() {
         return new RetoParser();
     }
 
-    public static Parser<List<Trabalenguas>> getTrabalenguasParser() {
+    public static Parser<Trabalenguas> getTrabalenguasParser() {
         return new TrabalenguasParser();
     }
 }

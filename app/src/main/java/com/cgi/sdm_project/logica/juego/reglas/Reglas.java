@@ -22,14 +22,14 @@ import com.cgi.sdm_project.util.loaders.VotacionesLoader;
 
 public enum Reglas {
     BRUJULA("No pierdas el norte", 3, Brujula.class, BrujulaLoader.class),
-    CAMARA("Fotos", 3, Camara.class, CamaraLoader.class),
-    CAZATOPOS("Cazatopos", 3, Cazatopos.class, CazatoposLoader.class),
-    EQUILIBRIO("Equilibrio", 3, Equilibrio.class, EquilibrioLoader.class),
-    HASTAQUE("Hasta que", 3, HastaQue.class, HastaQuesLoader.class),
-    PREGUNTA("Pregunta", 3, Pregunta.class, PreguntasLoader.class),
-    RETO("Reto", 3, Reto.class, RetosLoader.class),
-    TRABALENGUAS("Trabalenguas", 3, Trabalenguas.class, TrabalenguasLoader.class),
-    VOTACION("Votación", 3, Votacion.class, VotacionesLoader.class);
+    CAMARA("Fotos", 5, Camara.class, CamaraLoader.class),
+    CAZATOPOS("Cazatopos", 15, Cazatopos.class, CazatoposLoader.class),
+    EQUILIBRIO("Equilibrio", 12, Equilibrio.class, EquilibrioLoader.class),
+    HASTAQUE("Hasta que", 5, HastaQue.class, HastaQuesLoader.class),
+    PREGUNTA("Pregunta", 15, Pregunta.class, PreguntasLoader.class),
+    RETO("Reto", 20, Reto.class, RetosLoader.class),
+    TRABALENGUAS("Trabalenguas", 5, Trabalenguas.class, TrabalenguasLoader.class),
+    VOTACION("Votación", 20, Votacion.class, VotacionesLoader.class);
 
 
     public Class<? extends Regla> clase;

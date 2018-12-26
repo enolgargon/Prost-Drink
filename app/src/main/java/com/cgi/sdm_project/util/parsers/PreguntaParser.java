@@ -10,7 +10,7 @@ import org.w3c.dom.NodeList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PreguntaParser implements Parser<List<Pregunta>>{
+public class PreguntaParser implements Parser<Pregunta> {
     @Override
     public List<Pregunta> execute(Document doc) {
 
@@ -22,7 +22,7 @@ public class PreguntaParser implements Parser<List<Pregunta>>{
         for (int i = 0; i < items.getLength(); i++) {
             Node node = items.item(i);
 
-            if (node.getNodeType() == Node.ELEMENT_NODE){
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
 
                 Element elemento = (Element) node;
                 String valor = elemento.getAttribute("text");

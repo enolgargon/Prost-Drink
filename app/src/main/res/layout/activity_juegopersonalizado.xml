@@ -58,7 +58,7 @@
             android:id="@+id/layJuego"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="48dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
@@ -70,65 +70,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtJuego">
 
-            <CheckBox
-                android:id="@+id/ckPreguntas"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Preguntas" />
-
-            <CheckBox
-                android:id="@+id/ckRetos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Retos" />
-
-            <CheckBox
-                android:id="@+id/ckYoNunca"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/YoNunca" />
-
-            <CheckBox
-                android:id="@+id/ckHastaQues"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/HastaQue" />
-
-            <CheckBox
-                android:id="@+id/ckVotaciones"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Votaciones" />
-
-            <CheckBox
-                android:id="@+id/ckFotos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Fotos" />
-
-            <CheckBox
-                android:id="@+id/ckTrabalenguas"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Trabalenguas" />
-
-            <CheckBox
-                android:id="@+id/ckEquilibrio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Equilibrio" />
-
-            <CheckBox
-                android:id="@+id/ckTopos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Cazatopos" />
-
-            <CheckBox
-                android:id="@+id/ckNorte"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Brujula" />
         </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>

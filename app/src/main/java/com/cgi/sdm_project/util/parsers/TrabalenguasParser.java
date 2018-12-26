@@ -10,7 +10,7 @@ import org.w3c.dom.NodeList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TrabalenguasParser implements Parser<List<Trabalenguas>> {
+public class TrabalenguasParser implements Parser<Trabalenguas> {
     @Override
     public List<Trabalenguas> execute(Document doc) {
 

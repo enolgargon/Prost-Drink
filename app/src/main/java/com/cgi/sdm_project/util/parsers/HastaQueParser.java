@@ -10,7 +10,7 @@ import org.w3c.dom.NodeList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HastaQueParser implements Parser<List<HastaQue>> {
+public class HastaQueParser implements Parser<HastaQue> {
 
     @Override
     public List<HastaQue> execute(Document doc) {

@@ -3,6 +3,7 @@ package com.cgi.sdm_project.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.cgi.sdm_project.logica.juego.reglas.Reglas;
 import com.cgi.sdm_project.util.singletons.AppSingleton;
 
 public class Conf {
@@ -60,103 +61,13 @@ public class Conf {
 
     /*Configuraciones para los tipos de juego*/
 
-    public boolean getPreguntas() {
-        return settings.getBoolean("Preguntas", true);
+    public boolean getTipo(Reglas regla) {
+        return settings.getBoolean(regla.toString(), true);
     }
 
-    public void setPreguntas(boolean opcion) {
+    public void setTipo(Reglas regla, boolean opcion) {
         SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("Preguntas", opcion);
-        editor.apply();
-    }
-
-    public boolean getRetos() {
-        return settings.getBoolean("Retos", true);
-    }
-
-    public void setRetos(boolean opcion) {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("Retos", opcion);
-        editor.apply();
-    }
-
-    public boolean getYoNunca() {
-        return settings.getBoolean("YoNunca", true);
-    }
-
-    public void setYoNunca(boolean opcion) {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("YoNunca", opcion);
-        editor.apply();
-    }
-
-    public boolean getHastaQues() {
-        return settings.getBoolean("HastaQues", true);
-    }
-
-    public void setHastaQues(boolean opcion) {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("HastaQues", opcion);
-        editor.apply();
-    }
-
-    public boolean getVotaciones() {
-        return settings.getBoolean("Votaciones", true);
-    }
-
-    public void setVotaciones(boolean opcion) {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("Votaciones", opcion);
-        editor.apply();
-    }
-
-    public boolean getFotos() {
-        return settings.getBoolean("Fotos", true);
-    }
-
-    public void setFotos(boolean opcion) {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("Fotos", opcion);
-        editor.apply();
-    }
-
-    public boolean getTrabalenguas() {
-        return settings.getBoolean("Trabalenguas", true);
-    }
-
-    public void setTrabalenguas(boolean opcion) {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("Trabalenguas", opcion);
-        editor.apply();
-    }
-
-    public boolean getEquilibrio() {
-        return settings.getBoolean("Equilibrio", true);
-    }
-
-    public void setEquilibrio(boolean opcion) {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("Equilibrio", opcion);
-        editor.apply();
-    }
-
-    public boolean getCazatopos() {
-        return settings.getBoolean("CazatoposActivity", true);
-    }
-
-    public void setCazatopos(boolean opcion) {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("CazatoposActivity", opcion);
-        editor.apply();
-    }
-
-    public boolean getBrujula() {
-        return settings.getBoolean("Brujula", true);
-    }
-
-    public void setBrujula(boolean opcion) {
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("Brujula", opcion);
+        editor.putBoolean(regla.toString(), opcion);
         editor.apply();
     }
 

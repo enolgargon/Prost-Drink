@@ -10,7 +10,7 @@ import org.w3c.dom.NodeList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RetoParser implements Parser<List<Reto>>{
+public class RetoParser implements Parser<Reto> {
     @Override
     public List<Reto> execute(Document doc) {
 
@@ -18,10 +18,10 @@ public class RetoParser implements Parser<List<Reto>>{
         Element raiz = doc.getDocumentElement();
         NodeList items = raiz.getElementsByTagName("item");
 
-        for (int i = 0; i < items.getLength(); i++){
+        for (int i = 0; i < items.getLength(); i++) {
             Node node = items.item(i);
 
-            if (node.getNodeType() == Node.ELEMENT_NODE){
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
 
                 Element elemento = (Element) node;
                 String valor = elemento.getAttribute("text");
@@ -30,7 +30,7 @@ public class RetoParser implements Parser<List<Reto>>{
                 int hijosNodo = node.getChildNodes().getLength();
                 Reto reto;
 
-                if (hijosNodo > 0){
+                if (hijosNodo > 0) {
                     List<String> valores = new ArrayList<>();
                     for (int j = 0; j < node.getChildNodes().getLength(); j++) {
                         Node nodeAux = node.getChildNodes().item(j);
@@ -41,8 +41,7 @@ public class RetoParser implements Parser<List<Reto>>{
                         }
                     }
                     reto = new Reto(valor, numeroTragos, valores);
-                }
-                else
+                } else
                     reto = new Reto(valor, numeroTragos);
                 list.add(reto);
             }
