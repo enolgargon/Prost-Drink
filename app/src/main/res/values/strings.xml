@@ -150,8 +150,8 @@
     <!-- CAMARA -->
     <string name="error_camara">Hay algún problema con la cámara y no se puede sacar la foto</string>
     <string name="error_conexion">Hay un problema con la conexión a internet. No podrás compartir la imagen</string>
-    <string name="compartir">Compartir imagen usando</string>
     <string name="compartir_publi">Te regalo esta foto. Prost&amp;Drink</string>
+    <string name="camara_resultado">Que maravilloso es este juego!! Brinda y bebe %d</string>
 
     <!-- TRABALENGUAS -->
     <string name="repite">Repite:</string>
@@ -175,12 +175,12 @@
     <string name="jugar">Jugar</string>
     <string name="ready">¡Ya!</string>
     <string name="equilibrio_exito">¡Muy bien! Manda beber %d</string>
-    <string name="equilibrio_fracaso">Va a ser que no... Bebe %d</string>
+    <string name="equilibrio_fracaso">Va a ser que no… Bebe %d</string>
     <string name="comenzar">¡A jugar!</string>
     <string name="equilibrio_instrucciones">En este juego deberás conseguir colocar la aguja del medidor en la posición correcta. Para ello deberás girar el móvil para hacer que se mueva. Presta atención a las pistas.</string>
 
     <!-- TOPOS -->
-    <string name="topos_resultado0">Horrible... Bebe %d anda.</string>
+    <string name="topos_resultado0">Horrible… Bebe %d anda.</string>
     <string name="topos_resultado1">Lo importante es participar. Bebe %d.</string>
     <string name="topos_resultado2">No está nada mal. Manda beber %d a quién tú quieras.</string>
     <string name="topos_resultado3">¡El terror de los topos! Manda beber %d, leyenda.</string>

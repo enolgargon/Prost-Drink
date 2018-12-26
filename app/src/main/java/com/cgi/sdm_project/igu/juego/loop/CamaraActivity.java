@@ -24,8 +24,6 @@ import android.widget.Toast;
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.ContinuarRonda;
-import com.cgi.sdm_project.logica.juego.activities.FinJuego;
-import com.cgi.sdm_project.logica.juego.activities.IFinJuego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Camara;
 import com.cgi.sdm_project.util.PermissionChecker;
@@ -35,14 +33,16 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class CamaraActivity extends Loop implements InicioJuego, IFinJuego {
-    static final int REQUEST_TAKE_PHOTO = 1;
+public class CamaraActivity extends Loop implements InicioJuego {
+    private static final int REQUEST_TAKE_PHOTO = 1;
+    private static final int SHARE_PHOTO = 2;
 
     private String mCurrentPhotoPath;
 
     private ImageView imageView;
     private FloatingActionButton fabCamara;
     private FloatingActionButton fabShare;
+    private boolean showConnectionError = false;
 
     public static boolean isConnected(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -90,19 +90,26 @@ public class CamaraActivity extends Loop implements InicioJuego, IFinJuego {
 
 
     public void compartir(View view) {
-        if (!isConnected(getApplicationContext()))
+        if (!isConnected(getApplicationContext())) {
+            if (showConnectionError)
+                cargarResultado();
             Toast.makeText(getApplicationContext(), R.string.error_conexion, Toast.LENGTH_LONG).show();
-        else {
+            showConnectionError = true;
+        } else {
             final Intent intent = new Intent(android.content.Intent.ACTION_SEND);
             intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             intent.putExtra(Intent.EXTRA_STREAM,
                     FileProvider.getUriForFile(this, "com.example.android.fileprovider", new File(mCurrentPhotoPath)));
             intent.putExtra(Intent.EXTRA_SUBJECT, R.string.compartir_publi);
             intent.setType("image/jpg");
-            startActivity(intent);
+            startActivityForResult(intent, SHARE_PHOTO);
         }
+    }
 
-        new FinJuego().cargarSiguienteJuego(null);
+    private void cargarResultado() {
+        Intent intent = new Intent(this, ResultadoActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @SuppressLint("RestrictedApi")
@@ -115,7 +122,8 @@ public class CamaraActivity extends Loop implements InicioJuego, IFinJuego {
             imageView.setVisibility(ImageView.VISIBLE);
             fabShare.setVisibility(FloatingActionButton.VISIBLE);
             fabCamara.setVisibility(FloatingActionButton.GONE);
-        }
+        } else if (requestCode == SHARE_PHOTO)
+            cargarResultado();
     }
 
     /**
@@ -186,10 +194,5 @@ public class CamaraActivity extends Loop implements InicioJuego, IFinJuego {
 
         Bitmap bitmap = BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
         imageView.setImageBitmap(bitmap);
-    }
-
-    @Override
-    public void cargarSiguienteJuego(View view) {
-        new FinJuego().cargarSiguienteJuego(view);
     }
 }

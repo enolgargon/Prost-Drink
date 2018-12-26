@@ -1,10 +1,12 @@
 package com.cgi.sdm_project.util.factories;
 
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Camara;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.HastaQue;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Pregunta;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Reto;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Trabalenguas;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Votacion;
+import com.cgi.sdm_project.util.parsers.CamaraParser;
 import com.cgi.sdm_project.util.parsers.HastaQueParser;
 import com.cgi.sdm_project.util.parsers.Parser;
 import com.cgi.sdm_project.util.parsers.PreguntaParser;
@@ -35,5 +37,9 @@ public class FactoryParser {
 
     public static Parser<Trabalenguas> getTrabalenguasParser() {
         return new TrabalenguasParser();
+    }
+
+    public static Parser<Camara> getCamaraParser() {
+        return new CamaraParser();
     }
 }

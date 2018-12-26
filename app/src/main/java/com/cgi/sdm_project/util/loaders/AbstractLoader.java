@@ -42,8 +42,10 @@ abstract class AbstractLoader<T extends Regla> implements Loader<T> {
 
     @Override
     public List<T> load() {
-        return null;
+        return getParser().execute(getXML(getResXml()));
     }
+
+    protected abstract int getResXml();
 
     protected abstract Parser<T> getParser();
 }

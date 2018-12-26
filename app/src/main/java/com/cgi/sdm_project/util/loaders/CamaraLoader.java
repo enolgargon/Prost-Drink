@@ -1,22 +1,18 @@
 package com.cgi.sdm_project.util.loaders;
 
+import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Camara;
+import com.cgi.sdm_project.util.factories.FactoryParser;
 import com.cgi.sdm_project.util.parsers.Parser;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class CamaraLoader extends AbstractLoader<Camara> {
     @Override
-    public List<Camara> load() {
-        List<Camara> toRet = new ArrayList<>();
-        toRet.add(new Camara("Saca una foto al vaso después de acabartelo y compartela"));
-        toRet.add(new Camara("Saca una foto a un amigo bebiendo y compartela"));
-        return toRet;
+    protected int getResXml() {
+        return R.raw.camara;
     }
 
     @Override
     protected Parser<Camara> getParser() {
-        return null;
+        return FactoryParser.getCamaraParser();
     }
 }
