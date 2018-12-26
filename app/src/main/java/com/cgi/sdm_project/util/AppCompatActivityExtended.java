@@ -1,7 +1,6 @@
 package com.cgi.sdm_project.util;
 
 import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
 
 import com.cgi.sdm_project.util.singletons.MediaPlayerSingleton;
 
@@ -15,7 +14,7 @@ import static com.cgi.sdm_project.util.singletons.MediaPlayerSingleton.MAX_VOLUM
  * @version 24-12-2018
  */
 
-public class AppCompatActivityExtended extends AppCompatActivity {
+public class AppCompatActivityExtended extends AppCompatActivityLocale {
 
     @Override
     protected void onResume() {
@@ -58,4 +57,5 @@ public class AppCompatActivityExtended extends AppCompatActivity {
         }
         super.onPause();
     }
+
 }

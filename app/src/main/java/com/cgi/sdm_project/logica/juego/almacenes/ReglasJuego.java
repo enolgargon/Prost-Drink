@@ -61,4 +61,11 @@ public class ReglasJuego {
     public Regla get(Reglas regla) {
         return (Regla) Objects.requireNonNull(almacenes.get(regla)).get();
     }
+
+    /**
+     * Invalida las reglas si se cambia el idioma por ejemplo
+     */
+    public void invalidate() {
+        instance = null;
+    }
 }

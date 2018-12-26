@@ -1,42 +1,24 @@
-package com.cgi.sdm_project.util.singletons;
+package com.cgi.sdm_project.util;
 
-import android.app.Application;
-import android.content.Context;
 import android.content.res.Configuration;
-
-import com.cgi.sdm_project.util.Conf;
-import com.cgi.sdm_project.util.Enumerates;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 
 import java.util.Locale;
 
 /**
- * La idea de esta clase es proporcionar un nexo común a toda la aplicación para acceder al contexto,
- * además todas las actividades compartirán su contexto de cara a la internacionalización
+ * Decora appCompat para que todas las activities compartan el contexto del singleton
+ *
+ * @author Samuel
  */
-public class AppSingleton extends Application {
-    private static  AppSingleton app;
-
+public class AppCompatActivityLocale extends AppCompatActivity {
     private Locale locale = null;
 
-    public static void notifyLangChange() {
-        getInstance().setLocale();
-    }
-
     @Override
-    public void onCreate() {
-        super.onCreate();
-        app = this;
-
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setLocale();
-
-    }
-
-    public static AppSingleton getInstance() {
-        return app;
-    }
-
-    public Context getContext() {
-        return app.getApplicationContext();
     }
 
     private void setLocale() {

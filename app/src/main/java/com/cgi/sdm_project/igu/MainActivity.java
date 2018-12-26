@@ -10,7 +10,6 @@ import com.cgi.sdm_project.igu.juego.InicioJuegoActivity;
 import com.cgi.sdm_project.igu.sorteo.SortearActivity;
 import com.cgi.sdm_project.util.AppCompatActivityExtended;
 
-
 public class MainActivity extends AppCompatActivityExtended {
 
     @Override
@@ -18,7 +17,6 @@ public class MainActivity extends AppCompatActivityExtended {
         super.onCreate(savedInstanceState);
         setTheme(R.style.AppTheme_Splash);
         setContentView(R.layout.activity_main);
-
     }
 
     public void lanzarJuego(View vs) {
@@ -35,4 +33,6 @@ public class MainActivity extends AppCompatActivityExtended {
         Intent mIntent = new Intent(this, SortearActivity.class);
         startActivity(mIntent);
     }
+
+
 }

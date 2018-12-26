@@ -6,29 +6,28 @@
         <item>English</item>
     </string-array>
 
-
     <string name="app_name">Prost &amp; Drink</string>
 
     <!-- Instrucciones -->
     <string name="instrucciones">Instrucciones</string>
 
     <!-- Main activity -->
-    <string name="principal_juego">Juego</string>
+    <string name="principal_juego">Play</string>
     <!-- También usado en:
         Activity Preparación de juego
     -->
-    <string name="principal_sorteo">Sortear</string>
-    <string name="contentDescription_atras">Icono de flecha hacia atras</string>
-    <string name="contentDescription_principal_acerca_de">Icono para la información sobre la aplicación</string>
-    <string name="contentDescription_principal_settings">Icono para la configuración de la aplicación</string>
+    <string name="principal_sorteo">Draw teams</string>
+    <string name="contentDescription_atras">Backwards arrow icon</string>
+    <string name="contentDescription_principal_acerca_de">App info icon</string>
+    <string name="contentDescription_principal_settings">Configuration icon</string>
 
     <!-- Activity de configuración -->
-    <string name="Configuración">Configuración</string>
-    <string name="Sonido">Sonido</string>
-    <string name="Volumen">Volumen</string>
-    <string name="Idioma">Idioma</string>
-    <string name="Guardar">Guardar</string>
-    <string name="CambiosGuardados">Se han guardado tus cambios</string>
+    <string name="Configuración">Configuration</string>
+    <string name="Sonido">Sound</string>
+    <string name="Volumen">Volume</string>
+    <string name="Idioma">Language</string>
+    <string name="Guardar">Save</string>
+    <string name="CambiosGuardados">Your changes have been saved</string>
 
     <!-- ACTIVITIES DE LA SECCIÓN DE JUEGO -->
 
