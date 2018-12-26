@@ -18,7 +18,7 @@ import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Cazatopos;
 
 
 /**
- * Contiene el jugo de los topos y gestiona el loop de éste
+ * Contiene el juego de los topos y gestiona el loop de éste
  *
  * @author Samuel
  */
