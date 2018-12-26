@@ -16,7 +16,7 @@ import com.cgi.sdm_project.util.AppCompatActivityExtended;
 import com.cgi.sdm_project.util.Conf;
 import com.cgi.sdm_project.util.singletons.MediaPlayerSingleton;
 
-
+import static com.cgi.sdm_project.util.singletons.MediaPlayerSingleton.MAX_VOLUMEN;
 /**
  * Se encarga de guardar las preferencias del usuario en el SharedPreferences
  *
@@ -46,9 +46,7 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
         swSonido = findViewById(R.id.swSonido);
         sbVolumen = findViewById(R.id.sbVolumen);
         sbVolumen.setMax(100);
-
         spIdioma = findViewById(R.id.spIdioma);
-        Button btnGuardar = findViewById(R.id.btnGuardar);
     }
 
     /**
@@ -103,11 +101,7 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
         spIdioma.setSelection(conf.getIdioma());
     }
 
-    /**
-     * Guarda los cambios en las preferences
-     *
-     * @param view Vista para proveer de accion al botón
-     */
+    /*
     public void guardar(View view) {
         Conf conf = Conf.getInstancia();
         conf.setSonido(swSonido.isChecked());
@@ -120,9 +114,12 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
             mediaPlayer.stop();
             mediaPlayer.release();
             MediaPlayerSingleton.destroyMediaPlayer();
-        } else if (mediaPlayer.isPlaying() && swSonido.isChecked()) {
-            mediaPlayer.pause();
-            mediaPlayer.setVolume(sbVolumen.getProgress(), sbVolumen.getProgress());
+        } else if (swSonido.isChecked()) {
+            if (mediaPlayer.isPlaying())
+                mediaPlayer.pause();
+            float volume = (float) (1 - (Math.log(MAX_VOLUMEN - sbVolumen.getProgress())
+                    / Math.log(MAX_VOLUMEN)));
+            mediaPlayer.setVolume(volume, volume);
             mediaPlayer.start();
         }
 
@@ -130,11 +127,43 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
                 Toast.LENGTH_SHORT).show();
 
     }
+    */
 
+    /**
+     * Redefinición del onDestroy que además se encarga de guardar los cambios realizados en la
+     * activity de configuracion (this)
+     */
     @Override
     protected void onDestroy() {
-        Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+
+        Conf conf = Conf.getInstancia();
+        conf.setSonido(swSonido.isChecked());
+        conf.setVolumen(sbVolumen.getProgress());
+        conf.setIdioma(spIdioma.getSelectedItemPosition());
+
+        MediaPlayer mediaPlayer = MediaPlayerSingleton.getInstance();
+
+        if (!swSonido.isChecked() && mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            MediaPlayerSingleton.destroyMediaPlayer();
+        } else if (swSonido.isChecked()) {
+            if (mediaPlayer.isPlaying())
+                mediaPlayer.pause();
+            float volume = (float) (1 - (Math.log(MAX_VOLUMEN - sbVolumen.getProgress())
+                    / Math.log(MAX_VOLUMEN)));
+            mediaPlayer.setVolume(volume, volume);
+            mediaPlayer.start();
+        }
+
+        Toast.makeText(getApplicationContext(), getString(R.string.CambiosGuardados),
+                Toast.LENGTH_SHORT).show();
+      
+      
+       Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(mIntent);
+      
         super.onDestroy();
     }
+
 }

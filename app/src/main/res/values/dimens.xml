@@ -13,11 +13,15 @@
     <dimen name="bucketPadding">16dp</dimen>
     <dimen name="bucketMargin">16dp</dimen>
 
+    <dimen name="instruccionesPadding">16dp</dimen>
+
     <!-- Fuentes -->
     <dimen name="h1">96sp</dimen>
     <dimen name="h2">60sp</dimen>
     <dimen name="h3">44sp</dimen>
     <dimen name="h4">32sp</dimen>
+    <dimen name="h5">24sp</dimen>
+    <dimen name="h6">18sp</dimen>
     <dimen name="body">22sp</dimen>
     <dimen name="bodySmall">16sp</dimen>
     <dimen name="button">16sp</dimen>

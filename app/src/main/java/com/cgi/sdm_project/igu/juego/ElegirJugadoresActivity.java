@@ -3,6 +3,7 @@ package com.cgi.sdm_project.igu.juego;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -52,10 +53,11 @@ public class ElegirJugadoresActivity extends AppCompatActivityExtended {
 
         listaJugadores.setAdapter(new ArrayAdapter<Jugador>(getApplicationContext(), android.R.layout.simple_list_item_1, jugadores) {
             /* Redefinición de getView para aplicar estilo al listitem */
+            @NonNull
             @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
+            public View getView(int position, View convertView, @NonNull ViewGroup parent) {
                 View view = super.getView(position, convertView, parent);
-                TextView text = (TextView) view.findViewById(android.R.id.text1);
+                TextView text = view.findViewById(android.R.id.text1);
 
                 text.setTextColor(Color.WHITE);
 
@@ -93,7 +95,7 @@ public class ElegirJugadoresActivity extends AppCompatActivityExtended {
      * Lanza el juego con los jugadores introducidos, leyendon la signatura basta pero si te hace
      * ilusión leer los comentarios del javadoc te cuento mi vida aquí
      *
-     * @param view
+     * @param view Vista que lanza el evento
      */
     public void lanzarJuego(View view) {
 
@@ -101,15 +103,15 @@ public class ElegirJugadoresActivity extends AppCompatActivityExtended {
             Toast.makeText(getApplicationContext(), "Debe introducir mínimo un jugador para jugar", Toast.LENGTH_SHORT).show();
         else {
             Juego.getInstance().setJugadores(jugadores);
-            Intent mIntent = new Intent(getApplicationContext(), Juego.getInstance().getSiguienteJuego());
-            startActivity(mIntent);
+            Intent intent = new Intent(this, InstruccionesActivity.class);
+            startActivity(intent);
         }
     }
 
     /**
      * Método que carga la lista de jugadores almacenadas en el preferences en el RecyclerView
      *
-     * @param view
+     * @param view Vista que lanza el evento
      */
     public void cargarJugadores(View view) {
         for (String jugador : Conf.getInstancia().loadArray(Conf.JUGADORES)) {
