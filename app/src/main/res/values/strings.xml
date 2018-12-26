@@ -234,6 +234,14 @@
     <string name="reto_instrucciones">Instrucciones de los retos</string>
     <string name="trabalenguas_instrucciones">Instrucciones de los trabalenguas</string>
     <string name="votacion_instrucciones">Instrucciones de las votaciones</string>
+
+    <!-- Activity -->
+    <string name="antes">Andes de empezar…</string>
+    <string name="instrucciones_activity_bebida">Aseguraos de tener siempre bebida en el vaso</string>
+    <string name="instrucciones_activity_desarrollo">Van a aparecer juegos que os dirán que hacer, y teneis que contestar a todo y atreveros a los retos</string>
+    <string name="instrucciones_activity_instrucciones">Si todavía tienes dudas se enseñamos las instrucciones</string>
+
+    <!-- Otros textos -->
     <string name="entendido">Creo que ya lo he entendido</string>
 
 </resources>
