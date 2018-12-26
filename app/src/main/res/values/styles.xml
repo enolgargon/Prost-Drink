@@ -131,6 +131,14 @@
         <item name="android:textSize">@dimen/h4</item>
     </style>
 
+    <style name="H5" parent="H3">
+        <item name="android:textSize">@dimen/h5</item>
+    </style>
+
+    <style name="H6" parent="H2">
+        <item name="android:textSize">@dimen/h6</item>
+    </style>
+
     <style name="ColoredH3" parent="H3">
         <item name="android:textColor">@color/colorPrimaryDark</item>
     </style>
