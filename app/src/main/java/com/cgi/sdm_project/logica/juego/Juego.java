@@ -163,7 +163,7 @@ public class Juego {
         while ((regla = selectorRegla.getSiguienteJuego()) == null) ;
         while ((juegoActual = ReglasJuego.getInstance().get(regla)) == null) ;
 
-        return AlmacenadorActivities.getInstance().getActivityFor(juegoActual);
+        return AlmacenadorActivities.getInstance().getActivityFor(regla);
     }
 
     /**
