@@ -8,6 +8,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.igu.juego.loop.Loop;
@@ -46,6 +47,7 @@ public class MemoriaActivity extends Loop implements IFinJuego {
         setContentView(R.layout.activity_cartasmemoria);
 
         this.memoria = (Memoria) Juego.getInstance().getJuegoActual();
+        ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
         imgTarget = findViewById(R.id.imgTarget);
 
         prepareBoard();
