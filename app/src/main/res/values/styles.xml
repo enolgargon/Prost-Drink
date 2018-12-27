@@ -43,9 +43,13 @@
     </style>
 
     <style name="MierdiButton">
+        <item name="android:textSize">@dimen/subtitle2</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:background">@drawable/borderbuttom</item>
-        <item name="android:padding">@dimen/mierdibutton</item>
+        <item name="android:paddingLeft">@dimen/mierdibuttonHorizontal</item>
+        <item name="android:paddingRight">@dimen/mierdibuttonHorizontal</item>
+        <item name="android:paddingTop">@dimen/mierdiButtonVertical</item>
+        <item name="android:paddingBottom">@dimen/mierdiButtonVertical</item>
     </style>
 
     <style name="FAB" parent="AppTheme">
@@ -55,13 +59,13 @@
     <style name="CameraFAB" parent="FAB">
         <item name="android:scaleX">2.5</item>
         <item name="android:scaleY">2.5</item>
-        <item name="android:padding">@dimen/mierdibutton</item>
+        <item name="android:padding">@dimen/stdButton</item>
     </style>
 
     <style name="MicFAB" parent="FAB">
         <item name="android:scaleX">2</item>
         <item name="android:scaleY">2</item>
-        <item name="android:padding">@dimen/mierdibutton</item>
+        <item name="android:padding">@dimen/stdButton</item>
     </style>
 
     <style name="SorteoBucket" parent="AppTheme">

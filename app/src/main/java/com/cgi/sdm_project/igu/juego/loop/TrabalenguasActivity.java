@@ -160,8 +160,6 @@ public class TrabalenguasActivity extends LoopSinMusica implements InicioJuego, 
         Collator c = Collator.getInstance();
         c.setStrength(Collator.PRIMARY);
         for (String m : matches) {
-            Log.i("traba", stemmer.stem(m.replaceAll("[¡!¿?,.]", "")));
-            Log.i("traba", stemmer.stem(trabalenguas.getTexto().replaceAll("[¡!¿?,.]", "")));
             if (c.equals(stemmer.stem(m.replaceAll("[¡!¿?,.]", "")),
                     stemmer.stem(trabalenguas.getTexto().replaceAll("[¡!¿?,.]", "")))) {
                 inputText.setText(m);

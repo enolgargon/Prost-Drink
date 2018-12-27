@@ -1,7 +1,5 @@
 package com.cgi.sdm_project.logica.juego.reglas.implementaciones.cazatopos;
 
-import android.graphics.drawable.Drawable;
-
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Cazatopos;
 import com.cgi.sdm_project.util.singletons.AppSingleton;
@@ -9,30 +7,13 @@ import com.cgi.sdm_project.util.singletons.AppSingleton;
 /**
  * State representando un agujero sin topo
  */
-public class Agujero implements Casilla {
-    private Drawable img;
-    private Cazatopos context;
-    private int index;
+public class Agujero extends CasillaAbstracta {
+    private static final int HOLE_PENALTY = -5;
 
     public Agujero(Cazatopos context, int index) {
+        super(context, index);
         this.img = AppSingleton.getInstance().getDrawable(R.drawable.hole);
-        this.context = context;
-        this.index = index;
-    }
-
-    @Override
-    public void click() {
-        context.agua();
-    }
-
-    @Override
-    public Drawable getImg() {
-        return img;
-    }
-
-    @Override
-    public int getIndex() {
-        return index;
+        this.value = HOLE_PENALTY;
     }
 
     @Override

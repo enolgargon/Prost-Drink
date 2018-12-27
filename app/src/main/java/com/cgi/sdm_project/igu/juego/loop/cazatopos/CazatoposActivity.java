@@ -18,7 +18,7 @@ import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Cazatopos;
 
 
 /**
- * Contiene el jugo de los topos y gestiona el loop de éste
+ * Contiene el juego de los topos y gestiona el loop de éste
  *
  * @author Samuel
  */
@@ -104,22 +104,22 @@ public class CazatoposActivity extends Loop implements IFinJuego {
         int tickRatio = SECONDS * 1000 / TICKMS;
         //EASY
         if (ticks <= tickRatio / 3 && ticks % 18 == 0) {
-            cazatopos.actualizarTablero(1);
+            cazatopos.actualizarTablero(1, 0);
             paintTopos();
         }
         //MEDIUM
         if (ticks > tickRatio / 3 && ticks <= tickRatio * 2 / 3 && ticks % 18 == 0) {
-            cazatopos.actualizarTablero(2);
+            cazatopos.actualizarTablero(2, 0);
             paintTopos();
         }
         //HARD
         if (ticks > tickRatio * 2 / 3 && ticks <= tickRatio * 8 / 10 && ticks % 15 == 0) {
-            cazatopos.actualizarTablero(2);
+            cazatopos.actualizarTablero(2, 0);
             paintTopos();
         }
         //OH BOI
         else if (ticks > tickRatio * 8 / 10 && ticks % 12 == 0) {
-            cazatopos.actualizarTablero(3);
+            cazatopos.actualizarTablero(2, 1);
             paintTopos();
         }
 
@@ -131,6 +131,13 @@ public class CazatoposActivity extends Loop implements IFinJuego {
         startActivity(mIntent);
         finish();
     }
+
+    @Override
+    public void onDestroy() {
+        cazatopos.clear();
+        super.onDestroy();
+    }
+
 
     /**
      * Implementación extendida de OnClickListener para conocer qué casilla se ha pulsado

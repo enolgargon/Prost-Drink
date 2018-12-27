@@ -12,6 +12,7 @@ import com.cgi.sdm_project.igu.juego.loop.VotacionActivity;
 import com.cgi.sdm_project.igu.juego.loop.YoNuncaActivity;
 import com.cgi.sdm_project.igu.juego.loop.cazatopos.CazatoposInicioActivity;
 import com.cgi.sdm_project.igu.juego.loop.equilibrio.EquilibrioInicioActivity;
+import com.cgi.sdm_project.igu.juego.loop.memoria.MemoriaInicioActivity;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.util.loaders.BrujulaLoader;
 import com.cgi.sdm_project.util.loaders.CamaraLoader;
@@ -20,6 +21,7 @@ import com.cgi.sdm_project.util.loaders.CazatoposLoader;
 import com.cgi.sdm_project.util.loaders.EquilibrioLoader;
 import com.cgi.sdm_project.util.loaders.HastaQuesLoader;
 import com.cgi.sdm_project.util.loaders.Loader;
+import com.cgi.sdm_project.util.loaders.MemoriaLoader;
 import com.cgi.sdm_project.util.loaders.PreguntasLoader;
 import com.cgi.sdm_project.util.loaders.RetosLoader;
 import com.cgi.sdm_project.util.loaders.TrabalenguasLoader;
@@ -35,7 +37,6 @@ import com.cgi.sdm_project.util.singletons.AppSingleton;
  * @version 26-12-2018
  */
 public enum Reglas {
-
     BRUJULA(R.string.Brujula, 3, BrujulaLoader.class, BrujulaActivity.class),
     CAMARA(R.string.Fotos, 5, CamaraLoader.class, CamaraActivity.class),
     CARTAS(R.string.Cartas, 5, CartasLoader.class, CartasActivity.class),
@@ -44,8 +45,9 @@ public enum Reglas {
     HASTAQUE(R.string.HastaQue, 5, HastaQuesLoader.class, HastaQueActivity.class),
     PREGUNTA(R.string.Preguntas, 15, PreguntasLoader.class, PreguntaActivity.class),
     RETO(R.string.Retos, 20, RetosLoader.class, RetoActivity.class),
-    TRABALENGUAS(R.string.Trabalenguas, 5, TrabalenguasLoader.class, TrabalenguasActivity.class),
-    VOTACION(R.string.Votaciones, 15, VotacionesLoader.class, VotacionActivity.class),
+    TRABALENGUAS(R.string.Trabalenguas, 4, TrabalenguasLoader.class, TrabalenguasActivity.class),
+    VOTACION(R.string.Votaciones, 10, VotacionesLoader.class, VotacionActivity.class),
+    MEMORIA(R.string.Memoria, 6, MemoriaLoader.class, MemoriaInicioActivity.class),
     YONUNCA(R.string.YoNunca, 5, YoNuncaLoader.class, YoNuncaActivity.class);
 
     private int nombre;

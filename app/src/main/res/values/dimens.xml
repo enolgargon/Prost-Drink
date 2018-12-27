@@ -3,7 +3,9 @@
     <dimen name="titles">32sp</dimen>
 
     <!-- Botones -->
-    <dimen name="mierdibutton">8dp</dimen>
+    <dimen name="stdButton">8dp</dimen>
+    <dimen name="mierdibuttonHorizontal">6dp</dimen>
+    <dimen name="mierdiButtonVertical">0dp</dimen>
 
     <!-- Componentes Varios -->
     <dimen name="nameLblPaddingTop">8dp</dimen>

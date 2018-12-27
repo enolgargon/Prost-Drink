@@ -1,19 +1,23 @@
 package com.cgi.sdm_project.logica.juego.reglas.implementaciones.cazatopos;
 
+
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Cazatopos;
 import com.cgi.sdm_project.util.singletons.AppSingleton;
 
-/**
- * State representando un agujero con topo
- */
-public class Topo extends CasillaAbstracta {
-    private static final int TOPO_KILL = 10;
 
-    public Topo(Cazatopos context, int index) {
+/**
+ * Implementación de la casilla que representa a los gnomos
+ */
+//It's gnot an elf, its gnot a gnoblin, IT'S A...
+public class Gnomo extends CasillaAbstracta {
+    //AND
+    private static final int YOU_VE_BEEN_GNOMED = -50;
+
+    public Gnomo(Cazatopos context, int index) {
         super(context, index);
-        this.img = AppSingleton.getInstance().getDrawable(R.drawable.topo);
-        this.value = TOPO_KILL;
+        this.img = AppSingleton.getInstance().getDrawable(R.drawable.gnome);
+        this.value = YOU_VE_BEEN_GNOMED;
     }
 
     @Override
@@ -22,8 +26,9 @@ public class Topo extends CasillaAbstracta {
         context.getCasillas()[this.getIndex()] = new Agujero(context, this.getIndex());
     }
 
+
     @Override
     public String toString() {
-        return "TOPO";
+        return "GNOMO";
     }
 }

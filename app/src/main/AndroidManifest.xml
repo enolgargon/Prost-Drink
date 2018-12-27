@@ -47,7 +47,8 @@
         <activity
             android:name=".igu.juego.ElegirJugadoresActivity"
             android:configChanges="layoutDirection|locale"
-            android:parentActivityName=".igu.juego.JuegoPersonalizadoActivity" />
+            android:parentActivityName=".igu.juego.JuegoPersonalizadoActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".igu.juego.JuegoPersonalizadoActivity"
             android:configChanges="layoutDirection|locale"
@@ -91,6 +92,14 @@
             android:configChanges="layoutDirection|locale" />
         <activity
             android:name=".igu.juego.loop.cazatopos.CazatoposActivity"
+            android:configChanges="layoutDirection|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".igu.juego.loop.memoria.MemoriaActivity"
+            android:configChanges="layoutDirection|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".igu.juego.loop.memoria.MemoriaInicioActivity"
             android:configChanges="layoutDirection|locale"
             android:screenOrientation="portrait" />
 
