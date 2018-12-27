@@ -60,6 +60,7 @@
     <string name="Cazatopos">Cazatopos</string>
     <string name="Brujula">No pierdas el norte</string>
     <string name="Cartas">Cartas</string>
+    <string name="Memoria">Memoria</string>
     <string name="Jugar">Jugar</string>
     <string name="error_personalizado">La configuración para iniciar el juego no es correcta. Recuerda que debes seleccionar al menos un tipo de juego.</string>
 
@@ -166,6 +167,7 @@
     <string name="trabalenguas_fracaso3">Más suerte la próxima vez. Bebe %d</string>
 
     <!-- EQUILIBRIO -->
+    <string name="equilibrio_titulo">Frío/Caliente</string>
     <string name="helado">Helado</string>
     <string name="frio">Frío</string>
     <string name="templado">Templado</string>
@@ -179,6 +181,7 @@
     <string name="equilibrio_instrucciones">En este juego deberás conseguir colocar la aguja del medidor en la posición correcta. Para ello deberás girar el móvil para hacer que se mueva. Presta atención a las pistas.</string>
 
     <!-- TOPOS -->
+    <string name="topos_titulo">A tope con los topos</string>
     <string name="topos_resultado0">Horrible… Bebe %d anda.</string>
     <string name="topos_resultado1">Lo importante es participar. Bebe %d.</string>
     <string name="topos_resultado2">No está nada mal. Manda beber %d a quién tú quieras.</string>
@@ -186,6 +189,7 @@
     <string name="topos_fin">¡Fin del juego!</string>
     <string name="topos_instrucciones1">En este juego tienes 30 segundos para aplastar el máximo número de topos posibles.</string>
     <string name="topos_instrucciones2">¡Pero cuidado! Darle a una madriguera sin topo se penalizará.</string>
+    <string name="topos_instrucciones3">Y ante todo… \n¡No mates al gnomo de la suerte! \nO serás gravemente penalizado.</string>
 
     <!-- BRUJULA -->
     <string name="instrucciones_brujula">Vamos con un juego un poco distinto. ¿Has bebido mucho? Intenta en contrar el norte.
@@ -207,6 +211,18 @@
     <string name="fin">Fin</string>
     <string name="resultado_cartas_bien">Bien hecho. Manda beber %d</string>
     <string name="resultado_cartas_mal">No se te da muy bien esto. Bebe %d y mas suerte la próxima vez. Ah, y no vayas al casino.</string>
+
+    <!-- MEMORIA -->
+    <string name="memoria_success">Vaya memorión. Manda beber %d a quien tú quieras</string>
+    <string name="memoria_failure">Ay mecachis. Otra vez será. Bebe %d tragos</string>
+    <string name="memoria_titulo">A ver esa memoria</string>
+    <string name="memoria_jugar">Hemos venido a jugar</string>
+    <string name="memoria_instrucciones1">
+        En este juego te enseñaremos una serie de cartas. \nDebes recordar su posición. \nDespués de un tiempo, las ocultaremos
+        y deberás intentar encontrar la carta que te pedimos.
+    </string>
+    <string name="memoria_instrucciones2">Tienes 15 segundos para memorizar donde están las cartas. \nÚsalos bien.
+    \nCuando estés listo dale al botón.</string>
 
 
     <!-- INSTRUCCIONES -->
@@ -263,6 +279,19 @@
     <string name="votacion_instrucciones">
         Fácil, sencillo y para todo el grupo. Encuesta a todos para ver que opción prefieren de las que te damos.
         Marca la opción más votada y la aplicación os dirá que hacer.
+    </string>
+    <string name="cartas_instrucciones">
+        En este juego solo tienes que adivinar la carta que se encuentra boca abajo. Apareceran tres cartas, una por una. Y se te preguntará si es rojo o negro, o par o par.
+        Intenta acertarlas todas.
+    </string>
+    <string name="memoria_instrucciones">
+        En este juego te presentamos una serie de 12 cartas.
+        Tendrás 15 segundos para memorizar su posición, tras los cuales les daremos la vuelta a las cartas.
+        Te mostraremos una carta y te pediremos que señales donde está.
+    </string>
+    <string name="yonunca_instrucciones">
+        Esta actividad es grupal. Se enuncia una oración de tipo "Yo nunca he hecho X".
+        Aquellos miembros del grupo que sí lo hayan hecho alguna vez deberán beber un trago.
     </string>
 
     <!-- Activity -->

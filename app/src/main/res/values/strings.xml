@@ -290,6 +290,19 @@
         Fácil, sencillo y para todo el grupo. Encuesta a todos para ver que opción prefieren de las que te damos.
         Marca la opción más votada y la aplicación os dirá que hacer.
     </string>
+    <string name="cartas_instrucciones">
+        En este juego solo tienes que adivinar la carta que se encuentra boca abajo. Apareceran tres cartas, una por una. Y se te preguntará si es rojo o negro, o par o par.
+        Intenta acertarlas todas.
+    </string>
+    <string name="memoria_instrucciones">
+        En este juego te presentamos una serie de 12 cartas.
+        Tendrás 15 segundos para memorizar su posición, tras los cuales les daremos la vuelta a las cartas.
+        Te mostraremos una carta y te pediremos que señales donde está.
+    </string>
+    <string name="yonunca_instrucciones">
+        Esta actividad es grupal. Se enuncia una oración de tipo "Yo nunca he hecho X".
+        Aquellos miembros del grupo que sí lo hayan hecho alguna vez deberán beber un trago.
+    </string>
 
     <!-- Activity -->
     <string name="antes">Antes de empezar…</string>
