@@ -36,16 +36,17 @@ public class Memoria extends ReglaTragable {
 
     /**
      * Devuelve la lista de cartas para el juego
+     *
      * @return
      */
-    public List<Carta> getCartas(){
+    public List<Carta> getCartas() {
         return baraja.dameCartas(NUM_CARTAS);
     }
 
 
     @Override
     protected String nombreRespuesta() {
-        if(exito){
+        if (exito) {
             return "memoria_success";
         }
         return "memoria_failure";

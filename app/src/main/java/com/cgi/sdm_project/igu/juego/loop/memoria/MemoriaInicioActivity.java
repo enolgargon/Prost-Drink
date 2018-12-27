@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.igu.juego.loop.Loop;
-import com.cgi.sdm_project.igu.juego.loop.equilibrio.EquilibrioActivity;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 

@@ -96,8 +96,8 @@ public class MemoryCardAdapter extends RecyclerView.Adapter<MemoryCardAdapter.It
         notifyDataSetChanged();
     }
 
-    public void mostrarCartas(){
-        for (int i = 0; i < ocultas.length; i++){
+    public void mostrarCartas() {
+        for (int i = 0; i < ocultas.length; i++) {
             ocultas[i] = false;
         }
         notifyDataSetChanged();
@@ -147,7 +147,7 @@ public class MemoryCardAdapter extends RecyclerView.Adapter<MemoryCardAdapter.It
                 /**
                  * Marca visualmente como incorrecta la carta... incorrecta
                  */
-                Drawable[] layers = { mImages.get(getAdapterPosition()), mActivity.getDrawable(R.drawable.cartaincorrecta)};
+                Drawable[] layers = {mImages.get(getAdapterPosition()), mActivity.getDrawable(R.drawable.cartaincorrecta)};
                 LayerDrawable highlightedTarget = new LayerDrawable(layers);
 
                 mImages.set(getAdapterPosition(), highlightedTarget);

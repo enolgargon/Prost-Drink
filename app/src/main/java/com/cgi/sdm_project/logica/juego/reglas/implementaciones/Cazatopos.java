@@ -1,11 +1,12 @@
 package com.cgi.sdm_project.logica.juego.reglas.implementaciones;
 
-import com.cgi.sdm_project.R;
+import android.util.Log;
+
 import com.cgi.sdm_project.logica.juego.reglas.ReglaTragable;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.cazatopos.Agujero;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.cazatopos.Casilla;
+import com.cgi.sdm_project.logica.juego.reglas.implementaciones.cazatopos.Gnomo;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.cazatopos.Topo;
-import com.cgi.sdm_project.util.singletons.SFXPlayer;
 import com.cgi.sdm_project.util.SamUtil;
 
 /**
@@ -14,17 +15,14 @@ import com.cgi.sdm_project.util.SamUtil;
  * @author Samuel
  */
 public class Cazatopos extends ReglaTragable {
-    private final static int TOPO_KILL = 10;
-    private final static int HOLE_PENALTY = -5;
     private int score;
     private Casilla[] casillas;
 
     public Cazatopos() {
         super(0);
-        SFXPlayer.getInstance().setSFX(R.raw.whack);
         this.score = 0;
         this.casillas = new Casilla[6];
-        actualizarTablero(1);
+        actualizarTablero(1, 0);
     }
 
     /**
@@ -32,34 +30,30 @@ public class Cazatopos extends ReglaTragable {
      *
      * @param numTopos número de topos a introducir
      */
-    public void actualizarTablero(int numTopos) {
+    public void actualizarTablero(int numTopos, int numGnomos) {
         for (int i = 0; i < casillas.length; i++) {
             if (i < numTopos) {
                 casillas[i] = new Topo(this, i);
+            } else if (i >= numTopos && i < numTopos + numGnomos) {
+                casillas[i] = new Gnomo(this, i);
             } else
                 casillas[i] = new Agujero(this, i);
         }
         casillas = SamUtil.shuffleArray(casillas);
-    }
-
-    /**
-     * Si se mata un topo se llama a PETA y se suman @TOPO_KILL puntos
-     *
-     * @param casilla
-     */
-    public void topoIsKill(Casilla casilla) {
-        score += TOPO_KILL;
-        SFXPlayer.getInstance().playSFX();
-        casillas[casilla.getIndex()] = new Agujero(this, casilla.getIndex());
+        for (Casilla c : casillas)
+            Log.i("casilla", c.toString());
     }
 
 
     /**
-     * Cuando se pulsa un agujero sin topo se restan @HOLE_PENALTY puntos
+     * Es llamado por las casillas cuando son pulsadas
+     * @param value
      */
-    public void agua() {
-        score -= HOLE_PENALTY;
+    public void updateScore(int value) {
+        score += value;
+        Log.i("score", score + "");
     }
+
 
     /**
      * Devuelve el array con las casillas del juego
@@ -70,14 +64,14 @@ public class Cazatopos extends ReglaTragable {
         return casillas;
     }
 
+
     /**
-     * La puntuación se usará para decidir que recompensa/castigo emplear
-     *
-     * @return
+     * Resetea la puntuación
      */
-    public int getScore() {
-        return score;
+    public void clear() {
+        score = 0;
     }
+
 
     @Override
     public int getTragos() {
@@ -89,9 +83,10 @@ public class Cazatopos extends ReglaTragable {
 
     @Override
     protected String nombreRespuesta() {
+        Log.i("score", "final score: " + score);
         if (score <= 0) {
             return "topos_resultado" + 0;
-        } else if (score <= 100) {
+        } else if (score <= 175) {
             return "topos_resultado" + 1;
         } else if (score <= 250) {
             return "topos_resultado" + 2;

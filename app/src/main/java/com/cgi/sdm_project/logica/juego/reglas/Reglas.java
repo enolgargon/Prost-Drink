@@ -11,7 +11,6 @@ import com.cgi.sdm_project.igu.juego.loop.TrabalenguasActivity;
 import com.cgi.sdm_project.igu.juego.loop.VotacionActivity;
 import com.cgi.sdm_project.igu.juego.loop.cazatopos.CazatoposInicioActivity;
 import com.cgi.sdm_project.igu.juego.loop.equilibrio.EquilibrioInicioActivity;
-import com.cgi.sdm_project.igu.juego.loop.memoria.MemoriaActivity;
 import com.cgi.sdm_project.igu.juego.loop.memoria.MemoriaInicioActivity;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.util.loaders.BrujulaLoader;

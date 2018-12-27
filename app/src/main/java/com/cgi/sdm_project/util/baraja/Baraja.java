@@ -2,7 +2,6 @@ package com.cgi.sdm_project.util.baraja;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Clase que representa una baraja en el juego
@@ -14,7 +13,7 @@ public class Baraja {
     /**
      * Constante que representa el tamaño máximo que puede tener una baraja
      */
-    private final int MAX_TAM_BARAJA = 13*4;
+    private final int MAX_TAM_BARAJA = 13 * 4;
 
     private List<Carta> cartas;
 
@@ -64,14 +63,14 @@ public class Baraja {
      * @param numCartas que se quieren
      * @return
      */
-    public List<Carta> dameCartas(int numCartas){
+    public List<Carta> dameCartas(int numCartas) {
         if (numCartas > MAX_TAM_BARAJA)
             throw new IllegalArgumentException("Adonde vas, una baraja no tiene tantas cartas");
-        if (cartas.size() < numCartas){
+        if (cartas.size() < numCartas) {
             inicializarCartas();
         }
         List<Carta> toRet = new ArrayList<>();
-        for (int i = 0; i < numCartas; i++){
+        for (int i = 0; i < numCartas; i++) {
             toRet.add(sacarCarta());
         }
         return toRet;

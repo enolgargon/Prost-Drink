@@ -15,7 +15,6 @@ import com.cgi.sdm_project.igu.juego.loop.ResultadoActivity;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.IFinJuego;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Cazatopos;
-import com.cgi.sdm_project.util.singletons.SFXPlayer;
 
 
 /**
@@ -105,22 +104,22 @@ public class CazatoposActivity extends Loop implements IFinJuego {
         int tickRatio = SECONDS * 1000 / TICKMS;
         //EASY
         if (ticks <= tickRatio / 3 && ticks % 18 == 0) {
-            cazatopos.actualizarTablero(1);
+            cazatopos.actualizarTablero(1, 0);
             paintTopos();
         }
         //MEDIUM
         if (ticks > tickRatio / 3 && ticks <= tickRatio * 2 / 3 && ticks % 18 == 0) {
-            cazatopos.actualizarTablero(2);
+            cazatopos.actualizarTablero(2, 0);
             paintTopos();
         }
         //HARD
         if (ticks > tickRatio * 2 / 3 && ticks <= tickRatio * 8 / 10 && ticks % 15 == 0) {
-            cazatopos.actualizarTablero(2);
+            cazatopos.actualizarTablero(2, 0);
             paintTopos();
         }
         //OH BOI
         else if (ticks > tickRatio * 8 / 10 && ticks % 12 == 0) {
-            cazatopos.actualizarTablero(3);
+            cazatopos.actualizarTablero(2, 1);
             paintTopos();
         }
 
@@ -134,8 +133,8 @@ public class CazatoposActivity extends Loop implements IFinJuego {
     }
 
     @Override
-    public void onDestroy(){
-        SFXPlayer.getInstance().release();
+    public void onDestroy() {
+        cazatopos.clear();
         super.onDestroy();
     }
 

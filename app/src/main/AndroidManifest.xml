@@ -47,7 +47,8 @@
         <activity
             android:name=".igu.juego.ElegirJugadoresActivity"
             android:configChanges="layoutDirection|locale"
-            android:parentActivityName=".igu.juego.JuegoPersonalizadoActivity" />
+            android:parentActivityName=".igu.juego.JuegoPersonalizadoActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".igu.juego.JuegoPersonalizadoActivity"
             android:configChanges="layoutDirection|locale"

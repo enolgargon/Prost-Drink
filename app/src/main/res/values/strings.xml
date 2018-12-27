@@ -192,7 +192,8 @@
     <string name="topos_resultado3">¡El terror de los topos! Manda beber %d, leyenda.</string>
     <string name="topos_fin">¡Fin del juego!</string>
     <string name="topos_instrucciones1">En este juego tienes 30 segundos para aplastar el máximo número de topos posibles.</string>
-    <string name="topos_instrucciones2">¡Pero cuidado! Darle a una madriguera sin topo se penalizará.</string>
+    <string name="topos_instrucciones2">Intenta no darle a madrigueras vacías, se tendrá en cuenta.</string>
+    <string name="topos_instrucciones3">Y ante todo… \n¡No mates al gnomo de la suerte! \nO serás gravemente penalizado.</string>
 
     <!-- BRUJULA -->
     <string name="instrucciones_brujula">Vamos con un juego un poco distinto. ¿Has bebido mucho? Intenta encontrar el norte.

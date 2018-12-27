@@ -62,7 +62,7 @@ public class MemoriaActivity extends Loop implements IFinJuego {
         board.setLayoutManager(new GridLayoutManager(this, 4));
         List<Drawable> imgs = new ArrayList<Drawable>();
         List<Carta> cartas = memoria.getCartas();
-        for (Carta c: cartas)
+        for (Carta c : cartas)
             imgs.add(getDrawable(c.getRes()));
         mAdapter = new MemoryCardAdapter(imgs, this);
         board.setAdapter(mAdapter);
@@ -101,19 +101,19 @@ public class MemoriaActivity extends Loop implements IFinJuego {
      * Es llamado por el onClick de una carta incorrecta para avisar al Activity
      */
     public void notifyFailure() {
-       memoria.fallo();
-       mostrarBtnContinuar();
+        memoria.fallo();
+        mostrarBtnContinuar();
     }
 
     /**
      * Muestra el botón para pasar a la siguiente actividad
      */
-    private void mostrarBtnContinuar(){
+    private void mostrarBtnContinuar() {
         findViewById(R.id.btnContinuar).setVisibility(View.VISIBLE);
     }
 
     @Override
-    public void onDestroy(){
+    public void onDestroy() {
         super.onDestroy();
     }
 }
