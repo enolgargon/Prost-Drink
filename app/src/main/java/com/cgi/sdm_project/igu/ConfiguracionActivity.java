@@ -1,6 +1,7 @@
 package com.cgi.sdm_project.igu;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -64,6 +65,7 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
                 if (!isChecked) {
                     sbVolumen.setProgress(0);
                 }
+                guardarCambios();
             }
         });
 
@@ -77,6 +79,7 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
                 } else {
                     swSonido.setChecked(true);
                 }
+                guardarCambios();
             }
 
             @Override
@@ -101,8 +104,7 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
         spIdioma.setSelection(conf.getIdioma());
     }
 
-    /*
-    public void guardar(View view) {
+    private void guardarCambios() {
         Conf conf = Conf.getInstancia();
         conf.setSonido(swSonido.isChecked());
         conf.setVolumen(sbVolumen.getProgress());
@@ -122,48 +124,15 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
             mediaPlayer.setVolume(volume, volume);
             mediaPlayer.start();
         }
-
-        Toast.makeText(getApplicationContext(), getString(R.string.CambiosGuardados),
-                Toast.LENGTH_SHORT).show();
-
     }
-    */
 
     /**
-     * Redefinición del onDestroy que además se encarga de guardar los cambios realizados en la
-     * activity de configuracion (this)
+     * Redefinición del onDestroy donde también se indica
      */
     @Override
-    protected void onDestroy() {
-
-        Conf conf = Conf.getInstancia();
-        conf.setSonido(swSonido.isChecked());
-        conf.setVolumen(sbVolumen.getProgress());
-        conf.setIdioma(spIdioma.getSelectedItemPosition());
-
-        MediaPlayer mediaPlayer = MediaPlayerSingleton.getInstance();
-
-        if (!swSonido.isChecked() && mediaPlayer.isPlaying()) {
-            mediaPlayer.stop();
-            mediaPlayer.release();
-            MediaPlayerSingleton.destroyMediaPlayer();
-        } else if (swSonido.isChecked()) {
-            if (mediaPlayer.isPlaying())
-                mediaPlayer.pause();
-            float volume = (float) (1 - (Math.log(MAX_VOLUMEN - sbVolumen.getProgress())
-                    / Math.log(MAX_VOLUMEN)));
-            mediaPlayer.setVolume(volume, volume);
-            mediaPlayer.start();
-        }
-
+    public void onDestroy(){
         Toast.makeText(getApplicationContext(), getString(R.string.CambiosGuardados),
                 Toast.LENGTH_SHORT).show();
-      
-      
-       Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(mIntent);
-      
         super.onDestroy();
     }
-
 }
