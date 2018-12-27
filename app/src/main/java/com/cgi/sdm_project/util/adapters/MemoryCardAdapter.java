@@ -47,11 +47,17 @@ public class MemoryCardAdapter extends RecyclerView.Adapter<MemoryCardAdapter.It
      */
     private boolean[] ocultas;
 
+    /**
+     * Representa si se puede pulsar o no las cartas
+     */
+    private boolean clickable;
+
     public MemoryCardAdapter(List<Drawable> images, MemoriaActivity activity) {
         this.mImages = images;
         this.rngesus = new Random();
         this.ocultas = new boolean[mImages.size()];
         this.mActivity = activity;
+        this.clickable = false;
     }
 
 
@@ -65,8 +71,8 @@ public class MemoryCardAdapter extends RecyclerView.Adapter<MemoryCardAdapter.It
     /**
      * Pinta el item como le corresponde a su estado actual
      *
-     * @param holder
-     * @param i
+     * @param holder Hueco de la imagen
+     * @param i      Posición de la imagen
      */
     @Override
     public void onBindViewHolder(@NonNull MemoryCardAdapter.ItemViewHolder holder, int i) {
@@ -93,6 +99,7 @@ public class MemoryCardAdapter extends RecyclerView.Adapter<MemoryCardAdapter.It
         for (int i = 0; i < ocultas.length; i++) {
             ocultas[i] = true;
         }
+        clickable = true;
         notifyDataSetChanged();
     }
 
@@ -100,19 +107,19 @@ public class MemoryCardAdapter extends RecyclerView.Adapter<MemoryCardAdapter.It
         for (int i = 0; i < ocultas.length; i++) {
             ocultas[i] = false;
         }
+        clickable = false;
         notifyDataSetChanged();
     }
 
     /**
      * Elige la carta objetivo y devuelve su drawable para que el activity lo pueda mostrar
      *
-     * @return
+     * @return Imagen que se dibujara
      */
     public Drawable getObjetivo() {
         mIndex = rngesus.nextInt(mImages.size());
         return mImages.get(mIndex);
     }
-
 
 
     class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -121,19 +128,22 @@ public class MemoryCardAdapter extends RecyclerView.Adapter<MemoryCardAdapter.It
 
         ItemViewHolder(View itemView) {
             super(itemView);
-            imagenVisible = (AppCompatImageView) itemView.findViewById(R.id.imagenVisible);
-            imagenOculta = (AppCompatImageView) itemView.findViewById(R.id.imagenOculta);
+            imagenVisible = itemView.findViewById(R.id.imagenVisible);
+            imagenOculta = itemView.findViewById(R.id.imagenOculta);
             itemView.setOnClickListener(this);
         }
 
         /**
          * Notifica a la activity qué carta se ha pulsado y le da la vuelta
          *
-         * @param v
+         * @param v Vista que lanza el evento
          */
         @Override
         public void onClick(View v) {
+            if (!clickable)
+                return;
 
+            clickable = false;
             if (mIndex == getAdapterPosition()) {
 
                 ocultas[getAdapterPosition()] = false;
@@ -144,7 +154,7 @@ public class MemoryCardAdapter extends RecyclerView.Adapter<MemoryCardAdapter.It
                 ocultas[getAdapterPosition()] = false;
                 ocultas[mIndex] = false;
 
-                /**
+                /*
                  * Marca visualmente como incorrecta la carta... incorrecta
                  */
                 Drawable[] layers = {mImages.get(getAdapterPosition()), mActivity.getDrawable(R.drawable.cartaincorrecta)};
