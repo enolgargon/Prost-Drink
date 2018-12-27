@@ -160,10 +160,9 @@ public class TrabalenguasActivity extends LoopSinMusica implements InicioJuego, 
         Collator c = Collator.getInstance();
         c.setStrength(Collator.PRIMARY);
         for (String m : matches) {
-            if (c.equals(stemmer.stem(m.replace("(?|¿|¡|!)", "")),
-                    stemmer.stem(trabalenguas.getTexto().replace("(?|¿|¡|!)", "")))) {
+            if (c.equals(stemmer.stem(m.replaceAll("[?¿¡!,.]", "")),
+                    stemmer.stem(trabalenguas.getTexto().replaceAll("[?¿¡!,.]", "")))) {
                 inputText.setText(m);
-                Log.i("tts", stemmer.stem(m));
                 inputText.setTextColor(Color.GREEN);
                 continuar.setVisibility(View.VISIBLE);
                 speakButton.setClickable(false);
