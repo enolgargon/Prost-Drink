@@ -10,6 +10,8 @@ public class YoNunca implements Regla {
         this.texto = texto;
     }
 
-    public String getTexto(){ return texto; }
+    public String getTexto() {
+        return texto;
+    }
 
 }

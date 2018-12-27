@@ -45,5 +45,7 @@ public class FactoryParser {
         return new CamaraParser();
     }
 
-    public static Parser<YoNunca> getYoNuncaParser() { return new YoNuncaParser(); }
+    public static Parser<YoNunca> getYoNuncaParser() {
+        return new YoNuncaParser();
+    }
 }

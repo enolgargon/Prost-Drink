@@ -10,6 +10,11 @@ import java.util.List;
  * @version 27-12-2018
  */
 public class Baraja {
+    /**
+     * Constante que representa el tamaño máximo que puede tener una baraja
+     */
+    private final int MAX_TAM_BARAJA = 13 * 4;
+
     private List<Carta> cartas;
 
     public Baraja() {
@@ -48,5 +53,26 @@ public class Baraja {
         if (cartas.isEmpty())
             inicializarCartas();
         return carta;
+    }
+
+    /**
+     * Método que devuelve tantas cartas como se le piden. Si la baraja tiene menos cartas de las que se
+     * piden, se reinicializa antes para garantizar que las cartas serán diferentes
+     * Si pides más cartas del tamaño máximo de la baraja te casco una excepción
+     *
+     * @param numCartas que se quieren
+     * @return
+     */
+    public List<Carta> dameCartas(int numCartas) {
+        if (numCartas > MAX_TAM_BARAJA)
+            throw new IllegalArgumentException("Adonde vas, una baraja no tiene tantas cartas");
+        if (cartas.size() < numCartas) {
+            inicializarCartas();
+        }
+        List<Carta> toRet = new ArrayList<>();
+        for (int i = 0; i < numCartas; i++) {
+            toRet.add(sacarCarta());
+        }
+        return toRet;
     }
 }

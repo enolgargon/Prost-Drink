@@ -61,6 +61,7 @@
     <string name="Cazatopos">Cazatopos</string>
     <string name="Brujula">No pierdas el norte</string>
     <string name="Cartas">Cartas</string>
+    <string name="Memoria">Memoria</string>
     <string name="Jugar">Jugar</string>
     <string name="error_personalizado">La configuración para iniciar el juego no es correcta. Recuerda que debes seleccionar al menos un tipo de juego.</string>
 

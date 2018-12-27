@@ -10,7 +10,7 @@ import org.w3c.dom.NodeList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class YoNuncaParser implements Parser<YoNunca>{
+public class YoNuncaParser implements Parser<YoNunca> {
 
 
     @Override
