@@ -40,6 +40,7 @@
             android:background="@android:color/transparent"
             android:contentDescription="@string/contentDescription_principal_acerca_de"
             android:foregroundTint="@color/colorPrimaryDark"
+            android:onClick="mostrarAcercaDe"
             android:tint="@color/colorPrimaryDark"
             app:srcCompat="@android:drawable/ic_menu_info_details" />
 

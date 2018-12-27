@@ -314,4 +314,16 @@
     <string name="yo_nunca2">¡A beber %d todos los que lo hayais hecho alguna vez!</string>
     <string name="yo_nunca3">Normalmente os tocaría beber, pero está vez los que no lo hayan hecho son los que beben %d. A la próxima sed más atrevidos</string>
 
+
+    <!-- ACERCA DE -->
+    <string name="AcercaDe">Acerca de</string>
+    <string name="acercade_texto">
+        ¿Necesitáis animaros un poco para la noche?\nA nosotros también nos pasa y después de mucho tiempo usando
+        aplicaciones ajenas nos hemos preguntado por qué.\nSomos 3 estudiantes de Ingeniería Informática que nos
+        hemos planteado esta aplicación para la asignatura de Software Para Dispositivos Móviles.\nEsperamos que lo disfrutéis.
+    </string>
+    <string name="autores">
+        Samuel Cifuentes García\nEnol García González\nJorge Iturrioz del Vigo\n
+    </string>
+    <string name="cerrar_acercade">Me encanta. A jugar!!</string>
 </resources>

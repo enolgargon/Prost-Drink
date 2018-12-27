@@ -320,4 +320,17 @@
         Aquí puedes hacer equipos. Añade a la lista los nombres de las personas que van a jugar y abajo pon el número de equipos.
         Si quieres quitar un jugador manten pulsado su nombre.
     </string>
+
+
+    <!-- ACERCA DE -->
+    <string name="AcercaDe">Acerca de</string>
+    <string name="acercade_texto">
+        ¿Necesitáis animaros un poco para la noche?\nA nosotros también nos pasa y después de mucho tiempo usando
+        aplicaciones ajenas nos hemos preguntado por qué.\nSomos 3 estudiantes de Ingeniería Informática que nos
+        hemos planteado esta aplicación para la asignatura de Software Para Dispositivos Móviles.\nEsperamos que lo disfrutéis.
+    </string>
+    <string name="autores">
+        Samuel Cifuentes García\nEnol García González\nJorge Iturrioz del Vigo\n
+    </string>
+    <string name="cerrar_acercade">Me encanta. A jugar!!</string>
 </resources>
