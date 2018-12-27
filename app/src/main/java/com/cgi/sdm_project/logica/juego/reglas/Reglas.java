@@ -36,6 +36,7 @@ import com.cgi.sdm_project.util.singletons.AppSingleton;
  */
 public enum Reglas {
 
+
     BRUJULA(R.string.Brujula, 3, BrujulaLoader.class, BrujulaActivity.class),
     CAMARA(R.string.Fotos, 5, CamaraLoader.class, CamaraActivity.class),
     CARTAS(R.string.Cartas, 5, CartasLoader.class, CartasActivity.class),
@@ -47,6 +48,7 @@ public enum Reglas {
     TRABALENGUAS(R.string.Trabalenguas, 5, TrabalenguasLoader.class, TrabalenguasActivity.class),
     VOTACION(R.string.Votaciones, 15, VotacionesLoader.class, VotacionActivity.class),
     YONUNCA(R.string.YoNunca, 5, YoNuncaLoader.class, YoNuncaActivity.class);
+
 
     private int nombre;
     private int probabilidad;

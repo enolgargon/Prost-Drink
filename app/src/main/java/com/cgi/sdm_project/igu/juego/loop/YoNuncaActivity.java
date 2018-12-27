@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
+import com.cgi.sdm_project.logica.juego.activities.FinJuego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.YoNunca;
 
@@ -20,14 +21,13 @@ public class YoNuncaActivity extends Loop implements InicioJuego {
         setContentView(R.layout.activity_yonunca);
         yoNunca = (YoNunca) Juego.getInstance().getJuegoActual();
 
-        ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
+        ((TextView) findViewById(R.id.txtJugador)).setText(R.string.grupo);
         ((TextView) findViewById(R.id.txtTextoYoNunca)).setText(yoNunca.getTexto());
 
     }
 
     public void siguiente(View v) {
-        Intent mIntent = new Intent(this, ResultadoActivity.class);
-        startActivity(mIntent);
+        new FinJuego().cargarSiguienteJuego(v);
         finish();
     }
 }

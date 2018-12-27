@@ -28,8 +28,7 @@ public class YoNuncaParser implements Parser<YoNunca>{
 
                 Element elemento = (Element) node;
                 String valor = elemento.getAttribute("text");
-                int numeroTragos = Integer.parseInt(elemento.getAttribute("tragos"));
-                YoNunca yoNunca = new YoNunca(valor, numeroTragos);
+                YoNunca yoNunca = new YoNunca(valor);
                 list.add(yoNunca);
             }
         }

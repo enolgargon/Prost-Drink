@@ -281,8 +281,7 @@
         Aquí puedes hacer equipos. Añade a la lista los nombres de las personas que van a jugar y abajo pon el número de equipos.
         Si quieres quitar un jugador manten pulsado su nombre.
     </string>
-    <string name="yo_nunca1">Si eres de esos que les correspondería beber, felicidades. Esta vez mandas beber %d a quien tu quieras</string>
-    <string name="yo_nunca2">¡A beber %d todos los que lo hayais hecho alguna vez!</string>
-    <string name="yo_nunca3">Normalmente os tocaría beber, pero está vez los que no lo hayan hecho son los que beben %d. A la próxima sed más atrevidos</string>
+    <string name="grupo">Grupal</string>
+    <string name="yonuncahecho">Los que lo hayan hecho beben un trago</string>
 
 </resources>
