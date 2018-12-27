@@ -104,7 +104,8 @@
                 android:resource="@xml/paths" />
         </provider>
 
-        <activity android:name=".igu.juego.InstruccionesActivity"></activity>
+        <activity android:name=".igu.juego.InstruccionesActivity" />
+        <activity android:name=".igu.juego.loop.CartasActivity"></activity>
     </application>
 
 </manifest>
