@@ -46,6 +46,7 @@ public class MemoriaActivity extends Loop implements IFinJuego {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cartasmemoria);
 
+        ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
         this.memoria = (Memoria) Juego.getInstance().getJuegoActual();
         ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
         imgTarget = findViewById(R.id.imgTarget);

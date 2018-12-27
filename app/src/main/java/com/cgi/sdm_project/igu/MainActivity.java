@@ -22,6 +22,21 @@ public class MainActivity extends AppCompatActivityExtended {
         setContentView(R.layout.activity_main);
     }
 
+    public void mostrarAcercaDe(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AppTheme_Dialog));
+
+        builder.setView(getLayoutInflater().inflate(R.layout.dialog_acercade, null));
+        builder.setCancelable(false).setTitle(R.string.AcercaDe);
+        builder.setPositiveButton(R.string.cerrar_acercade, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.create().show();
+    }
+
     public void mostrarAyuda(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AppTheme_Dialog));
 

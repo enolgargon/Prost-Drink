@@ -194,5 +194,47 @@
             android:layout_height="wrap_content"
             android:text="@string/sorteo_instrucciones"
             android:theme="@style/SmallerBody" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Cartas"
+            android:theme="@style/SmallerBody" />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cartas_instrucciones"
+            android:theme="@style/SmallerBody" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Memoria"
+            android:theme="@style/SmallerBody" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/memoria_instrucciones"
+            android:theme="@style/SmallerBody" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/YoNunca"
+            android:theme="@style/SmallerBody" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/yonunca_instrucciones"
+            android:theme="@style/SmallerBody" />
     </LinearLayout>
 </ScrollView>
