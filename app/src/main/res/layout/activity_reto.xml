@@ -41,7 +41,7 @@
             android:id="@+id/btnApto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="pasar"
+            android:onClick="atreverse"
             android:text="@string/apto"
             android:theme="@style/Button" />
 
@@ -49,7 +49,7 @@
             android:id="@+id/btnNoApto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="atreverse"
+            android:onClick="pasar"
             android:text="@string/noApto"
             android:theme="@style/InvertedButton" />
 
