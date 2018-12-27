@@ -1,5 +1,6 @@
 package com.cgi.sdm_project.logica.juego.reglas.implementaciones;
 
+import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.reglas.ReglaTragable;
 import com.cgi.sdm_project.util.baraja.Baraja;
 import com.cgi.sdm_project.util.baraja.Carta;
@@ -15,7 +16,7 @@ public class Cartas extends ReglaTragable {
     private Baraja baraja;
     private Carta actual;
 
-    protected Cartas(int tragos) {
+    public Cartas(int tragos) {
         super(tragos);
         aciertos = new LinkedList<>();
         baraja = new Baraja();
@@ -32,6 +33,7 @@ public class Cartas extends ReglaTragable {
      * @return true si ha acertado y false en caso contrario
      */
     public boolean jugar(boolean respuesta) {
+        siguienteCarta();
         boolean correcta;
         if (aciertos.size() % 2 == 0)
             aciertos.add(correcta = respuesta && actual.isEven() || !respuesta && !actual.isEven());
@@ -40,7 +42,7 @@ public class Cartas extends ReglaTragable {
         return correcta;
     }
 
-    public void siguienteCarta() {
+    private void siguienteCarta() {
         actual = baraja.sacarCarta();
     }
 
@@ -49,15 +51,15 @@ public class Cartas extends ReglaTragable {
     }
 
     public int getOpcionDerecha() {
-        return 0;
+        return aciertos.size() % 2 == 0 ? R.string.par : R.string.rojo;
     }
 
     public int getOpcionIzquierda() {
-        return 0;
+        return aciertos.size() % 2 == 0 ? R.string.impar : R.string.negro;
     }
 
     @Override
     protected String nombreRespuesta() {
-        return null;
+        return aciertos.contains(false) ? "resultado_cartas_mal" : "resultado_cartas_bien";
     }
 }

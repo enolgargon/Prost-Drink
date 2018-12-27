@@ -60,6 +60,7 @@
     <string name="Equilibrio">Equilibrio</string>
     <string name="Cazatopos">Cazatopos</string>
     <string name="Brujula">No pierdas el norte</string>
+    <string name="Cartas">Cartas</string>
     <string name="Jugar">Jugar</string>
     <string name="error_personalizado">La configuración para iniciar el juego no es correcta. Recuerda que debes seleccionar al menos un tipo de juego.</string>
 
@@ -202,6 +203,14 @@
     <string name="brujula_fallo1">Ten cuidado, que te pierdes. Esta vez no bebas. Regálale tus %d a quien quieras</string>
     <string name="brujula_fallo2">Uy uy. ¿No te sabes orientar? Bebe %d</string>
 
+    <!-- CARTAS -->
+    <string name="par">Par</string>
+    <string name="impar">Impar</string>
+    <string name="rojo">Rojo</string>
+    <string name="negro">Negro</string>
+    <string name="fin">Fin</string>
+    <string name="resultado_cartas_bien">Bien hecho. Manda beber %d</string>
+    <string name="resultado_cartas_mal">No se te da muy bien esto. Bebe %d y mas suerte la próxima vez. Ah, y no vayas al casino.</string>
 
     <!-- INSTRUCCIONES -->
     <string name="instrucciones_title">Instrucciones</string>

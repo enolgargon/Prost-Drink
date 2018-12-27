@@ -3,6 +3,7 @@ package com.cgi.sdm_project.logica.juego.reglas;
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.igu.juego.loop.BrujulaActivity;
 import com.cgi.sdm_project.igu.juego.loop.CamaraActivity;
+import com.cgi.sdm_project.igu.juego.loop.CartasActivity;
 import com.cgi.sdm_project.igu.juego.loop.HastaQueActivity;
 import com.cgi.sdm_project.igu.juego.loop.PreguntaActivity;
 import com.cgi.sdm_project.igu.juego.loop.RetoActivity;
@@ -13,6 +14,7 @@ import com.cgi.sdm_project.igu.juego.loop.equilibrio.EquilibrioInicioActivity;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.util.loaders.BrujulaLoader;
 import com.cgi.sdm_project.util.loaders.CamaraLoader;
+import com.cgi.sdm_project.util.loaders.CartasLoader;
 import com.cgi.sdm_project.util.loaders.CazatoposLoader;
 import com.cgi.sdm_project.util.loaders.EquilibrioLoader;
 import com.cgi.sdm_project.util.loaders.HastaQuesLoader;
@@ -33,8 +35,9 @@ import com.cgi.sdm_project.util.singletons.AppSingleton;
 public enum Reglas {
     BRUJULA(R.string.Brujula, 3, BrujulaLoader.class, BrujulaActivity.class),
     CAMARA(R.string.Fotos, 5, CamaraLoader.class, CamaraActivity.class),
-    CAZATOPOS(R.string.Cazatopos, 15, CazatoposLoader.class, CazatoposInicioActivity.class),
-    EQUILIBRIO(R.string.Equilibrio, 12, EquilibrioLoader.class, EquilibrioInicioActivity.class),
+    CARTAS(R.string.Cartas, 5, CartasLoader.class, CartasActivity.class),
+    CAZATOPOS(R.string.Cazatopos, 12, CazatoposLoader.class, CazatoposInicioActivity.class),
+    EQUILIBRIO(R.string.Equilibrio, 10, EquilibrioLoader.class, EquilibrioInicioActivity.class),
     HASTAQUE(R.string.HastaQue, 5, HastaQuesLoader.class, HastaQueActivity.class),
     PREGUNTA(R.string.Preguntas, 15, PreguntasLoader.class, PreguntaActivity.class),
     RETO(R.string.Retos, 20, RetosLoader.class, RetoActivity.class),

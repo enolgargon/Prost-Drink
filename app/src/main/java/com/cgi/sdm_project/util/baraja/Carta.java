@@ -27,7 +27,7 @@ public class Carta {
 
     public int getRes() {
         try {
-            return R.drawable.class.getField(getPalo().toString() + getNumero()).getInt(R.drawable.class);
+            return R.drawable.class.getField(getPalo().toString().toLowerCase() + getNumero()).getInt(R.drawable.class);
         } catch (IllegalAccessException | NoSuchFieldException e) {
             e.printStackTrace();
         }
