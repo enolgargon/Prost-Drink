@@ -50,6 +50,10 @@ public class Cartas extends ReglaTragable {
         return aciertos.size() == 3;
     }
 
+    public int getNumCarta() {
+        return aciertos.size() + 1;
+    }
+
     public int getOpcionDerecha() {
         return aciertos.size() % 2 == 0 ? R.string.par : R.string.rojo;
     }
@@ -60,6 +64,14 @@ public class Cartas extends ReglaTragable {
 
     @Override
     protected String nombreRespuesta() {
-        return aciertos.contains(false) ? "resultado_cartas_mal" : "resultado_cartas_bien";
+        return (aciertos() * 100 / aciertos.size() < 50) ? "resultado_cartas_mal" : "resultado_cartas_bien";
+    }
+
+    private int aciertos() {
+        int contador = 0;
+        for (boolean respuesta : aciertos)
+            if (respuesta)
+                contador++;
+        return contador;
     }
 }
