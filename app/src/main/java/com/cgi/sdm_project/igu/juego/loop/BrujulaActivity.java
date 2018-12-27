@@ -37,6 +37,8 @@ public class BrujulaActivity extends Loop implements Observer, InicioJuego {
         instrucciones = findViewById(R.id.txtInstrucciones);
         empezar = findViewById(R.id.btnEmpezar);
 
+        ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
+
         brujula.setVisibility(View.INVISIBLE);
         contador.setVisibility(TextView.INVISIBLE);
 

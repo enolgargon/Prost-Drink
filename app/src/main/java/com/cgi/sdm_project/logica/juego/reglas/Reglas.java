@@ -3,6 +3,7 @@ package com.cgi.sdm_project.logica.juego.reglas;
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.igu.juego.loop.BrujulaActivity;
 import com.cgi.sdm_project.igu.juego.loop.CamaraActivity;
+import com.cgi.sdm_project.igu.juego.loop.CartasActivity;
 import com.cgi.sdm_project.igu.juego.loop.HastaQueActivity;
 import com.cgi.sdm_project.igu.juego.loop.PreguntaActivity;
 import com.cgi.sdm_project.igu.juego.loop.RetoActivity;
@@ -11,9 +12,11 @@ import com.cgi.sdm_project.igu.juego.loop.VotacionActivity;
 import com.cgi.sdm_project.igu.juego.loop.cazatopos.CazatoposInicioActivity;
 import com.cgi.sdm_project.igu.juego.loop.equilibrio.EquilibrioInicioActivity;
 import com.cgi.sdm_project.igu.juego.loop.memoria.MemoriaActivity;
+import com.cgi.sdm_project.igu.juego.loop.memoria.MemoriaInicioActivity;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.util.loaders.BrujulaLoader;
 import com.cgi.sdm_project.util.loaders.CamaraLoader;
+import com.cgi.sdm_project.util.loaders.CartasLoader;
 import com.cgi.sdm_project.util.loaders.CazatoposLoader;
 import com.cgi.sdm_project.util.loaders.EquilibrioLoader;
 import com.cgi.sdm_project.util.loaders.HastaQuesLoader;
@@ -38,11 +41,12 @@ public enum Reglas {
     CAZATOPOS(R.string.Cazatopos, 7, CazatoposLoader.class, CazatoposInicioActivity.class),
     EQUILIBRIO(R.string.Equilibrio, 12, EquilibrioLoader.class, EquilibrioInicioActivity.class),
     HASTAQUE(R.string.HastaQue, 4, HastaQuesLoader.class, HastaQueActivity.class),
+    CARTAS(R.string.Cartas, 5, CartasLoader.class, CartasActivity.class),
     PREGUNTA(R.string.Preguntas, 15, PreguntasLoader.class, PreguntaActivity.class),
     RETO(R.string.Retos, 20, RetosLoader.class, RetoActivity.class),
     TRABALENGUAS(R.string.Trabalenguas, 4, TrabalenguasLoader.class, TrabalenguasActivity.class),
     VOTACION(R.string.Votaciones, 20, VotacionesLoader.class, VotacionActivity.class),
-    MEMORIA(R.string.Memoria, 11, MemoriaLoader.class, MemoriaActivity.class);
+    MEMORIA(R.string.Memoria, 11, MemoriaLoader.class, MemoriaInicioActivity.class);
 
     private int nombre;
     private int probabilidad;

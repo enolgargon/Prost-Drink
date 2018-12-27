@@ -1,6 +1,7 @@
 package com.cgi.sdm_project.util.adapters;
 
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.RecyclerView;
@@ -24,7 +25,7 @@ public class MemoryCardAdapter extends RecyclerView.Adapter<MemoryCardAdapter.It
     /**
      * Constante que almacena la imagen que se pintará cuando se de la vuelta a las cartas
      */
-    private final Drawable OCULTA_IMG = AppSingleton.getInstance().getDrawable(R.drawable.hole);
+    private final Drawable OCULTA_IMG = AppSingleton.getInstance().getDrawable(R.drawable.blanco);
 
     /**
      * Lista de los drawables que se pintarán
@@ -95,6 +96,13 @@ public class MemoryCardAdapter extends RecyclerView.Adapter<MemoryCardAdapter.It
         notifyDataSetChanged();
     }
 
+    public void mostrarCartas(){
+        for (int i = 0; i < ocultas.length; i++){
+            ocultas[i] = false;
+        }
+        notifyDataSetChanged();
+    }
+
     /**
      * Elige la carta objetivo y devuelve su drawable para que el activity lo pueda mostrar
      *
@@ -104,6 +112,7 @@ public class MemoryCardAdapter extends RecyclerView.Adapter<MemoryCardAdapter.It
         mIndex = rngesus.nextInt(mImages.size());
         return mImages.get(mIndex);
     }
+
 
 
     class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -124,13 +133,27 @@ public class MemoryCardAdapter extends RecyclerView.Adapter<MemoryCardAdapter.It
          */
         @Override
         public void onClick(View v) {
-            ocultas[getAdapterPosition()] = false;
-            notifyItemChanged(getAdapterPosition());
+
             if (mIndex == getAdapterPosition()) {
+
+                ocultas[getAdapterPosition()] = false;
+                notifyItemChanged(getAdapterPosition());
                 //Notifica a la activity de que ha acertado el usuario
                 mActivity.notifySuccess();
             } else {
-                //En otro caso, notifica el fallo
+                ocultas[getAdapterPosition()] = false;
+                ocultas[mIndex] = false;
+
+                /**
+                 * Marca visualmente como incorrecta la carta... incorrecta
+                 */
+                Drawable[] layers = { mImages.get(getAdapterPosition()), mActivity.getDrawable(R.drawable.cartaincorrecta)};
+                LayerDrawable highlightedTarget = new LayerDrawable(layers);
+
+                mImages.set(getAdapterPosition(), highlightedTarget);
+
+                notifyDataSetChanged();
+                //Notifica a la activity de que ha fallado
                 mActivity.notifyFailure();
             }
         }

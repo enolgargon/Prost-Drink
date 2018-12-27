@@ -97,6 +97,10 @@
             android:name=".igu.juego.loop.memoria.MemoriaActivity"
             android:configChanges="layoutDirection|locale"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".igu.juego.loop.memoria.MemoriaInicioActivity"
+            android:configChanges="layoutDirection|locale"
+            android:screenOrientation="portrait" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -108,7 +112,8 @@
                 android:resource="@xml/paths" />
         </provider>
 
-        <activity android:name=".igu.juego.InstruccionesActivity"></activity>
+        <activity android:name=".igu.juego.InstruccionesActivity" />
+        <activity android:name=".igu.juego.loop.CartasActivity"></activity>
     </application>
 
 </manifest>

@@ -1,21 +1,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/viewFlipper"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/imagenVisible"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:padding="3dp"
-        android:scaleType="centerCrop" />
+        android:layout_height="100dp"
+        android:padding="0dp"
+        android:scaleType="fitCenter" />
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/imagenOculta"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:padding="3dp"
-        android:scaleType="centerCrop"
+        android:scaleType="fitCenter"
         android:src="@mipmap/ic_launcher"
         android:visibility="gone" />
 

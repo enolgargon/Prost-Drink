@@ -1,22 +1,22 @@
 package com.cgi.sdm_project.igu.juego.loop.memoria;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.igu.juego.loop.Loop;
+import com.cgi.sdm_project.igu.juego.loop.ResultadoActivity;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.IFinJuego;
-import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Memoria;
 import com.cgi.sdm_project.util.adapters.MemoryCardAdapter;
+import com.cgi.sdm_project.util.baraja.Carta;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,14 +27,13 @@ import java.util.List;
  *
  * @author Samuel
  */
-public class MemoriaActivity extends Loop implements InicioJuego, IFinJuego {
+public class MemoriaActivity extends Loop implements IFinJuego {
     /**
      * Constante que representan los milisegundos que se darán para memorizar donde están las cartas
      */
-    private final int MEMORY_TIME = 2000;
+    private final int MEMORY_TIME = 15000;
 
     private Memoria memoria;
-    private CountDownTimer loop;
     private RecyclerView board;
     private MemoryCardAdapter mAdapter;
 
@@ -60,12 +59,11 @@ public class MemoriaActivity extends Loop implements InicioJuego, IFinJuego {
      */
     private void prepareBoard() {
         board = findViewById(R.id.memoryBoard);
-        board.setLayoutManager(new GridLayoutManager(this, 3));
+        board.setLayoutManager(new GridLayoutManager(this, 4));
         List<Drawable> imgs = new ArrayList<Drawable>();
-        imgs.add(getDrawable(R.drawable.logo));
-        imgs.add(getDrawable(R.drawable.topo));
-        imgs.add(getDrawable(R.drawable.compass));
-        imgs.add(getDrawable(R.drawable.trago));
+        List<Carta> cartas = memoria.getCartas();
+        for (Carta c: cartas)
+            imgs.add(getDrawable(c.getRes()));
         mAdapter = new MemoryCardAdapter(imgs, this);
         board.setAdapter(mAdapter);
     }
@@ -86,23 +84,36 @@ public class MemoriaActivity extends Loop implements InicioJuego, IFinJuego {
 
     @Override
     public void cargarSiguienteJuego(View view) {
-
+        Intent mIntent = new Intent(this, ResultadoActivity.class);
+        startActivity(mIntent);
+        finish();
     }
 
     /**
      * Es llamado por el onClick de la carta correcta para avisar al Activity.
      */
     public void notifySuccess() {
-        //TODO implementación
-        Log.i("SamUtil", "Acierto");
-        findViewById(R.id.btnContinuar).setVisibility(View.VISIBLE);
+        memoria.acierto();
+        mostrarBtnContinuar();
     }
 
     /**
      * Es llamado por el onClick de una carta incorrecta para avisar al Activity
      */
     public void notifyFailure() {
-        //TODO implementación
-        Log.i("SamUtil", "has fallao loko");
+       memoria.fallo();
+       mostrarBtnContinuar();
+    }
+
+    /**
+     * Muestra el botón para pasar a la siguiente actividad
+     */
+    private void mostrarBtnContinuar(){
+        findViewById(R.id.btnContinuar).setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
     }
 }

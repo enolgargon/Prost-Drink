@@ -53,13 +53,14 @@
     <string name="Preguntas">Preguntas</string>
     <string name="Retos">Retos</string>
     <string name="YoNunca">Yo nunca</string>
-    <string name="HastaQue">Hasta Ques</string>
+    <string name="HastaQue">Hasta que</string>
     <string name="Votaciones">Votaciones</string>
     <string name="Fotos">Fotos</string>
     <string name="Trabalenguas">Trabalenguas</string>
-    <string name="Equilibrio">Equilibrio</string>
+    <string name="Equilibrio">Frío/Caliente</string>
     <string name="Cazatopos">Cazatopos</string>
     <string name="Brujula">No pierdas el norte</string>
+    <string name="Cartas">Cartas</string>
     <string name="Memoria">Memoria</string>
     <string name="Jugar">Jugar</string>
     <string name="error_personalizado">La configuración para iniciar el juego no es correcta. Recuerda que debes seleccionar al menos un tipo de juego.</string>
@@ -167,6 +168,7 @@
     <string name="trabalenguas_fracaso3">Más suerte la próxima vez. Bebe %d</string>
 
     <!-- EQUILIBRIO -->
+    <string name="equilibrio_titulo">Frío/Caliente</string>
     <string name="helado">Helado</string>
     <string name="frio">Frío</string>
     <string name="templado">Templado</string>
@@ -183,6 +185,7 @@
     -->
 
     <!-- TOPOS -->
+    <string name="topos_titulo">A tope con los topos</string>
     <string name="topos_resultado0">Horrible… Bebe %d anda.</string>
     <string name="topos_resultado1">Lo importante es participar. Bebe %d.</string>
     <string name="topos_resultado2">No está nada mal. Manda beber %d a quién tú quieras.</string>
@@ -203,6 +206,26 @@
     <string name="brujula_fallo1">Ten cuidado, que te pierdes. Esta vez no bebas. Regálale tus %d a quien quieras</string>
     <string name="brujula_fallo2">Uy uy. ¿No te sabes orientar? Bebe %d</string>
 
+    <!-- CARTAS -->
+    <string name="par">Par</string>
+    <string name="impar">Impar</string>
+    <string name="rojo">Rojo</string>
+    <string name="negro">Negro</string>
+    <string name="fin">Fin</string>
+    <string name="resultado_cartas_bien">Bien hecho. Manda beber %d</string>
+    <string name="resultado_cartas_mal">No se te da muy bien esto. Bebe %d y mas suerte la próxima vez. Ah, y no vayas al casino.</string>
+
+    <!-- MEMORIA -->
+    <string name="memoria_success">Vaya memorión. Manda beber %d a quien tú quieras</string>
+    <string name="memoria_failure">Ay mecachis. Otra vez será. Bebe %d tragos</string>
+    <string name="memoria_titulo">A ver esa memoria</string>
+    <string name="memoria_jugar">Hemos venido a jugar</string>
+    <string name="memoria_instrucciones1">
+        En este juego te enseñaremos una serie de cartas. \nDebes recordar su posición. \nDespués de un tiempo, las ocultaremos
+        y deberás intentar encontrar la carta que te pedimos.
+    </string>
+    <string name="memoria_instrucciones2">Tienes 15 segundos para memorizar donde están las cartas. \nÚsalos bien.
+    \nCuando estés listo dale al botón.</string>
 
     <!-- INSTRUCCIONES -->
     <string name="instrucciones_title">Instrucciones</string>

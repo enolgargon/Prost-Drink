@@ -1,9 +1,11 @@
 package com.cgi.sdm_project.logica.juego.reglas.implementaciones;
 
+import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.reglas.ReglaTragable;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.cazatopos.Agujero;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.cazatopos.Casilla;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.cazatopos.Topo;
+import com.cgi.sdm_project.util.singletons.SFXPlayer;
 import com.cgi.sdm_project.util.SamUtil;
 
 /**
@@ -19,6 +21,7 @@ public class Cazatopos extends ReglaTragable {
 
     public Cazatopos() {
         super(0);
+        SFXPlayer.getInstance().setSFX(R.raw.whack);
         this.score = 0;
         this.casillas = new Casilla[6];
         actualizarTablero(1);
@@ -46,6 +49,7 @@ public class Cazatopos extends ReglaTragable {
      */
     public void topoIsKill(Casilla casilla) {
         score += TOPO_KILL;
+        SFXPlayer.getInstance().playSFX();
         casillas[casilla.getIndex()] = new Agujero(this, casilla.getIndex());
     }
 

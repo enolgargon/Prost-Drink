@@ -15,6 +15,7 @@ import com.cgi.sdm_project.igu.juego.loop.ResultadoActivity;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.IFinJuego;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Cazatopos;
+import com.cgi.sdm_project.util.singletons.SFXPlayer;
 
 
 /**
@@ -131,6 +132,13 @@ public class CazatoposActivity extends Loop implements IFinJuego {
         startActivity(mIntent);
         finish();
     }
+
+    @Override
+    public void onDestroy(){
+        SFXPlayer.getInstance().release();
+        super.onDestroy();
+    }
+
 
     /**
      * Implementación extendida de OnClickListener para conocer qué casilla se ha pulsado
