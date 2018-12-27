@@ -46,8 +46,8 @@ public enum Reglas {
     PREGUNTA(R.string.Preguntas, 15, PreguntasLoader.class, PreguntaActivity.class),
     RETO(R.string.Retos, 20, RetosLoader.class, RetoActivity.class),
     TRABALENGUAS(R.string.Trabalenguas, 4, TrabalenguasLoader.class, TrabalenguasActivity.class),
-    VOTACION(R.string.Votaciones, 20, VotacionesLoader.class, VotacionActivity.class),
-    MEMORIA(R.string.Memoria, 11, MemoriaLoader.class, MemoriaInicioActivity.class),
+    VOTACION(R.string.Votaciones, 10, VotacionesLoader.class, VotacionActivity.class),
+    MEMORIA(R.string.Memoria, 6, MemoriaLoader.class, MemoriaInicioActivity.class),
     YONUNCA(R.string.YoNunca, 5, YoNuncaLoader.class, YoNuncaActivity.class);
 
     private int nombre;

@@ -1,6 +1,14 @@
 <actividad name="Yo nunca">
-	<item text="Yo nunca he escupido desde un puente" tragos = "3"/>
-	<item text="Yo nunca he meado en la playa/mar" tragos = "1"/>
-	<item text="Yo nunca he dejado de ir a clase solo porque estuviese lloviendo" tragos = "2" />
-	<item text="Yo nunca me he equivocado de baño y he entrado al del otro sexo" tragos = "4"/>
+    <item
+        text="Yo nunca he escupido desde un puente"
+        tragos="3" />
+    <item
+        text="Yo nunca he meado en la playa/mar"
+        tragos="1" />
+    <item
+        text="Yo nunca he dejado de ir a clase solo porque estuviese lloviendo"
+        tragos="2" />
+    <item
+        text="Yo nunca me he equivocado de baño y he entrado al del otro sexo"
+        tragos="4" />
 </actividad>

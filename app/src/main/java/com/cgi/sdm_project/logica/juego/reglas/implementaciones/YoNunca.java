@@ -11,7 +11,9 @@ public class YoNunca extends ReglaTragable {
         this.texto = texto;
     }
 
-    public String getTexto(){ return texto; }
+    public String getTexto() {
+        return texto;
+    }
 
     @Override
     protected String nombreRespuesta() {

@@ -5,14 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 
 import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
-import com.cgi.sdm_project.util.AppCompatActivityExtended;
 
-public class InstruccionesActivity extends AppCompatActivityExtended {
+public class InstruccionesActivity extends AppCompatActivity {
     private final Handler handler = new Handler();
     private Runnable llamada;
 
