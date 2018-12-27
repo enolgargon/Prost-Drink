@@ -9,6 +9,7 @@ import com.cgi.sdm_project.igu.juego.loop.PreguntaActivity;
 import com.cgi.sdm_project.igu.juego.loop.RetoActivity;
 import com.cgi.sdm_project.igu.juego.loop.TrabalenguasActivity;
 import com.cgi.sdm_project.igu.juego.loop.VotacionActivity;
+import com.cgi.sdm_project.igu.juego.loop.YoNuncaActivity;
 import com.cgi.sdm_project.igu.juego.loop.cazatopos.CazatoposInicioActivity;
 import com.cgi.sdm_project.igu.juego.loop.equilibrio.EquilibrioInicioActivity;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
@@ -23,6 +24,7 @@ import com.cgi.sdm_project.util.loaders.PreguntasLoader;
 import com.cgi.sdm_project.util.loaders.RetosLoader;
 import com.cgi.sdm_project.util.loaders.TrabalenguasLoader;
 import com.cgi.sdm_project.util.loaders.VotacionesLoader;
+import com.cgi.sdm_project.util.loaders.YoNuncaLoader;
 import com.cgi.sdm_project.util.singletons.AppSingleton;
 
 /**
@@ -33,6 +35,7 @@ import com.cgi.sdm_project.util.singletons.AppSingleton;
  * @version 26-12-2018
  */
 public enum Reglas {
+
     BRUJULA(R.string.Brujula, 3, BrujulaLoader.class, BrujulaActivity.class),
     CAMARA(R.string.Fotos, 5, CamaraLoader.class, CamaraActivity.class),
     CARTAS(R.string.Cartas, 5, CartasLoader.class, CartasActivity.class),
@@ -42,7 +45,8 @@ public enum Reglas {
     PREGUNTA(R.string.Preguntas, 15, PreguntasLoader.class, PreguntaActivity.class),
     RETO(R.string.Retos, 20, RetosLoader.class, RetoActivity.class),
     TRABALENGUAS(R.string.Trabalenguas, 5, TrabalenguasLoader.class, TrabalenguasActivity.class),
-    VOTACION(R.string.Votaciones, 20, VotacionesLoader.class, VotacionActivity.class);
+    VOTACION(R.string.Votaciones, 15, VotacionesLoader.class, VotacionActivity.class),
+    YONUNCA(R.string.YoNunca, 5, YoNuncaLoader.class, YoNuncaActivity.class);
 
     private int nombre;
     private int probabilidad;
