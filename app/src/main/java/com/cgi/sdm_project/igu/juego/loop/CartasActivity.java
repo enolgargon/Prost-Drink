@@ -47,9 +47,12 @@ public class CartasActivity extends AppCompatActivity implements InicioJuego {
     }
 
     private void mostrarCartaBlanco() {
-        actual = new ImageView(this);
-        actual.setImageResource(R.drawable.blanco);
-        cartas.addView(actual);
+        try {
+            actual = findViewById(R.id.class.getField("imgCarta" + regla.getNumCarta()).getInt(R.id.class));
+            actual.setVisibility(ImageView.VISIBLE);
+        } catch (IllegalAccessException | NoSuchFieldException e) {
+            verResultado();
+        }
     }
 
     private void mostrarPuntos(boolean acierto) {

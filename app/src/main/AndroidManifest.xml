@@ -103,6 +103,10 @@
             android:configChanges="layoutDirection|locale"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".igu.juego.loop.YoNuncaActivity"
+            android:configChanges="layoutDirection|locale" />
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.example.android.fileprovider"
@@ -114,7 +118,7 @@
         </provider>
 
         <activity android:name=".igu.juego.InstruccionesActivity" />
-        <activity android:name=".igu.juego.loop.CartasActivity"></activity>
+        <activity android:name=".igu.juego.loop.CartasActivity" />
     </application>
 
 </manifest>

@@ -17,7 +17,7 @@ import static com.cgi.sdm_project.util.singletons.MediaPlayerSingleton.MAX_VOLUM
 /**
  * Se encarga de guardar las preferencias del usuario en el SharedPreferences
  *
- * @author Samuel
+ * @author Samuel Cifuentes y Jorge Iturrioz
  */
 public class ConfiguracionActivity extends AppCompatActivityExtended {
 
@@ -123,7 +123,7 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
     }
 
     /**
-     * Redefinición del onDestroy donde también se indica
+     * Redefinición del onDestroy donde también se indica que se han guardado los cambios
      */
     @Override
     public void onDestroy() {

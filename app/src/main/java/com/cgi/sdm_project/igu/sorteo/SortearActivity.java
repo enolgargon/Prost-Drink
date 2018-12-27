@@ -116,7 +116,7 @@ public class SortearActivity extends AppCompatActivityExtended {
     /**
      * Método que carga la lista de jugadores almacenadas en el preferences en el RecyclerView
      *
-     * @param view
+     * @param view Vista que hace que se lance este comportamiento.
      */
     public void cargarJugadores(View view) {
         for (String jugador : Conf.getInstancia().loadArray(Conf.JUGADORES)) {
