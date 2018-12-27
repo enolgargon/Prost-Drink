@@ -15,7 +15,6 @@ public class YoNunca extends ReglaTragable {
 
     @Override
     protected String nombreRespuesta() {
-        //TODO Crear strings diferentes para que el texto no sea siempre el mismo
         return "yo_nunca" + ((int) (Math.random() * 3) + 1);
     }
 }
