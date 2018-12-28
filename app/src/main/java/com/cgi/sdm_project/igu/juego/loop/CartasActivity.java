@@ -29,6 +29,7 @@ public class CartasActivity extends AppCompatActivity implements InicioJuego {
         setContentView(R.layout.activity_cartas);
 
         regla = (Cartas) Juego.getInstance().getJuegoActual();
+        regla.initCartas();
         ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
 
         btnDerecha = findViewById(R.id.btnCartasDerecha);

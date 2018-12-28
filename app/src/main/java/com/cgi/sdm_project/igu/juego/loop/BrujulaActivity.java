@@ -43,7 +43,14 @@ public class BrujulaActivity extends Loop implements Observer, InicioJuego {
         contador.setVisibility(TextView.INVISIBLE);
 
         regla = ((Brujula) Juego.getInstance().getJuegoActual());
+        regla.initBrujula();
         regla.addObserver(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        regla.deleteObserver(this);
     }
 
     public void empezar(View view) {

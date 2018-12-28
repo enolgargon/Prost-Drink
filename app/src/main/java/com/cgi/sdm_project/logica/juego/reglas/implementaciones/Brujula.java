@@ -24,9 +24,6 @@ public class Brujula extends Observable implements SensorEventListener, Tragable
     private float[] mOrientationAngles = new float[3];
 
     public Brujula() {
-        intentos = 3;
-        logrado = false;
-
         SensorManager mSensorManager = (SensorManager) AppSingleton.getInstance().getContext().getSystemService(Context.SENSOR_SERVICE);
 
         Sensor accelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -39,6 +36,11 @@ public class Brujula extends Observable implements SensorEventListener, Tragable
             mSensorManager.registerListener(this, magneticField,
                     SensorManager.SENSOR_DELAY_NORMAL, SensorManager.SENSOR_DELAY_UI);
         }
+    }
+
+    public void initBrujula() {
+        intentos = 3;
+        logrado = false;
     }
 
     public float getAngle() {

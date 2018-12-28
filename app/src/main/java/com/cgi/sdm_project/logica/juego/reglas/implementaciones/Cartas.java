@@ -18,6 +18,9 @@ public class Cartas extends ReglaTragable {
 
     public Cartas(int tragos) {
         super(tragos);
+    }
+
+    public void initCartas() {
         aciertos = new LinkedList<>();
         baraja = new Baraja();
     }
