@@ -79,7 +79,7 @@ public class Brujula extends Observable implements SensorEventListener, Tragable
 
     @Override
     public int getTragos() {
-        return 3 + intentos;
+        return Math.abs(3 + intentos);
     }
 
     @Override
