@@ -36,6 +36,12 @@ public class ElegirJugadoresActivity extends AppCompatActivityExtended {
         setComponents();
         configurarAdapter();
 
+        findViewById(R.id.fabJugar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lanzarJuego(v);
+            }
+        });
     }
 
     /**

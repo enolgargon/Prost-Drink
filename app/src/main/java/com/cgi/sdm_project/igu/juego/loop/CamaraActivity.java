@@ -70,6 +70,19 @@ public class CamaraActivity extends Loop implements InicioJuego {
 
         ((TextView) findViewById(R.id.txtJugador)).setText(Juego.getInstance().getJugadorActual().toString());
         ((TextView) findViewById(R.id.txtCamara)).setText(regla.getTexto());
+
+        findViewById(R.id.fabCamara).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pulsarCamara(v);
+            }
+        });
+        findViewById(R.id.fabShare).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                compartir(v);
+            }
+        });
     }
 
     public void pulsarCamara(View view) {

@@ -54,6 +54,13 @@ public class TrabalenguasActivity extends LoopSinMusica implements InicioJuego, 
         speakButton = findViewById(R.id.btnSpeak);
         continuar = findViewById(R.id.btnContinuar);
 
+        speakButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                speak(v);
+            }
+        });
+
 
         //Muestra número de intentos inicial
         intentosTxt.setText(String.valueOf(trabalenguas.getIntentos()));

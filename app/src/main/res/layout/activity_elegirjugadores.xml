@@ -99,7 +99,6 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <android.support.design.widget.FloatingActionButton
-        android:onClick="lanzarJuego"
         android:id="@+id/fabJugar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -110,6 +109,7 @@
         android:clickable="true"
         android:focusable="true"
 
+        android:theme="@style/FAB"
         app:borderWidth="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
