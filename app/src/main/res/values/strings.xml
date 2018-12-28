@@ -21,6 +21,7 @@
     <string name="contentDescription_atras">Icono de flecha hacia atras</string>
     <string name="contentDescription_principal_acerca_de">Icono para la información sobre la aplicación</string>
     <string name="contentDescription_principal_settings">Icono para la configuración de la aplicación</string>
+    <string name="contentDescription_principal_ayuda">Icono para la ayuda de la aplicación</string>
 
     <!-- Activity de configuración -->
     <string name="Configuración">Configuración</string>
@@ -153,6 +154,7 @@
     <string name="error_conexion">Hay un problema con la conexión a internet. No podrás compartir la imagen</string>
     <string name="compartir_publi">Te regalo esta foto. Prost&amp;Drink</string>
     <string name="camara_resultado">Que maravilloso es este juego!! Brinda y bebe %d</string>
+    <string name="camara_content">Imagen tomada para la prueba que vas a compartir</string>
 
     <!-- TRABALENGUAS -->
     <string name="repite">Repite:</string>
@@ -166,6 +168,7 @@
     <string name="trabalenguas_fracaso1">El alcohol va surgiendo efecto… Bebe %d</string>
     <string name="trabalenguas_fracaso2">¿Tan mal vas ya? Bebe %d</string>
     <string name="trabalenguas_fracaso3">Más suerte la próxima vez. Bebe %d</string>
+    <string name="oreja_content">Ocono de una oreja para escuchar el trabalenguas</string>
 
     <!-- EQUILIBRIO -->
     <string name="equilibrio_titulo">Frío/Caliente</string>
@@ -194,6 +197,11 @@
     <string name="topos_instrucciones1">En este juego tienes 30 segundos para aplastar el máximo número de topos posibles.</string>
     <string name="topos_instrucciones2">¡Pero cuidado! Darle a una madriguera sin topo se penalizará.</string>
     <string name="topos_instrucciones3">Y ante todo… \n¡No mates al gnomo de la suerte! \nO serás gravemente penalizado.</string>
+    <!-- Content description -->
+    <string name="topo_description">Imagen de ejemplo un topo</string>
+    <string name="agujero_description">Imagen ejemplo de un agujero</string>
+    <string name="gnomo_description">Imagen ejemplo de un gnomo</string>
+    <string name="casilla_description">Casilla del juego donde aparecera un agujero, un topo o un gnomo</string>
 
     <!-- BRUJULA -->
     <string name="instrucciones_brujula">Vamos con un juego un poco distinto. ¿Has bebido mucho? Intenta encontrar el norte.
@@ -206,6 +214,9 @@
     <!-- Perdido -->
     <string name="brujula_fallo1">Ten cuidado, que te pierdes. Esta vez no bebas. Regálale tus %d a quien quieras</string>
     <string name="brujula_fallo2">Uy uy. ¿No te sabes orientar? Bebe %d</string>
+    <!-- Content Descriptions -->
+    <string name="brujula_description">Cuerpo de una brújula</string>
+    <string name="aguja_description">Aguja de una brújula</string>
 
     <!-- CARTAS -->
     <string name="par">Par</string>
@@ -215,6 +226,7 @@
     <string name="fin">Fin</string>
     <string name="resultado_cartas_bien">Bien hecho. Manda beber %d</string>
     <string name="resultado_cartas_mal">No se te da muy bien esto. Bebe %d y mas suerte la próxima vez. Ah, y no vayas al casino.</string>
+    <string name="cartas_content">Imagen de la carta para jugar</string>
 
     <!-- MEMORIA -->
     <string name="memoria_success">Vaya memorión. Manda beber %d a quien tú quieras</string>
@@ -227,9 +239,10 @@
     </string>
     <string name="memoria_instrucciones2">Tienes 15 segundos para memorizar donde están las cartas. \nÚsalos bien.
     \nCuando estés listo dale al botón.</string>
+    <string name="memoria_carta_content">Imagen de la carta que se tiene que encontrar</string>
+    <string name="memoria_content">Imagen de una carta sobre la que se puede buscar</string>
 
     <!-- YO NUNCA -->
-
     <string name="grupo">Grupal</string>
     <string name="yonuncahecho">Los que lo hayan hecho beben un trago</string>
 

@@ -21,6 +21,7 @@
     <string name="contentDescription_atras">Backwards arrow icon</string>
     <string name="contentDescription_principal_acerca_de">App info icon</string>
     <string name="contentDescription_principal_settings">Configuration icon</string>
+    <string name="contentDescription_principal_ayuda">Help info icon</string>
 
     <!-- Activity de configuración -->
     <string name="Configuración">Configuration</string>
@@ -153,6 +154,7 @@
     <string name="error_conexion">There\'s a problem with the internet connection. You won\'t be able to share the image</string>
     <string name="compartir_publi">I give you this photo. Prost&amp;Drink</string>
     <string name="camara_resultado">How wonderful is this game! Toast and drinks %d</string>
+    <string name="camara_content">Image taken for the test that you are going to share</string>
 
     <!-- TRABALENGUAS -->
     <string name="repite">Repeat:</string>
@@ -166,6 +168,7 @@
     <string name="trabalenguas_fracaso1">Alcohol is emerging effect… Drink %d</string>
     <string name="trabalenguas_fracaso2">Are you going so bad yet? Drink %d</string>
     <string name="trabalenguas_fracaso3">More luck next time. Drink %d</string>
+    <string name="oreja_content">Icon of an ear to hear the tongue twister</string>
 
     <!-- EQUILIBRIO -->
     <string name="equilibrio_titulo">Cold/Hot</string>
@@ -194,6 +197,11 @@
     <string name="topos_instrucciones1">In this game you have 30 seconds to crush the maximum number of moles possible.</string>
     <string name="topos_instrucciones2">Watch out! Giving a burrow without a mole will be penalized.</string>
     <string name="topos_instrucciones3">And first of all… \nDon\'t kill the lucky gnome! \nOr you will be severely penalized.</string>
+    <!-- Content description -->
+    <string name="topo_description">Example image a mole</string>
+    <string name="agujero_description">Example image of a hole</string>
+    <string name="gnomo_description">Example image of a gnome</string>
+    <string name="casilla_description">Game box where a hole, a mole or a gnome will appear</string>
 
     <!-- BRUJULA -->
     <string name="instrucciones_brujula">
@@ -208,6 +216,9 @@
     <!-- Perdido -->
     <string name="brujula_fallo1">Be careful, you get lost. This time don\'t drink. Give your %d to whoever you want</string>
     <string name="brujula_fallo2">Oops Don\'t you know how to guide? Drink %d</string>
+    <!-- Content Descriptions -->
+    <string name="brujula_description">Body of a compass</string>
+    <string name="aguja_description">Needle of a compass</string>
 
     <!-- CARTAS -->
     <string name="par">Even</string>
@@ -217,6 +228,7 @@
     <string name="fin">The end</string>
     <string name="resultado_cartas_bien">Well done. Send to drink %d</string>
     <string name="resultado_cartas_mal">You aren\'t very good at this. Drink %d and more luck next time. Oh, and don\'t go to the casino.</string>
+    <string name="cartas_content">Image of the card to play</string>
 
     <!-- MEMORIA -->
     <string name="memoria_success">Good memory. Send whomever you want to drink %d</string>
@@ -231,6 +243,8 @@
         You have 15 seconds to memorize where the cards are. \nLook good.
         \nWhen you\'re ready, hit the button.
     </string>
+    <string name="memoria_carta_content">Image of the letter that has to be found</string>
+    <string name="memoria_content">Image of a letter that can be searched</string>
 
     <!-- YO NUNCA -->
 
@@ -280,7 +294,7 @@
     </string>
     <string name="pregunta_instrucciones">
         The application will ask you questions (maybe compromised).
-        If you don\'t answer you\'ll have to drink. Let's see if alcohol releases your tongue.
+        If you don\'t answer you\'ll have to drink. Let\'s see if alcohol releases your tongue.
     </string>
     <string name="reto_instrucciones">
         What do you not dare?

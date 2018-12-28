@@ -69,8 +69,12 @@
     </style>
 
     <style name="SorteoBucket" parent="AppTheme">
-        <item name="android:padding">@dimen/bucketPadding</item>
+        <item name="android:paddingStart">@dimen/bucketPadding</item>
+        <item name="android:paddingEnd">@dimen/bucketPadding</item>
+        <item name="android:paddingBottom">@dimen/bucketPadding</item>
+        <item name="android:paddingTop">@dimen/bucketPaddingTop</item>
         <item name="android:layout_margin">@dimen/bucketMargin</item>
+        <item name="android:gravity">bottom|center_horizontal</item>
     </style>
 
     <style name="InputText" parent="Subtitle1">

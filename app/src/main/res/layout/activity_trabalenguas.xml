@@ -16,7 +16,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:gravity="right"
+        android:gravity="end"
         android:text="@string/intentos"
         android:theme="@style/Subtitle1"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,7 +34,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:gravity="right"
+        android:gravity="end"
         android:theme="@style/BodyCondensed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,7 +98,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:clickable="true"
-
+        android:focusable="true"
         android:theme="@style/MicFAB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -144,7 +144,6 @@
 
     <ImageButton
         android:id="@+id/btnTTS"
-        android:onClick="ttsEvent"
         android:layout_width="26dp"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
@@ -152,6 +151,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
+        android:contentDescription="@string/oreja_content"
+        android:onClick="ttsEvent"
         android:tint="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

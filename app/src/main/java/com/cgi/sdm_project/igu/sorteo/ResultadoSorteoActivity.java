@@ -67,11 +67,10 @@ public class ResultadoSorteoActivity extends AppCompatActivityExtended {
         ListView lista = new ListView(new ContextThemeWrapper(getApplicationContext(), R.style.SorteoBucket));
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        lista.setLayoutParams(new ListView.LayoutParams(metrics.widthPixels / 3 - getPixels(16), ListView.LayoutParams.WRAP_CONTENT));
+        lista.setLayoutParams(new ListView.LayoutParams(metrics.widthPixels / 3 - getPixels(16), ListView.LayoutParams.MATCH_PARENT));
         lista.setAdapter(new NombreAdapter(getApplicationContext(), equipo));
         lista.setDivider(null);
         lista.setBackground(getApplicationContext().getDrawable(R.drawable.borderbuttom));
-        lista.setPadding(getPixels(4), getPixels(32), getPixels(4), getPixels(32));
 
         return lista;
     }
