@@ -92,10 +92,10 @@ public class CartasActivity extends AppCompatActivity implements InicioJuego {
                     verResultado();
                 }
             }, 3000);
+        } else {
+            modificarTextoBotones();
+            mostrarCartaBlanco();
         }
-
-        modificarTextoBotones();
-        mostrarCartaBlanco();
     }
 
     private void verResultado() {
