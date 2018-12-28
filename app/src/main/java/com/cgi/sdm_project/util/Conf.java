@@ -7,6 +7,8 @@ import com.cgi.sdm_project.logica.juego.almacenes.ReglasJuego;
 import com.cgi.sdm_project.logica.juego.reglas.Reglas;
 import com.cgi.sdm_project.util.singletons.AppSingleton;
 
+import java.util.Locale;
+
 public class Conf {
     //Constantes
     public static final String JUGADORES = "jugadores";
@@ -50,8 +52,16 @@ public class Conf {
     }
 
     //Idioma
+
+    /**
+     * Si no hay preferences guardadas aún elegirá por defecto el idioma del sistema, si no es ninguno
+     * de los idiomas soportados, se optará por inglés
+     *
+     * @return
+     */
     public int getIdioma() {
-        return settings.getInt("Idioma", 0);
+        return settings.getInt("Idioma",
+                Enumerates.Idioma.getIdiomaFromCode(Locale.getDefault().getLanguage()).value);
     }
 
     public void setIdioma(int index) {
