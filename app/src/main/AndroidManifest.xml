@@ -35,7 +35,8 @@
         <activity
             android:name=".igu.sorteo.SortearActivity"
             android:configChanges="layoutDirection|locale"
-            android:parentActivityName=".igu.MainActivity" />
+            android:parentActivityName=".igu.MainActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".igu.sorteo.ResultadoSorteoActivity"
             android:configChanges="layoutDirection|locale"

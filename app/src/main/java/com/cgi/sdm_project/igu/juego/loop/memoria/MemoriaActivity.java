@@ -32,7 +32,7 @@ public class MemoriaActivity extends Loop implements IFinJuego {
     /**
      * Constante que representan los milisegundos que se darán para memorizar donde están las cartas
      */
-    private final int MEMORY_TIME = 15000;
+    private final int MEMORY_TIME = 10000;
 
     private Memoria memoria;
     private RecyclerView board;
