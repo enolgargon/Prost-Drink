@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 
@@ -19,6 +20,13 @@ public class MainActivity extends AppCompatActivityExtended {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(R.style.AppTheme_Splash);
+        setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("wtf", "llegué");
         setContentView(R.layout.activity_main);
     }
 

@@ -9,15 +9,20 @@ public class Enumerates {
      * Enumerado para representar idiomas
      */
     public enum Idioma {
-        SPANISH, ENGLISH;
+        SPANISH(0), ENGLISH(1);
 
+        public final int value;
+
+        Idioma(int i) {
+            this.value = i;
+        }
         /**
          * Returns the enumerate associated with a lang code, by default English
          *
          * @param code
          * @return
          */
-        public Idioma getIdiomaFromCode(String code) {
+        public static Idioma getIdiomaFromCode(String code) {
             switch (code) {
                 case "es":
                     return Idioma.SPANISH;

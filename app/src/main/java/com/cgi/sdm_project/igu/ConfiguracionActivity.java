@@ -2,6 +2,9 @@ package com.cgi.sdm_project.igu;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.Spinner;
@@ -24,13 +27,16 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
     private Switch swSonido;
     private SeekBar sbVolumen;
     private Spinner spIdioma;
+    private boolean flagCreation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        flagCreation = true;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config);
         getComponents();
         cargarPreferencias();
+
         setListeners();
 
     }
@@ -88,6 +94,26 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
 
             }
         });
+
+        spIdioma.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (flagCreation)
+                    flagCreation = false;
+                else {
+                    guardarCambios();
+                    finish();
+                    overridePendingTransition(0, 0);
+                    startActivity(getIntent());
+                    overridePendingTransition(0, 0);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     /**
@@ -105,6 +131,7 @@ public class ConfiguracionActivity extends AppCompatActivityExtended {
         conf.setSonido(swSonido.isChecked());
         conf.setVolumen(sbVolumen.getProgress());
         conf.setIdioma(spIdioma.getSelectedItemPosition());
+        Log.i("wtf", Conf.getInstancia().getIdioma() + "");
 
         MediaPlayer mediaPlayer = MediaPlayerSingleton.getInstance();
 
