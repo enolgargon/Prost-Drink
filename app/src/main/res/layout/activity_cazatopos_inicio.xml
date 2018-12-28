@@ -82,6 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="@string/topo_description"
             app:srcCompat="@drawable/topo" />
 
         <TextView
@@ -125,6 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="@string/agujero_description"
             app:srcCompat="@drawable/hole" />
     </LinearLayout>
 
@@ -148,6 +150,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="@string/gnomo_description"
             app:srcCompat="@drawable/gnome" />
 
         <TextView

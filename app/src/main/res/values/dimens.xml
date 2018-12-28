@@ -13,7 +13,9 @@
     <dimen name="nameLblPaddingBottom">8dp</dimen>
 
     <dimen name="bucketPadding">16dp</dimen>
+    <dimen name="bucketPaddingTop">48dp</dimen>
     <dimen name="bucketMargin">16dp</dimen>
+    <dimen name="sorteoTextSize">12sp</dimen>
 
     <dimen name="instruccionesPadding">16dp</dimen>
 

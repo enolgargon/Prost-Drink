@@ -2,14 +2,15 @@
 <resources>
 
     <string-array name="Idiomas">
-        <item>Español</item>
+        <item>Spanish</item>
         <item>English</item>
     </string-array>
+
 
     <string name="app_name">Prost &amp; Drink</string>
 
     <!-- Instrucciones -->
-    <string name="instrucciones">Instrucciones</string>
+    <string name="instrucciones">Instructions</string>
 
     <!-- Main activity -->
     <string name="principal_juego">Play</string>
@@ -20,6 +21,7 @@
     <string name="contentDescription_atras">Backwards arrow icon</string>
     <string name="contentDescription_principal_acerca_de">App info icon</string>
     <string name="contentDescription_principal_settings">Configuration icon</string>
+    <string name="contentDescription_principal_ayuda">Help info icon</string>
 
     <!-- Activity de configuración -->
     <string name="Configuración">Configuration</string>
@@ -32,52 +34,52 @@
     <!-- ACTIVITIES DE LA SECCIÓN DE JUEGO -->
 
     <!-- Inicio Juego -->
-    <string name="juegoRapido">Juego rapido</string>
-    <string name="juegoPersonalizado">Juego personalizado</string>
+    <string name="juegoRapido">Quick game</string>
+    <string name="juegoPersonalizado">Custom game</string>
 
     <!-- Juego Rápido (Elegir jugadores) -->
-    <string name="ElegirJugadores">Elección de Jugadores</string>
-    <string name="JugadorAñadir">Jugador a añadir</string>
-    <string name="AñadirParticipante">Añadir participante</string>
+    <string name="ElegirJugadores">Players Selection</string>
+    <string name="JugadorAñadir">Player to add</string>
+    <string name="AñadirParticipante">Add player</string>
     <!-- También usado en:
         Activity Preparación de sorteo
     -->
-    <string name="CargarLista">Cargar la última lista</string>
+    <string name="CargarLista">Load the lastest players list</string>
     <!-- También usado en:
         Activity Preparación de sorteo
     -->
 
     <!-- Juego Personalizado -->
     <!-- Texto de titulo juego, ver activity principal-->
-    <string name="Preguntas">Preguntas</string>
-    <string name="Retos">Retos</string>
-    <string name="YoNunca">Yo nunca</string>
-    <string name="HastaQue">Hasta Ques</string>
-    <string name="Votaciones">Votaciones</string>
-    <string name="Fotos">Fotos</string>
-    <string name="Trabalenguas">Trabalenguas</string>
-    <string name="Equilibrio">Equilibrio</string>
-    <string name="Cazatopos">Cazatopos</string>
-    <string name="Brujula">No pierdas el norte</string>
-    <string name="Cartas">Cartas</string>
-    <string name="Memoria">Memoria</string>
-    <string name="Jugar">Jugar</string>
-    <string name="error_personalizado">La configuración para iniciar el juego no es correcta. Recuerda que debes seleccionar al menos un tipo de juego.</string>
+    <string name="Preguntas">Questions</string>
+    <string name="Retos">Challenges</string>
+    <string name="YoNunca">I\'ve never</string>
+    <string name="HastaQue">Until that</string>
+    <string name="Votaciones">Polling</string>
+    <string name="Fotos">Photos</string>
+    <string name="Trabalenguas">Tongue twister</string>
+    <string name="Equilibrio">Balance</string>
+    <string name="Cazatopos">Hunting Mole</string>
+    <string name="Brujula">Don\'t lose the north</string>
+    <string name="Cartas">Cards</string>
+    <string name="Memoria">Memory</string>
+    <string name="Jugar">Play</string>
+    <string name="error_personalizado">The configuration to start the game isn\'t correct. Remember that you must select at least one type of game.</string>
 
     <!-- Dialogo back -->
-    <string name="titulo_back">Salir del juego</string>
-    <string name="texto_back">¿Estás seguro de que quieres salir del juego?</string>
+    <string name="titulo_back">Exit game</string>
+    <string name="texto_back">Are you sure you want to leave the game?</string>
     <string name="OK">OK</string>
-    <string name="Cancelar">Cancelar</string>
+    <string name="Cancelar">Cancel</string>
 
     <!-- ACTIVITIES DEL JUEGO PRINCIPAL -->
     <!-- Activity Preguntas -->
-    <string name="Contestar">Contestar</string>
-    <string name="Pasar">Pasar</string>
+    <string name="Contestar">Answer</string>
+    <string name="Pasar">Don\'t answer</string>
 
     <!-- Activity Retos -->
-    <string name="noApto">Nah, no me atrevo</string>
-    <string name="apto">¿Que ho hay huevos? Me atrevo</string>
+    <string name="noApto">Nah, I do not dare</string>
+    <string name="apto">That I do not dare? Of course I dare</string>
 
     <!-- Activity Yo nunca -->
 
@@ -85,244 +87,268 @@
     <!-- Texto de siguiente jugador, ver activity de resultados-->
 
     <!-- Activity Votaciones -->
-    <string name="votaciones_title">Votación</string>
+    <string name="votaciones_title">Polling</string>
 
     <!-- Activity Resultados -->
-    <string name="siguiente">Siguiente jugador</string>
-    <string name="Imagen">Imagen</string>
+    <string name="siguiente">Next player</string>
+    <string name="Imagen">Image</string>
     <!-- También usado en:
         Activity Hasta que
     -->
 
     <!-- Activity Resultados -->
-    <string name="notificaciones_seguir">Seguir</string>
+    <string name="notificaciones_seguir">Continue</string>
 
 
     <!-- ACTIVITIES DE LA SECCIÓN DE SORTEO -->
 
     <!-- Activity de preparación de sorteo -->
-    <string name="elegirJugador">Elegir jugadores</string>
-    <string name="jugadorAñadir">Jugador a añadir</string>
-    <string name="numGrupos">Numero de grupos</string>
+    <string name="elegirJugador">Choose players</string>
+    <string name="jugadorAñadir">Player to add</string>
+    <string name="numGrupos">Number of teams</string>
     <!-- Botón de añadir participante, ver activity de preparación de juego -->
     <!-- Botón de cargar lista, ver activity de preparación de juego -->
-    <string name="sortear">Sortear</string>
+    <string name="sortear">Draw teams</string>
 
     <!-- Errores en la preparacion de sorteo -->
-    <string name="error_nombre_sorteo">Debes introducir un nombre para el jugador</string>
-    <string name="error_equipos_menor">No puedes crear un número de equipos 0 o negativo</string>
-    <string name="error_equipos_mayor">No puede haber más equipos que jugadores</string>
+    <string name="error_nombre_sorteo">You must enter a name for the player</string>
+    <string name="error_equipos_menor">You can\'t create a 0 or negative teams</string>
+    <string name="error_equipos_mayor">There can not be more teams than players</string>
 
     <!-- Activity de resultado de sorteo -->
-    <string name="sorteo_resultado">Resultado del sorteo</string>
+    <string name="sorteo_resultado">Result of the draw</string>
 
     <!-- RESPUESTAS PARA LA LÓGICA DE LAS REGLAS -->
-    <string name="resultado_generar">Bebe %d, champ</string>
+    <string name="resultado_generar">Drink %d, champ</string>
 
     <!-- PREGUNTAS -->
     <!-- Contestada -->
-    <string name="pregunta_contestada1">Bien!! Por haber contestado puedes mandar beber %d a quien tu quieras</string>
-    <string name="pregunta_contestada2">Así se juega, manda beber %d a quien tu quieras</string>
-    <string name="pregunta_contestada3">¿¿Este juego es maravilloso, verdad?? Manda beber %d a quien tu quieras y recomienda la app a más gente</string>
+    <string name="pregunta_contestada1">All right!! For having answered you can send whoever you want to drink %d</string>
+    <string name="pregunta_contestada2">So you play, send whoever you want to drink %d</string>
+    <string name="pregunta_contestada3">This game is wonderful, right?? Send whoever you want to drink %d and recommend the app to more people</string>
     <!-- No contestada -->
-    <string name="pregunta_nocontestada1">Si esto solo es un juego… Bebe %d, a ver si para la próxima contestas</string>
-    <string name="pregunta_nocontestada2">No has entendido como hay que jugar. Para ganar hay que ser valiente, bebe %d</string>
-    <string name="pregunta_nocontestada3">Parece que la cosa todavía esta fría. Bebe %d a ver si entras en calor</string>
+    <string name="pregunta_nocontestada1">If this is just a game… Drink %d, you\'ve to answer the next</string>
+    <string name="pregunta_nocontestada2">You haven\'t understood how to play. To win you have to be brave, drink %d</string>
+    <string name="pregunta_nocontestada3">It seems that the thing is still cold. Drink %d to see if you get warm</string>
 
     <!-- RETOS -->
     <!-- Atrevido -->
-    <string name="resultado_atrevido1">En este juego nos gusta la gente atrevida. Puedes mandar beber %d a quien tu quieras</string>
-    <string name="resultado_atrevido2">¿No crees que tus amigos están demasiado bien? Reparte %d tragos</string>
-    <string name="resultado_atrevido3">Muy bien!! Por valiente te toca elegir quien bebe tus %d tragos</string>
+    <string name="resultado_atrevido1">In this game we like daring people. You can send whoever you want to drink %d</string>
+    <string name="resultado_atrevido2">Don\'t you think your friends are too fine? Deal %d drinks</string>
+    <string name="resultado_atrevido3">Very well!! For brave you\'ve to choose who drinks your %d drinks</string>
     <!-- Ho hay huevos -->
-    <string name="resultado_cobarde1">Cloc-cloc!! Gallina. A los cobardes les toca beber. Bebe %d</string>
-    <string name="resultado_cobarde2">No has entendido como hay que jugar. Para ganar hay que ser valiente, bebe %d a ver si la próxima te animas</string>
-    <string name="resultado_cobarde3">Hay algo que no funciona. Los cobardes se quedan en casa. Bebe %d y la próxima vez échale huevos</string>
+    <string name="resultado_cobarde1">Cloc-cloc!! Chicken. The cowards have to drink. Drink %d</string>
+    <string name="resultado_cobarde2">You haven\'t understood how to play. To win you have to be brave, drink %d to see if the next one you cheer up</string>
+    <string name="resultado_cobarde3">There\'s something that doesn\'t work. The cowards stay at home. Drink %d and next time dare</string>
 
     <!-- VOTACIONES -->
-    <string name="resultado_votacion_bebe">Los que hayan votado %s beben %d</string>
-    <string name="resultado_votacion_manda">Los que hayan votado %s pueden mandar beber %d a quien quieran</string>
+    <string name="resultado_votacion_bebe">Those who voted %s drink %d</string>
+    <string name="resultado_votacion_manda">Those who have voted %s can be sent who they want to drink %d</string>
 
     <!-- HASTA QUE -> Notificacion -->
-    <string name="notificacion_hasta_que">El jugador %s ya ha finalizado su hasta que</string>
-    <string name="error_equipos_inexistente">Debes introducir un número de equipos</string>
+    <string name="notificacion_hasta_que">Player %s has already finished his Until That</string>
+    <string name="error_equipos_inexistente">You must enter a number of teams</string>
 
     <!-- CAMARA -->
-    <string name="error_camara">Hay algún problema con la cámara y no se puede sacar la foto</string>
-    <string name="error_conexion">Hay un problema con la conexión a internet. No podrás compartir la imagen</string>
-    <string name="compartir_publi">Te regalo esta foto. Prost&amp;Drink</string>
-    <string name="camara_resultado">Que maravilloso es este juego!! Brinda y bebe %d</string>
+    <string name="error_camara">There\'s a problem with the camera and you can\'t take the picture</string>
+    <string name="error_conexion">There\'s a problem with the internet connection. You won\'t be able to share the image</string>
+    <string name="compartir_publi">I give you this photo. Prost&amp;Drink</string>
+    <string name="camara_resultado">How wonderful is this game! Toast and drinks %d</string>
+    <string name="camara_content">Image taken for the test that you are going to share</string>
 
     <!-- TRABALENGUAS -->
-    <string name="repite">Repite:</string>
-    <string name="intentos">Intentos restantes: </string>
-    <string name="continuar">Continuar</string>
+    <string name="repite">Repeat:</string>
+    <string name="intentos">Remaining attempts:</string>
+    <string name="continuar">Continue</string>
     <!-- Exito -->
-    <string name="trabalenguas_exito1">Todavía estás muy sobrio… Manda beber %d</string>
-    <string name="trabalenguas_exito2">¡Muy bien! Manda beber %d</string>
-    <string name="trabalenguas_exito3">¡Menuda dicción! Manda beber %d</string>
+    <string name="trabalenguas_exito1">You are still very sober… Send to drink %d</string>
+    <string name="trabalenguas_exito2">Very well! Send to drink %d</string>
+    <string name="trabalenguas_exito3">What a diction! Send to drink %d</string>
     <!-- Fracaso -->
-    <string name="trabalenguas_fracaso1">El alcohol va surgiendo efecto… Bebe %d</string>
-    <string name="trabalenguas_fracaso2">¿Tan mal vas ya? Bebe %d</string>
-    <string name="trabalenguas_fracaso3">Más suerte la próxima vez. Bebe %d</string>
+    <string name="trabalenguas_fracaso1">Alcohol is emerging effect… Drink %d</string>
+    <string name="trabalenguas_fracaso2">Are you going so bad yet? Drink %d</string>
+    <string name="trabalenguas_fracaso3">More luck next time. Drink %d</string>
+    <string name="oreja_content">Icon of an ear to hear the tongue twister</string>
 
     <!-- EQUILIBRIO -->
-    <string name="equilibrio_titulo">Frío/Caliente</string>
-    <string name="helado">Helado</string>
-    <string name="frio">Frío</string>
-    <string name="templado">Templado</string>
-    <string name="caliente">Caliente</string>
-    <string name="ardiendo">Ardiendo</string>
-    <string name="jugar">Jugar</string>
-    <string name="ready">¡Ya!</string>
-    <string name="equilibrio_exito">¡Muy bien! Manda beber %d</string>
-    <string name="equilibrio_fracaso">Va a ser que no… Bebe %d</string>
-    <string name="comenzar">¡A jugar!</string>
-    <string name="equilibrio_instrucciones">En este juego deberás conseguir colocar la aguja del medidor en la posición correcta. Para ello deberás girar el móvil para hacer que se mueva. Presta atención a las pistas.</string>
+    <string name="equilibrio_titulo">Cold/Hot</string>
+    <string name="helado">Frozen</string>
+    <string name="frio">Cold</string>
+    <string name="templado">Mild</string>
+    <string name="caliente">Hot</string>
+    <string name="ardiendo">Afire</string>
+    <string name="jugar">Play</string>
+    <string name="ready">¡Ready!</string>
+    <string name="equilibrio_exito">Very well! Send drink to %d</string>
+    <string name="equilibrio_fracaso">It\'s going to be not… Drink %d</string>
+    <string name="comenzar">¡Start playing!</string>
+    <string name="equilibrio_instrucciones">In this game you\'ll have to get the needle of the meter in the correct position. To do this you must turn the phone to make it move. Pay attention to the clues.</string>
+    <!-- También usado en:
+        Instrucciones
+    -->
 
     <!-- TOPOS -->
-    <string name="topos_titulo">A tope con los topos</string>
-    <string name="topos_resultado0">Horrible… Bebe %d anda.</string>
-    <string name="topos_resultado1">Lo importante es participar. Bebe %d.</string>
-    <string name="topos_resultado2">No está nada mal. Manda beber %d a quién tú quieras.</string>
-    <string name="topos_resultado3">¡El terror de los topos! Manda beber %d, leyenda.</string>
-    <string name="topos_fin">¡Fin del juego!</string>
-    <string name="topos_instrucciones1">En este juego tienes 30 segundos para aplastar el máximo número de topos posibles.</string>
-    <string name="topos_instrucciones2">¡Pero cuidado! Darle a una madriguera sin topo se penalizará.</string>
-    <string name="topos_instrucciones3">Y ante todo… \n¡No mates al gnomo de la suerte! \nO serás gravemente penalizado.</string>
+    <string name="topos_titulo">Let\'s play with moles</string>
+    <string name="topos_resultado0">Horrible… Drink %d yeah.</string>
+    <string name="topos_resultado1">The most important thing is to participate. Drink %d.</string>
+    <string name="topos_resultado2">It isn\'t bad at all. Send whoever you want to %d drink.</string>
+    <string name="topos_resultado3">The terror of the moles! Send to drink %d, legend.</string>
+    <string name="topos_fin">End of the game!</string>
+    <string name="topos_instrucciones1">In this game you have 30 seconds to crush the maximum number of moles possible.</string>
+    <string name="topos_instrucciones2">Watch out! Giving a burrow without a mole will be penalized.</string>
+    <string name="topos_instrucciones3">And first of all… \nDon\'t kill the lucky gnome! \nOr you will be severely penalized.</string>
+    <!-- Content description -->
+    <string name="topo_description">Example image a mole</string>
+    <string name="agujero_description">Example image of a hole</string>
+    <string name="gnomo_description">Example image of a gnome</string>
+    <string name="casilla_description">Game box where a hole, a mole or a gnome will appear</string>
 
     <!-- BRUJULA -->
-    <string name="instrucciones_brujula">Vamos con un juego un poco distinto. ¿Has bebido mucho? Intenta en contrar el norte.
-        Vas a tener 3 intentos para hacer que el móvil apunte al norte. En cada intento habra una cuenta atras de 3 segundos y luego verás una brújula.
-        ¿Serás capaz de que apunte al norte?</string>
-    <string name="empezar">Empezar</string>
+    <string name="instrucciones_brujula">
+        We go with a different game. Have you drunk a lot? Try to find the north.
+        You\'ll have 3 attempts to make the mobile point north. In each attempt there will be a countdown of 3 seconds and then you\'ll see a compass.
+        Will you be able to orient yourself?
+    </string>
+    <string name="empezar">Start</string>
     <!-- Norte -->
-    <string name="brujula_acierto1">Que poco has bebido. Si todavía puedes encontrar el norte… Bebe %d</string>
-    <string name="brujula_acierto2">Bien. Has encontrado el norte. Puedes mandar beber %d a quien quieras</string>
+    <string name="brujula_acierto1">How little have you drunk. You can still find the north… Drink %d</string>
+    <string name="brujula_acierto2">All right. You\'ve found the north. You can send whoever you want to drink %d</string>
     <!-- Perdido -->
-    <string name="brujula_fallo1">Ten cuidao, que te pierdes. Esta vez no bebas. Regalale tus %d a quien quieras</string>
-    <string name="brujula_fallo2">Uy uy. No te sabes orientar? Bebe %d</string>
+    <string name="brujula_fallo1">Be careful, you get lost. This time don\'t drink. Give your %d to whoever you want</string>
+    <string name="brujula_fallo2">Oops Don\'t you know how to guide? Drink %d</string>
+    <!-- Content Descriptions -->
+    <string name="brujula_description">Body of a compass</string>
+    <string name="aguja_description">Needle of a compass</string>
 
     <!-- CARTAS -->
-    <string name="par">Par</string>
-    <string name="impar">Impar</string>
-    <string name="rojo">Rojo</string>
-    <string name="negro">Negro</string>
-    <string name="fin">Fin</string>
-    <string name="resultado_cartas_bien">Bien hecho. Manda beber %d</string>
-    <string name="resultado_cartas_mal">No se te da muy bien esto. Bebe %d y mas suerte la próxima vez. Ah, y no vayas al casino.</string>
+    <string name="par">Even</string>
+    <string name="impar">Odd</string>
+    <string name="rojo">Red</string>
+    <string name="negro">Black</string>
+    <string name="fin">The end</string>
+    <string name="resultado_cartas_bien">Well done. Send to drink %d</string>
+    <string name="resultado_cartas_mal">You aren\'t very good at this. Drink %d and more luck next time. Oh, and don\'t go to the casino.</string>
+    <string name="cartas_content">Image of the card to play</string>
 
     <!-- MEMORIA -->
-    <string name="memoria_success">Vaya memorión. Manda beber %d a quien tú quieras</string>
-    <string name="memoria_failure">Ay mecachis. Otra vez será. Bebe %d tragos</string>
-    <string name="memoria_titulo">A ver esa memoria</string>
-    <string name="memoria_jugar">Hemos venido a jugar</string>
+    <string name="memoria_success">Good memory. Send whomever you want to drink %d</string>
+    <string name="memoria_failure">Oh fuck. Maybe next time. Drink %d drinks</string>
+    <string name="memoria_titulo">Let\'s see that memory</string>
+    <string name="memoria_jugar">We\'ve come to play</string>
     <string name="memoria_instrucciones1">
-        En este juego te enseñaremos una serie de cartas. \nDebes recordar su posición. \nDespués de un tiempo, las ocultaremos
-        y deberás intentar encontrar la carta que te pedimos.
+        In this game we\'ll show you a series of cards. \nYou must remember their position. \nAfter a while, we\'ll hide them
+        and you should try to find the letter we asked for.
     </string>
-    <string name="memoria_instrucciones2">Tienes 15 segundos para memorizar donde están las cartas. \nÚsalos bien.
-    \nCuando estés listo dale al botón.</string>
+    <string name="memoria_instrucciones2">
+        You have 15 seconds to memorize where the cards are. \nLook good.
+        \nWhen you\'re ready, hit the button.
+    </string>
+    <string name="memoria_carta_content">Image of the letter that has to be found</string>
+    <string name="memoria_content">Image of a letter that can be searched</string>
+
+    <!-- YO NUNCA -->
+
+    <string name="grupo">Group</string>
+    <string name="yonuncahecho">Those who have done so drink a drink</string>
 
 
     <!-- INSTRUCCIONES -->
-    <string name="instrucciones_title">Instrucciones</string>
+    <string name="instrucciones_title">Instructions</string>
     <string name="instrucciones_text">
-        Gracias por usar nuestra aplicación. Te vamos a explicar brevemente todo lo que se puede hacer en ella. Espero que lo disfrutes.
-        Para empezar, tienes que saber que la aplicación tiene dos partes. Una para hacer sorteos de equipos y otra para jugar a beber.
+        Thanks for using our application. We\'ll briefly explain everything that can be done in it. I hope you enjoy it.
+        To start, you have to know that the application has two parts. One to make draws of teams and another to play drinking.
     </string>
+
     <!-- Sorteo -->
-    <string name="sorteo_instrucciones_title">Instrucciones de los sorteos</string>
+    <string name="sorteo_instrucciones_title">Draw instructions</string>
     <string name="sorteo_instrucciones">
-        Desde la pantalla de inicio de la aplicación puedes acceder a la sección de sorteos.
-        En esa parte puedes indicar los jugadores que quieras en una lista, el número de equipos que quieres hacer y, al pulsar en sortear, la aplicación generará los equipos que deseas.
-        Esta opción es útil para cuando se quiere jugar a otros juegos como parchís o billar.
+        From the start screen of the application you can access the draw section.
+        In that part you can indicate the players you want in a list, the number of teams you want to make and, by clicking on the button, the application will generate the teams you want.
+        This option is useful for when you want to play other games such as parchís or billiards.
     </string>
 
     <!-- Juegos -->
-    <string name="juegos_instrucciones_title">Instrucciones de los juegos</string>
+    <string name="juegos_instrucciones_title">Game instructions</string>
     <string name="juegos_instrucciones">
-        El funcionamiento de los juegos es el siguiente:
-        En la parte superior de la pantalla aparecerá qué jugador debe participar en cada momento. Antes de empezar, se pedirá el nombre de los jugadores para identificaros, se recomienda que no pongais dos jugadores con el mismo nombre.
-        El juego no tiene fin, e irán apareciendo pruebas que tendréis que hacer. Cada prueba os puede mandar beber o repartir bebida a los demás jugadores. No olvides rellenar el vaso.
+        The functioning of the games is as follows:
+        At the top of the screen you\'ll see which player should participate at any time. Before starting, the name of the players will be asked to identify you, it\'s recommended that you don\'t put two players with the same name.
+        The game has no end, and they\'ll appear evidence that you\'ll have to do. Each test can send you drink or give drink to the other players. Don\'t forget to fill the glass.
     </string>
     <string name="brujula_instrucciones">
-        En este juego tienes que intentar apuntar tu móvil hacia el norte.
-        Tendrás 3 intentos, en los que se te mostrará una cuenta atrás para buscarlo.
-        Después de que se te acabe el tiempo podrás ver la brújula para saber lo que te has equivocado.
+        In this game you\'ve to try to point your mobile to the north.
+        You\'ll have 3 attempts, in which you\'ll be shown a countdown to look for it.
+        After you run out of time you can see the compass to know what you\'re wrong.
     </string>
     <string name="camara_instrucciones">
-        Por los amigos que no están con vosotros.
-        En este juego se te retará a sacar una foto a algo de la fiesta y compartírsela.
-        Que se mueran de envidia.
+        For the friends who aren\'t with you.
+        In this game you\'ll be challenged to take a picture of something from the party and share it.
+        Let them die of envy.
     </string>
     <string name="cazatopos_instrucciones">
-        Seguro que todos habéis jugado al cazatopos. Intenta matar al mayor número de topos que puedas en 30 segundos, pero ten cuidado, que si te equivocas se te penalizará.
+        Surely you have all played the cazatopos. Try to kill as many moles as you can in 30 seconds, but be careful, if you make a mistake you\'ll be penalized.
     </string>
     <!-- Texto de las instrucciones del equilibrio, ver activity equilibrio -->
     <string name="hastaque_instrucciones">
-        Déjate llevar. Hasta que pasen un numero de turnos tienes que hacer o te tienen que hacer algo.
-        Solo tienes que leer el mensaje y&#8230; ¡Qué decida el juego!
+        Let yourself go. Until you pass a number of shifts you\'ve to do something.
+        You just have to read the message and… What the game decides!
     </string>
     <string name="pregunta_instrucciones">
-        La aplicación te hará preguntas (puede que comprometidas).
-        Si no contestas tendrás que beber. A ver si el alcohol te suelta la lengua.
+        The application will ask you questions (maybe compromised).
+        If you don\'t answer you\'ll have to drink. Let\'s see if alcohol releases your tongue.
     </string>
     <string name="reto_instrucciones">
-        ¿A que no hay huevos?
-        Si te atreves y haces los retos que te proponemos, tendrás premio, si no castigo.
+        What do you not dare?
+        If you dare and do the challenges that we propose, you\'ll have a reward, if not punishment.
     </string>
     <string name="trabalenguas_instrucciones">
-        No hay quien te endienda borracho. Intenta decir un trabalenguas que te proponemos al microfono del teléfono.
-        Será capaz de entenderte. Recuerda… Al micrófono, ¡no a la columna del bar!
+        There\'s no one who understands you drunk. Try saying a tongue twister that we propose to the telephone microphone.
+        He\'ll be able to understand you. Remember… At the microphone, not at the bar column!
     </string>
     <string name="votacion_instrucciones">
-        Fácil, sencillo y para todo el grupo. Encuesta a todos para ver que opción prefieren de las que te damos.
-        Marca la opción más votada y la aplicación os dirá que hacer.
+        Easy, simple and for the whole group. Survey everyone to see which option they prefer from the ones we give you.
+        Check the most voted option and the application\'ll tell you what to do.
     </string>
     <string name="cartas_instrucciones">
-        En este juego solo tienes que adivinar la carta que se encuentra boca abajo. Apareceran tres cartas, una por una. Y se te preguntará si es rojo o negro, o par o par.
-        Intenta acertarlas todas.
+        In this game you only have to guess the card that is face down. Three cards will appear, one by one.
+        And you will be asked if it is red or black, or even or odd. Try to hit them all.
     </string>
     <string name="memoria_instrucciones">
-        En este juego te presentamos una serie de 12 cartas.
-        Tendrás 15 segundos para memorizar su posición, tras los cuales les daremos la vuelta a las cartas.
-        Te mostraremos una carta y te pediremos que señales donde está.
+        In this game we show you 12 cards.
+        You will have 15 seconds to memorize their position, after which, we will turn over the cards.
+        We will show you a letter and we will ask you where it is.
     </string>
     <string name="yonunca_instrucciones">
-        Esta actividad es grupal. Se enuncia una oración de tipo "Yo nunca he hecho X".
-        Aquellos miembros del grupo que sí lo hayan hecho alguna vez deberán beber un trago.
+        This activity is group. A sentence of type "I\'ve never done X" is enunciated.
+        Those members of the group who have ever done so should have a drink.
     </string>
 
     <!-- Activity -->
-    <string name="antes">Antes de empezar…</string>
-    <string name="instrucciones_activity_bebida">Aseguraos de tener siempre bebida en el vaso</string>
-    <string name="instrucciones_activity_desarrollo">Van a aparecer juegos que os dirán que hacer, teneis que contestar a todo y atreveros a realizar los retos</string>
-    <string name="instrucciones_activity_instrucciones">Si todavía tienes dudas te enseñamos las instrucciones</string>
+    <string name="antes">Before starting…</string>
+    <string name="instrucciones_activity_bebida">Make sure you always have a drink in your glass</string>
+    <string name="instrucciones_activity_desarrollo">There\'ll appear games that will tell you what to do, you have to answer everything and dare to perform the challenges</string>
+    <string name="instrucciones_activity_instrucciones">If you still have doubts we\'ll show you the instructions</string>
 
     <!-- Otros textos -->
-    <string name="entendido">Creo que ya lo he entendido</string>
+    <string name="entendido">I think I already understood</string>
     <string name="activity_elegir">
-        Vete escribiendo abajo el nombre de los jugadores que participarán, si quieres quitar alguno puedes hacerlo manteniendo pulsado su nombre.
-        Cuando estén todos en la lista para jugar, dale al play y… ¡¡¡A JUGAR!!!
+        Go write down the name of the players that will participate, if you want to remove someone you can do it by keeping their name pressed.
+        When everyone is on the list to play, hit the play and… PLAY!!
     </string>
     <string name="activity_sorteo">
-        Aquí puedes hacer equipos. Añade a la lista los nombres de las personas que van a jugar y abajo pon el número de equipos.
-        Si quieres quitar un jugador manten pulsado su nombre.
+        Here you can make teams. Add the names of the people who will play to the list and put the number of teams below.
+        If you want to remove a player, keep their name pressed.
     </string>
-    <string name="grupo">Grupal</string>
-    <string name="yonuncahecho">Los que lo hayan hecho beben un trago</string>
 
 
     <!-- ACERCA DE -->
     <string name="AcercaDe">Acerca de</string>
     <string name="acercade_texto">
-        ¿Necesitáis animaros un poco para la noche?\nA nosotros también nos pasa y después de mucho tiempo usando
-        aplicaciones ajenas nos hemos preguntado por qué.\nSomos 3 estudiantes de Ingeniería Informática que nos
-        hemos planteado esta aplicación para la asignatura de Software Para Dispositivos Móviles.\nEsperamos que lo disfrutéis.
+        Do you need to cheer up a bit for the night?\nAs we also do and after a long time using
+        other people\'s applications we have ourself asked why.\nWe are 3 students of Computer Engineering that
+        we have proposed this application for the subject of Mobile Devices Software. \nWe hope you enjoy it.
     </string>
     <string name="autores">
         Samuel Cifuentes García\nEnol García González\nJorge Iturrioz del Vigo\n
     </string>
-    <string name="cerrar_acercade">Me encanta. A jugar!!</string>
+    <string name="cerrar_acercade">I love. Let\'s to play!!</string>
 </resources>
