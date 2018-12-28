@@ -126,6 +126,7 @@ public class TrabalenguasActivity extends LoopSinMusica implements InicioJuego, 
      */
     private void listenToSweetVoice() {
         if (!PermissionChecker.getInstance().isRecordPermissionGranted(this)) {
+            Log.i("test", "llegué");
             new ContinuarRonda().cargarSiguienteJuego(null);
             finish();
         }
@@ -134,7 +135,6 @@ public class TrabalenguasActivity extends LoopSinMusica implements InicioJuego, 
         intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, "voice.recognition.test");
 
         intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 5);
-        Log.i("input", "Llegué aquí");
         sr.startListening(intent);
     }
 
