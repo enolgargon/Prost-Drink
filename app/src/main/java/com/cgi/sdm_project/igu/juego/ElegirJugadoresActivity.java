@@ -109,6 +109,13 @@ public class ElegirJugadoresActivity extends AppCompatActivityExtended {
             Toast.makeText(getApplicationContext(), "Debe introducir mínimo un jugador para jugar", Toast.LENGTH_SHORT).show();
         else {
             Juego.getInstance().setJugadores(jugadores);
+
+            //Se guardan los jugadores en los preferences
+            String[] nombres = new String[jugadores.size()];
+            for (int i = 0; i < jugadores.size(); i++)
+                nombres[i] = jugadores.get(i).toString();
+            Conf.getInstancia().saveArray(nombres, Conf.JUGADORES);
+
             Intent intent = new Intent(this, InstruccionesActivity.class);
             startActivity(intent);
         }
