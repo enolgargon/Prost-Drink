@@ -9,7 +9,6 @@ import android.speech.SpeechRecognizer;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -126,7 +125,6 @@ public class TrabalenguasActivity extends LoopSinMusica implements InicioJuego, 
      */
     private void listenToSweetVoice() {
         if (!PermissionChecker.getInstance().isRecordPermissionGranted(this)) {
-            Log.i("test", "llegué");
             new ContinuarRonda().cargarSiguienteJuego(null);
             finish();
         }
@@ -170,7 +168,6 @@ public class TrabalenguasActivity extends LoopSinMusica implements InicioJuego, 
             if (c.equals(stemmer.stem(m.replaceAll("[¡!¿?,.]", "")),
                     stemmer.stem(trabalenguas.getTexto().replaceAll("[¡!¿?,.]", "")))) {
                 inputText.setText(m);
-                Log.i("tts", stemmer.stem(m));
                 inputText.setTextColor(Color.GREEN);
                 continuar.setVisibility(View.VISIBLE);
                 speakButton.setClickable(false);

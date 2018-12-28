@@ -3,7 +3,6 @@ package com.cgi.sdm_project.util;
 import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
-import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -34,10 +33,7 @@ public class PermissionChecker {
     }
 
     public boolean isRecordPermissionGranted(Activity activity) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
             return ContextCompat.checkSelfPermission(activity, RECORD_LOC) == PackageManager.PERMISSION_GRANTED;
-        else
-            return true;
     }
 
     public void pedirPermisos(String permiso, int codigo, Activity activity) {
