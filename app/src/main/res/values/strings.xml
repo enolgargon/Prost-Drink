@@ -283,7 +283,7 @@
         Si te atreves y haces los retos que te proponemos, tendrás premio, si no castigo.
     </string>
     <string name="trabalenguas_instrucciones">
-        No hay quien te endienda borracho. Intenta decir un trabalenguas que te proponemos al microfono del teléfono.
+        No hay quien te entienda borracho. Intenta decir un trabalenguas que te proponemos al microfono del teléfono.
         Será capaz de entenderte. Recuerda… Al micrófono, ¡no a la columna del bar!
     </string>
     <string name="votacion_instrucciones">
@@ -291,7 +291,7 @@
         Marca la opción más votada y la aplicación os dirá que hacer.
     </string>
     <string name="cartas_instrucciones">
-        En este juego solo tienes que adivinar la carta que se encuentra boca abajo. Apareceran tres cartas, una por una. Y se te preguntará si es rojo o negro, o par o par.
+        En este juego solo tienes que adivinar la carta que se encuentra boca abajo. Apareceran tres cartas, una por una. Y se te preguntará si es rojo o negro, o par o impar.
         Intenta acertarlas todas.
     </string>
     <string name="memoria_instrucciones">
