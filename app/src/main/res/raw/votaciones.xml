@@ -7,7 +7,9 @@
 		<value text="Morir congelado" />
 		<value text="Morir quemado" />
 	</item>
-	<item text="Supositorio cada día o inyección cada día" tragos = "5">
+	<item
+		text="Supositorio o inyección cada día"
+		tragos="5">
 		<value text="Supositorio cada día" />
 		<value text="Inyección cada día" />
 	</item>

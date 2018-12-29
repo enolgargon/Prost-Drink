@@ -1,62 +1,62 @@
 <actividad name="Votación">
     <item
-        text="Ser invisible o leer la mente"
+        text="Being invisible or read minds"
         tragos="5">
-        <value text="Ser invisible" />
-        <value text="Leer la mente" />
+        <value text="Being invisible" />
+        <value text="Read minds" />
     </item>
     <item
-        text="Morir congelado o morir quemado"
+        text="Dying from hypothermia or being burned alive"
         tragos="5">
-        <value text="Morir congelado" />
-        <value text="Morir quemado" />
+        <value text="Dying from hypothermia" />
+        <value text="Being burned alive" />
     </item>
     <item
-        text="Supositorio cada día o inyección cada día"
+        text="Suppository or injection every day"
         tragos="5">
-        <value text="Supositorio cada día" />
-        <value text="Inyección cada día" />
+        <value text="Suppository every day" />
+        <value text="Injection every day" />
     </item>
     <item
-        text="Saber que te han puesto los cuernos o no enterarte nunca"
+        text="Learn that you've been cheated on or never discover it"
         tragos="5">
-        <value text="Saber que te hen puesto los cuernos" />
-        <value text="No enterarte nunca" />
+        <value text="Learn that I've been cheated on" />
+        <value text="Never discover it" />
     </item>
     <item
-        text="Vivir sin Internet toda tu vida o no encontrar al amor de tu vida"
+        text="Live without Internet your whole life or never find the love of your life"
         tragos="5">
-        <value text="Vivir sin Internet" />
-        <value text="No encontrar al amor de tu vida" />
+        <value text="Live without Internet" />
+        <value text="Never find the love of your life" />
     </item>
     <item
-        text="Encontrar el amor verdadero y ser pobre o ser millonario sin encontrar al amor de tu vida"
+        text="Find true love but being poor or be rich and never find the love of your life"
         tragos="5">
-        <value text="Encontrar el amor verdadero y ser pobre" />
-        <value text="Ser millonario sin encontrar al amor de tu vida" />
+        <value text="True love and poor" />
+        <value text="Rich and never find the love of your life" />
     </item>
     <item
-        text="Todo el mundo sabe lo que estás pensando en todo momento o tienes que repetir un mismo día de tu vida hasta que te mueras"
+        text="Everybody knows what you're thinking about at all times or relive the same day for the rest of your life"
         tragos="5">
-        <value text="Todo el mundo sabe lo que estás pensando en todo momento" />
-        <value text="Tienes que repetir un mismo día de tu vida hasta que te mueras" />
+        <value text="Everbody knows what you're thinking at all times" />
+        <value text="Relive the same day for the rest of your life" />
     </item>
     <item
-        text="Tener algo con tu crush pero no tener nada con nadie más o no tener nada con tu crush pero sí con otras personas"
+        text="Have something with your crush but no one else for the rest of your life or nothing with your crush but do with other people"
         tragos="5">
-        <value text="Tener algo con tu crush pero no tener nada con nadie más" />
-        <value text="No tener nada con tu crush pero sí con otras personas" />
+        <value text="Your crush and no one else" />
+        <value text="Nothing with your crush but something with other people" />
     </item>
     <item
-        text="Rubios/as o morenos/as"
+        text="Blondes or brunet/ttes"
         tragos="5">
-        <value text="Rubios/as" />
-        <value text="Morenos/as" />
+        <value text="Blondes" />
+        <value text="Brunet/ttes" />
     </item>
     <item
-        text="Cacharro o cerveza"
+        text="Gin or beer"
         tragos="5">
-        <value text="Cacharro" />
-        <value text="Cerveza" />
+        <value text="Gin" />
+        <value text="Beer" />
     </item>
 </actividad>
