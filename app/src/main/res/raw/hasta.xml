@@ -1,14 +1,26 @@
 <actividad name="Hasta que te vuelva a tocar...">
-	<item
-		text="Hasta que te vuelva a tocar tienes que hablar y moverte como un robot"
-		turnos="1" />
-	<item
-		text="Hasta que te vuelva a tocar te tienen que tratar de usted"
-		turnos="1" />
-	<item
-		text="Hasta que te vuelva a tocar tienes que estar sin camiseta"
-		turnos="1" />
-	<item
-		text="Hasta que te vuelva a tocar tienes que estar sentado/a encima de la persona que más te guste de la mesa"
-		turnos="1" />
+    <item
+        text="Until your next turn you must talk and move like a robot"
+        turnos="1" />
+    <item
+        text="Until your next turn everybody must call you sir"
+        turnos="1" />
+    <item
+        text="Until your next turn you must be shirtless"
+        turnos="1" />
+    <item
+        text="Until your next turn you must sit on the lap of the player you like the most"
+        turnos="1" />
+    <item
+        text="Until your next turn you must hold hands with the player the rest chooses"
+        turnos="1" />
+    <item
+        text="You mustn't speak until your next turn"
+        turnos="1" />
+    <item
+        text="You must speak in a different language until your next turn"
+        turnos="1" />
+    <item
+        text="Everybody must answer to you with 'Yes, sir'. If they forget they must drink a shot"
+        turnos="1" />
 </actividad>
