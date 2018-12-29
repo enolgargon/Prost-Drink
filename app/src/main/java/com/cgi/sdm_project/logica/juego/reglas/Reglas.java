@@ -37,26 +37,41 @@ import com.cgi.sdm_project.util.singletons.AppSingleton;
  * @version 26-12-2018
  */
 public enum Reglas {
-    BRUJULA(R.string.Brujula, 3, BrujulaLoader.class, BrujulaActivity.class),
-    CAMARA(R.string.Fotos, 5, CamaraLoader.class, CamaraActivity.class),
-    CARTAS(R.string.Cartas, 5, CartasLoader.class, CartasActivity.class),
-    CAZATOPOS(R.string.Cazatopos, 12, CazatoposLoader.class, CazatoposInicioActivity.class),
-    EQUILIBRIO(R.string.Equilibrio, 10, EquilibrioLoader.class, EquilibrioInicioActivity.class),
+    /*
+        ##### Nota del HERR KOORDINATOR #####
+
+        Relación de porcentajes:
+
+        TEXTO (80%)             JUEGO (20%)
+            - Pregunta 25%           - Brujula 1.5%
+            - Reto 25%               - Camara 1.5%
+            - Votación 10%           - Cartas 3.5%
+            - Yo nunca 15%           - Cazatopos 3.5%
+            - Hasta que 5%           - Equilibrio 4%
+                                     - Trabalenguas 3%
+                                     - Memoria 3%
+     */
+
+    BRUJULA(R.string.Brujula, 1.5f, BrujulaLoader.class, BrujulaActivity.class),
+    CAMARA(R.string.Fotos, 1.5f, CamaraLoader.class, CamaraActivity.class),
+    CARTAS(R.string.Cartas, 3.5f, CartasLoader.class, CartasActivity.class),
+    CAZATOPOS(R.string.Cazatopos, 3.5f, CazatoposLoader.class, CazatoposInicioActivity.class),
+    EQUILIBRIO(R.string.Equilibrio, 4, EquilibrioLoader.class, EquilibrioInicioActivity.class),
     HASTAQUE(R.string.HastaQue, 5, HastaQuesLoader.class, HastaQueActivity.class),
-    PREGUNTA(R.string.Preguntas, 15, PreguntasLoader.class, PreguntaActivity.class),
+    PREGUNTA(R.string.Preguntas, 20, PreguntasLoader.class, PreguntaActivity.class),
     RETO(R.string.Retos, 20, RetosLoader.class, RetoActivity.class),
-    TRABALENGUAS(R.string.Trabalenguas, 4, TrabalenguasLoader.class, TrabalenguasActivity.class),
+    TRABALENGUAS(R.string.Trabalenguas, 3, TrabalenguasLoader.class, TrabalenguasActivity.class),
     VOTACION(R.string.Votaciones, 10, VotacionesLoader.class, VotacionActivity.class),
-    MEMORIA(R.string.Memoria, 6, MemoriaLoader.class, MemoriaInicioActivity.class),
-    YONUNCA(R.string.YoNunca, 5, YoNuncaLoader.class, YoNuncaActivity.class);
+    MEMORIA(R.string.Memoria, 3, MemoriaLoader.class, MemoriaInicioActivity.class),
+    YONUNCA(R.string.YoNunca, 25, YoNuncaLoader.class, YoNuncaActivity.class);
 
     private int nombre;
-    private int probabilidad;
+    private float probabilidad;
 
     private Class<? extends Loader> loader;
     private Class<? extends InicioJuego> activity;
 
-    Reglas(int nombre, int probabilidad, Class<? extends Loader> loader, Class<? extends InicioJuego> activity) {
+    Reglas(int nombre, float probabilidad, Class<? extends Loader> loader, Class<? extends InicioJuego> activity) {
         this.nombre = nombre;
         this.probabilidad = probabilidad;
 
@@ -68,7 +83,7 @@ public enum Reglas {
         return AppSingleton.getInstance().getContext().getString(nombre);
     }
 
-    public int probabilidad() {
+    public float probabilidad() {
         return probabilidad;
     }
 

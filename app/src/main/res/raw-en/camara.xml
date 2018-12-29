@@ -1,8 +1,0 @@
-<actividad name="Camara">
-    <item
-        text="Take a pic of your glass after finishing it and share it"
-        tragos="2" />
-    <item
-        text="Take a pic of a friend drinking and share it"
-        tragos="4" />
-</actividad>

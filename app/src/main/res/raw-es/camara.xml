@@ -1,0 +1,8 @@
+<actividad name="Camara">
+    <item
+        text="Saca una foto al vaso después de acabartelo y compartela"
+        tragos="2" />
+    <item
+        text="Saca una foto a un amigo bebiendo y compartela"
+        tragos="4" />
+</actividad>

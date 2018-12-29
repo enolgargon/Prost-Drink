@@ -1,0 +1,26 @@
+<actividad name="Hasta que te vuelva a tocar...">
+    <item
+        text="Hasta que te vuelva a tocar tienes que hablar y moverte como un robot"
+        turnos="1" />
+    <item
+        text="Hasta que te vuelva a tocar te tienen que tratar de usted"
+        turnos="1" />
+    <item
+        text="Hasta que te vuelva a tocar tienes que estar sin camiseta"
+        turnos="1" />
+    <item
+        text="Hasta que te vuelva a tocar tienes que estar sentado/a encima de la persona que más te guste de la mesa"
+        turnos="1" />
+    <item
+        text="Debes darle la mano a un jugador que los demás elijan hasta que te vuelva a tocar"
+        turnos="1" />
+    <item
+        text="Hasta que te vuelva a tocar no puedes hablar"
+        turnos="1" />
+    <item
+        text="Debes hablar en otro idioma hasta que te vuelva a tocar"
+        turnos="1" />
+    <item
+        text="Hasta que te vuelva a tocar, los demás deberán terminar sus frases en 'Sí señor' cuando se dirijan a tí. Si se olvidan, beben un trato"
+        turnos="1" />
+</actividad>

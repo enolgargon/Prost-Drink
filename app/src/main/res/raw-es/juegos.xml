@@ -1,20 +1,20 @@
 <actividad name="Juego">
     <item
-        text="Hunting moles"
+        text="Cazatopos"
         tragos="5" />
     <item
-        text="Guess the character"
+        text="Adivinar personaje"
         tragos="5" />
     <item
-        text="Mimic actions"
+        text="Mimica de acciones"
         tragos="5" />
     <item
-        text="Throw a coin"
+        text="Lanzar moneda"
         tragos="5" />
     <item
-        text="Balance"
+        text="Equilibrio entre todos"
         tragos="5" />
     <item
-        text="Point with the compass"
+        text="Apuntar con la brujula"
         tragos="5" />
 </actividad>
