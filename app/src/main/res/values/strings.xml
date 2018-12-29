@@ -237,7 +237,7 @@
         En este juego te enseñaremos una serie de cartas. \nDebes recordar su posición. \nDespués de un tiempo, las ocultaremos
         y deberás intentar encontrar la carta que te pedimos.
     </string>
-    <string name="memoria_instrucciones2">Tienes 15 segundos para memorizar donde están las cartas. \nÚsalos bien.
+    <string name="memoria_instrucciones2">Tienes 10 segundos para memorizar donde están las cartas. \nÚsalos bien.
     \nCuando estés listo dale al botón.</string>
     <string name="memoria_carta_content">Imagen de la carta que se tiene que encontrar</string>
     <string name="memoria_content">Imagen de una carta sobre la que se puede buscar</string>
@@ -309,7 +309,7 @@
     </string>
     <string name="memoria_instrucciones">
         En este juego te presentamos una serie de 12 cartas.
-        Tendrás 15 segundos para memorizar su posición, tras los cuales les daremos la vuelta a las cartas.
+        Tendrás 10 segundos para memorizar su posición, tras los cuales les daremos la vuelta a las cartas.
         Te mostraremos una carta y te pediremos que señales donde está.
     </string>
     <string name="yonunca_instrucciones">
@@ -326,12 +326,10 @@
     <!-- Otros textos -->
     <string name="entendido">Creo que ya lo he entendido</string>
     <string name="activity_elegir">
-        Vete escribiendo abajo el nombre de los jugadores que participarán, si quieres quitar alguno puedes hacerlo manteniendo pulsado su nombre.
-        Cuando estén todos en la lista para jugar, dale al play y… ¡¡¡A JUGAR!!!
+        Escribe el nombre de los jugadores. \nSi te equivocas puedes mantener pulsado un nombre de la lista pare eliminarlo.
     </string>
     <string name="activity_sorteo">
-        Aquí puedes hacer equipos. Añade a la lista los nombres de las personas que van a jugar y abajo pon el número de equipos.
-        Si quieres quitar un jugador manten pulsado su nombre.
+        Introduce nombres, establece el número de equipos aleatorios que quieres crear y estás listo para sortear.\nSi te equivocas puedes mantener pulsado un nombre para eliminarlo.
     </string>
 
 
@@ -340,7 +338,7 @@
     <string name="acercade_texto">
         ¿Necesitáis animaros un poco para la noche?\nA nosotros también nos pasa y después de mucho tiempo usando
         aplicaciones ajenas nos hemos preguntado por qué.\nSomos 3 estudiantes de Ingeniería Informática que nos
-        hemos planteado esta aplicación para la asignatura de Software Para Dispositivos Móviles.\nEsperamos que lo disfrutéis.
+        hemos planteado esta aplicación para la asignatura de Software para Dispositivos Móviles.\nEsperamos que lo disfrutéis.
     </string>
     <string name="autores">
         Samuel Cifuentes García\nEnol García González\nJorge Iturrioz del Vigo\n
