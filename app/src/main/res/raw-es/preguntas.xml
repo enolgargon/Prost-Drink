@@ -1,44 +1,44 @@
 <actividad name="Pregunta">
     <item
         text="¿Te has o estas enamorado de un amigo/a?"
-        tragos="5" />
+        tragos="2" />
     <item
         text="Si tuvieras que liarte con alguien de la mesa, ¿quién sería?"
-        tragos="5" />
+        tragos="3" />
     <item
         text="¿Cuál ha sido el momento más caliente de tu vida?"
-        tragos="5" />
+        tragos="3" />
     <item
         text="¿Alguna vez te han atado o has atado a alguien a la cama?"
-        tragos="5" />
+        tragos="2" />
     <item
         text="¿Te has masturbado alguna vez delante de alguien? ¿De quién?"
-        tragos="5" />
+        tragos="3" />
     <item
         text="¿Qué es lo más penoso que has subido a una red social?"
-        tragos="5" />
+        tragos="1" />
     <item
         text="¿Quién crees que lleva más tiempo sin follar de la mesa?"
-        tragos="5" />
+        tragos="2" />
     <item
         text="¿Qué sería la cosa más guarra que harías por dinero?"
-        tragos="5" />
+        tragos="3" />
     <item
         text="¿Alguna vez te has sentido atraído por un profesor?"
         tragos="5" />
     <item
         text="¿Qué cosa no confesarías jamás a tu madre?"
-        tragos="5" />
+        tragos="3" />
     <item
         text="¿Cuál fue la situación más graciosa que tuviste?"
-        tragos="5" />
+        tragos="1" />
     <item
         text="¿Cuál es el momento de tu vida que más odias?"
-        tragos="5" />
+        tragos="2" />
     <item
         text="¿Con cuál de los jugadores preferirías quedarte a solas?"
-        tragos="5" />
+        tragos="3" />
     <item
         text="¿Harías un simpa alguna vez?"
-        tragos="5" />
+        tragos="2" />
 </actividad>

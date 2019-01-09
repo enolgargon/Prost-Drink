@@ -2,7 +2,7 @@
 
     <item
         text="Those who have a %s piece of clothing drink"
-        tragos="5">
+        tragos="1">
         <value text="red" />
         <value text="blue" />
         <value text="green" />
@@ -11,7 +11,7 @@
     </item>
     <item
         text="Name things that start with letter %s. First one who can't come up with one, drinks"
-        tragos="5">
+        tragos="3">
         <value text="k" />
         <value text="h" />
         <value text="z" />
@@ -19,63 +19,63 @@
     </item>
     <item
         text="The three people you point at drink"
-        tragos="5" />
+        tragos="1" />
     <item
         text="Start saying Simpson characters. Whoever repeats one, drinks"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Twist your nipples until they are pretty hard"
-        tragos="5" />
+        tragos="4" />
     <item
         text="Those who have argued in the last two days drink"
-        tragos="5" />
+        tragos="2" />
     <item
         text="Try to turn someone at the table on"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Say the name of your crush or drink"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Drink from someone's bellybutton"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Ask the guy/girl at the bar for his/her number"
-        tragos="5" />
+        tragos="1" />
     <item
         text="Give the player on your right a peck"
-        tragos="5" />
+        tragos="1" />
     <item
         text="Take off a piece of clothing"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Try to lick your elbow"
-        tragos="5" />
+        tragos="2" />
     <item
         text="Tell something embarrassing about yourself"
-        tragos="5" />
+        tragos="1" />
     <item
         text="Sing your favourite song"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Read the last text you received and say whose it was"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Have your lips painted"
-        tragos="5" />
+        tragos="2" />
     <item
         text="Dance the 'Macarena' with the player on your right"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Approach a table where you don't know anyone and ask them if they have a minute for our Lord and Saviour Jesus Christ"
-        tragos="5" />
+        tragos="2" />
     <item
         text="Mimic a dinosaur"
-        tragos="5" />
+        tragos="1" />
     <item
         text="Last one who touches the table drinks"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Last one to get up drinks"
-        tragos="5" />
+        tragos="2" />
 
 </actividad>

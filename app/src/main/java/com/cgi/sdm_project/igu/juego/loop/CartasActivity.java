@@ -3,7 +3,6 @@ package com.cgi.sdm_project.igu.juego.loop;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -14,8 +13,9 @@ import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Cartas;
+import com.cgi.sdm_project.util.AppCompatActivityExtended;
 
-public class CartasActivity extends AppCompatActivity implements InicioJuego {
+public class CartasActivity extends AppCompatActivityExtended implements InicioJuego {
     private Cartas regla;
 
     private ImageView actual;

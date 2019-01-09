@@ -2,7 +2,7 @@
 
     <item
         text="Quien tenga una prenda de color %s bebe"
-        tragos="5">
+        tragos="1">
         <value text="rojo" />
         <value text="azul" />
         <value text="verde" />
@@ -11,7 +11,7 @@
     </item>
     <item
         text="Nombrad cosas que empiecen por %s. Al primero que no es le ocurra ninguna bebe"
-        tragos="5">
+        tragos="3">
         <value text="k" />
         <value text="h" />
         <value text="z" />
@@ -19,64 +19,64 @@
     </item>
     <item
         text="Las tres personas que señales con el dedo beben"
-        tragos="5" />
+        tragos="1" />
     <item
         text="Decir personajes de los Simpson. Quien repita pierde"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Retuércete los pezones hasta que esten bien duritos"
-        tragos="5" />
+        tragos="4" />
     <item
         text="Los que hayan discutido en lo dos últimos días beben"
-        tragos="5" />
+        tragos="2" />
     <item
         text="Intenta poner caliente a la persona que más te guste de la mesa"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Di el nombre de quién te gusta o bebe"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Bebe desde el ombligo de otra persona"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Pídele el número al chico/chica que está en la barra"
-        tragos="5" />
+        tragos="1" />
     <item
         text="Dale un pico al jugador de tu derecha"
-        tragos="5" />
+        tragos="1" />
     <item
         text="Quítate una prenda de ropa"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Intenta chuparte el codo con la lengua"
-        tragos="5" />
+        tragos="2" />
     <item
         text="Cuenta una anécdota vergonzosa sobre ti"
-        tragos="5" />
+        tragos="1" />
     <item
         text="Canta tu canción favorita"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Debes leer el último mensaje que has recibido y decir quién era"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Déjate pintar los labios"
-        tragos="5" />
+        tragos="2" />
     <item
         text="Baila la macarena con el compañero de al lado"
-        tragos="5" />
+        tragos="3" />
     <item
         text="Vete a una mesa donde no conozcas a nadie y diles que quieres hablarles de la palabra del Señor"
-        tragos="5" />
+        tragos="2" />
     <item
         text="Imita a un dinosaurio"
-        tragos="5" />
+        tragos="1" />
     <item
         text="El último en tocar la mesa bebe"
-        tragos="5" />
+        tragos="3" />
     <item
         text="El último en ponerse de pie bebe"
-        tragos="5" />
+        tragos="2" />
 
 
 </actividad>

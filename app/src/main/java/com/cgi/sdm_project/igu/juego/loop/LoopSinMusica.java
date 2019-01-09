@@ -2,12 +2,12 @@ package com.cgi.sdm_project.igu.juego.loop;
 
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.view.ContextThemeWrapper;
 
 import com.cgi.sdm_project.R;
+import com.cgi.sdm_project.util.AppCompatActivityLocale;
 
-public abstract class LoopSinMusica extends AppCompatActivity {
+public abstract class LoopSinMusica extends AppCompatActivityLocale {
     @Override
     public void onBackPressed() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AppTheme_Dialog));

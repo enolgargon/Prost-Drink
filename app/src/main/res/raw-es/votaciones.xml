@@ -1,61 +1,61 @@
 <actividad name="Votación">
     <item
         text="Ser invisible o leer la mente"
-        tragos="5">
+        tragos="2">
         <value text="Ser invisible" />
         <value text="Leer la mente" />
     </item>
     <item
         text="Morir congelado o morir quemado"
-        tragos="5">
+        tragos="3">
         <value text="Morir congelado" />
         <value text="Morir quemado" />
     </item>
     <item
         text="Supositorio o inyección cada día"
-        tragos="5">
+        tragos="4">
         <value text="Supositorio cada día" />
         <value text="Inyección cada día" />
     </item>
     <item
         text="Saber que te han puesto los cuernos o no enterarte nunca"
-        tragos="5">
+        tragos="3">
         <value text="Saber que te hen puesto los cuernos" />
         <value text="No enterarte nunca" />
     </item>
     <item
         text="Vivir sin Internet toda tu vida o no encontrar al amor de tu vida"
-        tragos="5">
+        tragos="3">
         <value text="Vivir sin Internet" />
         <value text="No encontrar al amor de tu vida" />
     </item>
     <item
         text="Encontrar el amor verdadero y ser pobre o ser millonario sin encontrar al amor de tu vida"
-        tragos="5">
+        tragos="3">
         <value text="Encontrar el amor verdadero y ser pobre" />
         <value text="Ser millonario sin encontrar al amor de tu vida" />
     </item>
     <item
         text="Todo el mundo sabe lo que estás pensando en todo momento o tienes que repetir un mismo día de tu vida hasta que te mueras"
-        tragos="5">
+        tragos="2">
         <value text="Todo el mundo sabe lo que estás pensando en todo momento" />
         <value text="Tienes que repetir un mismo día de tu vida hasta que te mueras" />
     </item>
     <item
         text="Tener algo con tu crush pero no tener nada con nadie más o no tener nada con tu crush pero sí con otras personas"
-        tragos="5">
+        tragos="3">
         <value text="Tener algo con tu crush pero no tener nada con nadie más" />
         <value text="No tener nada con tu crush pero sí con otras personas" />
     </item>
     <item
         text="Rubios/as o morenos/as"
-        tragos="5">
+        tragos="2">
         <value text="Rubios/as" />
         <value text="Morenos/as" />
     </item>
     <item
         text="Cacharro o cerveza"
-        tragos="5">
+        tragos="2">
         <value text="Cacharro" />
         <value text="Cerveza" />
     </item>
