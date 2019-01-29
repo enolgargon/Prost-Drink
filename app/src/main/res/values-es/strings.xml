@@ -338,7 +338,8 @@
     <string name="acercade_texto">
         ¿Necesitáis animaros un poco para la noche?\nA nosotros también nos pasa y después de mucho tiempo usando
         aplicaciones ajenas nos hemos preguntado por qué.\nSomos 3 estudiantes de Ingeniería Informática que nos
-        hemos planteado esta aplicación para la asignatura de Software para Dispositivos Móviles.\nEsperamos que lo disfrutéis.
+        hemos planteado esta aplicación para la asignatura de Software para Dispositivos Móviles.\nEsperamos que lo disfrutéis.\n
+        Agradecemos a Gregor Cresnar, HaelDB y el portal Vecteezy el uso que hacemos de sus recursos. Más información sobre el uso en el repositorio de GitHub
     </string>
     <string name="autores">
         Samuel Cifuentes García\nEnol García González\nJorge Iturrioz del Vigo\n

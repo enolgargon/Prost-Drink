@@ -340,7 +340,8 @@
     <string name="acercade_texto">
         Do you need to cheer up a bit for the night?\nWe also find ourselves in the need sometimes and after a long time using
         other people\'s applications we decided to take the matter in our own hands.\nWe are 3 students of Computer Engineering that
-        we have proposed this application for the subject of Mobile Devices Software Development. \nWe hope you enjoy it.
+        we have proposed this application for the subject of Mobile Devices Software Development. \nWe hope you enjoy it.\n
+        We thank Gregor Cresnar, HaelDB and the Vecteezy portal for the use we make of their resources. Further information about the use in the GitHub repository
     </string>
     <string name="autores">
         Samuel Cifuentes García\nEnol García González\nJorge Iturrioz del Vigo\n
