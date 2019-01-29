@@ -12,9 +12,13 @@ import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.logica.juego.Juego;
 import com.cgi.sdm_project.logica.juego.activities.InicioJuego;
 import com.cgi.sdm_project.logica.juego.reglas.implementaciones.Brujula;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import java.util.Observable;
 import java.util.Observer;
+
 
 
 public class BrujulaActivity extends Loop implements Observer, InicioJuego {
@@ -30,6 +34,9 @@ public class BrujulaActivity extends Loop implements Observer, InicioJuego {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brujula);
+
+        MobileAds.initialize(this, "ca-app-pub-1059001153664295~6501625139");
+        ((AdView) findViewById(R.id.adView)).loadAd(new AdRequest.Builder().build());
 
         brujula = findViewById(R.id.brujula);
         contador = findViewById(R.id.txtContador);

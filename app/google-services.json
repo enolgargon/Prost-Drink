@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "141378357406",
+    "firebase_url": "https://prost-drink.firebaseio.com",
+    "project_id": "prost-drink",
+    "storage_bucket": "prost-drink.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141378357406:android:869a49ea17ac7b6c",
+        "android_client_info": {
+          "package_name": "com.cgi.sdm_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "141378357406-m25gijrdems34meb7gs5mnj6bm5b7boh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cgi.sdm_project",
+            "certificate_hash": "354443a7fc8e6924b0134c142972667984b25817"
+          }
+        },
+        {
+          "client_id": "141378357406-3b3k25a07s4scea62alt0o9700293fg9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZPOD3eEGU8ATcbkm9avpmKL-YrH_qVmY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "141378357406-3b3k25a07s4scea62alt0o9700293fg9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
