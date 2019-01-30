@@ -50,15 +50,14 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="125dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="275dp"
+        android:layout_marginBottom="128dp"
         android:gravity="center_vertical|center_horizontal"
         android:theme="@style/BodyCondensed"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.120000005" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtJugador"
@@ -100,11 +99,10 @@
         android:clickable="true"
         android:focusable="true"
         android:theme="@style/MicFAB"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62"
         app:srcCompat="@android:drawable/ic_btn_speak_now" />
     <!--android:theme="@style/MicFAB"-->
 
@@ -117,7 +115,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:theme="@style/InputText"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -130,17 +128,17 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginBottom="16dp"
         android:onClick="continuar"
         android:text="@string/continuar"
         android:theme="@style/Button"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.914"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.984" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/btnTTS"
@@ -161,5 +159,18 @@
         app:layout_constraintTop_toBottomOf="@+id/txtRepite"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ear" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginBottom="32dp"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>
