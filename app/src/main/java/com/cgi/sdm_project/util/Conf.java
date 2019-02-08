@@ -75,6 +75,16 @@ public class Conf {
         ReglasJuego.getInstance().invalidate();
     }
 
+    public boolean getFirstLaunch(){
+        return settings.getBoolean("FirstLaunch", true);
+    }
+
+    public void markFirstLaunch(){
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean("FirstLaunch", false);
+        editor.apply();
+    }
+
     /*Configuraciones para los tipos de juego*/
 
     public boolean getTipo(Reglas regla) {

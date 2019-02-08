@@ -12,6 +12,7 @@ import com.cgi.sdm_project.R;
 import com.cgi.sdm_project.igu.juego.InicioJuegoActivity;
 import com.cgi.sdm_project.igu.sorteo.SortearActivity;
 import com.cgi.sdm_project.util.AppCompatActivityExtended;
+import com.cgi.sdm_project.util.Conf;
 
 public class MainActivity extends AppCompatActivityExtended {
 
@@ -20,12 +21,33 @@ public class MainActivity extends AppCompatActivityExtended {
         super.onCreate(savedInstanceState);
         setTheme(R.style.AppTheme_Splash);
         setContentView(R.layout.activity_main);
+
+        if (Conf.getInstancia().getFirstLaunch()) {
+            mostrarDisclaimer();
+            Conf.getInstancia().markFirstLaunch();
+        }
     }
+
 
     @Override
     protected void onResume() {
         super.onResume();
         setContentView(R.layout.activity_main);
+    }
+
+
+    private void mostrarDisclaimer() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.AppTheme_Dialog));
+
+        builder.setView(getLayoutInflater().inflate(R.layout.dialog_disclaimer, null));
+        builder.setCancelable(false).setTitle(R.string.Disclaimer);
+        builder.setPositiveButton(R.string.btnUnderstand,new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.create().show();
     }
 
     public void mostrarAcercaDe(View view) {

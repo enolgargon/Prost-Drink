@@ -347,4 +347,10 @@
         Samuel Cifuentes García\nEnol García González\nJorge Iturrioz del Vigo\n
     </string>
     <string name="cerrar_acercade">Cool. Let\'s play!!</string>
+
+    <!-- DISCLAIMER -->
+    <string name="Disclaimer">Disclaimer</string>
+    <string name="disclaimer_text">You must be over 18 to use Prost &amp; Drink.\nPlease drink responsibly.</string>
+    <string name="btnUnderstand">I understand</string>
+
 </resources>
